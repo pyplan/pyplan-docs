@@ -7,7 +7,7 @@ esta edicion es desde el propio Github
 
 Holaaaaaaaaaaaa!!!
 
-Holaaaa
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
 eyJkaXNjdXNzaW9ucyI6eyJJQ1h3NEN4MDlIdTNBOGJyIjp7In
@@ -20,6 +20,6 @@ IiwiY3JlYXRlZCI6MTU4NDczODU4OTU5Nn0sIjZGQXhUd3JCdV
 pxdVc0VU4iOnsiZGlzY3Vzc2lvbklkIjoiSUNYdzRDeDA5SHUz
 QThiciIsInN1YiI6ImdoOjE3MDA3ODE0IiwidGV4dCI6InNpc2
 kiLCJjcmVhdGVkIjoxNTg0NzM4NjU3NzUwfX0sImhpc3Rvcnki
-OlstMTc5MDM3Mjg1LC0zNjE1Mzk0ODQsLTIxMzAwNjgzMiwyMD
-g3NjU1NzA5XX0=
+Ols0MzMzOTY5NzIsLTE3OTAzNzI4NSwtMzYxNTM5NDg0LC0yMT
+MwMDY4MzIsMjA4NzY1NTcwOV19
 -->
