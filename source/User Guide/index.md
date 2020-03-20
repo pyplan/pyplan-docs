@@ -1,4 +1,4 @@
-# **Pyplan**
+# **Home**
 Pyplan is an assisted  **Graphical Integrated Development Environment** designed for easily creating and sharing **Data Analytics Apps** based on  **Python** programming language.
 
 ## **Installing**

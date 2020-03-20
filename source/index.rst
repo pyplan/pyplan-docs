@@ -9,9 +9,10 @@ Pyplan Documentation
 .. toctree::
    :maxdepth: 4
 
+   User Guide/index
    Quick Start
    Community
-   User Guide/index
+   
    
    :orphan:
 
