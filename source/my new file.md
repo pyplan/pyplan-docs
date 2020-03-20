@@ -1,6 +1,9 @@
 
 Vamos facu!!!
+
 te espero aca
+
+esta edicion es desde el propio Github
 
 
 > Written with [StackEdit](https://stackedit.io/).
