@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Indexes synchronization &#8212; Pyplan-doc 1.0 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="indexes-synchronization">
+<h1>Indexes synchronization<a class="headerlink" href="#indexes-synchronization" title="Permalink to this headline">¶</a></h1>
+<p>To synchronize indexes you must first have a  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/filter-type-block/">filter-type block</a>  containing indexes. Then, you must have a node among the variables containing the indexes.<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc1.png"><img alt="sinc1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc1.png" /></a></p>
+<p>The example in the picture shows a dashboard that includes the Time index in one block and two graph-type blocks containing the same node. It is not necessary that the node be the same, but the Time index must be one of its variables.</p>
+<p>To filter the graphs, in this example, it is necessary only to select the months from any of the graphs or from the index. The following picture shows the view:<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc2.png"><img alt="sinc2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc2.png" /></a></p>
+<p>Notice that the Pivot Grid and the graph are synchronized with the Time index.</p>
+<p>If one of the graphs does not need to be synchronized with the others, you must disable the synchronization for said graph. You can do so from the graphs property window, in the Index sync tab. It looks like this:<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/12/sinc4.png"><img alt="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/12/sinc4.png" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/12/sinc4.png" /></a></p>
+<p>In the example shown in the picture, the graph will not be synchronized by the Time index, but by Productos y Empresas.<br />Thus, this block is excluded from synchronization by Time. The dashboard view is now the following:</p>
+<p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc5.png"><img alt="sinc5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc5.png" /></a></p>
+<p>Notice that where the index details are specified, Time is null. <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc7.png"><img alt="sinc7" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc7.png" /></a></p>
+</div>
+<div class="section" id="drilldown-dillup-synchronization">
+<h1>Drilldown-dillup synchronization<a class="headerlink" href="#drilldown-dillup-synchronization" title="Permalink to this headline">¶</a></h1>
+<p>It can be donde between two graph-type blocks. The must have at least one index in common to do the drilldown-drillup.<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc8.png"><img alt="sinc8" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc8.png" /></a></p>
+<p>You click any segment of the graph. In this example, the drilldown is done by the index Productos from Empresa 1.<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc6.png"><img alt="sinc6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc6.png" /></a></p>
+<p>To exclude a block from the synchronization you must disable this option the same way explained above for the Time index.</p>
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNzQ3NDIxNzUzXX0=
+--></div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../../index.html">Pyplan-doc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Quick Start.html"><strong>Quick Start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Community.html"><strong>Pyplan Community site</strong></a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Pyplan.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../../_sources/Auxiliar/Pyplan/4-Creating Dashboards/Create/Index Sync.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
