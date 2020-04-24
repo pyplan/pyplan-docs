@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Dashboard Toolbar &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>Dashboard Toolbar &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/doctools.js"></script>
         <script src="../../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
 
@@ -33,7 +34,6 @@
   
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
 </head>
@@ -45,16 +45,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="../../../../index.html" class="icon icon-home"> Pyplan Documentation
+            <a href="../../../../index.html">
           
 
           
             
-            <img src="../../../../_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="../../../../_static/logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -83,7 +83,7 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/index.html"><strong>Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Introduction.html"><strong>User Guide</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../Quick Start.html"><strong>Quick Start</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
@@ -100,7 +100,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../../index.html">Pyplan Documentation</a>
+          <a href="../../../../index.html">pyplandoc</a>
         
       </nav>
 
@@ -150,22 +150,80 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="dashboard-toolbar">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="dashboard-toolbar">
 <h1>Dashboard Toolbar<a class="headerlink" href="#dashboard-toolbar" title="Permalink to this headline">¶</a></h1>
 <p>The dashboards display the following toolbar:   <img alt="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/08/herr1.png" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/08/herr1.png" />
 ‍‍</p>
-<p>|Icon|Description|
-|–|–|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr2.png"><img alt="herr2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr2.png" /></a>|<strong>Edit dashboard:</strong> it enables the edit mode of the dashboard. It displays some buttons through which you can  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/create-blocks/">create different types of blocks</a>. It also displays the  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/blocks-toolbar/">toolbar of the block</a>  through which you can create a customized dashboard.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr3.png"><img alt="herr3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr3.png" /></a>|<strong>Refresh dashboard:</strong> it refreshes or updates the dashboard.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr4.png"><img alt="herr4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr4.png" /></a>|<strong>More dashboards:</strong> it displays a list with all the dashboards in the Reports Manager.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr5.png"><img alt="herr5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr5.png" /></a>|<strong>Share:</strong>  it allows you to  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/reports-manager-2/#Share_dashboard_or_report">share the dashboard</a>  the same way you can do so in the Reports Manager window.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr6.png"><img alt="herr6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr6.png" /></a>|<strong>Scenarios manager:</strong> it opens a window from which you can create, upload, and delete scenarios. For more information,  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/scenario-manager-2/">click here</a>.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr7.png"><img alt="herr7" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr7.png" /></a>|<strong>Data snapshot</strong>|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr8.png"><img alt="herr8" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr8.png" /></a>|<strong>Copy dashboard:</strong> it makes a copy of the dashboard.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/08/herr8-1-e1472584135603.png"><img alt="herr8-1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/08/herr8-1-e1472584135603.png" /></a>|<strong>Copy dashboard:</strong> it makes a copy of the dashboard.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr9.png"><img alt="herr9" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr9.png" /></a>|<strong>Comments:</strong> it opens a window from which you can make comments in the dashboard. There are two ways of making a comment, they are explained  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/dashboard-toolbar-2/#Comment_dashboards_and_blocks">here</a>.|</p>
-<div class="section" id="export-node">
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr2.png"><img alt="herr2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr2.png" /></a></td>
+<td><strong>Edit dashboard:</strong> it enables the edit mode of the dashboard. It displays some buttons through which you can  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/create-blocks/">create different types of blocks</a>. It also displays the  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/blocks-toolbar/">toolbar of the block</a>  through which you can create a customized dashboard.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr3.png"><img alt="herr3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr3.png" /></a></td>
+<td><strong>Refresh dashboard:</strong> it refreshes or updates the dashboard.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr4.png"><img alt="herr4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr4.png" /></a></td>
+<td><strong>More dashboards:</strong> it displays a list with all the dashboards in the Reports Manager.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr5.png"><img alt="herr5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr5.png" /></a></td>
+<td><strong>Share:</strong>  it allows you to  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/reports-manager-2/#Share_dashboard_or_report">share the dashboard</a>  the same way you can do so in the Reports Manager window.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr6.png"><img alt="herr6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr6.png" /></a></td>
+<td><strong>Scenarios manager:</strong> it opens a window from which you can create, upload, and delete scenarios. For more information,  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/scenario-manager-2/">click here</a>.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr7.png"><img alt="herr7" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr7.png" /></a></td>
+<td><strong>Data snapshot</strong></td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr8.png"><img alt="herr8" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr8.png" /></a></td>
+<td><strong>Copy dashboard:</strong> it makes a copy of the dashboard.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/08/herr8-1-e1472584135603.png"><img alt="herr8-1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/08/herr8-1-e1472584135603.png" /></a></td>
+<td><strong>Copy dashboard:</strong> it makes a copy of the dashboard.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr9.png"><img alt="herr9" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/herr9.png" /></a></td>
+<td><strong>Comments:</strong> it opens a window from which you can make comments in the dashboard. There are two ways of making a comment, they are explained  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/dashboard-toolbar-2/#Comment_dashboards_and_blocks">here</a>.</td>
+</tr>
+</tbody>
+</table><div class="section" id="export-node">
 <h2>Export node<a class="headerlink" href="#export-node" title="Permalink to this headline">¶</a></h2>
 <iframe width="721" height="480" src="https://www.youtube.com/embed/FewRhJzi25A?list=PLhZdWvtJsasTSZeamYJ6TIs_ApZPD4ex-" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><p>Click <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/exp1.png"><img alt="exp1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/exp1-e1468261874974.png" /></a>to open the following window:</p>
 <p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/expo1.png"><img alt="expo1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/expo1-e1468262579254.png" /></a></p>
@@ -198,7 +256,7 @@ eyJoaXN0b3J5IjpbLTE5MTMyMjUxODBdfQ==
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>

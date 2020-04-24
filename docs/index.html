@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Pyplan Documentation &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>Welcome to pyplandoc’s documentation! &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -33,10 +34,9 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Home" href="User Guide/index.html" /> 
+    <link rel="next" title="User Guide" href="Introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -46,16 +46,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="#" class="icon icon-home"> Pyplan Documentation
+            <a href="#">
           
 
           
             
-            <img src="_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="_static/logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -84,7 +84,7 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="User Guide/index.html"><strong>Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html"><strong>User Guide</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Quick Start.html"><strong>Quick Start</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
@@ -101,7 +101,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Pyplan Documentation</a>
+          <a href="#">pyplandoc</a>
         
       </nav>
 
@@ -132,7 +132,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>Pyplan Documentation</li>
+      <li>Welcome to pyplandoc’s documentation!</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -151,16 +151,53 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pyplan-documentation">
-<h1>Pyplan Documentation<a class="headerlink" href="#pyplan-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="welcome-to-pyplandoc-s-documentation">
+<h1>Welcome to pyplandoc’s documentation!<a class="headerlink" href="#welcome-to-pyplandoc-s-documentation" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="User Guide/index.html"><strong>Home</strong></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="User Guide/index.html#installing"><strong>Installing</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="User Guide/index.html#code-organization"><strong>Code Organization</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="User Guide/index.html#node-evaluation"><strong>Node Evaluation</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="User Guide/index.html#using-python-libraries"><strong>Using Python Libraries</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="User Guide/index.html#creating-apps"><strong>Creating Apps</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html"><strong>User Guide</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#what-you-will-find-in-this-user-guide"><strong>What you will find in this User Guide</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#pyplan-app-homepage"><strong>Pyplan App Homepage</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#file-manager"><strong>File Manager</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#model"><strong>Model</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#visualization"><strong>Visualization</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#interface-designer"><strong>Interface Designer</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#configuration-and-user-management"><strong>Configuration and User Management</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#tutorials-examples-and-demos"><strong>Tutorials, Examples and Demos</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#what-you-will-not-find-in-this-user-guide"><strong>What you will NOT find in this User Guide</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#formerly-cubeplan-users"><strong>Formerly Cubeplan users</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#pyplan-library-correlation-with-cubeplan"><strong>Pyplan Library correlation with Cubeplan</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#financial-planning-library-for-cubeplan-users"><strong>Financial Planning Library for Cubeplan users</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduction.html#pyplan-excel-addin"><strong>Pyplan Excel AddIn</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Quick Start.html"><strong>Quick Start</strong></a><ul>
@@ -188,6 +225,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
 </div>
+</div></blockquote>
 </div>
 
 
@@ -198,7 +236,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="User Guide/index.html" class="btn btn-neutral float-right" title="Home" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Introduction.html" class="btn btn-neutral float-right" title="User Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
@@ -208,7 +246,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>

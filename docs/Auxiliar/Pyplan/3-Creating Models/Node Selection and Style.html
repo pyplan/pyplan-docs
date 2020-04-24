@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Node Selection and Styles &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>Node Selection and Styles &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -33,7 +34,6 @@
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
@@ -45,16 +45,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="../../../index.html" class="icon icon-home"> Pyplan Documentation
+            <a href="../../../index.html">
           
 
           
             
-            <img src="../../../_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="../../../_static/logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -83,7 +83,7 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/index.html"><strong>Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Introduction.html"><strong>User Guide</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Quick Start.html"><strong>Quick Start</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
@@ -100,7 +100,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">Pyplan Documentation</a>
+          <a href="../../../index.html">pyplandoc</a>
         
       </nav>
 
@@ -150,7 +150,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="node-selection-and-styles">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="node-selection-and-styles">
 <h1>Node Selection and Styles<a class="headerlink" href="#node-selection-and-styles" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="select-nodes">
 <h2>Select nodes<a class="headerlink" href="#select-nodes" title="Permalink to this headline">¶</a></h2>
@@ -175,15 +199,40 @@
 <div class="section" id="style">
 <h2>Style<a class="headerlink" href="#style" title="Permalink to this headline">¶</a></h2>
 <p>The button  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3.png"><img alt="bot3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3.png" /></a> allows you to enable the follow option:</p>
-<p>|Icon|Description|
-|–|–|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun1.png"><img alt="bot3fun1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun1.png" /></a>|The node input arrows are shown in the diagram.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun2.png"><img alt="bot3fun2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun2.png" /></a>|The node output arrows are shown in the diagram.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun3.png"><img alt="bot3fun3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun3.png" /></a>|The node title is shown.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun4.png"><img alt="bot3fun4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun4.png" /></a>|The node border is shown.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun5.png"><img alt="bot3fun5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun5.png" /></a>|The node background color is visible.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/08/dia47.png"><img alt="dia47" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/08/dia47.png" /></a>|You will be able to choose the font type and size for the nodes you selected.|</p>
-</div>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun1.png"><img alt="bot3fun1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun1.png" /></a></td>
+<td>The node input arrows are shown in the diagram.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun2.png"><img alt="bot3fun2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun2.png" /></a></td>
+<td>The node output arrows are shown in the diagram.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun3.png"><img alt="bot3fun3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun3.png" /></a></td>
+<td>The node title is shown.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun4.png"><img alt="bot3fun4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun4.png" /></a></td>
+<td>The node border is shown.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun5.png"><img alt="bot3fun5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot3fun5.png" /></a></td>
+<td>The node background color is visible.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/08/dia47.png"><img alt="dia47" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/08/dia47.png" /></a></td>
+<td>You will be able to choose the font type and size for the nodes you selected.</td>
+</tr>
+</tbody>
+</table></div>
 <div class="section" id="color">
 <h2>Color<a class="headerlink" href="#color" title="Permalink to this headline">¶</a></h2>
 <p>You can change the color of a node by clicking  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot4.png"><img alt="bot4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot4.png" /></a> and selecting the color you want.</p>
@@ -202,18 +251,56 @@
 <div class="section" id="align-nodes">
 <h2>Align nodes<a class="headerlink" href="#align-nodes" title="Permalink to this headline">¶</a></h2>
 <p>The same way as to set the size, first you must select the nodes. The node with the colored corner will be the one taken as reference. When there is more than one selected node, the button  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6.png"><img alt="bot6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6.png" /></a>  is visible. Click it, and the following options will be displayed:</p>
-<p>|Icon|Description|
-|–|–|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun1.png"><img alt="bot6fun1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun1.png" /></a>|It aligns left edges|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun2.png"><img alt="bot6fun2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun2.png" /></a>|It centers left and right edges|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun3.png"><img alt="bot6fun3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun3.png" /></a>|It aligns right edges|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun4.png"><img alt="bot6fun4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun4.png" /></a>|It aligns left and right edges|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun5.png"><img alt="bot6fun5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun5.png" /></a>|It aligns top edges|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun6.png"><img alt="bot6fun6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun6.png" /></a>|It centers top and bottom edges|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun7.png"><img alt="bot6fun7" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun7.png" /></a>|It aligns bottom edges|</p>
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NTMzNzE1Nl19
---></div>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun1.png"><img alt="bot6fun1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun1.png" /></a></td>
+<td>It aligns left edges</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun2.png"><img alt="bot6fun2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun2.png" /></a></td>
+<td>It centers left and right edges</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun3.png"><img alt="bot6fun3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun3.png" /></a></td>
+<td>It aligns right edges</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun4.png"><img alt="bot6fun4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun4.png" /></a></td>
+<td>It aligns left and right edges</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun5.png"><img alt="bot6fun5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun5.png" /></a></td>
+<td>It aligns top edges</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun6.png"><img alt="bot6fun6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun6.png" /></a></td>
+<td>It centers top and bottom edges</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun7.png"><img alt="bot6fun7" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/bot6fun7.png" /></a></td>
+<td>It aligns bottom edges</td>
+</tr>
+<tr>
+<td>&lt;!--stackedit_data:</td>
+<td></td>
+</tr>
+<tr>
+<td>eyJoaXN0b3J5IjpbLTk3NTMzNzE1Nl19</td>
+<td></td>
+</tr>
+<tr>
+<td>--&gt;</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
 </div>
 
 
@@ -227,7 +314,7 @@ eyJoaXN0b3J5IjpbLTk3NTMzNzE1Nl19
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>
