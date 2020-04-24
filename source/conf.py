@@ -15,14 +15,22 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 
+
 # -- Project information -----------------------------------------------------
 
-project = 'Pyplan Documentation'
-copyright = '2020, Pyplan'
-author = 'Pyplan'
+project = 'pyplandoc'
+copyright = '2020, Franco Barberis'
+author = 'Franco Barberis'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
+
+import sphinxcontrib
+import recommonmark
+from recommonmark.transform import AutoStructify
+from recommonmark.parser import CommonMarkParser
+
+#source_parsers = {'.md': CommonMarkParser}
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,15 +39,12 @@ release = '1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+	'nbsphinx',
+        'recommonmark',
+        'sphinx_markdown_tables'
 ]
 
-source_parsers = {
-   '.md': 'recommonmark.parser.CommonMarkParser',
-}
-
 source_suffix = ['.rst', '.md']
-
-
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -56,13 +61,25 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
-#html_theme = 'pydata_sphinx_theme'
-html_logo = '_static/pyplan_logo.jpg'
+html_theme_options = {
+    'canonical_url': '',
+    'analytics_id': 'UA-154592986-1',  #  Provided by Google in your dashboard
+    'logo_only': True,
+    'display_version': True,
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': False,
+    #'vcs_pageview_mode': '',
+    #'style_nav_header_background': 'white',
+    # Toc options
+    'collapse_navigation': True,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
+}
 
-
+html_logo = "_static/Logo.jpg"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-def setup(app):
-    app.add_css_file('pyplan.css')

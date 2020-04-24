@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Executing Nodes &mdash; pyplandoc 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #236093" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/logo.jpg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Quick Start.html"><strong>Quick Start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Community.html"><strong>Pyplan Community site</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyplandoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Executing Nodes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/pyplan-docs/source/User Guide/Node Execution.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="executing-nodes">
+<h1>Executing Nodes<a class="headerlink" href="#executing-nodes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="console-output">
+<h2>Console Output<a class="headerlink" href="#console-output" title="Permalink to this headline">¶</a></h2>
+<p>You can run any node after editing its code by pressing <kbd>CTRL + Enter</kbd>.
+At the right side of the Code window, the console output resulting from running the node will appear.
+<img alt="enter image description here" src="http://img.pyplan.org/Node-execution-code-tab.png" />
+Any <code class="docutils literal notranslate"><span class="pre">Print()</span></code> statement written between code lines will display it result here.
+Its purpose is to make a quick evaluation of the node, to check if it is properly defined.</p>
+</div>
+<div class="section" id="result-explorer">
+<h2>Result Explorer<a class="headerlink" href="#result-explorer" title="Permalink to this headline">¶</a></h2>
+<p>Another way to run a node is by pressing <kbd>CTRL + E</kbd>.
+In this way, more complete information about the node properties and its result is displayed.</p>
+<p><img alt="http://img.pyplan.org/Node-execution-profile.png" src="http://img.pyplan.org/Node-execution-profile.png" />
+One of the most interesting features accesible through this means of evaluation is the “Show Profile” feature, which displays the calculation path, the calculation time, and the memory usage by step (nodes.)
+<img alt="enter image description here" src="http://img.pyplan.org/Node-execution-console+.png" /></p>
+</div>
+<div class="section" id="evaluating-a-node">
+<h2>Evaluating a Node<a class="headerlink" href="#evaluating-a-node" title="Permalink to this headline">¶</a></h2>
+<p>Press <kbd>CTRL + R</kbd> to get its result.</p>
+<p>You can evaluate a node by double clicking on it or pressing <kbd>CTRL + R</kbd> after selecting it.
+Unlike the previous running alternatives, the node is run and its result displayed in a new tab, called the “Title” of the node, which has a default table format.</p>
+<p><img alt="enter image description here" src="http://img.pyplan.org/Node-execution-default.png" /></p>
+<p>Pyplan natively interprets Numpy matrix, Pandas dataframe indexes, and Xarray dimensions, which will be automatically displayed at the bottom of the table for pivoting and filtering.
+Default views can be changed using the Edit interface menu that can be launched by clicking on the icon shown in the image below.</p>
+<p><img alt="enter image description here" src="http://img.pyplan.org/Node-execution-edit-interface.png" /></p>
+<p>When you click on the Edit interface icon, the configuration menu is launched. Here, you can decide how the node will be rendered. After defining the node visualization configuration, you must accept the changes in order to save them.
+<img alt="enter image description here" src="http://img.pyplan.org/Node-execution-edit-inter3.png" /></p>
+</div>
+<div class="section" id="embedded-tools">
+<h2>Embedded Tools<a class="headerlink" href="#embedded-tools" title="Permalink to this headline">¶</a></h2>
+<p>There are some embedded tools that appear when evaluating a node according to the type of result.
+For example, any node evaluates as a pandas dataframe object will display the following tools:
+<img alt="enter image description here" src="http://img.pyplan.org/node-exec-pandas-tools.png" />
+These tools make it easy for non-programmers to start manipulating the basic Python objects without coding.
+As you will realize, when operating with these tools, the subjacent Python code is automatically generated, hence inducing analysts to learn how to use Python. This is like saving a macro in Excel.</p>
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTgzMTExMjc5NSw0NzUzOTAyMzQsLTExND
+QwMjEwMzMsLTEzODU1MDc5OTgsMjA1NzI5MzcyMSwyODU5NDYw
+NTAsLTQwNzE1NTY0NywtMTQ4NjIzOTc4OCw0NzczNTY4NTIsMT
+I2OTExNTg2OCwtNDcyMjE4MjUwLC0zNzk5MTYwODAsLTE4NTUz
+Mjk5NzksMTQzNTUyNzI4MCwxMDgxMDc5NzQ1LDUwNTk1MjI0MS
+w5NjAxMDg2LDExOTAzMjIxMDQsLTU0MjA1NzA0Ml19
+--></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Franco Barberis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-154592986-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
