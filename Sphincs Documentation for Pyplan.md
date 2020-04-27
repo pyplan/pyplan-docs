@@ -33,7 +33,8 @@ pip install sphinx-markdown-tables
 ## Process
 
  - All the configuration needed for sphinx are in the config.py file
- - A new installation of Sphinx will overwrite the config,py file 
+ - The table of contents is in the index.rst file
+ - A new installation of Sphinx will overwrite both files so make shure of replace them with the files in the Pyplan's repository.
 
  
 
@@ -43,6 +44,5 @@ pip install sphinx-markdown-tables
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODYxMjQ4MzYsLTEwNjIyNDI4OTRdfQ
-==
+eyJoaXN0b3J5IjpbMTE0NTQ4MDg1MiwtMTA2MjI0Mjg5NF19
 -->
