@@ -32,13 +32,17 @@ pip install sphinx-markdown-tables
 ```
 ## Process
 
-All the configuration needed for sphinx are in the config.py 
+ - All the configuration needed for sphinx are in the config.py file
+ - A new installation of Sphinx will overwrite the config,py file 
+
+ 
+
 
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzM1ODQ1MjcsLTEwNjIyNDI4OTRdfQ
+eyJoaXN0b3J5IjpbLTE1ODYxMjQ4MzYsLTEwNjIyNDI4OTRdfQ
 ==
 -->
