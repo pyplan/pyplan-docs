@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Influence Diagram &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>Influence Diagram &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,7 +34,6 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -45,16 +45,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> Pyplan Documentation
+            <a href="../index.html">
           
 
           
             
-            <img src="../_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -83,8 +83,18 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html"><strong>Home</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Quick Start.html"><strong>Quick Start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../home.html">About Pyplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html">Node Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#tables">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#graphs">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#advanced-options-and-index-sync">Advanced Options and Index Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#other-visualization-libraries">Other visualization libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="User Interface Designer.html">User Interface Designer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
 
@@ -100,7 +110,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Pyplan Documentation</a>
+          <a href="../index.html">pyplandoc</a>
         
       </nav>
 
@@ -150,7 +160,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="influence-diagram">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="influence-diagram">
 <h1>Influence Diagram<a class="headerlink" href="#influence-diagram" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="input-and-output-nodes">
 <h2>Input and output nodes?<a class="headerlink" href="#input-and-output-nodes" title="Permalink to this headline">¶</a></h2>
@@ -182,7 +216,7 @@ eyJoaXN0b3J5IjpbMzg5ODk5NjM2XX0=
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>

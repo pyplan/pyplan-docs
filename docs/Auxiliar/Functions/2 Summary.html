@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Summary &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>Summary &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -33,7 +34,6 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
 </head>
@@ -45,16 +45,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Pyplan Documentation
+            <a href="../../index.html">
           
 
           
             
-            <img src="../../_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="../../_static/Logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -83,8 +83,18 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../User Guide/index.html"><strong>Home</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Quick Start.html"><strong>Quick Start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../home.html">About Pyplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../User Guide/Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../User Guide/App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../User Guide/File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../User Guide/Model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../User Guide/Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../User Guide/Visualization.html">Node Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../User Guide/Visualization.html#tables">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../User Guide/Visualization.html#graphs">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../User Guide/Visualization.html#advanced-options-and-index-sync">Advanced Options and Index Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../User Guide/Visualization.html#other-visualization-libraries">Other visualization libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../User Guide/User Interface Designer.html">User Interface Designer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
 
@@ -100,7 +110,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Pyplan Documentation</a>
+          <a href="../../index.html">pyplandoc</a>
         
       </nav>
 
@@ -150,7 +160,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="summary">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="summary">
 <h1>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="homepage">
 <h2>Homepage<a class="headerlink" href="#homepage" title="Permalink to this headline">¶</a></h2>
@@ -160,19 +194,56 @@
 <div class="section" id="properties-tool">
 <h2>Properties tool<a class="headerlink" href="#properties-tool" title="Permalink to this headline">¶</a></h2>
 <p>The properties bar is located on the left margin of the window. You can use it to access all the modules within the system; however, you have access only to the modules enabled in your profile. The bar contains the following buttons:</p>
-<p>|Icon|Description|
-|–|–|
-|<a class="reference external" href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/home.png"><img alt="home" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/home.png" /></a>|<strong>Home</strong>: It leads to the home page.|
-|<img alt="file manager" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/file-manager.png" />|<strong>File manager:</strong> It leads to the file manager window, where you find all the models.  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/file-manager-2/">(Go to file manager)</a>|
-|<img alt="schedule" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/schedule.png" />|<strong>Schedule task:</strong>  It gives access to the module where you can set up the automatic tasks to  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/model-tasks/">run models</a>, OleDB and ETL. After it has been run it can be seen by other users, or just closed.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/09/analysis.png"><img alt="analysis" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/09/analysis.png" /></a>|<strong>Analysis:</strong>  It leads to the analysis module. <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/analysis-2/">(Go to analysis)</a>|
-|<a class="reference external" href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/diagram.png"><img alt="diagram" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/diagram.png" /></a>|<strong>Influence diagram:</strong>  It shows the influence diagram of the model on which you are working. This option is available only when a model is open.  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/influence-diagram/">(Go to Influence diagram)</a>|
-|<a class="reference external" href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/reports.png"><img alt="reports" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/reports.png" /></a>|<strong>Reports manager:</strong> It gives access to the module that contains all the dashboards and reports created by the user and those that have been shared with the user. This option is available only when a model is open.  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/reports-manager-2/">(Go to reports manager)</a>|
-|<a class="reference external" href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/work.png"><img alt="work" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/work.png" /></a>|<strong>Workflow:</strong> It gives access to the different modules:  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/gantt-2/">Gantt</a>, <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/status-manager/">Status</a>, <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/transitions-manager/#Transitions_manager">Transitions</a>,  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/transitions-manager/#Transitions_by_rol_manager">Transitions by rol</a> and <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/task-group-manager/">Task groups</a>.
-|<a class="reference external" href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/knowledge.png"><img alt="knowledge" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/knowledge.png" /></a>|<strong>Knowledge base:</strong> It gives access to the module that contains all the model data. This option is available only when a model is open.  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/knowledge-base-2/">(Go to knowledge base)</a>|
-|<a class="reference external" href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/manager.png"><img alt="manager" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/manager.png" /></a>|<strong>Security options:</strong> It leads to the modules:  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/user-manager-2/">user manager</a>, <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/group-manager-2/">group manager</a>, <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/role-manager-2/">role manager</a>, and company manager.|
-|<a class="reference external" href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/configuration.png"><img alt="configuration" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/configuration.png" /></a>|<strong>Configuration:</strong> It leads to the modules: <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/session-manager-2/">session manager</a>, sanity check, and <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/summary-2/#Widget_editor">widget editor</a>.|</p>
-<p>The top margin has the following format:</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/home.png"><img alt="home" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/home.png" /></a></td>
+<td><strong>Home</strong>: It leads to the home page.</td>
+</tr>
+<tr>
+<td><img alt="file manager" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/file-manager.png" /></td>
+<td><strong>File manager:</strong> It leads to the file manager window, where you find all the models.  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/file-manager-2/">(Go to file manager)</a></td>
+</tr>
+<tr>
+<td><img alt="schedule" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/schedule.png" /></td>
+<td><strong>Schedule task:</strong>  It gives access to the module where you can set up the automatic tasks to  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/model-tasks/">run models</a>, OleDB and ETL. After it has been run it can be seen by other users, or just closed.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/09/analysis.png"><img alt="analysis" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/09/analysis.png" /></a></td>
+<td><strong>Analysis:</strong>  It leads to the analysis module. <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/analysis-2/">(Go to analysis)</a></td>
+</tr>
+<tr>
+<td><a href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/diagram.png"><img alt="diagram" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/diagram.png" /></a></td>
+<td><strong>Influence diagram:</strong>  It shows the influence diagram of the model on which you are working. This option is available only when a model is open.  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/influence-diagram/">(Go to Influence diagram)</a></td>
+</tr>
+<tr>
+<td><a href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/reports.png"><img alt="reports" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/reports.png" /></a></td>
+<td><strong>Reports manager:</strong> It gives access to the module that contains all the dashboards and reports created by the user and those that have been shared with the user. This option is available only when a model is open.  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/reports-manager-2/">(Go to reports manager)</a></td>
+</tr>
+<tr>
+<td><a href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/work.png"><img alt="work" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/work.png" /></a></td>
+<td><strong>Workflow:</strong> It gives access to the different modules:  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/gantt-2/">Gantt</a>, <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/status-manager/">Status</a>, <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/transitions-manager/#Transitions_manager">Transitions</a>,  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/transitions-manager/#Transitions_by_rol_manager">Transitions by rol</a> and <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/task-group-manager/">Task groups</a>.</td>
+</tr>
+<tr>
+<td><a href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/knowledge.png"><img alt="knowledge" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/knowledge.png" /></a></td>
+<td><strong>Knowledge base:</strong> It gives access to the module that contains all the model data. This option is available only when a model is open.  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/knowledge-base-2/">(Go to knowledge base)</a></td>
+</tr>
+<tr>
+<td><a href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/manager.png"><img alt="manager" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/manager.png" /></a></td>
+<td><strong>Security options:</strong> It leads to the modules:  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/user-manager-2/">user manager</a>, <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/group-manager-2/">group manager</a>, <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/role-manager-2/">role manager</a>, and company manager.</td>
+</tr>
+<tr>
+<td><a href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/configuration.png"><img alt="configuration" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/configuration.png" /></a></td>
+<td><strong>Configuration:</strong> It leads to the modules: <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/session-manager-2/">session manager</a>, sanity check, and <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/summary-2/#Widget_editor">widget editor</a>.</td>
+</tr>
+</tbody>
+</table><p>The top margin has the following format:</p>
 <p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/06/barra.png"><img alt="barra" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/06/barra.png" /></a></p>
 <p>The Cubeplan version number is displayed on the left margin; next to it, you find the following button  <a class="reference external" href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/acth.png"><img alt="acth" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/acth.png" /></a>. It enables/disables the vertical toolbar displayed on the left margin. Then, you find the name of the module you are in and the button to close it; if you close the current module, the page returns to the previous module.<br />You will find the button  <a class="reference external" href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/guardar.png"><img alt="guardar" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/guardar.png" /></a> on the right margin. It allows you to save any changes introduced in the model. This buttom turns yellow  <a class="reference external" href="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/cambia.png"><img alt="cambia" src="http://162.252.81.163:8081/wiki/wp-content/uploads/2016/03/cambia.png" /></a>  when there are changes to save. If you need to save changes in a new version of the model, you can do so by clicking <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/06/guardarcomo.png"><img alt="guardarcomo" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/06/guardarcomo.png" /></a>.</p>
 <p>On the right, you can see the model currently open. If you click on it, a window will open showing the properties of the model. This window looks like this:</p>
@@ -237,7 +308,7 @@ eyJoaXN0b3J5IjpbLTUyMDA4ODY2OF19
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>

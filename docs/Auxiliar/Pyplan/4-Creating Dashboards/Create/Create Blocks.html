@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Create Blocks &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>Create Blocks &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/doctools.js"></script>
         <script src="../../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
 
@@ -33,7 +34,6 @@
   
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
 </head>
@@ -45,16 +45,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="../../../../index.html" class="icon icon-home"> Pyplan Documentation
+            <a href="../../../../index.html">
           
 
           
             
-            <img src="../../../../_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="../../../../_static/Logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -83,8 +83,18 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/index.html"><strong>Home</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../Quick Start.html"><strong>Quick Start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../home.html">About Pyplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Visualization.html">Node Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Visualization.html#tables">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Visualization.html#graphs">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Visualization.html#advanced-options-and-index-sync">Advanced Options and Index Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Visualization.html#other-visualization-libraries">Other visualization libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/User Interface Designer.html">User Interface Designer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
 
@@ -100,7 +110,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../../index.html">Pyplan Documentation</a>
+          <a href="../../../../index.html">pyplandoc</a>
         
       </nav>
 
@@ -150,7 +160,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="create-blocks">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="create-blocks">
 <h1>Create Blocks<a class="headerlink" href="#create-blocks" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>Created  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/knowledge-base/create-blocks/">December 15, 2016</a></p></li>
@@ -158,17 +192,48 @@
 </ul>
 <p>You can start editing a dashboard by clicking on it. At the center of the block you will find the following buttons:</p>
 <p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/botones.png"><img alt="botones" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/botones.png" /></a></p>
-<p>|Icon|Description|
-|:–|:–|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton1.png"><img alt="boton1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton1.png" /></a>|<strong>Table:</strong> When you search a node, you will view those which are Variable type. If you click on it, they will be displayed in a table.  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/table-2/">Click here</a>  for a detailed explanation on how to edit tables.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton2.png"><img alt="boton2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton2.png" /></a>|<strong>Graph:</strong> As it is for tables, when you search a node you will view those which are Variable type. If you select a node, it will be shown in a graph.  [Click here]|(http://www.cubeplat.com:8081/wiki/en/knowledge-base/column-2/)  for detailed information on how to edit all types of graphs.
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton3.png"><img alt="boton3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton3.png" /></a>|<strong>Diagram:</strong> It creates a  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Diagram-type_block">diagram-type block</a>.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton4.png"><img alt="boton4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton4.png" /></a>|<strong>Text editor:</strong> It creates a  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Text-type_block">text-type block</a>.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton5.png"><img alt="boton5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton5.png" /></a>|<strong>Filter:</strong> When you search a node, you will view those which are Index and Decision type. If you click it, it will be displayed as a selector. Click here for detailed information on how to edit the  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Selector-type_block">selector type block</a>.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton6.png"><img alt="boton6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton6.png" /></a>|<strong>PivotGrid:</strong> As it is for tables, when you search a node you will view those which are Variable type. If you select the node, it will be displayed in a dynamic table. Click here for detailed information on how to edit  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/pivotgrid-2/">PivotGrid-type graph</a>.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton7.png"><img alt="boton7" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton7.png" /></a>|<strong>Gis Map:</strong> It opens a map. Click here for more information about  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#GIS_Map-type_block">Gis Map-type block</a>.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton8.png"><img alt="boton8" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton8.png" /></a>|<strong>Magic:</strong> When you search a node, you may be able to find any type of node. This button allows you to create  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Button-type_block">button</a>,  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Module-type_block">module</a>, and  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Variable_input_node">formnode-types of block</a>. These are not available for the previous buttons.|</p>
-<!--stackedit_data:
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th align="left">Icon</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton1.png"><img alt="boton1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton1.png" /></a></td>
+<td align="left"><strong>Table:</strong> When you search a node, you will view those which are Variable type. If you click on it, they will be displayed in a table.  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/table-2/">Click here</a>  for a detailed explanation on how to edit tables.</td>
+</tr>
+<tr>
+<td align="left"><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton2.png"><img alt="boton2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton2.png" /></a></td>
+<td align="left"><strong>Graph:</strong> As it is for tables, when you search a node you will view those which are Variable type. If you select a node, it will be shown in a graph.  [Click here]</td>
+</tr>
+<tr>
+<td align="left"><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton3.png"><img alt="boton3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton3.png" /></a></td>
+<td align="left"><strong>Diagram:</strong> It creates a  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Diagram-type_block">diagram-type block</a>.</td>
+</tr>
+<tr>
+<td align="left"><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton4.png"><img alt="boton4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton4.png" /></a></td>
+<td align="left"><strong>Text editor:</strong> It creates a  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Text-type_block">text-type block</a>.</td>
+</tr>
+<tr>
+<td align="left"><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton5.png"><img alt="boton5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton5.png" /></a></td>
+<td align="left"><strong>Filter:</strong> When you search a node, you will view those which are Index and Decision type. If you click it, it will be displayed as a selector. Click here for detailed information on how to edit the  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Selector-type_block">selector type block</a>.</td>
+</tr>
+<tr>
+<td align="left"><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton6.png"><img alt="boton6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton6.png" /></a></td>
+<td align="left"><strong>PivotGrid:</strong> As it is for tables, when you search a node you will view those which are Variable type. If you select the node, it will be displayed in a dynamic table. Click here for detailed information on how to edit  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/pivotgrid-2/">PivotGrid-type graph</a>.</td>
+</tr>
+<tr>
+<td align="left"><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton7.png"><img alt="boton7" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton7.png" /></a></td>
+<td align="left"><strong>Gis Map:</strong> It opens a map. Click here for more information about  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#GIS_Map-type_block">Gis Map-type block</a>.</td>
+</tr>
+<tr>
+<td align="left"><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton8.png"><img alt="boton8" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/boton8.png" /></a></td>
+<td align="left"><strong>Magic:</strong> When you search a node, you may be able to find any type of node. This button allows you to create  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Button-type_block">button</a>,  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Module-type_block">module</a>, and  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/block-types/#Variable_input_node">formnode-types of block</a>. These are not available for the previous buttons.</td>
+</tr>
+</tbody>
+</table><!--stackedit_data:
 eyJoaXN0b3J5IjpbMjAwOTQ0MTM2N119
 --></div>
 
@@ -183,7 +248,7 @@ eyJoaXN0b3J5IjpbMjAwOTQ0MTM2N119
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Node Properties Window &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>Node Properties Window &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -33,7 +34,6 @@
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
@@ -45,16 +45,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="../../../index.html" class="icon icon-home"> Pyplan Documentation
+            <a href="../../../index.html">
           
 
           
             
-            <img src="../../../_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="../../../_static/Logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -83,8 +83,18 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/index.html"><strong>Home</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Quick Start.html"><strong>Quick Start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../home.html">About Pyplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Visualization.html">Node Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Visualization.html#tables">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Visualization.html#graphs">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Visualization.html#advanced-options-and-index-sync">Advanced Options and Index Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Visualization.html#other-visualization-libraries">Other visualization libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/User Interface Designer.html">User Interface Designer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
 
@@ -100,7 +110,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">Pyplan Documentation</a>
+          <a href="../../../index.html">pyplandoc</a>
         
       </nav>
 
@@ -150,7 +160,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="node-properties-window">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="node-properties-window">
 <h1>Node Properties Window<a class="headerlink" href="#node-properties-window" title="Permalink to this headline">¶</a></h1>
 <p>When you click any node in the diagram, the following window will open:<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/dia25.png"><img alt="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/dia25.png" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/dia25.png" /></a></p>
 <p>The tab Definition shows the Title, Indntificator, and Units of the node. If you click  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia31.png"><img alt="dia31" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia31.png" /></a>, you open  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/number-format-2/">this window</a>. To the right, there is a field where you can enter a definition for the node. If you enter CTRL+Espace, a list with nodes and functions will appear. In the case of a function, it will detailed.<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/07/dia34.png"><img alt="dia34" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/07/dia34.png" /></a></p>
@@ -174,7 +208,7 @@ eyJoaXN0b3J5IjpbLTEyNzMyMzgzMF19
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Intro &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>Intro &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,7 +34,6 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -45,16 +45,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> Pyplan Documentation
+            <a href="../index.html">
           
 
           
             
-            <img src="../_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -83,8 +83,18 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../User Guide/index.html"><strong>Home</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Quick Start.html"><strong>Quick Start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../home.html">About Pyplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Visualization.html">Node Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Visualization.html#tables">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Visualization.html#graphs">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Visualization.html#advanced-options-and-index-sync">Advanced Options and Index Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Visualization.html#other-visualization-libraries">Other visualization libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/User Interface Designer.html">User Interface Designer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
 
@@ -100,7 +110,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Pyplan Documentation</a>
+          <a href="../index.html">pyplandoc</a>
         
       </nav>
 
@@ -150,7 +160,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="intro">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="intro">
 <h1>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h1>
 <p>In the following sections you will learn how to use the Pyplan User Guide, the system requirements and the steps to follow in order to use Pyplan.</p>
 <ul class="simple">
@@ -158,9 +192,8 @@
 <li><p><a class="reference external" href="Pyplan/Introduction/Intro/#how-to-access-pyplan">How to Access to Pyplan</a></p></li>
 <li><p><a class="reference external" href="Pyplan/Introduction/Intro/#how-to-use-the-knowledge-base">How to Use this Manual</a></p></li>
 </ul>
-</div>
 <div class="section" id="first-steps-in-pyplan">
-<h1>First steps in Pyplan<a class="headerlink" href="#first-steps-in-pyplan" title="Permalink to this headline">¶</a></h1>
+<h2>First steps in Pyplan<a class="headerlink" href="#first-steps-in-pyplan" title="Permalink to this headline">¶</a></h2>
 <p>This section presents the basic concepts such as: 1) log in, log out and edit profile, 2) main window, property bar and widgets.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="/Pyplan/Introduction/Sign%20up">Sign up</a></p></li>
@@ -168,7 +201,7 @@
 </ul>
 </div>
 <div class="section" id="file-manager">
-<h1>File Manager<a class="headerlink" href="#file-manager" title="Permalink to this headline">¶</a></h1>
+<h2>File Manager<a class="headerlink" href="#file-manager" title="Permalink to this headline">¶</a></h2>
 <p>In this section, you will learn how to manage different files on which the model is based. You can duplicate folders, create new ones, rename existing files, move a file to a different location, compress and unzip a file, upload new files or download existing ones.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="Pyplan/2.%20Model%20Manager/File%20Manager/">File Manager</a></p></li>
@@ -176,7 +209,7 @@
 </ul>
 </div>
 <div class="section" id="creating-dashboards">
-<h1>Creating dashboards<a class="headerlink" href="#creating-dashboards" title="Permalink to this headline">¶</a></h1>
+<h2>Creating dashboards<a class="headerlink" href="#creating-dashboards" title="Permalink to this headline">¶</a></h2>
 <p>In this section, you will learn how to create, mark dashboards and reports as favorite in the Reports Manager. Then you will learn how to creat a dashboards with different types of blocks and graphs.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="Pyplan/4-Creating Dashboards/Report Manager.html"><span class="doc">Reports Manager</span></a></p></li>
@@ -199,7 +232,7 @@
 </ul>
 </div>
 <div class="section" id="editing-models">
-<h1>Editing Models<a class="headerlink" href="#editing-models" title="Permalink to this headline">¶</a></h1>
+<h2>Editing Models<a class="headerlink" href="#editing-models" title="Permalink to this headline">¶</a></h2>
 <p>In this section, you will learn how to edit the model preferences. You will learn to evaluate nodes, navigate into the diagram, import and export modules. Then you will create nodes with functiones and number format. These nodes can have a style, color, size and alignment. At the end, the Function List.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/model-preferences/">Model preferences</a></p></li>
@@ -213,14 +246,14 @@
 </ul>
 </div>
 <div class="section" id="schedule-task">
-<h1>Schedule Task<a class="headerlink" href="#schedule-task" title="Permalink to this headline">¶</a></h1>
+<h2>Schedule Task<a class="headerlink" href="#schedule-task" title="Permalink to this headline">¶</a></h2>
 <p>This module will allow you program tasks to run the day and at the scheduled time.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/model-tasks/">Model task</a></p></li>
 </ul>
 </div>
 <div class="section" id="workflow">
-<h1>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h1>
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
 <p>In this section, you will learn to create a task and assign it to another user. As well, you will learn to create and manage status, groups and transitions.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/gantt-2/">Gantt</a></p></li>
@@ -230,7 +263,7 @@
 </ul>
 </div>
 <div class="section" id="knowledge-base">
-<h1>Knowledge Base<a class="headerlink" href="#knowledge-base" title="Permalink to this headline">¶</a></h1>
+<h2>Knowledge Base<a class="headerlink" href="#knowledge-base" title="Permalink to this headline">¶</a></h2>
 <p>In this module, you will find and add documentation of the model and its modules.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/knowledge-base-2/">Knowledge base</a></p></li>
@@ -238,7 +271,7 @@
 </ul>
 </div>
 <div class="section" id="security-options">
-<h1>Security options<a class="headerlink" href="#security-options" title="Permalink to this headline">¶</a></h1>
+<h2>Security options<a class="headerlink" href="#security-options" title="Permalink to this headline">¶</a></h2>
 <p>In this section, you will find different modules to user administration.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/user-manager-2/">User Manager</a></p></li>
@@ -248,7 +281,7 @@
 </ul>
 </div>
 <div class="section" id="other-features">
-<h1>Other features<a class="headerlink" href="#other-features" title="Permalink to this headline">¶</a></h1>
+<h2>Other features<a class="headerlink" href="#other-features" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/function-list/">Function List</a></p></li>
 <li><p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/cubecalc-installation-2/">Cubecalc</a></p></li>
@@ -258,6 +291,7 @@
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbNDMzODE5MzBdfQ==
 --></div>
+</div>
 
 
            </div>
@@ -270,7 +304,7 @@ eyJoaXN0b3J5IjpbNDMzODE5MzBdfQ==
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>

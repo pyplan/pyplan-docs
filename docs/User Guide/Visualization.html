@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Node Visualization &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>Node Visualization &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,9 +34,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="User Interface Designer" href="User Interface Designer.html" />
+    <link rel="prev" title="Executing Nodes" href="Node Execution.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -45,16 +47,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> Pyplan Documentation
+            <a href="../index.html">
           
 
           
             
-            <img src="../_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -82,9 +84,26 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html"><strong>Home</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Quick Start.html"><strong>Quick Start</strong></a></li>
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../home.html">About Pyplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Node Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#tables">Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#regular-table">Regular Table</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#conditional-format">Conditional Format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pivot-tables">Pivot Tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#graphs">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#advanced-options-and-index-sync">Advanced Options and Index Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#other-visualization-libraries">Other visualization libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="User Interface Designer.html">User Interface Designer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
 
@@ -100,7 +119,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Pyplan Documentation</a>
+          <a href="../index.html">pyplandoc</a>
         
       </nav>
 
@@ -150,7 +169,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="node-visualization">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="node-visualization">
 <h1>Node Visualization<a class="headerlink" href="#node-visualization" title="Permalink to this headline">¶</a></h1>
 <p>When a node is run (double clicking it) its result can be rendered as a table, a pivot table, different type of graphs, or a map.
 The visualization type is selected clicking on the configuration wheel that appears when you enter in the visualization edit mode. After clicking the configuration wheel the following menu is displayed to navigate and set the options.
@@ -238,12 +281,21 @@ NzQsMTE1NDMyMzk4Nl19
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="User Interface Designer.html" class="btn btn-neutral float-right" title="User Interface Designer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Node Execution.html" class="btn btn-neutral float-left" title="Executing Nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>

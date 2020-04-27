@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>User Guide &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>User Guide &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,9 +34,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="App Home" href="App Homepage.html" />
+    <link rel="prev" title="Home" href="../home.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -45,16 +47,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> Pyplan Documentation
+            <a href="../index.html">
           
 
           
             
-            <img src="../_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -82,9 +84,38 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html"><strong>Home</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Quick Start.html"><strong>Quick Start</strong></a></li>
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../home.html">About Pyplan</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>User Guide</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-you-will-find-in-this-user-guide"><strong>What you will find in this User Guide</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyplan-app-homepage"><strong>Pyplan App Homepage</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-manager"><strong>File Manager</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#model"><strong>Model</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visualization"><strong>Visualization</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interface-designer"><strong>Interface Designer</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-and-user-management"><strong>Configuration and User Management</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tutorials-examples-and-demos"><strong>Tutorials, Examples and Demos</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#what-you-will-not-find-in-this-user-guide"><strong>What you will NOT find in this User Guide</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#formerly-cubeplan-users"><strong>Formerly Cubeplan users</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyplan-library-correlation-with-cubeplan"><strong>Pyplan Library correlation with Cubeplan</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#financial-planning-library-for-cubeplan-users"><strong>Financial Planning Library for Cubeplan users</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyplan-excel-addin"><strong>Pyplan Excel AddIn</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html">Node Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#tables">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#graphs">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#advanced-options-and-index-sync">Advanced Options and Index Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#other-visualization-libraries">Other visualization libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="User Interface Designer.html">User Interface Designer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
 
@@ -100,7 +131,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Pyplan Documentation</a>
+          <a href="../index.html">pyplandoc</a>
         
       </nav>
 
@@ -150,7 +181,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="user-guide">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="user-guide">
 <h1><strong>User Guide</strong><a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
 <p>The following sections cover the basic functionalities and features of Pyplan.
 Pyplan is in permanent evolution, so you will probably find minor differences between this document and the last Pyplan version running online.</p>
@@ -207,69 +262,375 @@ Cubeplan models cannot be run in Pyplan. A good way to learn how to use Python i
 <p>Check examples available in  <strong>Pyplan Library</strong> folder to see how things  you did in Cubeplan are now done using <strong>Pyplan</strong> .</p>
 <p><img alt="enter image description here" src="http://img.pyplan.org/Int_pplexamples_new.png" /></p>
 <p>The following table contains <strong>Cubeplan basic function</strong> list and its <strong>correlation in Pyplan</strong>.</p>
-<p>|Model| Title in Cubeplan|Pyplan Library|Node with example|PPL,XA or Pandas|
-|—–|—–|—–|—–|—–|
-|Selecting Data from Array|change index|change_index|change_index_ex  /change_index_by_pos_ex|PPL|
-|Selecting Data from Array|subscript|subscript|subscript_ex|PPL|
-|Selecting Data from Array|subscript looking up|lookup|lookup_ex|PPL|
-|Selecting Data from Array|subset|subset|subset_ex|PPL|
-|Selecting Data from Array|slice|slice_dataarray|slice_dataarray_ex|PPL|
-|Basic Math and Missing Values|size|len()|len_size_ex|XA|
-|Basic Math and Missing Values|size|dataarray.size|len_size_ex|XA|
-|Basic Math and Missing Values|undef_filter|fill_all|fillall_ex|PPL|
-|Basic Math and Missing Values|nvx_is_null/nvx_is_nan|dataarray.fillna()|missing_values_methodsfillna|XA|
-|Basic Math and Missing Values|undef_filter|fill_inf|fillinf_ex|PPL|
-|Basic Math and Missing Values|min|dataarray.min(teams.name)|min_along_indexes|XA|
-|Basic Math and Missing Values|max|dataarray.max(teams.name)|max_along_indexes|XA|
-|Basic Math and Missing Values|if then else|xr.where|xr_where_exa|XA|
-|Basic Math and Missing Values|min_|xr.ufuncs.minimum|mini_maxi_among_2_dataarrays|XA|
-|Basic Math and Missing Values|max_|xr.ufuncs.maximum|pp_maximum|XA|
-|Aggregation and Rolling window operations|sum|dataarray.sum(teams.name)|sum_ex|XA|
-|Aggregation and Rolling window operations|cumulate|dataarray.cumsum(teams.name)|cumsum_ex|XA|
-|Aggregation and Rolling window operations|cumproduct|dataarray.cumprod(teams.name)|cumprod_ex|XA|
-|Aggregation and Rolling window operations|backward looking sum|dataarray.rolling|back_look_sum_example|XA|
-|Aggregation and Rolling window operations|filtered aggregate|aggregate|aggregate_ex|PPL|
-|Working with Indexes|concat|concat_index|concatindex_ex|PPL|
-|Working with Indexes|new|add_periods_ex|add_periods_ex|PPL|
-|Working with Indexes|new|apply_fn|apply_fn_ex|PPL|
-|Working with Indexes|find in text|find|find_ex|PPL|
-|Working with Indexes|splittext|split_text|splittext_ex|PPL|
-|Dynamic NPV IRR  and Linear Depreciation|npv|npv|npv_ex|PPL|
-|Dynamic NPV IRR  and Linear Depreciation|irr|irr|irr_ex|PPL|
-|Dynamic NPV IRR  and Linear Depreciation|dynamic|dynamic|dynamic_ex|PPL|
-|Dynamic NPV IRR  and Linear Depreciation|new|create_time|time|PPL|
-|Dynamic NPV IRR  and Linear Depreciation|linear depreciation|linear_depreciation|linear_depreciation_ex|PPL|
-|Dynamic NPV IRR  and Linear Depreciation|or|¦|NA|XA|
-|Reading Data from Excel|nvx_da_source_cone|excel_connection|excel_connection_ex|PPL|
-|Reading Data from Excel|nvx_read_index|index_from_excel|reading_example_index|PPL|
-|Reading Data from Excel|nvx_read_table|dataarray_from_excel|dataarray_from_excel_ex|PPL|
-|Reading Data from Excel|nvx_read_table|pandas_from_excel|pandas_from_excel_ex|PPL|
-|Interacting with Pandas|new| pd.read_csv|pd_read_csv|Pandas|
-|Interacting with Pandas|new|index_from_pandas|orders_date|PPL|
-|Interacting with Pandas|new|reading from pandas see example|sales_data_by_orders_date|XA||</p>
-</div>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Model</th>
+<th>Title in Cubeplan</th>
+<th>Pyplan Library</th>
+<th>Node with example</th>
+<th>PPL,XA or Pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selecting Data from Array</td>
+<td>change index</td>
+<td>change_index</td>
+<td>change_index_ex  /change_index_by_pos_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Selecting Data from Array</td>
+<td>subscript</td>
+<td>subscript</td>
+<td>subscript_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Selecting Data from Array</td>
+<td>subscript looking up</td>
+<td>lookup</td>
+<td>lookup_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Selecting Data from Array</td>
+<td>subset</td>
+<td>subset</td>
+<td>subset_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Selecting Data from Array</td>
+<td>slice</td>
+<td>slice_dataarray</td>
+<td>slice_dataarray_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>size</td>
+<td>len()</td>
+<td>len_size_ex</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>size</td>
+<td>dataarray.size</td>
+<td>len_size_ex</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>undef_filter</td>
+<td>fill_all</td>
+<td>fillall_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>nvx_is_null/nvx_is_nan</td>
+<td>dataarray.fillna()</td>
+<td>missing_values_methodsfillna</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>undef_filter</td>
+<td>fill_inf</td>
+<td>fillinf_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>min</td>
+<td>dataarray.min(teams.name)</td>
+<td>min_along_indexes</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>max</td>
+<td>dataarray.max(teams.name)</td>
+<td>max_along_indexes</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>if then else</td>
+<td>xr.where</td>
+<td>xr_where_exa</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>min_</td>
+<td>xr.ufuncs.minimum</td>
+<td>mini_maxi_among_2_dataarrays</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>max_</td>
+<td>xr.ufuncs.maximum</td>
+<td>pp_maximum</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Aggregation and Rolling window operations</td>
+<td>sum</td>
+<td>dataarray.sum(teams.name)</td>
+<td>sum_ex</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Aggregation and Rolling window operations</td>
+<td>cumulate</td>
+<td>dataarray.cumsum(teams.name)</td>
+<td>cumsum_ex</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Aggregation and Rolling window operations</td>
+<td>cumproduct</td>
+<td>dataarray.cumprod(teams.name)</td>
+<td>cumprod_ex</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Aggregation and Rolling window operations</td>
+<td>backward looking sum</td>
+<td>dataarray.rolling</td>
+<td>back_look_sum_example</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Aggregation and Rolling window operations</td>
+<td>filtered aggregate</td>
+<td>aggregate</td>
+<td>aggregate_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Working with Indexes</td>
+<td>concat</td>
+<td>concat_index</td>
+<td>concatindex_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Working with Indexes</td>
+<td>new</td>
+<td>add_periods_ex</td>
+<td>add_periods_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Working with Indexes</td>
+<td>new</td>
+<td>apply_fn</td>
+<td>apply_fn_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Working with Indexes</td>
+<td>find in text</td>
+<td>find</td>
+<td>find_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Working with Indexes</td>
+<td>splittext</td>
+<td>split_text</td>
+<td>splittext_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>npv</td>
+<td>npv</td>
+<td>npv_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>irr</td>
+<td>irr</td>
+<td>irr_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>dynamic</td>
+<td>dynamic</td>
+<td>dynamic_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>new</td>
+<td>create_time</td>
+<td>time</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>linear depreciation</td>
+<td>linear_depreciation</td>
+<td>linear_depreciation_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>or</td>
+<td>¦</td>
+<td>NA</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Reading Data from Excel</td>
+<td>nvx_da_source_cone</td>
+<td>excel_connection</td>
+<td>excel_connection_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Reading Data from Excel</td>
+<td>nvx_read_index</td>
+<td>index_from_excel</td>
+<td>reading_example_index</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Reading Data from Excel</td>
+<td>nvx_read_table</td>
+<td>dataarray_from_excel</td>
+<td>dataarray_from_excel_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Reading Data from Excel</td>
+<td>nvx_read_table</td>
+<td>pandas_from_excel</td>
+<td>pandas_from_excel_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Interacting with Pandas</td>
+<td>new</td>
+<td>pd.read_csv</td>
+<td>pd_read_csv</td>
+<td>Pandas</td>
+</tr>
+<tr>
+<td>Interacting with Pandas</td>
+<td>new</td>
+<td>index_from_pandas</td>
+<td>orders_date</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Interacting with Pandas</td>
+<td>new</td>
+<td>reading from pandas see example</td>
+<td>sales_data_by_orders_date</td>
+<td>XA</td>
+</tr>
+</tbody>
+</table></div>
 <div class="section" id="financial-planning-library-for-cubeplan-users">
 <h3><strong>Financial Planning Library for Cubeplan users</strong><a class="headerlink" href="#financial-planning-library-for-cubeplan-users" title="Permalink to this headline">¶</a></h3>
 <p>If you are used to create <strong>financial planning models in Cubeplan</strong> then these other functions will be useful for you.</p>
 <p><strong>Contact your former Cubeplan distributor</strong> to ask for the module with these specific functions.</p>
-<p>|Module| Title in Cubeplan|Pyplan Library|
-|—–|—–|—–|
-|Financial Planning|sea_to_time|sea_to_time|
-|Financial Planning|annualise|annualise|
-|Financial Planning|month|month|
-|Financial Planning|evatime|evatime|
-|Financial Planning|new|days_to_time|
-|Financial Planning|new|time_to_days|
-|Financial Planning|evayears|evayears|
-|Financial Planning|years to time|years_to_time|
-|Financial Planning|cascade_volume|cascade_volume|
-|Financial Planning|band_allocation|band_allocation|
-|Financial Planning|new|dispatch|
-|Financial Planning|new|nvx_read_multi_sheets|
-|Financial Planning|new|nvx_smart_pandas|
-|Financial Planning|new|nvx_round|
-|Financial Planning|new|nvx_safe_int_div|</p>
-<p>Use these functions as you used them in Cubeplan.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Module</th>
+<th>Title in Cubeplan</th>
+<th>Pyplan Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Financial Planning</td>
+<td>sea_to_time</td>
+<td>sea_to_time</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>annualise</td>
+<td>annualise</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>month</td>
+<td>month</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>evatime</td>
+<td>evatime</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>days_to_time</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>time_to_days</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>evayears</td>
+<td>evayears</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>years to time</td>
+<td>years_to_time</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>cascade_volume</td>
+<td>cascade_volume</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>band_allocation</td>
+<td>band_allocation</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>dispatch</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>nvx_read_multi_sheets</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>nvx_smart_pandas</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>nvx_round</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>nvx_safe_int_div</td>
+</tr>
+</tbody>
+</table><p>Use these functions as you used them in Cubeplan.</p>
 </div>
 <div class="section" id="pyplan-excel-addin">
 <h3><strong>Pyplan Excel AddIn</strong><a class="headerlink" href="#pyplan-excel-addin" title="Permalink to this headline">¶</a></h3>
@@ -293,12 +654,21 @@ NDY4Nl19
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="App Homepage.html" class="btn btn-neutral float-right" title="App Home" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../home.html" class="btn btn-neutral float-left" title="Home" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>

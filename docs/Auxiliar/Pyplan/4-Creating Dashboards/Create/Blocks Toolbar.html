@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Blocks Toolbar &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>Blocks Toolbar &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/doctools.js"></script>
         <script src="../../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
 
@@ -33,7 +34,6 @@
   
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
 </head>
@@ -45,16 +45,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="../../../../index.html" class="icon icon-home"> Pyplan Documentation
+            <a href="../../../../index.html">
           
 
           
             
-            <img src="../../../../_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="../../../../_static/Logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -83,8 +83,18 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/index.html"><strong>Home</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../Quick Start.html"><strong>Quick Start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../home.html">About Pyplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Visualization.html">Node Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Visualization.html#tables">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Visualization.html#graphs">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Visualization.html#advanced-options-and-index-sync">Advanced Options and Index Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/Visualization.html#other-visualization-libraries">Other visualization libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../User Guide/User Interface Designer.html">User Interface Designer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
 
@@ -100,7 +110,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../../index.html">Pyplan Documentation</a>
+          <a href="../../../../index.html">pyplandoc</a>
         
       </nav>
 
@@ -150,18 +160,64 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="blocks-toolbar">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="blocks-toolbar">
 <h1>Blocks Toolbar<a class="headerlink" href="#blocks-toolbar" title="Permalink to this headline">¶</a></h1>
 <p>When the dashboard is on edit mode, the following buttons are displayed:</p>
 <p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/funciones.png"><img alt="funciones" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/funciones.png" /></a></p>
-<p>|Icon|Description|
-|–|–|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun1.png"><img alt="fun1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun1.png" /></a>|It resets the block, leaving it blank. The  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/create-blocks/">buttons</a>  are displayed so you can start over.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun2.png"><img alt="fun2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun2.png" /></a>|It allows you to click and drag a block so you can place it where you want.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun3.png"><img alt="fun3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun3.png" /></a>|It splits the block in half, creating a new one under the original.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun4.png"><img alt="fun4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun4.png" /></a>|It splits the block in half, creating a new one to the right of the original.|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun5.png"><img alt="fun5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun5.png" /></a>|It deletes the block.|</p>
-<hr class="docutils" />
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun1.png"><img alt="fun1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun1.png" /></a></td>
+<td>It resets the block, leaving it blank. The  <a href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/create-blocks/">buttons</a>  are displayed so you can start over.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun2.png"><img alt="fun2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun2.png" /></a></td>
+<td>It allows you to click and drag a block so you can place it where you want.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun3.png"><img alt="fun3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun3.png" /></a></td>
+<td>It splits the block in half, creating a new one under the original.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun4.png"><img alt="fun4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun4.png" /></a></td>
+<td>It splits the block in half, creating a new one to the right of the original.</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun5.png"><img alt="fun5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/fun5.png" /></a></td>
+<td>It deletes the block.</td>
+</tr>
+</tbody>
+</table><hr class="docutils" />
 <p>If you place the cursor over a block a bubble will appear on the screen, as shown in the picture:<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/bur1.png"><img alt="bur1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/bur1.png" /></a></p>
 <p>First, you will see the brief description of the node. If you click  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/bur2.png"><img alt="bur2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/bur2.png" /></a>, you will be sent to the  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/knowledge-base-2/">Knowledge Base</a>.</p>
 <p>Then, you will see the tasks from the group associated to this node. If you click  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/bur3.png"><img alt="bur3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/bur3.png" /></a>, you will be sent to  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/gantt-2/">Workflow</a>. If you click <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/bur4.png"><img alt="bur4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/07/bur4.png" /></a>, you  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/gantt-2/#New_task">create a new task</a>.<br />You can edit a task from this window by clicking on its name.</p>
@@ -186,7 +242,7 @@ eyJoaXN0b3J5IjpbLTI3MjQ2MzcxMF19
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>

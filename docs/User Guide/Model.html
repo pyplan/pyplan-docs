@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Model &mdash; Pyplan Documentation 1.0 documentation</title>
+  <title>Model &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,9 +34,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pyplan.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Executing Nodes" href="Node Execution.html" />
+    <link rel="prev" title="File Manager" href="File Manager.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -45,16 +47,16 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search"  style="background: #236093" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> Pyplan Documentation
+            <a href="../index.html">
           
 
           
             
-            <img src="../_static/pyplan_logo.jpg" class="logo" alt="Logo"/>
+            <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -82,9 +84,39 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html"><strong>Home</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Quick Start.html"><strong>Quick Start</strong></a></li>
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../home.html">About Pyplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#node-properties-tabs">Node Properties Tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#types-of-nodes">Types of Nodes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#node">Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#function">Function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision">Decision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index">Index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#button">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module">Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text">Text</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#model-preferences">Model Preferences</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#default-imports">Default imports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-python-libraries">Using Python Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toolboxes">Toolboxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shortcuts">Shortcuts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html">Node Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#tables">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#graphs">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#advanced-options-and-index-sync">Advanced Options and Index Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html#other-visualization-libraries">Other visualization libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="User Interface Designer.html">User Interface Designer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
 
@@ -100,7 +132,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Pyplan Documentation</a>
+          <a href="../index.html">pyplandoc</a>
         
       </nav>
 
@@ -150,7 +182,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="model">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="model">
 <h1>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="node-properties-tabs">
 <h2>Node Properties Tabs<a class="headerlink" href="#node-properties-tabs" title="Permalink to this headline">¶</a></h2>
@@ -296,48 +352,212 @@ This is an experimental feature. Further development of toolboxes will be mainly
 <h2>Shortcuts<a class="headerlink" href="#shortcuts" title="Permalink to this headline">¶</a></h2>
 <p>Shortcuts are very useful when modelling.</p>
 <p>Take a look at shortcuts available on Pyplan on the following chart.</p>
-<p>|Keys (PC)|(iOS)|Action|
-|———–|———–|———–|
-|Shift + Click ||Select node|
-|Shift + area|Shift + area|Select node area|
-|Delete|Delete |Delete node|
-|Ctrl + ←|Ctrl + Cmd + ←|Align left|
-|Ctrl + →|Ctrl + Cmd + →|Align right|
-|Ctrl + down|Ctrl + Cmd + down |Align bottom edge|
-|Ctrl + up|Ctrl + Cmd + up |Align top edge|
-|Ctrl + F|Ctrl + F |Search node|
-|Ctrl + S|Ctrl + S |Save current model|
-|Ctrl + H|Ctrl + H|From a selected alias node go to the original|
-|Ctrl + R|Ctrl + R|Evaluate node|
-|Ctrl + Y|Ctrl + Y|Alternated displaying nodes Title / ID|
-| Ctrl + Click|Option + Click|Insert node Id in other node definition|
-|Ctrl + space|Ctrl + space |Autofill formulas|
-|Ctrl + B|Ctrl + B |Edit node number format|
-|Ctrl + C|Ctrl + C |Copy node|
-|Ctrl + X|Ctrl + X |Cut node|
-|Ctrl + V|Ctrl + V |Paste node|
-|Ctrl + M|Ctrl + M |Create alias|
-|Ctrl + D|Ctrl + D |Duplicate node|
-|Ctrl + G|Ctrl + G |Same height|
-|Ctrl + I|Ctrl + I|Same width|
-|Ctrl + Alt + 0|Ctrl + Option + 0|Same size|
-|Ctrl + Enter|Cmd + Enter|Evaluate node and show console output|
-|Ctrl + E|Ctrl + E|Evaluate and Explore node properties|
-|Ctrl + A|Ctrl + A |Select all items from PivotGrid and influence diagram|
-|Ctrl + Alt + O||New output|
-|Ctrl + Alt + I|Ctrl + Opt + Cmd + I|New input|
-|Ctrl + Alt + D|Ctrl + Opt + D|Go to influence diagram|
-|Mouse Wheel||Move the diagram up/down|
-|Alt + Mouse Wheel||Move the diagram left/right|
-|Ctrl + Mouse Wheel||Increase/reduce node size|
-|Ctrl + Shift +H|Ctrl + Shift +H|Go back to the last level when navigating the modules in the diagram|
-|Ctrl + Q|Ctrl + Q|Go one level up|
-|Ctrl + Shift + C||Copy PivotGrid with format|
-|Ctrl + F (in dock)|Cmd + F (in dock)|Search/ change key|
-|Ctrl + 1 (in dock)|Ctrl + 1 (in dock)|Move to properties window|
-|Ctrl + 2 (in dock)|Ctrl + 2 (in dock)|Move to code window|
-|Ctrl + 3 (in dock)|Ctrl + 3 (in dock)|Move to docs window|</p>
-<p>Take advantaged of these to increase coding speed.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Keys (PC)</th>
+<th>(iOS)</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shift + Click</td>
+<td></td>
+<td>Select node</td>
+</tr>
+<tr>
+<td>Shift + area</td>
+<td>Shift + area</td>
+<td>Select node area</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete</td>
+<td>Delete node</td>
+</tr>
+<tr>
+<td>Ctrl + ←</td>
+<td>Ctrl + Cmd + ←</td>
+<td>Align left</td>
+</tr>
+<tr>
+<td>Ctrl + →</td>
+<td>Ctrl + Cmd + →</td>
+<td>Align right</td>
+</tr>
+<tr>
+<td>Ctrl + down</td>
+<td>Ctrl + Cmd + down</td>
+<td>Align bottom edge</td>
+</tr>
+<tr>
+<td>Ctrl + up</td>
+<td>Ctrl + Cmd + up</td>
+<td>Align top edge</td>
+</tr>
+<tr>
+<td>Ctrl + F</td>
+<td>Ctrl + F</td>
+<td>Search node</td>
+</tr>
+<tr>
+<td>Ctrl + S</td>
+<td>Ctrl + S</td>
+<td>Save current model</td>
+</tr>
+<tr>
+<td>Ctrl + H</td>
+<td>Ctrl + H</td>
+<td>From a selected alias node go to the original</td>
+</tr>
+<tr>
+<td>Ctrl + R</td>
+<td>Ctrl + R</td>
+<td>Evaluate node</td>
+</tr>
+<tr>
+<td>Ctrl + Y</td>
+<td>Ctrl + Y</td>
+<td>Alternated displaying nodes Title / ID</td>
+</tr>
+<tr>
+<td>Ctrl + Click</td>
+<td>Option + Click</td>
+<td>Insert node Id in other node definition</td>
+</tr>
+<tr>
+<td>Ctrl + space</td>
+<td>Ctrl + space</td>
+<td>Autofill formulas</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td>Ctrl + B</td>
+<td>Edit node number format</td>
+</tr>
+<tr>
+<td>Ctrl + C</td>
+<td>Ctrl + C</td>
+<td>Copy node</td>
+</tr>
+<tr>
+<td>Ctrl + X</td>
+<td>Ctrl + X</td>
+<td>Cut node</td>
+</tr>
+<tr>
+<td>Ctrl + V</td>
+<td>Ctrl + V</td>
+<td>Paste node</td>
+</tr>
+<tr>
+<td>Ctrl + M</td>
+<td>Ctrl + M</td>
+<td>Create alias</td>
+</tr>
+<tr>
+<td>Ctrl + D</td>
+<td>Ctrl + D</td>
+<td>Duplicate node</td>
+</tr>
+<tr>
+<td>Ctrl + G</td>
+<td>Ctrl + G</td>
+<td>Same height</td>
+</tr>
+<tr>
+<td>Ctrl + I</td>
+<td>Ctrl + I</td>
+<td>Same width</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + 0</td>
+<td>Ctrl + Option + 0</td>
+<td>Same size</td>
+</tr>
+<tr>
+<td>Ctrl + Enter</td>
+<td>Cmd + Enter</td>
+<td>Evaluate node and show console output</td>
+</tr>
+<tr>
+<td>Ctrl + E</td>
+<td>Ctrl + E</td>
+<td>Evaluate and Explore node properties</td>
+</tr>
+<tr>
+<td>Ctrl + A</td>
+<td>Ctrl + A</td>
+<td>Select all items from PivotGrid and influence diagram</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + O</td>
+<td></td>
+<td>New output</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + I</td>
+<td>Ctrl + Opt + Cmd + I</td>
+<td>New input</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + D</td>
+<td>Ctrl + Opt + D</td>
+<td>Go to influence diagram</td>
+</tr>
+<tr>
+<td>Mouse Wheel</td>
+<td></td>
+<td>Move the diagram up/down</td>
+</tr>
+<tr>
+<td>Alt + Mouse Wheel</td>
+<td></td>
+<td>Move the diagram left/right</td>
+</tr>
+<tr>
+<td>Ctrl + Mouse Wheel</td>
+<td></td>
+<td>Increase/reduce node size</td>
+</tr>
+<tr>
+<td>Ctrl + Shift +H</td>
+<td>Ctrl + Shift +H</td>
+<td>Go back to the last level when navigating the modules in the diagram</td>
+</tr>
+<tr>
+<td>Ctrl + Q</td>
+<td>Ctrl + Q</td>
+<td>Go one level up</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + C</td>
+<td></td>
+<td>Copy PivotGrid with format</td>
+</tr>
+<tr>
+<td>Ctrl + F (in dock)</td>
+<td>Cmd + F (in dock)</td>
+<td>Search/ change key</td>
+</tr>
+<tr>
+<td>Ctrl + 1 (in dock)</td>
+<td>Ctrl + 1 (in dock)</td>
+<td>Move to properties window</td>
+</tr>
+<tr>
+<td>Ctrl + 2 (in dock)</td>
+<td>Ctrl + 2 (in dock)</td>
+<td>Move to code window</td>
+</tr>
+<tr>
+<td>Ctrl + 3 (in dock)</td>
+<td>Ctrl + 3 (in dock)</td>
+<td>Move to docs window</td>
+</tr>
+</tbody>
+</table><p>Take advantaged of these to increase coding speed.</p>
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTg5ODAxNTIyNiwzMTk4NDA2NjksMjAzND
 g0Mzg0OSwxODM2NjM3MTI5LC02NTA1MjI4OSwtMTQ4NTA3NTAx
@@ -355,12 +575,21 @@ XX0=
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Node Execution.html" class="btn btn-neutral float-right" title="Executing Nodes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="File Manager.html" class="btn btn-neutral float-left" title="File Manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Pyplan
+        &copy; Copyright 2020, Franco Barberis
 
     </p>
   </div>
