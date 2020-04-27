@@ -44,6 +44,11 @@ Pull the files form the repository so yo have the latest versions of the markdow
 If needed, add the new markdown files in the ondex.rst toctree
 
 ### Step Three
+In the command line, go to the repository folder, and execute Sphinx
+
+    sphinx-build -b html source build
+
+The new site will be generated in the buid folder
 
  
 
@@ -53,6 +58,6 @@ If needed, add the new markdown files in the ondex.rst toctree
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyODg3MDM2NCwtMTE0MjA4MDg4NiwtMT
+eyJoaXN0b3J5IjpbMTE3MjgyODM4MSwtMTE0MjA4MDg4NiwtMT
 A2MjI0Mjg5NF19
 -->
