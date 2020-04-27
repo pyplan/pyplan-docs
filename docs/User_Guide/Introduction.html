@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User Guide &mdash; pyplandoc 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #236093" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../home.html">About Pyplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Quick Start.html"><strong>Quick Start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="User Interface Designer.html">User Interface Designer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Auxiliar/newhome.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Auxiliar/Functions/index.html">ADE Function List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Community.html"><strong>Pyplan Community site</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyplandoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li><strong>User Guide</strong></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/User_Guide/Introduction.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="user-guide">
+<h1><strong>User Guide</strong><a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
+<p>The following sections cover the basic functionalities and features of Pyplan.
+Pyplan is in permanent evolution, so you will probably find minor differences between this document and the last Pyplan version running online.</p>
+<div class="section" id="what-you-will-find-in-this-user-guide">
+<h2><strong>What you will find in this User Guide</strong><a class="headerlink" href="#what-you-will-find-in-this-user-guide" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>The User Guide has been structured in the following sections:</p>
+<div class="section" id="pyplan-app-homepage">
+<h3><strong>Pyplan App Homepage</strong><a class="headerlink" href="#pyplan-app-homepage" title="Permalink to this headline">¶</a></h3>
+<p>Where the application’s main menu and tools are described.</p>
+</div>
+<div class="section" id="file-manager">
+<h3><strong>File Manager</strong><a class="headerlink" href="#file-manager" title="Permalink to this headline">¶</a></h3>
+<p>Users have their own workspace and can also access a Public workspace. The File manager provides assistance for working with files related to your applications.</p>
+</div>
+<div class="section" id="model">
+<h3><strong>Model</strong><a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
+<p>Pyplan organizes Python code in nodes that are represented as a workflow (influence diagram.) In this section, all the tools and features created for helping you build the calculation and data manipulation logic are explained.</p>
+</div>
+<div class="section" id="visualization">
+<h3><strong>Visualization</strong><a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h3>
+<p>Calculation steps are contained in nodes that end with a result. These nodes can be evaluated, and their result can be displayed as a table, graph or map.
+All native Pyplan visualization alternatives and parameter configurations are described in this section.
+It is important to highlight that it is also possible to use many other visualization libraries available in Python, like <a class="reference external" href="https://bokeh.pydata.org/en/latest/">Bokeh</a> or <a class="reference external" href="https://github.com/plotly/plotly.py">Plotly</a> for rendering results.</p>
+</div>
+<div class="section" id="interface-designer">
+<h3><strong>Interface Designer</strong><a class="headerlink" href="#interface-designer" title="Permalink to this headline">¶</a></h3>
+<p>Visualization and user controls are grouped in interfaces which allow the user to interact with your app and explore the results. In this chapter, we will explain how to create, configure, and share these apps. <strong>Most importantly: no coding required!</strong></p>
+</div>
+<div class="section" id="configuration-and-user-management">
+<h3><strong>Configuration and User Management</strong><a class="headerlink" href="#configuration-and-user-management" title="Permalink to this headline">¶</a></h3>
+<p>The enterprise version of Pyplan is installed on a server or provided as a service through Amazon Elastic Cloud. In this section, we will explore the app’s architecture and how to administer users in terms of security and resources.</p>
+</div>
+<div class="section" id="tutorials-examples-and-demos">
+<h3><strong>Tutorials, Examples and Demos</strong><a class="headerlink" href="#tutorials-examples-and-demos" title="Permalink to this headline">¶</a></h3>
+<p>In the Public folder that you can access through the File manager, you will find many Pyplan models grouped as Tutorials, Examples and Demos.
+<strong>Tutorials</strong> are basic examples that illustrate how Pyplan natively handles and interact with Python objects.
+The <strong>Examples</strong> are intended to demonstrate what can be done with Pyplan. You can review its code to understand how to adapt or reuse any piece of code in your own project.
+In the <strong>Demos</strong> folder, you will find complete applications related to certain topics and/or industries.</p>
+</div>
+</div>
+<div class="section" id="what-you-will-not-find-in-this-user-guide">
+<h2><strong>What you will NOT find in this User Guide</strong><a class="headerlink" href="#what-you-will-not-find-in-this-user-guide" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Pyplan can be considered a Python integrated development environment for data analytics apps. This User Guide is not intended to explain how to program in Python, or in any of the other used libraries, like Pandas, Numpy or Xarray just to name a few. There are plenty of introductory tutorials and courses for you to learn from. The libraries’ own documentation is always a good source of information, and for any challenging task you can also count on the community help gathered in sites like StackOverflow.</p>
+</div>
+<div class="section" id="formerly-cubeplan-users">
+<h2><strong>Formerly Cubeplan users</strong><a class="headerlink" href="#formerly-cubeplan-users" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p><strong>Pyplan</strong> is the software evolution of <strong>Cubeplan</strong>. Improvements were so radical that required a change in the name of the product. However, in order to make it easy for former Cubeplan users to migrate to Pyplan, we have created a library that reproduces, as similar as possible, Cubeplan functions and syntax.
+Cubeplan models cannot be run in Pyplan. A good way to learn how to use Python is to migrate an existing Cubeplan model.</p>
+<div class="section" id="pyplan-library-correlation-with-cubeplan">
+<h3><strong>Pyplan Library correlation with Cubeplan</strong><a class="headerlink" href="#pyplan-library-correlation-with-cubeplan" title="Permalink to this headline">¶</a></h3>
+<p>Check examples available in  <strong>Pyplan Library</strong> folder to see how things  you did in Cubeplan are now done using <strong>Pyplan</strong> .</p>
+<p><img alt="enter image description here" src="http://img.pyplan.org/Int_pplexamples_new.png" /></p>
+<p>The following table contains <strong>Cubeplan basic function</strong> list and its <strong>correlation in Pyplan</strong>.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Model</th>
+<th>Title in Cubeplan</th>
+<th>Pyplan Library</th>
+<th>Node with example</th>
+<th>PPL,XA or Pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Selecting Data from Array</td>
+<td>change index</td>
+<td>change_index</td>
+<td>change_index_ex  /change_index_by_pos_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Selecting Data from Array</td>
+<td>subscript</td>
+<td>subscript</td>
+<td>subscript_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Selecting Data from Array</td>
+<td>subscript looking up</td>
+<td>lookup</td>
+<td>lookup_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Selecting Data from Array</td>
+<td>subset</td>
+<td>subset</td>
+<td>subset_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Selecting Data from Array</td>
+<td>slice</td>
+<td>slice_dataarray</td>
+<td>slice_dataarray_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>size</td>
+<td>len()</td>
+<td>len_size_ex</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>size</td>
+<td>dataarray.size</td>
+<td>len_size_ex</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>undef_filter</td>
+<td>fill_all</td>
+<td>fillall_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>nvx_is_null/nvx_is_nan</td>
+<td>dataarray.fillna()</td>
+<td>missing_values_methodsfillna</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>undef_filter</td>
+<td>fill_inf</td>
+<td>fillinf_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>min</td>
+<td>dataarray.min(teams.name)</td>
+<td>min_along_indexes</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>max</td>
+<td>dataarray.max(teams.name)</td>
+<td>max_along_indexes</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>if then else</td>
+<td>xr.where</td>
+<td>xr_where_exa</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>min_</td>
+<td>xr.ufuncs.minimum</td>
+<td>mini_maxi_among_2_dataarrays</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Basic Math and Missing Values</td>
+<td>max_</td>
+<td>xr.ufuncs.maximum</td>
+<td>pp_maximum</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Aggregation and Rolling window operations</td>
+<td>sum</td>
+<td>dataarray.sum(teams.name)</td>
+<td>sum_ex</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Aggregation and Rolling window operations</td>
+<td>cumulate</td>
+<td>dataarray.cumsum(teams.name)</td>
+<td>cumsum_ex</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Aggregation and Rolling window operations</td>
+<td>cumproduct</td>
+<td>dataarray.cumprod(teams.name)</td>
+<td>cumprod_ex</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Aggregation and Rolling window operations</td>
+<td>backward looking sum</td>
+<td>dataarray.rolling</td>
+<td>back_look_sum_example</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Aggregation and Rolling window operations</td>
+<td>filtered aggregate</td>
+<td>aggregate</td>
+<td>aggregate_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Working with Indexes</td>
+<td>concat</td>
+<td>concat_index</td>
+<td>concatindex_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Working with Indexes</td>
+<td>new</td>
+<td>add_periods_ex</td>
+<td>add_periods_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Working with Indexes</td>
+<td>new</td>
+<td>apply_fn</td>
+<td>apply_fn_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Working with Indexes</td>
+<td>find in text</td>
+<td>find</td>
+<td>find_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Working with Indexes</td>
+<td>splittext</td>
+<td>split_text</td>
+<td>splittext_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>npv</td>
+<td>npv</td>
+<td>npv_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>irr</td>
+<td>irr</td>
+<td>irr_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>dynamic</td>
+<td>dynamic</td>
+<td>dynamic_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>new</td>
+<td>create_time</td>
+<td>time</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>linear depreciation</td>
+<td>linear_depreciation</td>
+<td>linear_depreciation_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Dynamic NPV IRR  and Linear Depreciation</td>
+<td>or</td>
+<td>¦</td>
+<td>NA</td>
+<td>XA</td>
+</tr>
+<tr>
+<td>Reading Data from Excel</td>
+<td>nvx_da_source_cone</td>
+<td>excel_connection</td>
+<td>excel_connection_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Reading Data from Excel</td>
+<td>nvx_read_index</td>
+<td>index_from_excel</td>
+<td>reading_example_index</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Reading Data from Excel</td>
+<td>nvx_read_table</td>
+<td>dataarray_from_excel</td>
+<td>dataarray_from_excel_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Reading Data from Excel</td>
+<td>nvx_read_table</td>
+<td>pandas_from_excel</td>
+<td>pandas_from_excel_ex</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Interacting with Pandas</td>
+<td>new</td>
+<td>pd.read_csv</td>
+<td>pd_read_csv</td>
+<td>Pandas</td>
+</tr>
+<tr>
+<td>Interacting with Pandas</td>
+<td>new</td>
+<td>index_from_pandas</td>
+<td>orders_date</td>
+<td>PPL</td>
+</tr>
+<tr>
+<td>Interacting with Pandas</td>
+<td>new</td>
+<td>reading from pandas see example</td>
+<td>sales_data_by_orders_date</td>
+<td>XA</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="financial-planning-library-for-cubeplan-users">
+<h3><strong>Financial Planning Library for Cubeplan users</strong><a class="headerlink" href="#financial-planning-library-for-cubeplan-users" title="Permalink to this headline">¶</a></h3>
+<p>If you are used to create <strong>financial planning models in Cubeplan</strong> then these other functions will be useful for you.</p>
+<p><strong>Contact your former Cubeplan distributor</strong> to ask for the module with these specific functions.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Module</th>
+<th>Title in Cubeplan</th>
+<th>Pyplan Library</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Financial Planning</td>
+<td>sea_to_time</td>
+<td>sea_to_time</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>annualise</td>
+<td>annualise</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>month</td>
+<td>month</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>evatime</td>
+<td>evatime</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>days_to_time</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>time_to_days</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>evayears</td>
+<td>evayears</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>years to time</td>
+<td>years_to_time</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>cascade_volume</td>
+<td>cascade_volume</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>band_allocation</td>
+<td>band_allocation</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>dispatch</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>nvx_read_multi_sheets</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>nvx_smart_pandas</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>nvx_round</td>
+</tr>
+<tr>
+<td>Financial Planning</td>
+<td>new</td>
+<td>nvx_safe_int_div</td>
+</tr>
+</tbody>
+</table><p>Use these functions as you used them in Cubeplan.</p>
+</div>
+<div class="section" id="pyplan-excel-addin">
+<h3><strong>Pyplan Excel AddIn</strong><a class="headerlink" href="#pyplan-excel-addin" title="Permalink to this headline">¶</a></h3>
+<p>Check the following <a class="reference external" href="https://cubeplat.com/pyplan-excel-addin/">link</a> to install Pyplan Excel AddIn if you need to dynamically download Pyplan Information into your spreadsheets.</p>
+<p><img alt="enter image description here" src="http://img.pyplan.org/Int_add_in.png" /></p>
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTEwNDgxODIyMCwtNTEyNDE2MSwxMjAzMD
+U5ODM5LC04MDEzNTU5ODksLTIxMzcwOTQxOTksLTU2NTg1OTQx
+NiwtNDgxNTc1NjcsNDYzOTc0MjM5LDE5NzkwMjUxOTYsLTgzMj
+E0NzY0OCw0MjA0MDI1NTIsMTY5ODg1MjMwLC0zMjAyMTA4OTQs
+LTE5ODM5OTE1NzksLTExNjk2NzI3NTUsMTQyMDQ2MjIzMSwxMj
+AwMjY4MTY5LC03NDU2MzE5NCwtMjE0MzU1NDY4NiwtMjE0MzU1
+NDY4Nl19
+--></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Franco Barberis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-154592986-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

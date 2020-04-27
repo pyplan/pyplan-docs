@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Node Visualization &mdash; pyplandoc 1.0 documentation</title>
+  <title>Visualization &mdash; pyplandoc 1.0 documentation</title>
   
 
   
@@ -35,7 +35,9 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="User Interface Designer" href="User Interface Designer.html" />
+    <link rel="prev" title="Model" href="../User Guide/Model.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -54,7 +56,7 @@
 
           
             
-            <img src="../_static/logo.jpg" class="logo" alt="Logo"/>
+            <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -82,9 +84,30 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction.html"><strong>User Guide</strong></a></li>
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../home.html">About Pyplan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Quick Start.html"><strong>Quick Start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../User Guide/Model.html">Model</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#node-visualization">Node Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tables">Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#regular-table">Regular Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conditional-format">Conditional Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pivot-tables">Pivot Tables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#graphs">Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-options-and-index-sync">Advanced Options and Index Sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-visualization-libraries">Other visualization libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="User Interface Designer.html">User Interface Designer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Auxiliar/newhome.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Auxiliar/Functions/index.html">ADE Function List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Community.html"><strong>Pyplan Community site</strong></a></li>
 </ul>
 
@@ -131,7 +154,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Node Visualization</li>
+      <li>Visualization</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,8 +197,11 @@
     text-align: unset;
 }
 </style>
+<div class="section" id="visualization">
+<h1>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h1>
+<p>#Visualization</p>
 <div class="section" id="node-visualization">
-<h1>Node Visualization<a class="headerlink" href="#node-visualization" title="Permalink to this headline">¶</a></h1>
+<h2>Node Visualization<a class="headerlink" href="#node-visualization" title="Permalink to this headline">¶</a></h2>
 <p>When a node is run (double clicking it) its result can be rendered as a table, a pivot table, different type of graphs, or a map.
 The visualization type is selected clicking on the configuration wheel that appears when you enter in the visualization edit mode. After clicking the configuration wheel the following menu is displayed to navigate and set the options.
 <img alt="enter image description here" src="http://img.pyplan.org/viz-edit2.png" /></p>
@@ -183,26 +209,26 @@ The visualization type is selected clicking on the configuration wheel that appe
 <img alt="enter image description here" src="http://img.pyplan.org/viz-viz-type1.png" /></p>
 </div>
 <div class="section" id="tables">
-<h1>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h1>
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
 <p>There are two types of tables intended for different purposes.
 Regular tables and pivot tables.
 The image below show some different configuration features from these tables:</p>
 <div class="section" id="regular-table">
-<h2>Regular Table<a class="headerlink" href="#regular-table" title="Permalink to this headline">¶</a></h2>
+<h3>Regular Table<a class="headerlink" href="#regular-table" title="Permalink to this headline">¶</a></h3>
 <p>Is the default view of any node. The user can pivot dimensions and filter any dimension by clicking the <code class="docutils literal notranslate"><span class="pre">(all)</span></code> legend next to each dimension.
 It is possible to generate custom configurations by rows or cols. Heatmaps and Background colors based on customized ranges are also possible.
 <img alt="enter image description here" src="http://img.pyplan.org/viz-table-standard.png" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">Number</span> <span class="pre">format</span></code> menu and <code class="docutils literal notranslate"><span class="pre">advanced</span> <span class="pre">options</span></code> may help generating the view you need for each variable.</p>
 <p><img alt="enter image description here" src="http://img.pyplan.org/Vizua_tables_format.png" /></p>
+</div>
 <div class="section" id="conditional-format">
 <h3>Conditional Format<a class="headerlink" href="#conditional-format" title="Permalink to this headline">¶</a></h3>
 <p>Regular table has the option of defining conditional format rules to coloured, highlight with different font or even add a shape on displayed information.</p>
 <p>These configurations enhance visualization analysis.
 <img alt="enter image description here" src="http://img.pyplan.org/Vizua_condi_format.png" /></p>
 </div>
-</div>
 <div class="section" id="pivot-tables">
-<h2>Pivot Tables<a class="headerlink" href="#pivot-tables" title="Permalink to this headline">¶</a></h2>
+<h3>Pivot Tables<a class="headerlink" href="#pivot-tables" title="Permalink to this headline">¶</a></h3>
 <p>Different than the standard table It allows multiple dimensions in rows or cols as well as filtering.
 It has fewer customization options compared to regular tables.
 <img alt="enter image description here" src="http://img.pyplan.org/viz-tables-dif1.png" />
@@ -211,7 +237,7 @@ But one main differentiation is that can work as an input table, allowing the us
 </div>
 </div>
 <div class="section" id="graphs">
-<h1>Graphs<a class="headerlink" href="#graphs" title="Permalink to this headline">¶</a></h1>
+<h2>Graphs<a class="headerlink" href="#graphs" title="Permalink to this headline">¶</a></h2>
 <p>Pyplan includes several type of standard chart graphs.
 Take advantage of  <code class="docutils literal notranslate"><span class="pre">graph</span> <span class="pre">generation</span></code>  shortcut to create a graph in one click.
 <img alt="enter image description here" src="http://img.pyplan.org/Visua_table_n_graph.png" /></p>
@@ -219,7 +245,7 @@ Take advantage of  <code class="docutils literal notranslate"><span class="pre">
 Types of graphs, labels, legends, axis configurations and other characteristics can be defined on this menu. <img alt="enter image description here" src="http://img.pyplan.org/Visua_graph_cust.png" /></p>
 </div>
 <div class="section" id="advanced-options-and-index-sync">
-<h1>Advanced Options and Index Sync<a class="headerlink" href="#advanced-options-and-index-sync" title="Permalink to this headline">¶</a></h1>
+<h2>Advanced Options and Index Sync<a class="headerlink" href="#advanced-options-and-index-sync" title="Permalink to this headline">¶</a></h2>
 <p>Regular tables as well as graphs share a couple of advanced options that can be very helpful.
 Click on  <code class="docutils literal notranslate"><span class="pre">Hide</span> <span class="pre">empty</span> <span class="pre">data</span></code>,  <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">index</span> <span class="pre">detail</span></code> and  <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">drilldown</span></code> to see how these options impact on tables and graphs.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Index</span> <span class="pre">Sync</span></code> is a powerful tool when working with tables and graphs sharing dimensions.
@@ -235,7 +261,7 @@ Des-synchronizing index <code class="docutils literal notranslate"><span class="
 Check specific section for further infomation.</p>
 </div>
 <div class="section" id="other-visualization-libraries">
-<h1>Other visualization libraries<a class="headerlink" href="#other-visualization-libraries" title="Permalink to this headline">¶</a></h1>
+<h2>Other visualization libraries<a class="headerlink" href="#other-visualization-libraries" title="Permalink to this headline">¶</a></h2>
 <p>As any <a class="reference external" href="https://www.python.org/">Python</a> developer knows there are plenty of open source graphing libraries available on the web. <a class="reference external" href="https://bokeh.pydata.org/en/latest/">Bokeh</a>  ,<a class="reference external" href="https://plot.ly/python/">Plotly</a> and <a class="reference external" href="https://pypi.org/project/folium/">Folium</a> are examples of these libraries that can be used for plotting data.</p>
 <p>Pyplan has the capability of interpreting and rendering HTML code generated by these libraries.</p>
 <p>For instance, you can check the following example
@@ -255,12 +281,22 @@ ODc2NTg1OTA1LC0xMzE0NTg3MDU0LC0xNDI4NTAzNzA0LC0yNz
 c3Nzc4MTksMTA1MTMyMjg2MywtMTg4NDIzMDg3Myw4MTE1MjY2
 NzQsMTE1NDMyMzk4Nl19
 --></div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="User Interface Designer.html" class="btn btn-neutral float-right" title="User Interface Designer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../User Guide/Model.html" class="btn btn-neutral float-left" title="Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
