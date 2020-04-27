@@ -36,6 +36,9 @@ pip install sphinx-markdown-tables
  - The table of contents is in the index.rst file
  - A new installation of Sphinx will overwrite both files so make shure of replace them with the files in the Pyplan's repository.
 
+
+Pull the files form the repository so yo have the latest versions of the markdown files in /source
+
  
 
 
@@ -44,5 +47,6 @@ pip install sphinx-markdown-tables
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NTQ4MDg1MiwtMTA2MjI0Mjg5NF19
+eyJoaXN0b3J5IjpbLTExNDIwODA4ODYsLTEwNjIyNDI4OTRdfQ
+==
 -->
