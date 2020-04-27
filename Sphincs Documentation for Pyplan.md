@@ -10,7 +10,7 @@ The source files for the documentation are in:
 
 > /pyplan-docs/source
 
-All the files for the documentation must be in Pyplan's github /source folder
+All the files for the documentation must be in Pyplan's GitHub /source folder
 The reccommended tool for markdown writing and editing is Stackedit [https://stackedit.io/](https://stackedit.io/)
 
 ## Tools needed:
@@ -34,7 +34,7 @@ pip install sphinx-markdown-tables
 
  - All the configuration needed for sphinx are in the config.py file
  - The table of contents is in the index.rst file
- - A new installation of Sphinx will overwrite both files so make shure of replace them with the files in the Pyplan's repository.
+ - A new installation of Sphinx will overwrite both files so make sure of replace them with the files in the Pyplan's repository.
 
 
 ### Step One:
@@ -64,6 +64,6 @@ The new Documentation site will be automatically updated
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjEwNDE3NTAsLTExNDIwODA4ODYsLT
-EwNjIyNDI4OTRdfQ==
+eyJoaXN0b3J5IjpbLTQ0MjIyODc1NiwtMTE0MjA4MDg4NiwtMT
+A2MjI0Mjg5NF19
 -->
