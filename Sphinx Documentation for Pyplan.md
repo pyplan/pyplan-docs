@@ -2,7 +2,7 @@
 
 ## Specs
 
-The Documentation site is: 
+The Documentation site is in: 
 
 > /pyplan-docs/docs
 
@@ -64,5 +64,5 @@ The new Documentation site will be automatically updated
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxOTE2NTE2M119
+eyJoaXN0b3J5IjpbLTQwNjg2MTY5MF19
 -->
