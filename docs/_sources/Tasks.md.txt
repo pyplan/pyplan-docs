@@ -1,7 +1,0 @@
-Tasks
-=====
-
- .. toctree::
-    	
-    Tasks/01_task_types.md
-    Tasks/02_etl_concept.md

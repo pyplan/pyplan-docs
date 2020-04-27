@@ -6,23 +6,15 @@
 Welcome to pyplandoc's documentation!
 =====================================
 
- .. toctree::
-     :glob:
-	 :caption: Contents:	
-	 
+.. toctree::
+
    About Pyplan <home>
-   Quick Start
-   
+   Quick Start*
    User Guide/Introduction
-   
+   User Guide/App Homepage
+   User Guide/File Manager
    User Guide/Model
-   User_Guide/Visualization
-   User_Guide/User Interface Designer
-   User_Guide/Node Execution
-   #User_Guide/Migrating from Cubeplan
-   #User_Guide/Influence Diagram
-   User_Guide/File Manager
-   User_Guide/App Homepage
-   Auxiliar/newhome
-   Auxiliar/Functions/index
+   User Guide/Node Execution
+   User Guide/Visualization
+   User Guide/User Interface Designer
    Community
