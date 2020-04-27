@@ -1,4 +1,7 @@
-Guide to generate the Pyplan's Documentation site.
+# Guide to generate the Pyplan's Documentation site.
+
+##Specs
+
 The Documentation site is: 
 
 > /pyplan-docs/docs
@@ -14,7 +17,7 @@ Tools needed:
 Sphinx for python:
 
     pip install sphinx
-Read The  theme
+Read The Docs theme
 
     pip install sphinx_rtd_theme
 
@@ -24,10 +27,15 @@ Recommonmark parser to parse markdown files
 
 Sphinx Markdown Tables to correctly render markdown tables
 
+```
+pip install sphinx-markdown-tables
+```
+
+
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNzY4ODE3NSwtMTA2MjI0Mjg5NF19
+eyJoaXN0b3J5IjpbMTE3MDYyNDEwMywtMTA2MjI0Mjg5NF19
 -->
