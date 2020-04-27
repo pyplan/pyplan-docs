@@ -13,10 +13,10 @@ The reccommended tool for markdown writing and editing is Stackedit [https://sta
 Tools needed:
 Sphinx for python:
 
-    $ pip install sphinx
+    pip install sphinx
 nbsphinx theme
 
-    pip install recommonmark
+    pip install sphinx_rtd_theme
 
 Recommonmark parser to parse markdown files
 
@@ -29,6 +29,5 @@ Sphinx Markdown Tables to correctly render markdown tables
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDQ0NjQwNDYsLTEwNjIyNDI4OTRdfQ
-==
+eyJoaXN0b3J5IjpbOTAxMDEzNzYwLC0xMDYyMjQyODk0XX0=
 -->
