@@ -37,7 +37,13 @@ pip install sphinx-markdown-tables
  - A new installation of Sphinx will overwrite both files so make shure of replace them with the files in the Pyplan's repository.
 
 
+### Step One:
 Pull the files form the repository so yo have the latest versions of the markdown files in /source
+
+### Step Two:
+If needed, add the new markdown files in the ondex.rst toctree
+
+### Step Three
 
  
 
@@ -47,6 +53,6 @@ Pull the files form the repository so yo have the latest versions of the markdow
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDIwODA4ODYsLTEwNjIyNDI4OTRdfQ
-==
+eyJoaXN0b3J5IjpbLTgyODg3MDM2NCwtMTE0MjA4MDg4NiwtMT
+A2MjI0Mjg5NF19
 -->
