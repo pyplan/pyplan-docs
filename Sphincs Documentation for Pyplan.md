@@ -48,7 +48,13 @@ In the command line, go to the repository folder, and execute Sphinx
 
     sphinx-build -b html source build
 
-The new site will be generated in the buid folder
+The new site will be generated in the /buid folder
+
+### Step Four
+Replace the /docs folder with the new files in the /buid folder
+Commit the changes and push to github
+
+The new Documentation site will be automatically updated
 
  
 
@@ -58,6 +64,6 @@ The new site will be generated in the buid folder
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MjgyODM4MSwtMTE0MjA4MDg4NiwtMT
-A2MjI0Mjg5NF19
+eyJoaXN0b3J5IjpbLTE4NjEwNDE3NTAsLTExNDIwODA4ODYsLT
+EwNjIyNDI4OTRdfQ==
 -->
