@@ -1,27 +1,24 @@
-.. Pyplan-doc documentation master file, created by
-   sphinx-quickstart on Fri Mar 20 12:14:56 2020.
+.. pyplandoc documentation master file, created by
+   sphinx-quickstart on Thu Mar 19 18:32:09 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Pyplan Documentation
-======================================
+Welcome to pyplandoc's documentation!
+=====================================
 
 .. toctree::
-   :maxdepth: 4
-
-   User Guide/index
+   
+   About Pyplan <home>
    Quick Start
    Community
    
-   
-   :orphan:
+.. toctree::
+   :caption: User Guide
 
-   Auxiliar/*
-   Others/*
-   Report/*
-   Tasks/*
-   User Guide/*
-
-
-
-
+   Introduction <User Guide/Introduction>
+   User Guide/App Homepage
+   User Guide/File Manager
+   User Guide/Model
+   User Guide/Node Execution
+   User Guide/Visualization
+   User Guide/User Interface Designer

@@ -1,4 +1,4 @@
-# **User Guide**
+# **Introduction**
 The following sections cover the basic functionalities and features of Pyplan.
 Pyplan is in permanent evolution, so you will probably find minor differences between this document and the last Pyplan version running online.
 
