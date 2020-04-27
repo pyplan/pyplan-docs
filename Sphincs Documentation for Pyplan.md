@@ -41,7 +41,7 @@ pip install sphinx-markdown-tables
 Pull the files form the repository so yo have the latest versions of the markdown files in /source
 
 ### Step Two:
-If needed, add the new markdown files in the ondex.rst toctree
+If needed, add the new markdown files to the index.rst toctree
 
 ### Step Three
 In the command line, go to the repository folder, and execute Sphinx
@@ -51,8 +51,8 @@ In the command line, go to the repository folder, and execute Sphinx
 The new site will be generated in the /buid folder
 
 ### Step Four
-Replace the /docs folder with the new files in the /buid folder
-Commit the changes and push to github
+Replace the files in the /docs folder with the new files in the /buid folder
+Commit the changes and push to GitHub
 
 The new Documentation site will be automatically updated
 
@@ -64,6 +64,6 @@ The new Documentation site will be automatically updated
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MjIyODc1NiwtMTE0MjA4MDg4NiwtMT
+eyJoaXN0b3J5IjpbLTIxOTE2NTE2MywtMTE0MjA4MDg4NiwtMT
 A2MjI0Mjg5NF19
 -->
