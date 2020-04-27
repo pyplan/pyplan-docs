@@ -16,11 +16,11 @@ Sphinx for python:
     $ pip install sphinx
 nbsphinx theme
 
-    $ pip install sphinx
+    pip install recommonmark
 
 Recommonmark parser to parse markdown files
 
-    $ pip install sphinx
+    pip install recommonmark
 
 Sphinx Markdown Tables to correctly render markdown tables
 
@@ -29,5 +29,6 @@ Sphinx Markdown Tables to correctly render markdown tables
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUzMzQwNzg2LC0xMDYyMjQyODk0XX0=
+eyJoaXN0b3J5IjpbLTE5MDQ0NjQwNDYsLTEwNjIyNDI4OTRdfQ
+==
 -->
