@@ -14,7 +14,7 @@ Tools needed:
 Sphinx for python:
 
     pip install sphinx
-nbsphinx theme
+Read The  theme
 
     pip install sphinx_rtd_theme
 
@@ -29,5 +29,5 @@ Sphinx Markdown Tables to correctly render markdown tables
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAxMDEzNzYwLC0xMDYyMjQyODk0XX0=
+eyJoaXN0b3J5IjpbMTUwNzY4ODE3NSwtMTA2MjI0Mjg5NF19
 -->
