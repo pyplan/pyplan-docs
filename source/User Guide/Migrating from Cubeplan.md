@@ -1,5 +1,5 @@
 # Migrating from Cubeplan
-Cubeplan models can not be r
+Even though the way of creating and sharing apps is the same,  influence diagram looks verCubeplan models can not be run on Pyplan
 ## Similarities
 Pyplan organizes Python code through influence diagrams the same as Cubeplan
 ## Differences
@@ -82,5 +82,5 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ5NzYzOTY0LC0xNzg2OTI2ODE2XX0=
+eyJoaXN0b3J5IjpbLTc3ODYzMjQ5MCwtMTc4NjkyNjgxNl19
 -->
