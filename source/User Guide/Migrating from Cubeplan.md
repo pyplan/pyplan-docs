@@ -1,5 +1,5 @@
 # Migrating from Cubeplan
-Even though the way of creating and sharing apps is the same,  influence diagram looks verCubeplan models can not be run on Pyplan
+Even though the way of creating and sharing apps is the same, Cubeplan models can not be run on Pyplan. Neither dashboards generated with Cubeplan can be exported and used in Pyplan. The basic reason for that is that
 ## Similarities
 Pyplan organizes Python code through influence diagrams the same as Cubeplan
 ## Differences
@@ -82,5 +82,5 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3ODYzMjQ5MCwtMTc4NjkyNjgxNl19
+eyJoaXN0b3J5IjpbLTI2MDE3MDQ5NywtMTc4NjkyNjgxNl19
 -->
