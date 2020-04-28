@@ -11,7 +11,7 @@ Pyplan natively interprets the Pandas, Numpy and Xarray objects visualising its 
 Libraries can be installed and used with any model. The model file registers libraries dependency to require instalment when shared with other users.
 
 ## Functions equivalence list
-Check the examples available in  **Pyplan Library** folder to see how things  you did in Cubeplan are now done using **Pyplan** .
+Check the examples available in  **Pyplan Library** folder to find how to do with Pyplan basic Cubeplan operations .
 
 ![enter image description here](http://img.pyplan.org/Int_pplexamples_new.png)
 
@@ -89,6 +89,5 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDAwNzY3NTQsLTE3ODY5MjY4MTZdfQ
-==
+eyJoaXN0b3J5IjpbMTA1MzM5Njk2OCwtMTc4NjkyNjgxNl19
 -->
