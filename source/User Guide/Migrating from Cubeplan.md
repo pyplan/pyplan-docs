@@ -1,8 +1,9 @@
 # Migrating from Cubeplan
+Cubeplan models can not be r
 ## Similarities
+Pyplan organizes Python code through influence diagrams the same as Cubeplan
 ## Differences
 ## Functions equivalence list
-### **Pyplan Library correlation with Cubeplan** 
 Check examples available in  **Pyplan Library** folder to see how things  you did in Cubeplan are now done using **Pyplan** .
 
 ![enter image description here](http://img.pyplan.org/Int_pplexamples_new.png)
@@ -81,6 +82,5 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzYyODQ4MjQsLTE3ODY5MjY4MTZdfQ
-==
+eyJoaXN0b3J5IjpbNDQ5NzYzOTY0LC0xNzg2OTI2ODE2XX0=
 -->
