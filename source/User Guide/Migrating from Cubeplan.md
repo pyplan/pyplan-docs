@@ -15,7 +15,7 @@ Check the examples available in  **Pyplan Library** folder to find how to do wit
 
 ![enter image description here](http://img.pyplan.org/Int_pplexamples_new.png)
 
-The following table contains **Cubeplan basic function** list and its **correlation in Pyplan**.
+The following table contains **Cubeplan basic function** list and its **equivalent in Pyplan**.
 
 |Model| Title in Cubeplan|Pyplan Library|Node with example|PPL,XA or Pandas|
 |-----|-----|-----|-----|-----|
@@ -84,10 +84,7 @@ If you are used to create **financial planning models in Cubeplan** then these o
 
 Use these functions as you used them in Cubeplan.
 
-## How to do in Pylan
-
-
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MzM5Njk2OCwtMTc4NjkyNjgxNl19
+eyJoaXN0b3J5IjpbLTgxODY0NDgyNSwtMTc4NjkyNjgxNl19
 -->
