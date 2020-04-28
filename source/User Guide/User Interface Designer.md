@@ -6,7 +6,7 @@ This layer can be accessed by clicking on the icon `Interfaces` located on the l
 
 
 
-![enter image description here](http://img.pyplan.org/UI_interfaces.png)
+![enter image description here](/assets/UI_interfaces.png)
 ## Layout
 Interfaces manager shows those I/O Interfaces created by the user and those that were shared by someone else.
 Shared interfaces can be used but not modified unless they are copied to user own workspace.
@@ -17,7 +17,7 @@ Once it has been copied user has total control over that interface.
  
 
 
-![enter image description here](http://img.pyplan.org/Ui_layout_new1.png)
+![enter image description here](/assets/Ui_layout_new1.png)
 
 **Favs app** for quick access can also be set once the user owns the interface.
 
@@ -26,23 +26,23 @@ Once it has been copied user has total control over that interface.
 If you want to create an interface from scratch click on `New` and select `interface`.
 
 Define a name for it and double click on your new interface
-![enter image description here](http://img.pyplan.org/Ui_new_interface.png)
+![enter image description here](/assets/Ui_new_interface.png)
 
 A white interface will open with a widget selector inside.
 
 The interface layout is created by adding and resizing new widgets. 
 Widgets can be added by pressing `+` or by dividing existing widgets block space clicking on the arrows (Right or Down) found at the top left corner of every widget block.
-![enter image description here](http://img.pyplan.org/Ui_blanck_interface.png)
+![enter image description here](/assets/Ui_blanck_interface.png)
 
 Each widget can be used for displaying information from the influence diagram choosing among the different visualization alternatives described on section `Node Visualization`.
 
 There are **two ways of selecting objects from diagram to represent them in an interface**.
 
 1- Click on the visualization icon you want to include and then search and select the node you want (searching by node Title or ID).
-![enter image description here](http://img.pyplan.org/UI_sele_obje_op1.png)
+![enter image description here](/assets/UI_sele_obje_op1.png)
 
 2- Or use one widget to show the influence diagram, then by pressing <kbd>Shift + click</kbd> on a node in the diagram, drag and drop it into the widget block you want to include it.
-![enter image description here](http://img.pyplan.org/UI_sele_obje_op2.png)
+![enter image description here](/assets/UI_sele_obje_op2.png)
 ## Inputs on interfaces
 
 Interfaces can have inputs as well as outputs widgets. 
@@ -54,7 +54,7 @@ In case of inputs widgets, depending on the type of input you need to make you c
 This object can be used when you need to modify information of an array directly on your model.
 
 For instance, in this example `market growth` information can be modified to simulate different scenarios, you may want to do this on your interface that is why it is presented as a pivot grid:
-![enter image description here](http://img.pyplan.org/UI_pivot_input.png)
+![enter image description here](/assets/UI_pivot_input.png)
 
 By dragging dimension in the correct order and pressing <kbd>ok</kbd> you build your input interface.
 
@@ -66,13 +66,13 @@ Indexes can be explicitly exposed on interfaces so that filtering  along dimensi
 
 If you need to set an **index widget** just drag it from de diagram or search for it using wizard object.
 **Indexes widget has their specific options menu.**
-![enter image description here](http://img.pyplan.org/UI_indexes.png)
+![enter image description here](/assets/UI_indexes.png)
 
 ### Selector input
 
 **Selector object** can also being dragged and dropped from diagram to create an input widget.
 
-![enter image description here](http://img.pyplan.org/UI_choices.png)
+![enter image description here](/assets/UI_choices.png)
 ## Synchronization
 Once an interface has been created dimensions shared by objects in that interface are automatically synchronized.
 
@@ -82,7 +82,7 @@ Let’s suppose you have created an interface like the following where `region`,
  
 If you select a **single region, a couple of items and a range of time** these selections will apply to all interface.
 
-![enter image description here](http://img.pyplan.org/UI_synchro_new.jpg)
+![enter image description here](/assets/UI_synchro_new.jpg)
 **Remember you can always choose to des-synchronized indexes as explained in `Node visualization` section.
 
 ## App Sharing
@@ -92,18 +92,18 @@ Once you have created various interfaces you may need to generate an application
 
 Creating an application is as simple as selecting `Application` from menu and defining a name for it.
 
-![enter image description here](http://img.pyplan.org/UI_create_app.png)
+![enter image description here](/assets/UI_create_app.png)
 
 By **dragging and dropping** previously created interfaces in the application deployment is done.
-![enter image description here](http://img.pyplan.org/UI_drag_dro_inter.png)
+![enter image description here](/assets/UI_drag_dro_inter.png)
 
 **Sharing an application**
 
 Select the application and press right bottom to access the following menu:
 
-<img alt="Image" title="Share 1" src="http://img.pyplan.org/UI_share_1.jpg" width="50%"/>
+<img alt="Image" title="Share 1" src="/assets/UI_share_1.jpg" width="50%"/>
 
-<img alt="Image" title="Share 1" src="http://img.pyplan.org/UI_share_2.jpg" width="70%"/>
+<img alt="Image" title="Share 1" src="/assets/UI_share_2.jpg" width="70%"/>
 
 
 **Share the application externally and make it accessible for every person with the link.**
