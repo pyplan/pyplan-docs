@@ -7,7 +7,8 @@ Nodes have a Title and an Identifier to call them from other nodes. You can also
 Pyplan also includes "intelligent" matrix operations by adapting the usage of the [Xarray](http://xarray.pydata.org/) python library
 ## Differences
 One of the most important conceptual difference of Pyplan is that a node can contain different type of objects (i.e. [Pandas](http://pandas.pydata.org/), [Numpy](https://numpy.org/devdocs/), [Xarray](http://xarray.pydata.org/)) This fact is one of the most important advantage of embracing Python language since you will be able to use specific purposes libraries that use different type of data structures and objects.
-Pyplan natively interprets the Pandas, N 
+Pyplan natively interprets the Pandas, Numpy and Xarray objects visualising its data as table or graphs with a single click.
+Another important 
 
 
 empower the possibilities of must be kept in mind when creating formulas.
@@ -91,5 +92,5 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYzMjk5MDc1LC0xNzg2OTI2ODE2XX0=
+eyJoaXN0b3J5IjpbMTExOTY0MDU1MCwtMTc4NjkyNjgxNl19
 -->
