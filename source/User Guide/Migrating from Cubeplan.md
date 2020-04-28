@@ -2,7 +2,7 @@
 Even though the way of creating and sharing apps is the same, Cubeplan models can not be run on Pyplan. Neither dashboards generated with Cubeplan can be exported and used in Pyplan.
 It is an excellent exercise for learning Pyplan translating an old Cubeplan model.
 ## Similarities
-Pyplan organizes Python code through influence diagrams the same as Cubeplan, but in this case, nodes could contain different type of objects (i.e. Pandas, Numpy, Xarray) so that the programmer needs to be aware of thatkeep in mind that
+Pyplan organizes Python code through influence diagrams the same as Cubeplan, but in this case, nodes could contain different type of objects (i.e. Pandas, Numpy, Xarray) so that the programmer needs to be aware of that when creating calculations.
 ## Differences
 ## Functions equivalence list
 Check examples available in  **Pyplan Library** folder to see how things  you did in Cubeplan are now done using **Pyplan** .
@@ -83,5 +83,6 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzAzMDY5OCwtMTc4NjkyNjgxNl19
+eyJoaXN0b3J5IjpbLTE3MDU4OTI1OTQsLTE3ODY5MjY4MTZdfQ
+==
 -->
