@@ -6,7 +6,7 @@ Pyplan organizes Python code through influence diagrams the same as Cubeplan.
 Nodes have a Title and an Identifier to call them from other nodes. You can also point and click a node to incorporate its Id when creating a formula. Navigating through the model works exactly the same, following inputs or outputs or by exploring the influence diagram. Nodes also include a documentation as in Cubeplan.
 Pyplan also includes "intelligent" matrix operations by adapting the usage of the [Xarray](http://xarray.pydata.org/) python library
 ## Differences
-One of the most important conceptual difference of Pyplan is that a node can contain different type of objects (i.e. [Pandas](http://pandas.pydata.org/), [Numpy](https://numpy.org/devdocs/), Xarray) that must be kept in mind when creating formulas.
+One of the most important conceptual difference of Pyplan is that a node can contain different type of objects (i.e. [Pandas](http://pandas.pydata.org/), [Numpy](https://numpy.org/devdocs/), [Xarray](http://xarray.pydata.org/)) That important fact is one of the most important advanempower the possibilities of must be kept in mind when creating formulas.
 so that the programmer needs to be aware of that when creating calculations.
 ## Functions equivalence list
 Check examples available in  **Pyplan Library** folder to see how things  you did in Cubeplan are now done using **Pyplan** .
@@ -87,5 +87,5 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIyNTA5Njg2LC0xNzg2OTI2ODE2XX0=
+eyJoaXN0b3J5IjpbLTk4NzY0NDk0NSwtMTc4NjkyNjgxNl19
 -->
