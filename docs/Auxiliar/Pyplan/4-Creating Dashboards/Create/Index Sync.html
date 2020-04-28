@@ -21,11 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-        <script src="../../../../_static/jquery.js"></script>
-        <script src="../../../../_static/underscore.js"></script>
-        <script src="../../../../_static/doctools.js"></script>
-        <script src="../../../../_static/language_data.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
 
@@ -45,7 +44,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: #236093" >
+        <div class="wy-side-nav-search" >
           
 
           
@@ -164,31 +163,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="indexes-synchronization">
+  <div class="section" id="indexes-synchronization">
 <h1>Indexes synchronization<a class="headerlink" href="#indexes-synchronization" title="Permalink to this headline">¶</a></h1>
 <p>To synchronize indexes you must first have a  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/en/knowledge-base/filter-type-block/">filter-type block</a>  containing indexes. Then, you must have a node among the variables containing the indexes.<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc1.png"><img alt="sinc1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/04/sinc1.png" /></a></p>
 <p>The example in the picture shows a dashboard that includes the Time index in one block and two graph-type blocks containing the same node. It is not necessary that the node be the same, but the Time index must be one of its variables.</p>

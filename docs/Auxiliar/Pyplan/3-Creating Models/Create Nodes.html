@@ -21,11 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -45,7 +44,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: #236093" >
+        <div class="wy-side-nav-search" >
           
 
           
@@ -164,46 +163,70 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="create-nodes">
+  <div class="section" id="create-nodes">
 <h1>Create Nodes<a class="headerlink" href="#create-nodes" title="Permalink to this headline">¶</a></h1>
 <p>If you want to create a node you have to enable the diagram edit mode first; the following options will be available:</p>
-<p>|<strong>Button</strong>|<strong>Node type</strong>|<strong>Shortcuts</strong>|
-|–|–|–|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia2.png"><img alt="dia2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia2.png" /></a>|Variable|Ctrl+2|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia3.png"><img alt="dia3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia3.png" /></a>|Index|Ctrl+6|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia4.png"><img alt="dia4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia4.png" /></a>|Module|Ctrl+5|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia5.png"><img alt="dia5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia5.png" /></a>|Text|Ctrl+9|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia6.png"><img alt="dia6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia6.png" /></a>|Button|Ctrl+0|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia7.png"><img alt="dia7" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia7.png" /></a>|Decision|Ctrl+1|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia8.png"><img alt="dia8" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia8.png" /></a>|Option|Ctrl+3|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia9.png"><img alt="dia9" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia9.png" /></a>|Objective|Ctrl+4|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia10.png"><img alt="dia10" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia10.png" /></a>|Constant|Ctrl+7|
-|<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia11.png"><img alt="dia11" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia11.png" /></a>|Function|Ctrl+8|</p>
-<p>You can create a node in two ways:</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th><strong>Button</strong></th>
+<th><strong>Node type</strong></th>
+<th><strong>Shortcuts</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia2.png"><img alt="dia2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia2.png" /></a></td>
+<td>Variable</td>
+<td>Ctrl+2</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia3.png"><img alt="dia3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia3.png" /></a></td>
+<td>Index</td>
+<td>Ctrl+6</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia4.png"><img alt="dia4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia4.png" /></a></td>
+<td>Module</td>
+<td>Ctrl+5</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia5.png"><img alt="dia5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia5.png" /></a></td>
+<td>Text</td>
+<td>Ctrl+9</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia6.png"><img alt="dia6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia6.png" /></a></td>
+<td>Button</td>
+<td>Ctrl+0</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia7.png"><img alt="dia7" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia7.png" /></a></td>
+<td>Decision</td>
+<td>Ctrl+1</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia8.png"><img alt="dia8" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia8.png" /></a></td>
+<td>Option</td>
+<td>Ctrl+3</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia9.png"><img alt="dia9" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia9.png" /></a></td>
+<td>Objective</td>
+<td>Ctrl+4</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia10.png"><img alt="dia10" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia10.png" /></a></td>
+<td>Constant</td>
+<td>Ctrl+7</td>
+</tr>
+<tr>
+<td><a href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia11.png"><img alt="dia11" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/05/dia11.png" /></a></td>
+<td>Function</td>
+<td>Ctrl+8</td>
+</tr>
+</tbody>
+</table><p>You can create a node in two ways:</p>
 <ol class="simple">
 <li><p>Click a node and drag it to the influence diagram window.</p></li>
 <li><p>Use the respective shortcut.</p></li>

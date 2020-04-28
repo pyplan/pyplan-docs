@@ -2,6 +2,10 @@
    sphinx-quickstart on Thu Mar 19 18:32:09 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+Pyplan
+======
+
+Pyplan is a graphical Integrated Development Environment for creating and sharing Data Analytics Apps.
 
 Pyplan's documentation
 ======================
