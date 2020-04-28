@@ -8,13 +8,10 @@ Pyplan also includes "intelligent" matrix operations by adapting the usage of th
 ## Differences
 One of the most important conceptual difference of Pyplan is that a node can contain different type of objects (i.e. [Pandas](http://pandas.pydata.org/), [Numpy](https://numpy.org/devdocs/), [Xarray](http://xarray.pydata.org/)) This fact is one of the most important advantage of embracing Python language since you will be able to use specific purposes libraries that use different type of data structures and objects.
 Pyplan natively interprets the Pandas, Numpy and Xarray objects visualising its data as table or graphs with a single click.
-Libraries can be installed and used with any model. The model file registers libraries dependency 
+Libraries can be installed and used with any model. The model file registers libraries dependency to require instalment when shared with other users.
 
-
-empower the possibilities of must be kept in mind when creating formulas.
-so that the programmer needs to be aware of that when creating calculations.
 ## Functions equivalence list
-Check examples available in  **Pyplan Library** folder to see how things  you did in Cubeplan are now done using **Pyplan** .
+Check the examples available in  **Pyplan Library** folder to see how things  you did in Cubeplan are now done using **Pyplan** .
 
 ![enter image description here](http://img.pyplan.org/Int_pplexamples_new.png)
 
@@ -92,5 +89,6 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNTA0ODA1OCwtMTc4NjkyNjgxNl19
+eyJoaXN0b3J5IjpbLTEyMDAwNzY3NTQsLTE3ODY5MjY4MTZdfQ
+==
 -->
