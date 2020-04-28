@@ -86,7 +86,7 @@ If you select a **single region, a couple of items and a range of time** these s
 **Remember you can always choose to des-synchronized indexes as explained in `Node visualization` section.
 
 ## App Sharing
-Once you have created various interfaces you may need to generate an application for sharing it with other users or even publicly.
+Once you have created various interfaces you may need to generate an application for sharing it with other users.
 
 **Creating an application**
 
@@ -112,11 +112,11 @@ Congratulations your [python](https://www.python.org/) coded application has bee
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE5MjI2Nzc4LDczNTI3NDcxMSw0NDQ5MT
-IwMTQsMTUyODUyMDcyOSwxMjgxNzI3Nzg3LC0zMjQwMDUyODUs
-LTc5ODU5MTg0MywxNjA1MjU5MzkzLC04MTEzMTQwNjQsMTY4Mj
-c5MzgzLC0xMzA2ODg4Nzk3LDkyMjA2MDU0NiwtMTM4Mjk2NTQ4
-NCwtNTQ5NTI2MTI0LC0yNzc2MzY5NTgsLTE5NzI4NjkwNjAsLT
-E1NzcxNzY2NzksLTE5MzIwNTYxODIsMTUyODUxMzA5OCwtMTg2
-MDI2MjYwNV19
+eyJoaXN0b3J5IjpbNjE1MTAyMzgzLDkxOTIyNjc3OCw3MzUyNz
+Q3MTEsNDQ0OTEyMDE0LDE1Mjg1MjA3MjksMTI4MTcyNzc4Nywt
+MzI0MDA1Mjg1LC03OTg1OTE4NDMsMTYwNTI1OTM5MywtODExMz
+E0MDY0LDE2ODI3OTM4MywtMTMwNjg4ODc5Nyw5MjIwNjA1NDYs
+LTEzODI5NjU0ODQsLTU0OTUyNjEyNCwtMjc3NjM2OTU4LC0xOT
+cyODY5MDYwLC0xNTc3MTc2Njc5LC0xOTMyMDU2MTgyLDE1Mjg1
+MTMwOThdfQ==
 -->
