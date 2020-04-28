@@ -3,7 +3,7 @@ Even though the way of creating and sharing apps is the same, Cubeplan models ca
 It is an excellent exercise for learning Pyplan translating an old Cubeplan model.
 ## Similarities
 Pyplan organizes Python code through influence diagrams the same as Cubeplan, but in this case, nodes could contain different type of objects (i.e. Pandas, Numpy, Xarray) so that the programmer needs to be aware of that when creating calculations.
-Nodes have a Title and an Identifier
+Nodes have a Title and an Identifier to call them from other nodes. Navigating through the model works exactly the same, following inputs or outputs or by 
 
 ## Differences
 ## Functions equivalence list
@@ -85,5 +85,5 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwOTA5NjQwMywtMTc4NjkyNjgxNl19
+eyJoaXN0b3J5IjpbLTYxOTc5Mjc3MiwtMTc4NjkyNjgxNl19
 -->
