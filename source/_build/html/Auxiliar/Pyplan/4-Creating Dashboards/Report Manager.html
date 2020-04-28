@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reports Manager &mdash; pyplandoc 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #236093" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/Logo.jpg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../home.html">About Pyplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Introduction.html"><strong>User Guide</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Model.html">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Visualization.html">Node Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Visualization.html#tables">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Visualization.html#graphs">Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Visualization.html#advanced-options-and-index-sync">Advanced Options and Index Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/Visualization.html#other-visualization-libraries">Other visualization libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../User Guide/User Interface Designer.html">User Interface Designer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Community.html"><strong>Pyplan Community site</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyplandoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Reports Manager</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/Auxiliar/Pyplan/4-Creating Dashboards/Report Manager.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="reports-manager">
+<h1>Reports Manager<a class="headerlink" href="#reports-manager" title="Permalink to this headline">¶</a></h1>
+<iframe width="721" height="480" src="https://www.youtube.com/embed/-Gxm8UDAkBk?list=PLhZdWvtJsasTSZeamYJ6TIs_ApZPD4ex-" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><div class="section" id="share-dashboard-or-report">
+<h2>Share dashboard or report<a class="headerlink" href="#share-dashboard-or-report" title="Permalink to this headline">¶</a></h2>
+<p>With a right click on the window some tools will be displayed. You should click Share.
+<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2018/01/Screenshot_3.png"><img alt="Screenshot_3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2018/01/Screenshot_3.png" /></a></p>
+<p>A window will open:<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp1-1.png"><img alt="comp1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp1-1.png" /></a></p>
+<div class="section" id="share-internal">
+<h3>Share internal<a class="headerlink" href="#share-internal" title="Permalink to this headline">¶</a></h3>
+<p>There are three share modes:</p>
+<div class="section" id="not-shared">
+<h4>Not shared<a class="headerlink" href="#not-shared" title="Permalink to this headline">¶</a></h4>
+<p>This is the default mode. The view of the modes is as follows:<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp1.png"><img alt="comp1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp1.png" /></a></p>
+</div>
+<div class="section" id="share-with-everybody">
+<h4>Share with Everybody<a class="headerlink" href="#share-with-everybody" title="Permalink to this headline">¶</a></h4>
+<p>If you choose this option, the dashboard will be shared with all the users of the company.<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp2-1.png"><img alt="comp2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp2-1.png" /></a></p>
+</div>
+<div class="section" id="share-with">
+<h4>Share with..<a class="headerlink" href="#share-with" title="Permalink to this headline">¶</a></h4>
+<p>This option allows you to select the users you want to share the dashboard with.<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp3-1.png"><img alt="comp3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp3-1.png" /></a></p>
+</div>
+</div>
+<div class="section" id="share-external">
+<h3>Share external<a class="headerlink" href="#share-external" title="Permalink to this headline">¶</a></h3>
+<iframe width="721" height="480" src="https://www.youtube.com/embed/VLZl8yY7OE4?list=PLhZdWvtJsasTSZeamYJ6TIs_ApZPD4ex-" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+There are two external share modes:<div class="section" id="link">
+<h4>Link<a class="headerlink" href="#link" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp6.png"><img alt="comp6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp6.png" /></a></p>
+<p><strong>Common instance:</strong>  All access under a common session. Thus, if someone change something in the dashboard, this change will impact in the other instances.</p>
+<p><strong>Navigate report:</strong>  Enabling this option, you can navigate the dashboards that are inside of the report. Remember that you must share a dashboard and check this option. You can’t share a report directly.</p>
+<p>Copy and paste the link on the browser to see the dashboard/report that was share.</p>
+</div>
+<div class="section" id="embed">
+<h4>Embed<a class="headerlink" href="#embed" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp7.png"><img alt="comp7" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2017/05/comp7.png" /></a></p>
+<p>Copy and paste this code on a web page to see the dashboard/report that was share.</p>
+</div>
+</div>
+</div>
+<div class="section" id="export-or-import-dashboards-or-reports">
+<h2>Export or import dashboards or reports<a class="headerlink" href="#export-or-import-dashboards-or-reports" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="export-dashboards-reports">
+<h3>Export dashboards/reports<a class="headerlink" href="#export-dashboards-reports" title="Permalink to this headline">¶</a></h3>
+<p>With a right click on the window some tools will be displayed. You should click Export.
+<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2018/01/Screenshot_4-1.png"><img alt="Screenshot_4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2018/01/Screenshot_4-1.png" /></a></p>
+<p>A window will open from which you can select the dashboards/reports you want to export.</p>
+<p><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2018/01/Screenshot_6-1.png"><img alt="Screenshot_6" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2018/01/Screenshot_6-1.png" /></a></p>
+<p>Once you have selected the dashboards you want to export, click  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/export2.png"><img alt="export2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/export2.png" /></a>.</p>
+</div>
+<div class="section" id="import-dashboards-reports">
+<h3>Import dashboards/reports<a class="headerlink" href="#import-dashboards-reports" title="Permalink to this headline">¶</a></h3>
+<p>First, you should click the button  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2018/01/Screenshot_5-1.png"><img alt="Screenshot_5" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2018/01/Screenshot_5-1.png" /></a> in the Reports Manager toolbar.</p>
+<p>A window will open from which you can select the .json file:<br /><a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/impor1.png"><img alt="impor1" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/impor1.png" /></a></p>
+<p>Once you have selected the file, a window will open from which you can select the dashboards/reports you want to import. The window looks like this:<a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/impor2.png"><img alt="impor2" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/impor2.png" /></a></p>
+<p>If the option <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/impor3.png"><img alt="impor3" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/impor3.png" /></a>  is enabled, the dashboards inside a report will be imported inside the report as well. If the option is disabled, the dashboards will be imported individually.<br />Once you have selected the dashboards, click  <a class="reference external" href="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/impor4.png"><img alt="impor4" src="http://www.cubeplat.com:8081/wiki/wp-content/uploads/2016/03/impor4.png" /></a>. They will be displayed in the Reports Manager.</p>
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTY1ODc3MTQwOF19
+--></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Franco Barberis
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-154592986-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
