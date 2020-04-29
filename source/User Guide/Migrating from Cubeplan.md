@@ -59,7 +59,7 @@ The following table contains **Cubeplan basic function** list and its **equivale
 |Interacting with Pandas|new|reading from pandas see example|sales_data_by_orders_date|XA|| 
 
 
-### **Financial Planning Library for Cubeplan users**
+### Financial Planning Library for Cubeplan users
 If you are used to create **financial planning models in Cubeplan** then these other functions will be useful for you.
 
 **Contact your former Cubeplan distributor** to ask for the module with these specific functions.
@@ -86,6 +86,6 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNjUxOTkyNCwtODE4NjQ0ODI1LC0xNz
-g2OTI2ODE2XX0=
+eyJoaXN0b3J5IjpbLTEyNDg1MDA3NDgsMTgwNjUxOTkyNCwtOD
+E4NjQ0ODI1LC0xNzg2OTI2ODE2XX0=
 -->
