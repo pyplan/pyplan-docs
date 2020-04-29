@@ -26,5 +26,5 @@ Pyplan's documentation
    User Guide/Model
    User Guide/Node Execution
    User Guide/Visualization
-   User Guide/Migrating from Cubeplan
    User Guide/User Interface Designer
+   User Guide/Migrating from Cubeplan
