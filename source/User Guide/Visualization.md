@@ -3,10 +3,10 @@
 ## Node Visualization
 When a node is run (double clicking it) its result can be rendered as a table, a pivot table, different type of graphs, or a map.
 The visualization type is selected clicking on the configuration wheel that appears when you enter in the visualization edit mode. After clicking the configuration wheel the following menu is displayed to navigate and set the options.
-![enter image description here](http://img.pyplan.org/viz-edit2.png)
+![enter image description here](http://img.pyplan.org/assets/viz-edit2.png)
 
 The first choice to be made is about the type of chart (Table, Graph or Map). The menu is accessed clicking on the first option called "Chart and filters".
-![enter image description here](/assets/viz-viz-type1.png)
+![enter image description here](/viz-viz-type1.png)
 
 
 ## Tables
@@ -82,11 +82,11 @@ Where **HTML code is rendered getting California power plants geographical repre
 Check the folowing box plot example
 ![enter image description here](/assets/Visua_box_plot2.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MzY0NjU3MywtMTY4MTM5NzU2NywtMT
-Y1MTk5ODA2LDIxMjYzNzU0NjEsLTE0MzYxMjI3NSwtMjA4ODEx
-OTQzMywtNDY5ODk5NTc5LC0xMjczOTQ2ODQzLDIwMzU0NDQ2MT
-csMTgzMTM2Njg3OCwxNDQ0NDU2NjM0LC0xMjE3OTkyMTE1LC0x
-MzA2OTgwNDI4LC04NzY1ODU5MDUsLTEzMTQ1ODcwNTQsLTE0Mj
-g1MDM3MDQsLTI3Nzc3NzgxOSwxMDUxMzIyODYzLC0xODg0MjMw
-ODczLDgxMTUyNjY3NF19
+eyJoaXN0b3J5IjpbLTExOTg2ODQ0NDksLTU0MzY0NjU3MywtMT
+Y4MTM5NzU2NywtMTY1MTk5ODA2LDIxMjYzNzU0NjEsLTE0MzYx
+MjI3NSwtMjA4ODExOTQzMywtNDY5ODk5NTc5LC0xMjczOTQ2OD
+QzLDIwMzU0NDQ2MTcsMTgzMTM2Njg3OCwxNDQ0NDU2NjM0LC0x
+MjE3OTkyMTE1LC0xMzA2OTgwNDI4LC04NzY1ODU5MDUsLTEzMT
+Q1ODcwNTQsLTE0Mjg1MDM3MDQsLTI3Nzc3NzgxOSwxMDUxMzIy
+ODYzLC0xODg0MjMwODczXX0=
 -->
