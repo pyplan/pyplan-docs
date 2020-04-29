@@ -1,4 +1,5 @@
 # Visualization
+
 ## Node Visualization
 When a node is run (double clicking it) its result can be rendered as a table, a pivot table, different type of graphs, or a map.
 The visualization type is selected clicking on the configuration wheel that appears when you enter in the visualization edit mode. After clicking the configuration wheel the following menu is displayed to navigate and set the options.
