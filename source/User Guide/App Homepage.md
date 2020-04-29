@@ -6,17 +6,17 @@ After logging in, the user lands at the app homepage, which is a starting point 
  - Opening tutorials or examples
  - Launching a tool (left-hand menu where options are enabled or not depending on whether there is an open model)
 
-![enter image description here](/assets/hop_home_new1.png)
+![enter image description here](http://img.pyplan.org/hop_home_new1.png)
 
 Users can go back to the homepage any time by clicking at the Pyplan icon or selecting Summary from the dropdown menu in the app header.
 
-![enter image description here](/assets/hop_goto_new.png)
+![enter image description here](http://img.pyplan.org/hop_goto_new.png)
 
 If you click on the model name, you can access information about the model and you will also find an option to close it.
-![enter image description here](/assets/hop_home_model_new.png)
+![enter image description here](http://img.pyplan.org/hop_home_model_new.png)
 
 In case there are multiple sessions open, they are listed as follows:
-![enter image description here](/assets/hop_home_sessions_new.png)
+![enter image description here](http://img.pyplan.org/hop_home_sessions_new.png)
 
 The user can jump from one session to another just by clicking on the session name or close any open session by clicking on the cross button.
 
