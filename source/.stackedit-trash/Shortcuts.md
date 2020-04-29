@@ -39,5 +39,5 @@
 |Ctrl + Shift + C	|Copy PivotGrid with format|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTYzNzY3MTEsMTA1NjQ4Njc3OV19
+eyJoaXN0b3J5IjpbLTE1NTYzNzY3MTFdfQ==
 -->
