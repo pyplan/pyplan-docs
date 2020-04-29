@@ -1,6 +1,6 @@
 # Configuration
 
-![enter image description here](/assets/Under_constuction.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Under_constuction.png)
 ### Soon you will be getting information about
 ## Architecture
 ## User Administration

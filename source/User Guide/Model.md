@@ -2,7 +2,7 @@
 ## Node Properties Tabs
 Pyplan structures code using an influence diagram of nodes. When a node is selected (on Edit mode), a Properties window opens. Nodes attributes can be inspected and edited by means of tabs that are labeled as <kbd>Properties</kbd>, <kbd>Code</></kbd>, and <kbd>Docs</kbd>.
 
-![enter image description here](http://img.pyplan.org/mod_node_prop.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/mod_node_prop.png)
 The <kbd>Properties</kbd> tab contains:
 
  - **Title**: the legend that will be displayed over the node.
@@ -13,25 +13,25 @@ The <kbd>Properties</kbd> tab contains:
  - **Code**: shortcut to the Code tab.
 
 The <kbd>Code</></kbd> tab:
-![enter image description here](http://img.pyplan.org/model-code-tab1.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-code-tab1.png)
 The Code tab presents two windows: the left one is where the code of the node is inserted.
 Nodes' code **must end with the result definition**. The **"result"** variable contains the output of the node, i.e., the values that will be displayed when the node is evaluated or called from other node.
 Intermediate local variables can be used within the node code. These local variables can be printed in the console for tracing calculation, but the result definition must be placed at the end.
 The right-side window displays the console output. The outputs of any `print()` statement will be displayed here.
 When the code is modified, a check and a cancel box appear, and the Play button turns orange to indicate the node needs to be run. 
- ![](http://img.pyplan.org/model-orange.png)
+ ![](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-orange.png)
 
 You can accept changes and run the node by pressing <kbd>Ctrl + Enter</></kbd> or by clicking on the icons. 
 After running the node, the Play button turns blue to indicate it has already been calculated.
-![enter image description here](http://img.pyplan.org/model-blue.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-blue.png)
 
 The <kbd>Docs</kbd> tab:
 This tab contains a complete HTML text editor to include rich text, links, images, and videos that describe and explain the fundamentals of every calculation step. This way, the app becomes an interactive knowledge repository.
-![enter image description here](http://img.pyplan.org/model-docs.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-docs.png)
 ## Types of Nodes
 The main elements for creating the app calculation logic are the following:
 
-<img src="http://img.pyplan.org/model-nodes-type.png"
+<img src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-nodes-type.png"
 	style="float: right; margin-left: 10px;"
 	ALIGN=”top”
 	height="300" /> 
@@ -81,7 +81,7 @@ You can drag a group of selected nodes into a module to organize your diagram or
 ### Text
 The text node is intended for clarification of the calculation logic. 
 Its properties include text size, which can be adjusted by selecting the text; Z position, which allows to bring the selection to the front or send it to the back; and text font type and size, as well as border and background color.
-![enter image description here](http://img.pyplan.org/model-text-usage.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-text-usage.png)
 
 ## Model Preferences
 
@@ -114,7 +114,7 @@ The image below shows the result of installing the [Bokeh](https://bokeh.pydata.
 
     install_library( 'bokeh', import_name=None )
 
-![enter image description here](http://img.pyplan.org/model-install-lib.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-install-lib.png)
 When the library is already installed the `install_library` function realize about that fact and does nothing.
 Once installed you could delete the `install_library`  sentence and the model will keep running, but it is good practice to keep this line because when you share the model or copy it to a different place, when running for the first time in that environment it will proceed again with the required installment.
 Additionally, you must consider to include the library in the "Default Import" node to avoid the `import`  sentence in every node you use the library.
@@ -126,7 +126,7 @@ Toolboxes are nodes for specific purposes, with custom wizards associated to the
 Pyplan includes a toolbox named Data Sources. An example of this wizard has been developed with the read CSV node.
 This is an experimental feature. Further development of toolboxes will be mainly driven by Pyplan users' requests.
 
-![enter image description here](http://img.pyplan.org/Mod_data_sources.jpg)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Mod_data_sources.jpg)
  	
 	
 ## Shortcuts

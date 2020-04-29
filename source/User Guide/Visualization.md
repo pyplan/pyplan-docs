@@ -3,10 +3,10 @@
 ## Node Visualization
 When a node is run (double clicking it) its result can be rendered as a table, a pivot table, different type of graphs, or a map.
 The visualization type is selected clicking on the configuration wheel that appears when you enter in the visualization edit mode. After clicking the configuration wheel the following menu is displayed to navigate and set the options.
-![enter image description here](http://img.pyplan.orghttp://img.pyplan.org/viz-edit2.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/viz-edit2.png)
 
 The first choice to be made is about the type of chart (Table, Graph or Map). The menu is accessed clicking on the first option called "Chart and filters".
-![enter image description here](/viz-viz-type1.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/viz-viz-type1.png)
 
 
 ## Tables
@@ -18,31 +18,31 @@ The image below show some different configuration features from these tables:
 ### Regular Table
 Is the default view of any node. The user can pivot dimensions and filter any dimension by clicking the `(all)` legend next to each dimension.
 It is possible to generate custom configurations by rows or cols. Heatmaps and Background colors based on customized ranges are also possible.
- ![enter image description here](http://img.pyplan.org/viz-table-standard.png)
+ ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/viz-table-standard.png)
  
 `Number format` menu and `advanced options` may help generating the view you need for each variable.
 
-![enter image description here](http://img.pyplan.org/Vizua_tables_format.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Vizua_tables_format.png)
 
 #### Conditional Format
 Regular table has the option of defining conditional format rules to coloured, highlight with different font or even add a shape on displayed information.
 
 
 These configurations enhance visualization analysis.
-![enter image description here](http://img.pyplan.org/Vizua_condi_format.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Vizua_condi_format.png)
 ### Pivot Tables
 Different than the standard table It allows multiple dimensions in rows or cols as well as filtering.
 It has fewer customization options compared to regular tables.
-![enter image description here](http://img.pyplan.org/viz-tables-dif1.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/viz-tables-dif1.png)
 But one main differentiation is that can work as an input table, allowing the user to manually change table values.
-![enter image description here](http://img.pyplan.org/viz-edit-table.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/viz-edit-table.png)
 ## Graphs
 Pyplan includes several type of standard chart graphs.
 Take advantage of  `graph generation`  shortcut to create a graph in one click.
-![enter image description here](http://img.pyplan.org/Visua_table_n_graph.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Visua_table_n_graph.png)
 
 Graphs customization options are availbale on rigth menu. 
-Types of graphs, labels, legends, axis configurations and other characteristics can be defined on this menu. ![enter image description here](http://img.pyplan.org/Visua_graph_cust.png)
+Types of graphs, labels, legends, axis configurations and other characteristics can be defined on this menu. ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Visua_graph_cust.png)
 ## Advanced Options and Index Sync
 
 Regular tables as well as graphs share a couple of advanced options that can be very helpful. 
@@ -51,14 +51,14 @@ Click on  `Hide empty data`,  `View index detail` and  `Enable drilldown` to see
 `Index Sync` is a powerful tool when working with tables and graphs sharing dimensions.
 Pyplan **synchronizes** **shared dimensions** among objects presented in an interface.
 For instance, on the following example ***total cost Information*** is presented as a table and as a graph and all dimensions are **synchronised.**
-![enter image description here](http://img.pyplan.org/Visua_index_sync.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Visua_index_sync.png)
 
 This means that **any dimension filtered on the table will apply on the graph and vice versa.**
 
 On the other hand, it may be useful to **des-synchronised** dimensions between objects. 
 Let's suppose you need to filter some item type on table while all item type is shown on graph for doing some analysis
 Des-synchronizing index `Item type` on the menu shown above will allow you to do this kind of selective filtering.
-![enter image description here](http://img.pyplan.org/Visua_index_des_sync.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Visua_index_des_sync.png)
 
 This characteristic will also be very **useful when designing interfaces** which collect  information from different parts of your app when they share dimensions.
 Check specific section for further infomation.
@@ -73,14 +73,14 @@ For instance, you can check the following example
 `Public/Examples/01-Visualization/02-California Power Plants/California Power Plants.ppl`
 
 Where **HTML code is rendered getting California power plants geographical represented**
-![enter image description here](http://img.pyplan.org/Visua_folium.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Visua_folium.png)
 
 [Plotly](https://plot.ly/python/) graphs are interpreted by Pyplan by simplying adding  `result = plot(var_to_plot)`  at the end of the code.
 
-![enter image description here](http://img.pyplan.org/Visua_box_plot1.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Visua_box_plot1.png)
 
 Check the folowing box plot example
-![enter image description here](http://img.pyplan.org/Visua_box_plot2.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Visua_box_plot2.png)
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTExOTg2ODQ0NDksLTU0MzY0NjU3MywtMT
 Y4MTM5NzU2NywtMTY1MTk5ODA2LDIxMjYzNzU0NjEsLTE0MzYx

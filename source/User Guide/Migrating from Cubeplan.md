@@ -13,7 +13,7 @@ Libraries can be installed and used with any model. The model file registers lib
 ## Functions equivalence list
 Check the examples available in  **Pyplan Library** folder to find how to do with Pyplan basic Cubeplan operations .
 
-![enter image description here](http://img.pyplan.org/Int_pplexamples_new.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Int_pplexamples_new.png)
 
 The following table contains **Cubeplan basic function** list and its **equivalent in Pyplan**.
 

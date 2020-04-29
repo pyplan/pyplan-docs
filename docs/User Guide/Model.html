@@ -186,7 +186,7 @@
 <div class="section" id="node-properties-tabs">
 <h2>Node Properties Tabs<a class="headerlink" href="#node-properties-tabs" title="Permalink to this headline">¶</a></h2>
 <p>Pyplan structures code using an influence diagram of nodes. When a node is selected (on Edit mode), a Properties window opens. Nodes attributes can be inspected and edited by means of tabs that are labeled as <kbd>Properties</kbd>, <kbd>Code&lt;/&gt;</kbd>, and <kbd>Docs</kbd>.</p>
-<p><img alt="enter image description here" src="http://img.pyplan.org/mod_node_prop.png" />
+<p><img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/mod_node_prop.png" />
 The <kbd>Properties</kbd> tab contains:</p>
 <ul class="simple">
 <li><p><strong>Title</strong>: the legend that will be displayed over the node.</p></li>
@@ -197,24 +197,24 @@ The <kbd>Properties</kbd> tab contains:</p>
 <li><p><strong>Code</strong>: shortcut to the Code tab.</p></li>
 </ul>
 <p>The <kbd>Code&lt;/&gt;</kbd> tab:
-<img alt="enter image description here" src="http://img.pyplan.org/model-code-tab1.png" />
+<img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-code-tab1.png" />
 The Code tab presents two windows: the left one is where the code of the node is inserted.
 Nodes’ code <strong>must end with the result definition</strong>. The <strong>“result”</strong> variable contains the output of the node, i.e., the values that will be displayed when the node is evaluated or called from other node.
 Intermediate local variables can be used within the node code. These local variables can be printed in the console for tracing calculation, but the result definition must be placed at the end.
 The right-side window displays the console output. The outputs of any <code class="docutils literal notranslate"><span class="pre">print()</span></code> statement will be displayed here.
 When the code is modified, a check and a cancel box appear, and the Play button turns orange to indicate the node needs to be run.
-<img alt="http://img.pyplan.org/model-orange.png" src="http://img.pyplan.org/model-orange.png" /></p>
+<img alt="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-orange.png" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-orange.png" /></p>
 <p>You can accept changes and run the node by pressing <kbd>Ctrl + Enter&lt;/&gt;</kbd> or by clicking on the icons.
 After running the node, the Play button turns blue to indicate it has already been calculated.
-<img alt="enter image description here" src="http://img.pyplan.org/model-blue.png" /></p>
+<img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-blue.png" /></p>
 <p>The <kbd>Docs</kbd> tab:
 This tab contains a complete HTML text editor to include rich text, links, images, and videos that describe and explain the fundamentals of every calculation step. This way, the app becomes an interactive knowledge repository.
-<img alt="enter image description here" src="http://img.pyplan.org/model-docs.png" /></p>
+<img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-docs.png" /></p>
 </div>
 <div class="section" id="types-of-nodes">
 <h2>Types of Nodes<a class="headerlink" href="#types-of-nodes" title="Permalink to this headline">¶</a></h2>
 <p>The main elements for creating the app calculation logic are the following:</p>
-<p><img src="http://img.pyplan.org/model-nodes-type.png"
+<p><img src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-nodes-type.png"
 style="float: right; margin-left: 10px;"
 ALIGN=”top”
 height="300" /></p>
@@ -273,7 +273,7 @@ You can drag a group of selected nodes into a module to organize your diagram or
 <h3>Text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h3>
 <p>The text node is intended for clarification of the calculation logic.
 Its properties include text size, which can be adjusted by selecting the text; Z position, which allows to bring the selection to the front or send it to the back; and text font type and size, as well as border and background color.
-<img alt="enter image description here" src="http://img.pyplan.org/model-text-usage.png" /></p>
+<img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-text-usage.png" /></p>
 </div>
 </div>
 <div class="section" id="model-preferences">
@@ -311,7 +311,7 @@ The image below shows the result of installing the <a class="reference external"
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install_library</span><span class="p">(</span> <span class="s1">&#39;bokeh&#39;</span><span class="p">,</span> <span class="n">import_name</span><span class="o">=</span><span class="kc">None</span> <span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="enter image description here" src="http://img.pyplan.org/model-install-lib.png" />
+<p><img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-install-lib.png" />
 When the library is already installed the <code class="docutils literal notranslate"><span class="pre">install_library</span></code> function realize about that fact and does nothing.
 Once installed you could delete the <code class="docutils literal notranslate"><span class="pre">install_library</span></code>  sentence and the model will keep running, but it is good practice to keep this line because when you share the model or copy it to a different place, when running for the first time in that environment it will proceed again with the required installment.
 Additionally, you must consider to include the library in the “Default Import” node to avoid the <code class="docutils literal notranslate"><span class="pre">import</span></code>  sentence in every node you use the library.</p>
@@ -321,7 +321,7 @@ Additionally, you must consider to include the library in the “Default Import�
 <p>Toolboxes are nodes for specific purposes, with custom wizards associated to them, which help parametrize a function for producing certain result.
 Pyplan includes a toolbox named Data Sources. An example of this wizard has been developed with the read CSV node.
 This is an experimental feature. Further development of toolboxes will be mainly driven by Pyplan users’ requests.</p>
-<p><img alt="enter image description here" src="http://img.pyplan.org/Mod_data_sources.jpg" /></p>
+<p><img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Mod_data_sources.jpg" /></p>
 </div>
 <div class="section" id="shortcuts">
 <h2>Shortcuts<a class="headerlink" href="#shortcuts" title="Permalink to this headline">¶</a></h2>
