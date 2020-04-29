@@ -2,6 +2,8 @@
 The following sections cover the basic functionalities and features of Pyplan.
 Pyplan is in permanent evolution, so you will probably find minor differences between this document and the last Pyplan version running online.
 
+![enter image description here](img/pyplan_logo.jpg)
+![enter image description here](http://img.pyplan.org/Int_pplexamples_new.png)
 ## **What you will find in this User Guide**
 -------------
 The User Guide has been structured in the following sections:
