@@ -2,6 +2,7 @@
    sphinx-quickstart on Thu Mar 19 18:32:09 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+
 Pyplan
 ======
 
