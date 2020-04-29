@@ -41,7 +41,7 @@ Cubeplan models cannot be run in Pyplan. A good way to learn how to use Python i
 ### **Pyplan Library correlation with Cubeplan** 
 Check examples available in  **Pyplan Library** folder to see how things  you did in Cubeplan are now done using **Pyplan** .
 
-![enter image description here](http://img.pyplan.org/Int_pplexamples_new.png)
+![enter image description here](/assets/Int_pplexamples_new.png)
 
 The following table contains **Cubeplan basic function** list and its **correlation in Pyplan**.
 
@@ -116,13 +116,13 @@ Use these functions as you used them in Cubeplan.
 
 Check the following [link](https://cubeplat.com/pyplan-excel-addin/) to install Pyplan Excel AddIn if you need to dynamically download Pyplan Information into your spreadsheets.
 
-![enter image description here](http://img.pyplan.org/Int_add_in.png)
+![enter image description here](/assets/Int_add_in.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNDgxODIyMCwtNTEyNDE2MSwxMjAzMD
-U5ODM5LC04MDEzNTU5ODksLTIxMzcwOTQxOTksLTU2NTg1OTQx
-NiwtNDgxNTc1NjcsNDYzOTc0MjM5LDE5NzkwMjUxOTYsLTgzMj
-E0NzY0OCw0MjA0MDI1NTIsMTY5ODg1MjMwLC0zMjAyMTA4OTQs
-LTE5ODM5OTE1NzksLTExNjk2NzI3NTUsMTQyMDQ2MjIzMSwxMj
-AwMjY4MTY5LC03NDU2MzE5NCwtMjE0MzU1NDY4NiwtMjE0MzU1
-NDY4Nl19
+eyJoaXN0b3J5IjpbMTQ2OTA4ODM1NywxMTA0ODE4MjIwLC01MT
+I0MTYxLDEyMDMwNTk4MzksLTgwMTM1NTk4OSwtMjEzNzA5NDE5
+OSwtNTY1ODU5NDE2LC00ODE1NzU2Nyw0NjM5NzQyMzksMTk3OT
+AyNTE5NiwtODMyMTQ3NjQ4LDQyMDQwMjU1MiwxNjk4ODUyMzAs
+LTMyMDIxMDg5NCwtMTk4Mzk5MTU3OSwtMTE2OTY3Mjc1NSwxND
+IwNDYyMjMxLDEyMDAyNjgxNjksLTc0NTYzMTk0LC0yMTQzNTU0
+Njg2XX0=
 -->
