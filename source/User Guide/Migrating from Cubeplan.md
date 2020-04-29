@@ -1,16 +1,16 @@
-# Migrating from Cubeplan
+## Migrating from Cubeplan
 Even though the way of creating and sharing apps is the same, Cubeplan models can not be run on Pyplan. Neither dashboards generated with Cubeplan can be exported and used in Pyplan. The origin of that lack of compatibility is that they run different languages underneath to calculate computations.
 It is an excellent exercise for learning Pyplan translating an old Cubeplan model.
-## Similarities
+### Similarities
 Pyplan organizes Python code through influence diagrams the same as Cubeplan.
 Nodes have a Title and an Identifier to call them from other nodes. You can also point and click a node to incorporate its Id when creating a formula. Navigating through the model works exactly the same, following inputs or outputs or by exploring the influence diagram. Nodes also include a documentation as in Cubeplan.
 Pyplan also includes "intelligent" matrix operations by adapting the usage of the [Xarray](http://xarray.pydata.org/) python library
-## Differences
+### Differences
 One of the most important conceptual difference of Pyplan is that a node can contain different type of objects (i.e. [Pandas](http://pandas.pydata.org/), [Numpy](https://numpy.org/devdocs/), [Xarray](http://xarray.pydata.org/)) This fact is one of the most important advantage of embracing Python language since you will be able to use specific purposes libraries that use different type of data structures and objects.
 Pyplan natively interprets the Pandas, Numpy and Xarray objects visualising its data as table or graphs with a single click.
 Libraries can be installed and used with any model. The model file registers libraries dependency to require instalment when shared with other users.
 
-## Functions equivalence list
+### Functions equivalence list
 Check the examples available in  **Pyplan Library** folder to find how to do with Pyplan basic Cubeplan operations .
 
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Int_pplexamples_new.png)
@@ -86,5 +86,6 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxODY0NDgyNSwtMTc4NjkyNjgxNl19
+eyJoaXN0b3J5IjpbMTgwNjUxOTkyNCwtODE4NjQ0ODI1LC0xNz
+g2OTI2ODE2XX0=
 -->
