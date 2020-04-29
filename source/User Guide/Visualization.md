@@ -1,4 +1,4 @@
-# Node Visualization
+## Node Visualization
 When a node is run (double clicking it) its result can be rendered as a table, a pivot table, different type of graphs, or a map.
 The visualization type is selected clicking on the configuration wheel that appears when you enter in the visualization edit mode. After clicking the configuration wheel the following menu is displayed to navigate and set the options.
 ![enter image description here](/assets/viz-edit2.png)
@@ -7,13 +7,13 @@ The first choice to be made is about the type of chart (Table, Graph or Map). Th
 ![enter image description here](/assets/viz-viz-type1.png)
 
 
-# Tables
+## Tables
 There are two types of tables intended for different purposes. 
 Regular tables and pivot tables.
 The image below show some different configuration features from these tables:
 
 
-## Regular Table
+### Regular Table
 Is the default view of any node. The user can pivot dimensions and filter any dimension by clicking the `(all)` legend next to each dimension.
 It is possible to generate custom configurations by rows or cols. Heatmaps and Background colors based on customized ranges are also possible.
  ![enter image description here](/assets/viz-table-standard.png)
@@ -22,26 +22,26 @@ It is possible to generate custom configurations by rows or cols. Heatmaps and B
 
 ![enter image description here](/assets/Vizua_tables_format.png)
 
-### Conditional Format
+#### Conditional Format
 Regular table has the option of defining conditional format rules to coloured, highlight with different font or even add a shape on displayed information.
 
 
 These configurations enhance visualization analysis.
 ![enter image description here](/assets/Vizua_condi_format.png)
-## Pivot Tables
+### Pivot Tables
 Different than the standard table It allows multiple dimensions in rows or cols as well as filtering.
 It has fewer customization options compared to regular tables.
 ![enter image description here](/assets/viz-tables-dif1.png)
 But one main differentiation is that can work as an input table, allowing the user to manually change table values.
 ![enter image description here](/assets/viz-edit-table.png)
-# Graphs
+## Graphs
 Pyplan includes several type of standard chart graphs.
 Take advantage of  `graph generation`  shortcut to create a graph in one click.
 ![enter image description here](/assets/Visua_table_n_graph.png)
 
 Graphs customization options are availbale on rigth menu. 
 Types of graphs, labels, legends, axis configurations and other characteristics can be defined on this menu. ![enter image description here](/assets/Visua_graph_cust.png)
-# Advanced Options and Index Sync
+## Advanced Options and Index Sync
 
 Regular tables as well as graphs share a couple of advanced options that can be very helpful. 
 Click on  `Hide empty data`,  `View index detail` and  `Enable drilldown` to see how these options impact on tables and graphs.
@@ -61,7 +61,7 @@ Des-synchronizing index `Item type` on the menu shown above will allow you to do
 This characteristic will also be very **useful when designing interfaces** which collect  information from different parts of your app when they share dimensions.
 Check specific section for further infomation.
 
-# Other visualization libraries
+## Other visualization libraries
 
 As any [Python](https://www.python.org/) developer knows there are plenty of open source graphing libraries available on the web. [Bokeh](https://bokeh.pydata.org/en/latest/)  ,[Plotly](https://plot.ly/python/) and [Folium](https://pypi.org/project/folium/) are examples of these libraries that can be used for plotting data.
 
@@ -80,11 +80,11 @@ Where **HTML code is rendered getting California power plants geographical repre
 Check the folowing box plot example
 ![enter image description here](/assets/Visua_box_plot2.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODEzOTc1NjcsLTE2NTE5OTgwNiwyMT
-I2Mzc1NDYxLC0xNDM2MTIyNzUsLTIwODgxMTk0MzMsLTQ2OTg5
-OTU3OSwtMTI3Mzk0Njg0MywyMDM1NDQ0NjE3LDE4MzEzNjY4Nz
-gsMTQ0NDQ1NjYzNCwtMTIxNzk5MjExNSwtMTMwNjk4MDQyOCwt
-ODc2NTg1OTA1LC0xMzE0NTg3MDU0LC0xNDI4NTAzNzA0LC0yNz
-c3Nzc4MTksMTA1MTMyMjg2MywtMTg4NDIzMDg3Myw4MTE1MjY2
-NzQsMTE1NDMyMzk4Nl19
+eyJoaXN0b3J5IjpbLTU0MzY0NjU3MywtMTY4MTM5NzU2NywtMT
+Y1MTk5ODA2LDIxMjYzNzU0NjEsLTE0MzYxMjI3NSwtMjA4ODEx
+OTQzMywtNDY5ODk5NTc5LC0xMjczOTQ2ODQzLDIwMzU0NDQ2MT
+csMTgzMTM2Njg3OCwxNDQ0NDU2NjM0LC0xMjE3OTkyMTE1LC0x
+MzA2OTgwNDI4LC04NzY1ODU5MDUsLTEzMTQ1ODcwNTQsLTE0Mj
+g1MDM3MDQsLTI3Nzc3NzgxOSwxMDUxMzIyODYzLC0xODg0MjMw
+ODczLDgxMTUyNjY3NF19
 -->
