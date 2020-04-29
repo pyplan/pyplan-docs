@@ -27,3 +27,4 @@ Pyplan's documentation
    User Guide/Node Execution
    User Guide/Visualization
    User Guide/User Interface Designer
+   User Guide/Migrating from Cubeplan
