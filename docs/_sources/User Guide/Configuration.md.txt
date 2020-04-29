@@ -1,6 +1,6 @@
 # Configuration
 
-![enter image description here](http://img.pyplan.org/Under_constuction.png)
+![enter image description here](/assets/Under_constuction.png)
 ### Soon you will be getting information about
 ## Architecture
 ## User Administration
@@ -9,6 +9,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTE3MjIyNjAsMjAwNTA0MDU2MiwtMz
-MyODM5OTM1XX0=
+eyJoaXN0b3J5IjpbLTc0NDQ1NDczLC0xOTExNzIyMjYwLDIwMD
+UwNDA1NjIsLTMzMjgzOTkzNV19
 -->
