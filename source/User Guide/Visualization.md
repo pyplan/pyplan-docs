@@ -18,7 +18,7 @@ The image below show some different configuration features from these tables:
 ### Regular Table
 Is the default view of any node. The user can pivot dimensions and filter any dimension by clicking the `(all)` legend next to each dimension.
 It is possible to generate custom configurations by rows or cols. Heatmaps and Background colors based on customized ranges are also possible.
- ![enter image description here](//raw.githubusercontent.com/pyplan/pyplan-docs/master/imimg.pyplan.org/viz-table-standard.png)
+ ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/imimg.pyplan.org/viz-table-standard.png)
  
 `Number format` menu and `advanced options` may help generating the view you need for each variable.
 
@@ -42,7 +42,7 @@ Take advantage of  `graph generation`  shortcut to create a graph in one click.
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/imimg.pyplan.org/Visua_table_n_graph.png)
 
 Graphs customization options are availbale on rigth menu. 
-Types of graphs, labels, legends, axis configurations and other characteristics can be defined on this menu. ![enter image description here](//raw.githubusercontent.com/pyplan/pyplan-docs/master/imimg.pyplan.org/Visua_graph_cust.png)
+Types of graphs, labels, legends, axis configurations and other characteristics can be defined on this menu. ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/imimg.pyplan.org/Visua_graph_cust.png)
 ## Advanced Options and Index Sync
 
 Regular tables as well as graphs share a couple of advanced options that can be very helpful. 
@@ -58,7 +58,7 @@ This means that **any dimension filtered on the table will apply on the graph an
 On the other hand, it may be useful to **des-synchronised** dimensions between objects. 
 Let's suppose you need to filter some item type on table while all item type is shown on graph for doing some analysis
 Des-synchronizing index `Item type` on the menu shown above will allow you to do this kind of selective filtering.
-![enter image description here](//raw.githubusercontent.com/pyplan/pyplan-docs/master/imimg.pyplan.org/Visua_index_des_sync.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/imimg.pyplan.org/Visua_index_des_sync.png)
 
 This characteristic will also be very **useful when designing interfaces** which collect  information from different parts of your app when they share dimensions.
 Check specific section for further infomation.

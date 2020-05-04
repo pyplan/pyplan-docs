@@ -3,7 +3,7 @@
 ### Console Output
 You can run any node after editing its code by pressing <kbd>CTRL + Enter</kbd>.
 At the right side of the Code window, the console output resulting from running the node will appear.
-![enter image description here](//raw.githubusercontent.com/pyplan/pyplan-docs/master/imimg.pyplan.org/Node-execution-code-tab.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/imimg.pyplan.org/Node-execution-code-tab)
 Any `Print()` statement written between code lines will display it result here.
 Its purpose is to make a quick evaluation of the node, to check if it is properly defined.
 
