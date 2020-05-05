@@ -19,8 +19,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'pyplandoc'
-copyright = '2020, Franco Barberis'
-author = 'Franco Barberis'
+copyright = '2020, Pyplan'
+author = 'Pyplan'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
