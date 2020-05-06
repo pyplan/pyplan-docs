@@ -1,6 +1,8 @@
 ## Pyplan Functions
 
 ### dataarray_from_pandas()
+dataframe, domainDic, valueColumns, defaultValue=None, valueColumnsAsDim=True, sumDuplicateRecords=True)
+
 Returns a DataArray (valueColumns is string or (valueColumns is pd.Index and valueColumnsAsDim is True)) or Dataset (valueColumns is a list or (valueColumns is a pd.Index and valueColumnsAsDim is False)) from a Pandas dataframe applying the set_domain function.
     dataframe: Pandas dataframe with no index columns.
     domainDic: Dictionary of column names and index names. Ex. {'Column Name': index_name}.
@@ -14,5 +16,5 @@ pandas_to_dataarray(sales_dataframe, {'Sales Channel': sales_channels, 'Market S
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NzcwMDQ2Ml19
+eyJoaXN0b3J5IjpbLTE2Mzc5Nzg2ODksLTg0NzcwMDQ2Ml19
 -->
