@@ -14,7 +14,11 @@ pandas_to_dataarray(sales_dataframe, {'Sales Channel': sales_channels, 'Market S
 
     epandas_to_dataarray(sales_dataframe, {'Sales Channel': sales_channels, 'Market Segment': market_segments, 'Month': time}, 'Sales', 0.)nter code here
 
+
+
+
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mzc5Nzg2ODksLTg0NzcwMDQ2Ml19
+eyJoaXN0b3J5IjpbNDEyNDcxOTI3LC04NDc3MDA0NjJdfQ==
 -->
