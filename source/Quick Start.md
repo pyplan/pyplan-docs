@@ -6,9 +6,9 @@ Here you will find sections for creating a new model, opening recent models, rec
 
 ## **Pyplan Cloud**
 You can also access Pyplan cloud environment at [https://my.pyplan.com](https://my.pyplan.com)
-You must login with your LinkedIn account or request an account to access Pyplan cloud services  [here](http://pyplan.com/contact/).
+You must login with your LinkedIn or Google account, or request an account to access Pyplan cloud services  [here](http://pyplan.com/contact/).
 
-![login](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_login_en1.png)
+![login](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_login_en2.png)
 
 ## **Homepage Menu**
 After the new model workspace has been created, you will access the sandbox for creating the logic of your model.
