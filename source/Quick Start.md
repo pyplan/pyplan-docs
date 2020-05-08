@@ -45,7 +45,7 @@ While the node is selected , if you press <kbd>Ctrl+R</kbd> or double click it, 
 Create another node, draging and dropping a node called "CSV" that you will find in the "Data sources" section on the right menu. 
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_csv.png)
 Then:
-![enter image description here](%28https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_CSV%20Data_Source.png)
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_CSV_Data_Source.png)
 Then set its definition as:
 
     result = pd.read_csv('http://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv', sep=None)
@@ -66,17 +66,18 @@ Where each module contains the underlying logic of each area of the company. In 
 
 
 ## **Evaluating and Visualizing Data**
-In order to explore the evaluation and visualization alternatives, let's copy onto your own workspace the app called "My First App.ppl," which you will find in the “Public” folder. After selecting it, click on the "Copy in" section as shown in the figure below:
-![My First App file](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_file_app_1.png)
+In order to explore the evaluation and visualization alternatives, let's copy onto your own workspace the app called "My First App.ppl," which you will find in the “My First App.ppl" (Public/Tutorials/04-Creating mi first App/” folder. After selecting it, click on the "Copy in" section as shown in the figure below:
+
+![My First App file](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_File_Manager_My_First_App.png)
 
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_own_ws_ad.png)
 
-Now open the copied file and then go to the model (Click “Open Model,” or the Model icon on the left.) You should be able to see the following diagram:
-![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_mfa_model_.png)
+Now open the copied file and then go to the model (Double-Click to open the model). You should be able to see the following diagram:
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_mfa_model_2.png)
 Now you can inspect any node values by selecting and evaluating them. There are three alternatives for evaluating a node: The first one is by clicking on the  **"Run"** button that you will find in the “Code” tab after selecting a node. The same result can be obtained by  pressing <kbd>Ctrl + return</kbd> when editing the code. This will show/update the console output resulting from the evaluation of the node.
 
-![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_eval1.png)
-Try adding `Print('Hello World')`in the first line before the result definition.[L1] Run the node and check the console output. You will find this Printing functionality useful for inspecting intermediate values in your calculations.
+![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_eval2.png)
+Try adding `print('Hello World')`in the first line before the result definition.[L1] Run the node and check the console output. You will find this Printing functionality useful for inspecting intermediate values in your calculations.
 
 The second alternative is pressing <kbd>Ctrl+E</kbd> after selecting the node. In this case, a more complete window opens showing this:
 
@@ -139,11 +140,11 @@ There are other types of controls, like buttons for launching specific tasks (sc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODQxMTI3MzAsLTI1ODkyMjE0Nyw4ND
-M5MzQ3MzEsLTE1NzI4MDAyNzgsODc5Mjc1MDE0LC0yMDgyMzkz
-ODY4LC0xOTkxMzQ4Nzc5LDgxMzU5MDYwLC0xMzY4ODA2MTkwLD
-EzNDc1MjMyNTEsLTExNjY5MDIwNTgsMTk5MTUwNjQ3MiwxNzgx
-NTgyMTYyLDQzODA5NzE5NCwtMzM2NjE3NDAyLC0xNTk3NDg4Mz
-gxLC0xODMzNDM1MzUxLDYyOTM4MjI1NywxMzMwMTc1NDczLC0z
-OTYwMTA1MjFdfQ==
+eyJoaXN0b3J5IjpbLTg5OTEwOTM3MiwtMTE0ODU2NTEyNSw1Nj
+MwMjk5OTEsLTI5NjUyMDYyLC0xOTg0MTEyNzMwLC0yNTg5MjIx
+NDcsODQzOTM0NzMxLC0xNTcyODAwMjc4LDg3OTI3NTAxNCwtMj
+A4MjM5Mzg2OCwtMTk5MTM0ODc3OSw4MTM1OTA2MCwtMTM2ODgw
+NjE5MCwxMzQ3NTIzMjUxLC0xMTY2OTAyMDU4LDE5OTE1MDY0Nz
+IsMTc4MTU4MjE2Miw0MzgwOTcxOTQsLTMzNjYxNzQwMiwtMTU5
+NzQ4ODM4MV19
 -->
