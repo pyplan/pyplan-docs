@@ -66,7 +66,8 @@ Where each module contains the underlying logic of each area of the company. In 
 
 
 ## **Evaluating and Visualizing Data**
-In order to explore the evaluation and visualization alternatives, let's copy onto your own workspace the app called "My First App.ppl," which you will find in the “Public” folder. After selecting it, click on the "Copy in" section as shown in the figure below:
+In order to explore the evaluation and visualization alternatives, let's copy onto your own workspace the app called "My First App.ppl," which you will find in the “My First App.ppl" (Public/Tutorials/04-Creating mi first App/” folder. After selecting it, click on the "Copy in" section as shown in the figure below:
+
 ![My First App file](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_File_Manager_My_First_App.png)
 
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_own_ws_ad.png)
@@ -139,7 +140,7 @@ There are other types of controls, like buttons for launching specific tasks (sc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg2MjExMjkzLC0yOTY1MjA2MiwtMTk4ND
+eyJoaXN0b3J5IjpbNTYzMDI5OTkxLC0yOTY1MjA2MiwtMTk4ND
 ExMjczMCwtMjU4OTIyMTQ3LDg0MzkzNDczMSwtMTU3MjgwMDI3
 OCw4NzkyNzUwMTQsLTIwODIzOTM4NjgsLTE5OTEzNDg3NzksOD
 EzNTkwNjAsLTEzNjg4MDYxOTAsMTM0NzUyMzI1MSwtMTE2Njkw
