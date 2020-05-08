@@ -44,6 +44,7 @@ While the node is selected , if you press <kbd>Ctrl+R</kbd> or double click it, 
 
 Create another node, draging and dropping a node called "CSV" that you will find in the "Data sources" section on the right menu. 
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_csv.png)
+Then:
 
 Then set its definition as:
 
@@ -138,11 +139,11 @@ There are other types of controls, like buttons for launching specific tasks (sc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1ODkyMjE0Nyw4NDM5MzQ3MzEsLTE1Nz
-I4MDAyNzgsODc5Mjc1MDE0LC0yMDgyMzkzODY4LC0xOTkxMzQ4
-Nzc5LDgxMzU5MDYwLC0xMzY4ODA2MTkwLDEzNDc1MjMyNTEsLT
-ExNjY5MDIwNTgsMTk5MTUwNjQ3MiwxNzgxNTgyMTYyLDQzODA5
-NzE5NCwtMzM2NjE3NDAyLC0xNTk3NDg4MzgxLC0xODMzNDM1Mz
-UxLDYyOTM4MjI1NywxMzMwMTc1NDczLC0zOTYwMTA1MjEsLTE5
-MjE5NTk4MzJdfQ==
+eyJoaXN0b3J5IjpbMTMwNjYzMjQzOCwtMjU4OTIyMTQ3LDg0Mz
+kzNDczMSwtMTU3MjgwMDI3OCw4NzkyNzUwMTQsLTIwODIzOTM4
+NjgsLTE5OTEzNDg3NzksODEzNTkwNjAsLTEzNjg4MDYxOTAsMT
+M0NzUyMzI1MSwtMTE2NjkwMjA1OCwxOTkxNTA2NDcyLDE3ODE1
+ODIxNjIsNDM4MDk3MTk0LC0zMzY2MTc0MDIsLTE1OTc0ODgzOD
+EsLTE4MzM0MzUzNTEsNjI5MzgyMjU3LDEzMzAxNzU0NzMsLTM5
+NjAxMDUyMV19
 -->
