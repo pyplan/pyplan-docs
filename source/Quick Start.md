@@ -72,7 +72,7 @@ In order to explore the evaluation and visualization alternatives, let's copy on
 
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_own_ws_ad.png)
 
-Now open the copied file and then go to the model (Click “Open Model,” or the Model icon on the left.) You should be able to see the following diagram:
+Now open the copied file and then go to the model (Double-Click to open the model). You should be able to see the following diagram:
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_mfa_model_.png)
 Now you can inspect any node values by selecting and evaluating them. There are three alternatives for evaluating a node: The first one is by clicking on the  **"Run"** button that you will find in the “Code” tab after selecting a node. The same result can be obtained by  pressing <kbd>Ctrl + return</kbd> when editing the code. This will show/update the console output resulting from the evaluation of the node.
 
@@ -140,11 +140,11 @@ There are other types of controls, like buttons for launching specific tasks (sc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYzMDI5OTkxLC0yOTY1MjA2MiwtMTk4ND
-ExMjczMCwtMjU4OTIyMTQ3LDg0MzkzNDczMSwtMTU3MjgwMDI3
-OCw4NzkyNzUwMTQsLTIwODIzOTM4NjgsLTE5OTEzNDg3NzksOD
-EzNTkwNjAsLTEzNjg4MDYxOTAsMTM0NzUyMzI1MSwtMTE2Njkw
-MjA1OCwxOTkxNTA2NDcyLDE3ODE1ODIxNjIsNDM4MDk3MTk0LC
-0zMzY2MTc0MDIsLTE1OTc0ODgzODEsLTE4MzM0MzUzNTEsNjI5
-MzgyMjU3XX0=
+eyJoaXN0b3J5IjpbLTExNDg1NjUxMjUsNTYzMDI5OTkxLC0yOT
+Y1MjA2MiwtMTk4NDExMjczMCwtMjU4OTIyMTQ3LDg0MzkzNDcz
+MSwtMTU3MjgwMDI3OCw4NzkyNzUwMTQsLTIwODIzOTM4NjgsLT
+E5OTEzNDg3NzksODEzNTkwNjAsLTEzNjg4MDYxOTAsMTM0NzUy
+MzI1MSwtMTE2NjkwMjA1OCwxOTkxNTA2NDcyLDE3ODE1ODIxNj
+IsNDM4MDk3MTk0LC0zMzY2MTc0MDIsLTE1OTc0ODgzODEsLTE4
+MzM0MzUzNTFdfQ==
 -->
