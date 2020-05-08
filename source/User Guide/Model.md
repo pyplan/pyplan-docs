@@ -134,7 +134,7 @@ Shortcuts are very useful when modelling.
 
 Take a look at shortcuts available on Pyplan on the following chart.
 
-|Keys (PC)|(iOS)|Action|
+|Keys (PC)|(Mac OS)|Action|
 |-----------|-----------|-----------| 
 |Shift + Click ||Select node|
 |Shift + area|Shift + area|Select node area|
@@ -178,11 +178,11 @@ Take a look at shortcuts available on Pyplan on the following chart.
 
 Take advantaged of these to increase coding speed.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQyMTQwNTE5LC0yMDMwODc4MTU3LC04OT
-gwMTUyMjYsMzE5ODQwNjY5LDIwMzQ4NDM4NDksMTgzNjYzNzEy
-OSwtNjUwNTIyODksLTE0ODUwNzUwMSwtNTc1ODcxNDY5LDgxNT
-E5MDg0NCw1NjkzNzI5NjMsMTM3NjM0Nzc3NSwxNjI2MjY5MDY0
-LDg4NzMzMjgzMSwtMTQ5MTgwNTg5NSwtNjg1MjU4NDg2LDk1ND
-AxNjkxMywtMjY2MjA0NzU1LDIwNzIzOTk3NjUsNzExOTc5NTIy
-XX0=
+eyJoaXN0b3J5IjpbMTk3MDE3MTMwOSwtMjAzMDg3ODE1NywtOD
+k4MDE1MjI2LDMxOTg0MDY2OSwyMDM0ODQzODQ5LDE4MzY2Mzcx
+MjksLTY1MDUyMjg5LC0xNDg1MDc1MDEsLTU3NTg3MTQ2OSw4MT
+UxOTA4NDQsNTY5MzcyOTYzLDEzNzYzNDc3NzUsMTYyNjI2OTA2
+NCw4ODczMzI4MzEsLTE0OTE4MDU4OTUsLTY4NTI1ODQ4Niw5NT
+QwMTY5MTMsLTI2NjIwNDc1NSwyMDcyMzk5NzY1LDcxMTk3OTUy
+Ml19
 -->
