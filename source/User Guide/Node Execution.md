@@ -4,7 +4,7 @@
 You can run any node after editing its code by pressing <kbd>CTRL + Enter</kbd>.
 At the right side of the Code window, the console output resulting from running the node will appear.
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Node-execution-code-tab.png)
-Any `Print()` statement written between code lines will display it result here.
+Any `Pprint()` statement written between code lines will display it result here.
 Its purpose is to make a quick evaluation of the node, to check if it is properly defined.
 
 ### Result Explorer
@@ -38,11 +38,11 @@ For example, any node evaluates as a pandas dataframe object will display the fo
 These tools make it easy for non-programmers to start manipulating the basic Python objects without coding.
 As you will realize, when operating with these tools, the subjacent Python code is automatically generated, hence inducing analysts to learn how to use Python. This is like saving a macro in Excel.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NTQ0MzM0LC0xMDU3NTA0OTUsMTgzMT
-ExMjc5NSw0NzUzOTAyMzQsLTExNDQwMjEwMzMsLTEzODU1MDc5
-OTgsMjA1NzI5MzcyMSwyODU5NDYwNTAsLTQwNzE1NTY0NywtMT
-Q4NjIzOTc4OCw0NzczNTY4NTIsMTI2OTExNTg2OCwtNDcyMjE4
-MjUwLC0zNzk5MTYwODAsLTE4NTUzMjk5NzksMTQzNTUyNzI4MC
-wxMDgxMDc5NzQ1LDUwNTk1MjI0MSw5NjAxMDg2LDExOTAzMjIx
-MDRdfQ==
+eyJoaXN0b3J5IjpbMTk3MDMwMjEzMSwxNTg1NDQzMzQsLTEwNT
+c1MDQ5NSwxODMxMTEyNzk1LDQ3NTM5MDIzNCwtMTE0NDAyMTAz
+MywtMTM4NTUwNzk5OCwyMDU3MjkzNzIxLDI4NTk0NjA1MCwtND
+A3MTU1NjQ3LC0xNDg2MjM5Nzg4LDQ3NzM1Njg1MiwxMjY5MTE1
+ODY4LC00NzIyMTgyNTAsLTM3OTkxNjA4MCwtMTg1NTMyOTk3OS
+wxNDM1NTI3MjgwLDEwODEwNzk3NDUsNTA1OTUyMjQxLDk2MDEw
+ODZdfQ==
 -->
