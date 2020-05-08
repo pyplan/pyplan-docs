@@ -45,7 +45,7 @@ While the node is selected , if you press <kbd>Ctrl+R</kbd> or double click it, 
 Create another node, draging and dropping a node called "CSV" that you will find in the "Data sources" section on the right menu. 
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_csv.png)
 Then:
-
+![enter image description here](%28https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_CSV%20Data_Source.png)
 Then set its definition as:
 
     result = pd.read_csv('http://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv', sep=None)
@@ -139,11 +139,11 @@ There are other types of controls, like buttons for launching specific tasks (sc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNjYzMjQzOCwtMjU4OTIyMTQ3LDg0Mz
-kzNDczMSwtMTU3MjgwMDI3OCw4NzkyNzUwMTQsLTIwODIzOTM4
-NjgsLTE5OTEzNDg3NzksODEzNTkwNjAsLTEzNjg4MDYxOTAsMT
-M0NzUyMzI1MSwtMTE2NjkwMjA1OCwxOTkxNTA2NDcyLDE3ODE1
-ODIxNjIsNDM4MDk3MTk0LC0zMzY2MTc0MDIsLTE1OTc0ODgzOD
-EsLTE4MzM0MzUzNTEsNjI5MzgyMjU3LDEzMzAxNzU0NzMsLTM5
-NjAxMDUyMV19
+eyJoaXN0b3J5IjpbLTE5ODQxMTI3MzAsLTI1ODkyMjE0Nyw4ND
+M5MzQ3MzEsLTE1NzI4MDAyNzgsODc5Mjc1MDE0LC0yMDgyMzkz
+ODY4LC0xOTkxMzQ4Nzc5LDgxMzU5MDYwLC0xMzY4ODA2MTkwLD
+EzNDc1MjMyNTEsLTExNjY5MDIwNTgsMTk5MTUwNjQ3MiwxNzgx
+NTgyMTYyLDQzODA5NzE5NCwtMzM2NjE3NDAyLC0xNTk3NDg4Mz
+gxLC0xODMzNDM1MzUxLDYyOTM4MjI1NywxMzMwMTc1NDczLC0z
+OTYwMTA1MjFdfQ==
 -->
