@@ -77,7 +77,7 @@ Now open the copied file and then go to the model (Double-Click to open the mode
 Now you can inspect any node values by selecting and evaluating them. There are three alternatives for evaluating a node: The first one is by clicking on the  **"Run"** button that you will find in the “Code” tab after selecting a node. The same result can be obtained by  pressing <kbd>Ctrl + return</kbd> when editing the code. This will show/update the console output resulting from the evaluation of the node.
 
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_eval1.png)
-Try adding `Print('Hello World')`in the first line before the result definition.[L1] Run the node and check the console output. You will find this Printing functionality useful for inspecting intermediate values in your calculations.
+Try adding `print('Hello World')`in the first line before the result definition.[L1] Run the node and check the console output. You will find this Printing functionality useful for inspecting intermediate values in your calculations.
 
 The second alternative is pressing <kbd>Ctrl+E</kbd> after selecting the node. In this case, a more complete window opens showing this:
 
@@ -140,11 +140,11 @@ There are other types of controls, like buttons for launching specific tasks (sc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDg1NjUxMjUsNTYzMDI5OTkxLC0yOT
-Y1MjA2MiwtMTk4NDExMjczMCwtMjU4OTIyMTQ3LDg0MzkzNDcz
-MSwtMTU3MjgwMDI3OCw4NzkyNzUwMTQsLTIwODIzOTM4NjgsLT
-E5OTEzNDg3NzksODEzNTkwNjAsLTEzNjg4MDYxOTAsMTM0NzUy
-MzI1MSwtMTE2NjkwMjA1OCwxOTkxNTA2NDcyLDE3ODE1ODIxNj
-IsNDM4MDk3MTk0LC0zMzY2MTc0MDIsLTE1OTc0ODgzODEsLTE4
-MzM0MzUzNTFdfQ==
+eyJoaXN0b3J5IjpbLTE4OTA4MTM1NDEsLTExNDg1NjUxMjUsNT
+YzMDI5OTkxLC0yOTY1MjA2MiwtMTk4NDExMjczMCwtMjU4OTIy
+MTQ3LDg0MzkzNDczMSwtMTU3MjgwMDI3OCw4NzkyNzUwMTQsLT
+IwODIzOTM4NjgsLTE5OTEzNDg3NzksODEzNTkwNjAsLTEzNjg4
+MDYxOTAsMTM0NzUyMzI1MSwtMTE2NjkwMjA1OCwxOTkxNTA2ND
+cyLDE3ODE1ODIxNjIsNDM4MDk3MTk0LC0zMzY2MTc0MDIsLTE1
+OTc0ODgzODFdfQ==
 -->
