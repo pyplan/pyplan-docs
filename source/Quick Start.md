@@ -5,8 +5,8 @@ In case you installed Pyplan on your computer, as soon as launching Pyplan you w
 Here you will find sections for creating a new model, opening recent models, recovering any active session, or opening tutorials and examples. Click on “Create new” to create a new model.
 
 ## **Pyplan Cloud**
-You can also access Pyplan cloud environment at [https://my.pyplan.com](https://my.pyplan.com)
-You must login with your LinkedIn or Google account, or request an account to access Pyplan cloud services  [here](http://pyplan.com/contact/).
+You can also access Pyplan cloud environment at [https://my.pyplan.com](https://mpyplancom)
+You must login with your LinkedIn or Google account, or request an account to access Pyplan cloud services  [here](http://pypln.com/contact/).
 
 ![login](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_login_en2.png)
 
@@ -68,7 +68,7 @@ Where each module contains the underlying logic of each area of the company. In 
 ## **Evaluating and Visualizing Data**
 In order to explore the evaluation and visualization alternatives, let's copy onto your own workspace the app called "My First App.ppl," which you will find in the “My First App.ppl" (Public/Tutorials/04-Creating mi first App/” folder. After selecting it, click on the "Copy in" section as shown in the figure below:
 
-![My First App file](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_File_Manager_My_First_App.png)
+![My First App file](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_Ffile_Manager_My_First_1.png)
 
 ![enter image description here](https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Quick_start_own_ws_ad.png)
 
@@ -140,11 +140,11 @@ There are other types of controls, like buttons for launching specific tasks (sc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ3MzI1ODcxLC04OTkxMDkzNzIsLTExND
-g1NjUxMjUsNTYzMDI5OTkxLC0yOTY1MjA2MiwtMTk4NDExMjcz
-MCwtMjU4OTIyMTQ3LDg0MzkzNDczMSwtMTU3MjgwMDI3OCw4Nz
-kyNzUwMTQsLTIwODIzOTM4NjgsLTE5OTEzNDg3NzksODEzNTkw
-NjAsLTEzNjg4MDYxOTAsMTM0NzUyMzI1MSwtMTE2NjkwMjA1OC
-wxOTkxNTA2NDcyLDE3ODE1ODIxNjIsNDM4MDk3MTk0LC0zMzY2
-MTc0MDJdfQ==
+eyJoaXN0b3J5IjpbMzc3NDQ2MTAzLDU0NzMyNTg3MSwtODk5MT
+A5MzcyLC0xMTQ4NTY1MTI1LDU2MzAyOTk5MSwtMjk2NTIwNjIs
+LTE5ODQxMTI3MzAsLTI1ODkyMjE0Nyw4NDM5MzQ3MzEsLTE1Nz
+I4MDAyNzgsODc5Mjc1MDE0LC0yMDgyMzkzODY4LC0xOTkxMzQ4
+Nzc5LDgxMzU5MDYwLC0xMzY4ODA2MTkwLDEzNDc1MjMyNTEsLT
+ExNjY5MDIwNTgsMTk5MTUwNjQ3MiwxNzgxNTgyMTYyLDQzODA5
+NzE5NF19
 -->
