@@ -12,7 +12,7 @@ Returns a DataArray (valueColumns is string or (valueColumns is pd.Index and val
     sumDuplicateRecords: If True, sums identical rows. Otherwise, removes duplicates (except the first one). 
 pandas_to_dataarray(sales_dataframe, {'Sales Channel': sales_channels, 'Market Segment': market_segments, 'Month': time}, 'Sales', 0.)
 
-    epandas_to_dataarray(sales_dataframe, {'Sales Channel': sales_channels, 'Market Segment': market_segments, 'Month': time}, 'Sales', 0.)nter code here
+    pandas_to_dataarray(sales_dataframe, {'Sales Channel': sales_channels, 'Market Segment': market_segments, 'Month': time}, 'Sales', 0.)
 
 
 **(dataframe, domainDic, valueColumns, defaultValue=None, valueColumnsAsDim=True, sumDuplicateRecords=True)**
@@ -24,5 +24,6 @@ Returns a DataArray (valueColumns is string or (valueColumns is pd.Index and val
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzU5NDE2NDgsLTg0NzcwMDQ2Ml19
+eyJoaXN0b3J5IjpbLTUwNjE2NTI5NywtMjAzNTk0MTY0OCwtOD
+Q3NzAwNDYyXX0=
 -->
