@@ -1,6 +1,6 @@
 ## Pyplan Functions
 
-### dataarray_from_pandas()
+### pandas_from_excel()
 dataframe, domainDic, valueColumns, defaultValue=None, valueColumnsAsDim=True, sumDuplicateRecords=True)
 
 Returns a DataArray (valueColumns is string or (valueColumns is pd.Index and valueColumnsAsDim is True)) or Dataset (valueColumns is a list or (valueColumns is a pd.Index and valueColumnsAsDim is False)) from a Pandas dataframe applying the set_domain function.
@@ -24,6 +24,7 @@ Returns a DataArray (valueColumns is string or (valueColumns is pd.Index and val
 
 ### dataarray_from_excel()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzcwMTM1ODksLTE1MDMwNDI5MDMsMT
-MyNjMxOTY1NSwtMjAzNTk0MTY0OCwtODQ3NzAwNDYyXX0=
+eyJoaXN0b3J5IjpbLTU2MDMwNjkxMSwtMTAzNzAxMzU4OSwtMT
+UwMzA0MjkwMywxMzI2MzE5NjU1LC0yMDM1OTQxNjQ4LC04NDc3
+MDA0NjJdfQ==
 -->
