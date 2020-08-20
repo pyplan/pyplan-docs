@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Model &mdash; pyplandoc 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Executing Nodes" href="Node Execution.html" />
+    <link rel="prev" title="File Manager" href="File Manager.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/Logo.jpg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../home.html">About Pyplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Quick Start.html"><strong>Quick Start</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Community.html"><strong>Pyplan Community site</strong></a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="App Homepage.html"><strong>App Home</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="File Manager.html"><strong>File Manager</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#node-properties-tabs">Node Properties Tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#types-of-nodes">Types of Nodes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#node">Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#function">Function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision">Decision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index">Index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#button">Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module">Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text">Text</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#model-preferences">Model Preferences</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#default-imports">Default imports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-python-libraries">Using Python Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toolboxes">Toolboxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shortcuts">Shortcuts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Node Execution.html">Executing Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Visualization.html">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="User Interface Designer.html">User Interface Designer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Migrating from Cubeplan.html">Migrating from Cubeplan</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyplandoc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Model</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/User Guide/Model.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="model">
+<h1>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="node-properties-tabs">
+<h2>Node Properties Tabs<a class="headerlink" href="#node-properties-tabs" title="Permalink to this headline">¶</a></h2>
+<p>Pyplan structures code using an influence diagram of nodes. When a node is selected (on Edit mode), a Properties window opens. Nodes attributes can be inspected and edited by means of tabs that are labeled as <kbd>Properties</kbd>, <kbd>Code&lt;/&gt;</kbd>, and <kbd>Docs</kbd>.</p>
+<p><img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/mod_node_prop.png" />
+The <kbd>Properties</kbd> tab contains:</p>
+<ul class="simple">
+<li><p><strong>Title</strong>: the legend that will be displayed over the node.</p></li>
+<li><p><strong>ID</strong>: the node identification. The way to call the node values when coding.</p></li>
+<li><p><strong>Units</strong>: a text value that will be displayed next to the title when evaluating a node.</p></li>
+<li><p><strong>#</strong>: the number format of the node.</p></li>
+<li><p><strong>Inputs/Outputs</strong>: lists of nodes titles directly linked to the selected node. You can navigate to any of them by clicking on the node name.</p></li>
+<li><p><strong>Code</strong>: shortcut to the Code tab.</p></li>
+</ul>
+<p>The <kbd>Code&lt;/&gt;</kbd> tab:
+<img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-code-tab1.png" />
+The Code tab presents two windows: the left one is where the code of the node is inserted.
+Nodes’ code <strong>must end with the result definition</strong>. The <strong>“result”</strong> variable contains the output of the node, i.e., the values that will be displayed when the node is evaluated or called from other node.
+Intermediate local variables can be used within the node code. These local variables can be printed in the console for tracing calculation, but the result definition must be placed at the end.
+The right-side window displays the console output. The outputs of any <code class="docutils literal notranslate"><span class="pre">print()</span></code> statement will be displayed here.
+When the code is modified, a check and a cancel box appear, and the Play button turns orange to indicate the node needs to be run.
+<img alt="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-orange.png" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-orange.png" /></p>
+<p>You can accept changes and run the node by pressing <kbd>Ctrl + Enter&lt;/&gt;</kbd> or by clicking on the icons.
+After running the node, the Play button turns blue to indicate it has already been calculated.
+<img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-blue.png" /></p>
+<p>The <kbd>Docs</kbd> tab:
+This tab contains a complete HTML text editor to include rich text, links, images, and videos that describe and explain the fundamentals of every calculation step. This way, the app becomes an interactive knowledge repository.
+<img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-docs.png" /></p>
+</div>
+<div class="section" id="types-of-nodes">
+<h2>Types of Nodes<a class="headerlink" href="#types-of-nodes" title="Permalink to this headline">¶</a></h2>
+<p>The main elements for creating the app calculation logic are the following:</p>
+<p><img src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-nodes-type.png"
+style="float: right; margin-left: 10px;"
+ALIGN=”top”
+height="300" /></p>
+<div class="section" id="node">
+<h3>Node<a class="headerlink" href="#node" title="Permalink to this headline">¶</a></h3>
+<p>It is the main element for creating the calculation logic. It can be understood as a global variable for programming, and its definition ends by indicating the output value of the variable as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">localvar</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;this is the output:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">localvar</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function">
+<h3>Function<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h3>
+<p>This element is used for creating user-defined functions.
+Below is a basic example of a UDF definition:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_fn</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span><span class="n">param2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">param1</span><span class="o">+</span><span class="n">param2</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">_fn</span>
+</pre></div>
+</div>
+<p>Functions can be globally used in the entire model, and custom libraries can be created by grouping functions inside a module for later export and import.</p>
+</div>
+<div class="section" id="decision">
+<h3>Decision<a class="headerlink" href="#decision" title="Permalink to this headline">¶</a></h3>
+<p>A decision node is meant to create a set of options from which the model user can choose.
+Its definition syntax is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">selector</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where the first parameter is the list of values to choose from, the second is the position of the list chosen, and the third is a flag to indicate the multiple selection option.</p>
+</div>
+<div class="section" id="index">
+<h3>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://xarray.pydata.org/en/stable/data-structures.html">Xarray data structure</a> is Xarray’s implementation of a labeled, multi-dimensional array. It has several key properties:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code>: a  <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray"><code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>  holding the array’s values</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dims</span></code>: dimension names for each axis (e.g.,  <code class="docutils literal notranslate"><span class="pre">('x',</span>&#160; <span class="pre">'y',</span>&#160; <span class="pre">'z')</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">coords</span></code>: a dict-like container of arrays (<em>coordinates</em>) that label each point (e.g., 1-dimensional arrays of numbers, datetime objects or strings)</p></li>
+</ul>
+<p>The Pyplan index node is defined as a Pandas index to help operate with the Xarray matrix.
+To define the index, the dims and coords properties are set simultaneously. Dim is defined as the Id property of the index, and Coords as the elements of the index.
+Creating and working with the index in this way guarantees the possibility to operate in the matrix’s domain. So for example, when you add two matrixes that share an index, the values are defined for all elements of the index. Working with Xarray native dims and coords does not guarantee that, because you could be operating with matrixes that even though they share a dimension, the coords domains do not intersect.
+Indexes defined in Pyplan have an additional function when creating User Interfaces. When more than one Xarray output node share a dimension, inserting that dimension in the interface will work as a coordinated filter on all objects that share that dimension.</p>
+</div>
+<div class="section" id="button">
+<h3>Button<a class="headerlink" href="#button" title="Permalink to this headline">¶</a></h3>
+<p>A button is created to run the scripts that use the model.
+Any custom task, for example assigning a value or definition to a node, can be executed by running a button. Unlike nodes, its definition does not require the <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> </code> sentence at the end, since there is no result to be stored.</p>
+</div>
+<div class="section" id="module">
+<h3>Module<a class="headerlink" href="#module" title="Permalink to this headline">¶</a></h3>
+<p>Modules are the containers of diagrams (workflows of nodes.) You can access a module by double clicking on it. The module navigation path is shown at the top of the digram. You can navigate directly to the level you want to access by clicking on it.
+You can drag a group of selected nodes into a module to organize your diagram or cut and paste a group in case you want to move upstream.</p>
+</div>
+<div class="section" id="text">
+<h3>Text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h3>
+<p>The text node is intended for clarification of the calculation logic.
+Its properties include text size, which can be adjusted by selecting the text; Z position, which allows to bring the selection to the front or send it to the back; and text font type and size, as well as border and background color.
+<img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-text-usage.png" /></p>
+</div>
+</div>
+<div class="section" id="model-preferences">
+<h2>Model Preferences<a class="headerlink" href="#model-preferences" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="default-imports">
+<h3>Default imports<a class="headerlink" href="#default-imports" title="Permalink to this headline">¶</a></h3>
+<p>In order to avoid declaring the “Import” sentence in each node, there is a node, called Default imports, which collects the libraries that will not require to declare import all across the model.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span><span class="o">,</span> <span class="nn">pandas</span><span class="o">,</span> <span class="nn">cubepy</span><span class="o">,</span> <span class="nn">xarray</span>
+<span class="c1">#fill the following dict keys with the alias you need to import in each node</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s2">&quot;np&quot;</span><span class="p">:</span><span class="n">numpy</span><span class="p">,</span>
+<span class="s2">&quot;pd&quot;</span><span class="p">:</span><span class="n">pandas</span><span class="p">,</span>
+<span class="s2">&quot;cubepy&quot;</span><span class="p">:</span><span class="n">cubepy</span><span class="p">,</span>
+<span class="s2">&quot;xr&quot;</span><span class="p">:</span><span class="n">xarray</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-python-libraries">
+<h2>Using Python Libraries<a class="headerlink" href="#using-python-libraries" title="Permalink to this headline">¶</a></h2>
+<p>Pyplan includes a function called “install_library” to help you work with libraries that are not natively included in the Pyplan app.
+The syntax of such function is shown below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install_library</span><span class="p">(</span> <span class="n">pypi_name</span><span class="p">,</span> <span class="n">import_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The second parameter is for cases where the pip install name is different than the name used for importing.</p>
+<p>You can define a node as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">install_library</span><span class="p">(</span> <span class="s1">&#39;bokeh&#39;</span><span class="p">,</span> <span class="n">import_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="kn">import</span> <span class="s1">&#39;bokeh&#39;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">bokeh</span><span class="o">.</span><span class="n">__version</span>
+</pre></div>
+</div>
+<p>When a node with such definition is run for the first time, the mentioned library will be installed in a folder inside in the folder where the model is saved. A new folder named <code class="docutils literal notranslate"><span class="pre">libs</span></code> will be created and all library components will be installed in that folder.
+The image below shows the result of installing the <a class="reference external" href="https://bokeh.pydata.org/en/latest/">Bokeh</a> visualization library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install_library</span><span class="p">(</span> <span class="s1">&#39;bokeh&#39;</span><span class="p">,</span> <span class="n">import_name</span><span class="o">=</span><span class="kc">None</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/model-install-lib.png" />
+When the library is already installed the <code class="docutils literal notranslate"><span class="pre">install_library</span></code> function realize about that fact and does nothing.
+Once installed you could delete the <code class="docutils literal notranslate"><span class="pre">install_library</span></code>  sentence and the model will keep running, but it is good practice to keep this line because when you share the model or copy it to a different place, when running for the first time in that environment it will proceed again with the required installment.
+Additionally, you must consider to include the library in the “Default Import” node to avoid the <code class="docutils literal notranslate"><span class="pre">import</span></code>  sentence in every node you use the library.</p>
+</div>
+<div class="section" id="toolboxes">
+<h2>Toolboxes<a class="headerlink" href="#toolboxes" title="Permalink to this headline">¶</a></h2>
+<p>Toolboxes are nodes for specific purposes, with custom wizards associated to them, which help parametrize a function for producing certain result.
+Pyplan includes a toolbox named Data Sources. An example of this wizard has been developed with the read CSV node.
+This is an experimental feature. Further development of toolboxes will be mainly driven by Pyplan users’ requests.</p>
+<p><img alt="enter image description here" src="https://raw.githubusercontent.com/pyplan/pyplan-docs/master/img/Mod_data_sources.jpg" /></p>
+</div>
+<div class="section" id="shortcuts">
+<h2>Shortcuts<a class="headerlink" href="#shortcuts" title="Permalink to this headline">¶</a></h2>
+<p>Shortcuts are very useful when modelling.</p>
+<p>Take a look at shortcuts available on Pyplan on the following chart.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Keys (PC)</th>
+<th>(Mac OS)</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shift + Click</td>
+<td></td>
+<td>Select node</td>
+</tr>
+<tr>
+<td>Shift + area</td>
+<td>Shift + area</td>
+<td>Select node area</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete</td>
+<td>Delete node</td>
+</tr>
+<tr>
+<td>Ctrl + ←</td>
+<td>Ctrl + Cmd + ←</td>
+<td>Align left</td>
+</tr>
+<tr>
+<td>Ctrl + →</td>
+<td>Ctrl + Cmd + →</td>
+<td>Align right</td>
+</tr>
+<tr>
+<td>Ctrl + down</td>
+<td>Ctrl + Cmd + down</td>
+<td>Align bottom edge</td>
+</tr>
+<tr>
+<td>Ctrl + up</td>
+<td>Ctrl + Cmd + up</td>
+<td>Align top edge</td>
+</tr>
+<tr>
+<td>Ctrl + F</td>
+<td>Ctrl + F</td>
+<td>Search node</td>
+</tr>
+<tr>
+<td>Ctrl + S</td>
+<td>Ctrl + S</td>
+<td>Save current model</td>
+</tr>
+<tr>
+<td>Ctrl + H</td>
+<td>Ctrl + H</td>
+<td>From a selected alias node go to the original</td>
+</tr>
+<tr>
+<td>Ctrl + R</td>
+<td>Ctrl + R</td>
+<td>Evaluate node</td>
+</tr>
+<tr>
+<td>Ctrl + Y</td>
+<td>Ctrl + Y</td>
+<td>Alternated displaying nodes Title / ID</td>
+</tr>
+<tr>
+<td>Ctrl + Click</td>
+<td>Option + Click</td>
+<td>Insert node Id in other node definition</td>
+</tr>
+<tr>
+<td>Ctrl + space</td>
+<td>Ctrl + space</td>
+<td>Autofill formulas</td>
+</tr>
+<tr>
+<td>Ctrl + B</td>
+<td>Ctrl + B</td>
+<td>Edit node number format</td>
+</tr>
+<tr>
+<td>Ctrl + C</td>
+<td>Ctrl + C</td>
+<td>Copy node</td>
+</tr>
+<tr>
+<td>Ctrl + X</td>
+<td>Ctrl + X</td>
+<td>Cut node</td>
+</tr>
+<tr>
+<td>Ctrl + V</td>
+<td>Ctrl + V</td>
+<td>Paste node</td>
+</tr>
+<tr>
+<td>Ctrl + M</td>
+<td>Ctrl + M</td>
+<td>Create alias</td>
+</tr>
+<tr>
+<td>Ctrl + D</td>
+<td>Ctrl + D</td>
+<td>Duplicate node</td>
+</tr>
+<tr>
+<td>Ctrl + G</td>
+<td>Ctrl + G</td>
+<td>Same height</td>
+</tr>
+<tr>
+<td>Ctrl + I</td>
+<td>Ctrl + I</td>
+<td>Same width</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + 0</td>
+<td>Ctrl + Option + 0</td>
+<td>Same size</td>
+</tr>
+<tr>
+<td>Ctrl + Enter</td>
+<td>Cmd + Enter</td>
+<td>Evaluate node and show console output</td>
+</tr>
+<tr>
+<td>Ctrl + E</td>
+<td>Ctrl + E</td>
+<td>Evaluate and Explore node properties</td>
+</tr>
+<tr>
+<td>Ctrl + A</td>
+<td>Ctrl + A</td>
+<td>Select all items from PivotGrid and influence diagram</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + O</td>
+<td></td>
+<td>New output</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + I</td>
+<td>Ctrl + Opt + Cmd + I</td>
+<td>New input</td>
+</tr>
+<tr>
+<td>Ctrl + Alt + D</td>
+<td>Ctrl + Opt + D</td>
+<td>Go to influence diagram</td>
+</tr>
+<tr>
+<td>Mouse Wheel</td>
+<td></td>
+<td>Move the diagram up/down</td>
+</tr>
+<tr>
+<td>Alt + Mouse Wheel</td>
+<td></td>
+<td>Move the diagram left/right</td>
+</tr>
+<tr>
+<td>Ctrl + Mouse Wheel</td>
+<td></td>
+<td>Increase/reduce node size</td>
+</tr>
+<tr>
+<td>Ctrl + Shift +H</td>
+<td>Ctrl + Shift +H</td>
+<td>Go back to the last level when navigating the modules in the diagram</td>
+</tr>
+<tr>
+<td>Ctrl + Q</td>
+<td>Ctrl + Q</td>
+<td>Go one level up</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + C</td>
+<td></td>
+<td>Copy PivotGrid with format</td>
+</tr>
+<tr>
+<td>Ctrl + F (in dock)</td>
+<td>Cmd + F (in dock)</td>
+<td>Search/ change key</td>
+</tr>
+<tr>
+<td>Ctrl + 1 (in dock)</td>
+<td>Ctrl + 1 (in dock)</td>
+<td>Move to properties window</td>
+</tr>
+<tr>
+<td>Ctrl + 2 (in dock)</td>
+<td>Ctrl + 2 (in dock)</td>
+<td>Move to code window</td>
+</tr>
+<tr>
+<td>Ctrl + 3 (in dock)</td>
+<td>Ctrl + 3 (in dock)</td>
+<td>Move to docs window</td>
+</tr>
+</tbody>
+</table><p>Take advantaged of these to increase coding speed.</p>
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTk3MDE3MTMwOSwtMjAzMDg3ODE1NywtOD
+k4MDE1MjI2LDMxOTg0MDY2OSwyMDM0ODQzODQ5LDE4MzY2Mzcx
+MjksLTY1MDUyMjg5LC0xNDg1MDc1MDEsLTU3NTg3MTQ2OSw4MT
+UxOTA4NDQsNTY5MzcyOTYzLDEzNzYzNDc3NzUsMTYyNjI2OTA2
+NCw4ODczMzI4MzEsLTE0OTE4MDU4OTUsLTY4NTI1ODQ4Niw5NT
+QwMTY5MTMsLTI2NjIwNDc1NSwyMDcyMzk5NzY1LDcxMTk3OTUy
+Ml19
+--></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Node Execution.html" class="btn btn-neutral float-right" title="Executing Nodes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="File Manager.html" class="btn btn-neutral float-left" title="File Manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Pyplan
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-154592986-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
