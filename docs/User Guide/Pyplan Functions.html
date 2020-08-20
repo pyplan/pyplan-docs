@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,12 +11,18 @@
   
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -29,10 +34,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -44,7 +45,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: #236093" >
+        <div class="wy-side-nav-search" >
           
 
           
@@ -74,6 +75,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -101,6 +103,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -139,7 +142,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Pyplan Functions</li>
     
@@ -162,29 +165,134 @@
             
   <div class="section" id="pyplan-functions">
 <h1>Pyplan Functions<a class="headerlink" href="#pyplan-functions" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="dataarray-from-pandas">
-<h2>dataarray_from_pandas()<a class="headerlink" href="#dataarray-from-pandas" title="Permalink to this headline">¶</a></h2>
-<p>dataframe, domainDic, valueColumns, defaultValue=None, valueColumnsAsDim=True, sumDuplicateRecords=True)</p>
-<p>Returns a DataArray (valueColumns is string or (valueColumns is pd.Index and valueColumnsAsDim is True)) or Dataset (valueColumns is a list or (valueColumns is a pd.Index and valueColumnsAsDim is False)) from a Pandas dataframe applying the set_domain function.
-dataframe: Pandas dataframe with no index columns.
-domainDic: Dictionary of column names and index names. Ex. {‘Column Name’: index_name}.
-valueColumns: String, list or pd.Index. Dataframe’s value columns.
-defaultValue: Default value when applying set_domain function.
-valueColumnsAsDim: If True, valueColumns becomes a dimension of resulting DataArray. If False, each value column becomes a variable of the resulting Dataset.
-sumDuplicateRecords: If True, sums identical rows. Otherwise, removes duplicates (except the first one).
-pandas_to_dataarray(sales_dataframe, {‘Sales Channel’: sales_channels, ‘Market Segment’: market_segments, ‘Month’: time}, ‘Sales’, 0.)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">epandas_to_dataarray</span><span class="p">(</span><span class="n">sales_dataframe</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Sales Channel&#39;</span><span class="p">:</span> <span class="n">sales_channels</span><span class="p">,</span> <span class="s1">&#39;Market Segment&#39;</span><span class="p">:</span> <span class="n">market_segments</span><span class="p">,</span> <span class="s1">&#39;Month&#39;</span><span class="p">:</span> <span class="n">time</span><span class="p">},</span> <span class="s1">&#39;Sales&#39;</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)</span><span class="n">nter</span> <span class="n">code</span> <span class="n">here</span>
+<div class="section" id="pp-pandas-from-excel">
+<h2>pp.pandas_from_excel<a class="headerlink" href="#pp-pandas-from-excel" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">pp</span><span class="o">.</span><span class="n">pandas_from_excel</span><span class="o">**</span><span class="p">(</span><span class="o">*</span><span class="n">excel</span><span class="p">,</span> <span class="n">sheetName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">namedRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cellRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">indexes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="n">driver</span><span class="o">=</span><span class="s2">&quot;Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)}; DBQ=</span><span class="si">%s</span><span class="s2">; READONLY=TRUE&quot;</span><span class="o">*</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>(dataframe, domainDic, valueColumns, defaultValue=None, valueColumnsAsDim=True, sumDuplicateRecords=True)</strong></p>
+<p>Creates a Pandas Dataframe from an Excel spreadsheet.</p>
+<div class="section" id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>excel</strong> (str) - Path to Excel spreadsheet.</p></li>
+<li><p><strong>sheetName</strong> (str) - Sheet name to be read.</p></li>
+<li><p><strong>namedRange</strong> (str) - Range name to be read. Only applies if sheetName is None.</p></li>
+<li><p><strong>cellRange</strong> (str) - Range of cells to be read. Must be used with sheetName. e.g. ‘A1:H10’.</p></li>
+<li><p><strong>indexes</strong> (list) - List of columns to set index.</p></li>
+<li><p><strong>driver</strong> (str) - Driver to be used to interact with Excel spreadsheet. Only applies to Windows PCs.</p></li>
+</ul>
+</div>
+<div class="section" id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Permalink to this headline">¶</a></h3>
+<p>Pandas DataFrame</p>
+</div>
+</div>
 <hr class="docutils" />
-<p>Returns a DataArray (valueColumns is string or (valueColumns is pd.Index and valueColumnsAsDim is True)) or Dataset (valueColumns is a list or (valueColumns is a pd.Index and valueColumnsAsDim is False)) from a Pandas dataframe applying the set_domain function. dataframe: Pandas dataframe with no index columns. domainDic: Dictionary of column names and index names. Ex. {‘Column Name’: index_name}. valueColumns: String, list or pd.Index. Dataframe’s value columns. defaultValue: Default value when applying set_domain function. valueColumnsAsDim: If True, valueColumns becomes a dimension of resulting DataArray. If False, each value column becomes a variable of the resulting Dataset. sumDuplicateRecords: If True, sums identical rows. Otherwise, removes duplicates (except the first one). Ex. pandas_to_dataarray(sales_dataframe, {‘Sales Channel’: sales_channels, ‘Market Segment’: market_segments, ‘Month’: time}, ‘Sales’, 0.)</p>
-<blockquote>
-<div><p>Written with <a class="reference external" href="https://stackedit.io/">StackEdit</a>.</p>
-</div></blockquote>
+<div class="section" id="pp-index-from-excel">
+<h2>pp.index_from_excel<a class="headerlink" href="#pp-index-from-excel" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">pp</span><span class="o">.</span><span class="n">index_from_excel</span><span class="o">**</span><span class="p">(</span><span class="o">*</span><span class="n">excel</span><span class="p">,</span> <span class="n">sheetName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">namedRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cellRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="n">columnName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">removeEmpty</span><span class="o">=</span><span class="kc">True</span><span class="o">*</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Creates a Pandas Index from an Excel spreadsheet.</p>
+<div class="section" id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>excel</strong> (str) - Path to Excel spreadsheet.</p></li>
+<li><p><strong>sheetName</strong> (str) - Sheet name to be read.</p></li>
+<li><p><strong>namedRange</strong> (str) - Range name to be read. Only applies if sheetName is None.</p></li>
+<li><p><strong>cellRange</strong> (str) - Range of cells to be read. Must be used with sheetName. e.g. ‘A1:H10’.</p></li>
+<li><p><strong>columnName</strong> (str) - Name of column to be read.</p></li>
+<li><p><strong>removeEmpty</strong> (bool) - Removes empty rows if set to True.</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Returns<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Pandas Index</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="pp-index-from-pandas">
+<h2>pp.index_from_pandas<a class="headerlink" href="#pp-index-from-pandas" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">pp</span><span class="o">.</span><span class="n">index_from_pandas</span><span class="o">**</span><span class="p">(</span><span class="o">*</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">columnName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">removeEmpty</span><span class="o">=</span><span class="kc">True</span><span class="o">*</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Creates a Pandas Index from a Pandas DataFrame.</p>
+<div class="section" id="id3">
+<h3>Parameters<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>dataframe</strong> (Pandas DataFrame)</p></li>
+<li><p><strong>columnName</strong> (str) - Name of column to be read.</p></li>
+<li><p><strong>removeEmpty</strong> (bool) - Removes empty rows if set to True.</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Returns<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Pandas Index</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="pp-dataarray-from-pandas">
+<h2>pp.dataarray_from_pandas<a class="headerlink" href="#pp-dataarray-from-pandas" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">pp</span><span class="o">.</span><span class="n">dataarray_from_pandas</span><span class="o">**</span><span class="p">(</span><span class="o">*</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">domainDic</span><span class="p">,</span> <span class="n">valueColumns</span><span class="p">,</span> <span class="n">defaultValue</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="n">valueColumnsAsDim</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sumDuplicateRecords</span><span class="o">=</span><span class="kc">True</span><span class="o">*</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Applies the pp.set_domain function to a Pandas DataFrame and returns:
+Xarray DataArray, if (valueColumns is a string) or (valueColumns is a Pandas Index and valueColumnsAsDim is True), or
+Xarray Dataset, if (valueColumns is a list) or (valueColumns is a Pandas Index and valueColumnsAsDim is False)</p>
+<div class="section" id="id5">
+<h3>Parameters<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>dataframe</strong> (Pandas DataFrame) - Pandas DataFrame without MultiIndex.</p></li>
+<li><p><strong>domainDic</strong> (dict) - Dictionary of column names (keys) and Pandas Index objects (values). e.g. {‘Column Name’: index_a}.</p></li>
+<li><p><strong>valueColumns</strong> (str, list or Pandas Index) - Dataframe’s value columns.</p></li>
+<li><p><strong>defaultValue</strong> (str, float or int) - Value used to fill empty combinations of DataArray.</p></li>
+<li><p><strong>valueColumnsAsDim</strong> (bool) - If True, valueColumns becomes a dimension of the resulting Xarray DataArray. If False, each value column becomes a variable of the resulting Xarray Dataset.</p></li>
+<li><p><strong>sumDuplicateRecords</strong> (bool) - If True, sums identical rows. If False, keeps the first one.</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>Returns<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Xarray DataArray, if (valueColumns is a string) or (valueColumns is a Pandas Index and valueColumnsAsDim is True),
+or
+Xarray Dataset, if (valueColumns is a list) or (valueColumns is a Pandas Index and valueColumnsAsDim is False)</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="pp-dataarray-from-excel">
+<h2>pp.dataarray_from_excel<a class="headerlink" href="#pp-dataarray-from-excel" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">pp</span><span class="o">.</span><span class="n">dataarray_from_excel</span><span class="o">**</span><span class="p">(</span><span class="o">*</span><span class="n">excel</span><span class="p">,</span> <span class="n">sheetName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">namedRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cellRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="n">indexes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">valueColumns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">indexColumnHeaders</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">replaceByIndex</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="n">defaultValue</span><span class="o">=</span><span class="mi">0</span><span class="o">*</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Creates an Xarray DataArray from an Excel spreadsheet.</p>
+<div class="section" id="id7">
+<h3>Parameters<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>excel</strong> (str) - Path to Excel spreadsheet.</p></li>
+<li><p><strong>sheetName</strong> (str) - Sheet name to be read.</p></li>
+<li><p><strong>namedRange</strong> (str) - Range name to be read. Only applies if sheetName is None.</p></li>
+<li><p><strong>cellRange</strong> (str) - Range of cells to be read. Must be used with sheetName. e.g. ‘A1:H10’.</p></li>
+<li><p><strong>indexes</strong> (list) - List of Pandas Indexes that match index columns’ values.</p></li>
+<li><p><strong>valueColumns</strong> (str or Pandas Index) - str if there is only one value column; Pandas Index with column’s names if there are two or more value columns.</p></li>
+<li><p><strong>indexColumnHeaders</strong> (list) - List of strings with columns’ names matching indexes.</p></li>
+<li><p><strong>replaceByIndex</strong> (bool) - Replaces Pandas Index used in valueColumns with another Pandas Index applying the pp.change_index function.</p></li>
+<li><p><strong>defaultValue</strong> (str, float or int) - Value used to fill empty combinations of DataArray.</p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>Returns<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Xarray DataArray</p>
+<hr class="docutils" />
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzU5NDE2NDgsLTg0NzcwMDQ2Ml19
+eyJoaXN0b3J5IjpbLTkxMjYyNTIzNCw3MDA2NTM2OTgsLTEwMz
+cwMTM1ODksLTE1MDMwNDI5MDMsMTMyNjMxOTY1NSwtMjAzNTk0
+MTY0OCwtODQ3NzAwNDYyXX0=
 --></div>
+</div>
 </div>
 
 
@@ -198,11 +306,19 @@ eyJoaXN0b3J5IjpbLTIwMzU5NDE2NDgsLTg0NzcwMDQ2Ml19
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Pyplan
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -213,7 +329,6 @@ eyJoaXN0b3J5IjpbLTIwMzU5NDE2NDgsLTg0NzcwMDQ2Ml19
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
