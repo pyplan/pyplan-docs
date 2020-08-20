@@ -83,7 +83,7 @@ Xarray Dataset, if (valueColumns is a list) or (valueColumns is a Pandas Index a
     defaultValue=0*)
 
 Creates an Xarray DataArray from an Excel spreadsheet.
-#### Parameters
+### Parameters
 
  - **excel** (str) - Path to Excel spreadsheet.
  - **sheetName** (str) - Sheet name to be read.
@@ -95,12 +95,12 @@ Creates an Xarray DataArray from an Excel spreadsheet.
  - **replaceByIndex** (bool) - Replaces Pandas Index used in valueColumns with another Pandas Index applying the pp.change_index function.
  - **defaultValue** (str, float or int) - Value used to fill empty combinations of DataArray.
 
-#### Returns
+### Returns
 Xarray DataArray
 
 ----------
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMDI2MjA3MiwtOTEyNjI1MjM0LDcwMD
-Y1MzY5OCwtMTAzNzAxMzU4OSwtMTUwMzA0MjkwMywxMzI2MzE5
-NjU1LC0yMDM1OTQxNjQ4LC04NDc3MDA0NjJdfQ==
+eyJoaXN0b3J5IjpbOTU2NTAyNTg2LC05MTI2MjUyMzQsNzAwNj
+UzNjk4LC0xMDM3MDEzNTg5LC0xNTAzMDQyOTAzLDEzMjYzMTk2
+NTUsLTIwMzU5NDE2NDgsLTg0NzcwMDQ2Ml19
 -->
