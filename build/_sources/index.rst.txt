@@ -25,6 +25,7 @@ Pyplan's documentation
    User Guide/File Manager
    User Guide/Model
    User Guide/Node Execution
+   User Guide/Pyplan Functions
    User Guide/Visualization
    User Guide/User Interface Designer
    User Guide/Migrating from Cubeplan
