@@ -2,8 +2,8 @@
 
 ## pp.pandas_from_excel
 
-    **pp.pandas_from_excel**(*excel, sheetName=None, namedRange=None, cellRange=None, indexes=None,
-    driver="Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)}; DBQ=%s; READONLY=TRUE"*)
+    pp.pandas_from_excelexcel, sheetName=None, namedRange=None, cellRange=None, indexes=None,
+    driver="Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)}; DBQ=%s; READONLY=TRUE")
 
 Creates a Pandas Dataframe from an Excel spreadsheet.
 ### Parameters
@@ -21,8 +21,8 @@ Pandas DataFrame
 ----------
 
 ## pp.index_from_excel
-    **pp.index_from_excel**(*excel, sheetName=None, namedRange=None, cellRange=None,
-    columnName=None, removeEmpty=True*)
+    pp.index_from_excelexcel, sheetName=None, namedRange=None, cellRange=None,
+    columnName=None, removeEmpty=True)
 
 Creates a Pandas Index from an Excel spreadsheet.
 ### Parameters
@@ -40,7 +40,7 @@ Pandas Index
 ----------
 
 ## pp.index_from_pandas
-    **pp.index_from_pandas**(*dataframe, columnName=None, removeEmpty=True*)
+    pp.index_from_pandasdataframe, columnName=None, removeEmpty=True)
 
 Creates a Pandas Index from a Pandas DataFrame.
 ### Parameters
@@ -55,8 +55,8 @@ Pandas Index
 ----------
 
 ## pp.dataarray_from_pandas
-    **pp.dataarray_from_pandas**(*dataframe, domainDic, valueColumns, defaultValue=None,
-    valueColumnsAsDim=True, sumDuplicateRecords=True*)
+    pp.dataarray_from_pandasdataframe, domainDic, valueColumns, defaultValue=None,
+    valueColumnsAsDim=True, sumDuplicateRecords=True)
 
 Applies the pp.set_domain function to a Pandas DataFrame and returns:
 Xarray DataArray, if (valueColumns is a string) or (valueColumns is a Pandas Index and valueColumnsAsDim is True), or
@@ -78,9 +78,9 @@ Xarray Dataset, if (valueColumns is a list) or (valueColumns is a Pandas Index a
 ----------
 
 ## pp.dataarray_from_excel
-    **pp.dataarray_from_excel**(*excel, sheetName=None, namedRange=None, cellRange=None,
+    pp.dataarray_from_excelexcel, sheetName=None, namedRange=None, cellRange=None,
     indexes=None, valueColumns=None, indexColumnHeaders=None, replaceByIndex=None,
-    defaultValue=0*)
+    defaultValue=0)
 
 Creates an Xarray DataArray from an Excel spreadsheet.
 ### Parameters
@@ -100,7 +100,7 @@ Xarray DataArray
 
 ----------
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU2NTAyNTg2LC05MTI2MjUyMzQsNzAwNj
-UzNjk4LC0xMDM3MDEzNTg5LC0xNTAzMDQyOTAzLDEzMjYzMTk2
-NTUsLTIwMzU5NDE2NDgsLTg0NzcwMDQ2Ml19
+eyJoaXN0b3J5IjpbLTE5MTczNjg0OTYsOTU2NTAyNTg2LDcwMD
+Y1MzY5OCwtMTAzNzAxMzU4OSwtMTUwMzA0MjkwMywxMzI2MzE5
+NjU1LC0yMDM1OTQxNjQ4LC04NDc3MDA0NjJdfQ==
 -->
