@@ -19,44 +19,44 @@ The following table contains **Cubeplan basic function** list and its **equivale
 
 |Model| Title in Cubeplan|Pyplan Library|Node with example|PPL,XA or Pandas|
 |-----|-----|-----|-----|-----|
-|Selecting Data from Array|change index|change_index|change_index_ex  /change_index_by_pos_ex|PPL|
-|Selecting Data from Array|subscript|subscript|subscript_ex|PPL|
-|Selecting Data from Array|subscript looking up|lookup|lookup_ex|PPL|
-|Selecting Data from Array|subset|subset|subset_ex|PPL|
-|Selecting Data from Array|slice|slice_dataarray|slice_dataarray_ex|PPL|
+|Selecting Data from Array|change index|pp.change_index|change_index_ex  /change_index_by_pos_ex|PPL|
+|Selecting Data from Array|subscript|pp.subscript|subscript_ex|PPL|
+|Selecting Data from Array|subscript looking up|pp.lookup|lookup_ex|PPL|
+|Selecting Data from Array|subset|pp.subset|subset_ex|PPL|
+|Selecting Data from Array|slice|pp.slice_dataarray|slice_dataarray_ex|PPL|
 |Basic Math and Missing Values|size|len()|len_size_ex|XA|
 |Basic Math and Missing Values|size|dataarray.size|len_size_ex|XA|
-|Basic Math and Missing Values|undef_filter|fill_all|fillall_ex|PPL|
+|Basic Math and Missing Values|undef_filter|pp.fill_all|fillall_ex|PPL|
 |Basic Math and Missing Values|nvx_is_null/nvx_is_nan|dataarray.fillna()|missing_values_methodsfillna|XA|
-|Basic Math and Missing Values|undef_filter|fill_inf|fillinf_ex|PPL|
-|Basic Math and Missing Values|min|dataarray.min(teams.name)|min_along_indexes|XA|
-|Basic Math and Missing Values|max|dataarray.max(teams.name)|max_along_indexes|XA|
+|Basic Math and Missing Values|undef_filter|pp.fill_inf|fillinf_ex|PPL|
+|Basic Math and Missing Values|min|dataarray.min()|min_along_indexes|XA|
+|Basic Math and Missing Values|max|dataarray.max()|max_along_indexes|XA|
 |Basic Math and Missing Values|if then else|xr.where|xr_where_exa|XA|
-|Basic Math and Missing Values|min_|xr.ufuncs.minimum|mini_maxi_among_2_dataarrays|XA|
-|Basic Math and Missing Values|max_|xr.ufuncs.maximum|pp_maximum|XA|
-|Aggregation and Rolling window operations|sum|dataarray.sum(teams.name)|sum_ex|XA|
-|Aggregation and Rolling window operations|cumulate|dataarray.cumsum(teams.name)|cumsum_ex|XA|
-|Aggregation and Rolling window operations|cumproduct|dataarray.cumprod(teams.name)|cumprod_ex|XA|
-|Aggregation and Rolling window operations|backward looking sum|dataarray.rolling|back_look_sum_example|XA|
-|Aggregation and Rolling window operations|filtered aggregate|aggregate|aggregate_ex|PPL|
-|Working with Indexes|concat|concat_index|concatindex_ex|PPL|
-|Working with Indexes|new|add_periods_ex|add_periods_ex|PPL|
-|Working with Indexes|new|apply_fn|apply_fn_ex|PPL|
-|Working with Indexes|find in text|find|find_ex|PPL|
-|Working with Indexes|splittext|split_text|splittext_ex|PPL|
-|Dynamic NPV IRR  and Linear Depreciation|npv|npv|npv_ex|PPL|
-|Dynamic NPV IRR  and Linear Depreciation|irr|irr|irr_ex|PPL|
-|Dynamic NPV IRR  and Linear Depreciation|dynamic|dynamic|dynamic_ex|PPL|
-|Dynamic NPV IRR  and Linear Depreciation|new|create_time|time|PPL|
-|Dynamic NPV IRR  and Linear Depreciation|linear depreciation|linear_depreciation|linear_depreciation_ex|PPL|
+|Basic Math and Missing Values|min_|np.minimum|mini_maxi_among_2_dataarrays|XA|
+|Basic Math and Missing Values|max_|np.maximum|pp_maximum|XA|
+|Aggregation and Rolling window operations|sum|dataarray.sum()|sum_ex|XA|
+|Aggregation and Rolling window operations|cumulate|dataarray.cumsum()|cumsum_ex|XA|
+|Aggregation and Rolling window operations|cumproduct|dataarray.cumprod()|cumprod_ex|XA|
+|Aggregation and Rolling window operations|backward looking sum|dataarray.rolling()|back_look_sum_example|XA|
+|Aggregation and Rolling window operations|filtered aggregate|pp.aggregate|aggregate_ex|PPL|
+|Working with Indexes|concat|pp.concat_index|concatindex_ex|PPL|
+|Working with Indexes|new|pp.add_periods|add_periods_ex|PPL|
+|Working with Indexes|new|pp.apply_fn|apply_fn_ex|PPL|
+|Working with Indexes|find in text|pp.find|find_ex|PPL|
+|Working with Indexes|splittext|pp.split_text|splittext_ex|PPL|
+|Dynamic NPV IRR  and Linear Depreciation|npv|pp.npv|npv_ex|PPL|
+|Dynamic NPV IRR  and Linear Depreciation|irr|pp.irr|irr_ex|PPL|
+|Dynamic NPV IRR  and Linear Depreciation|dynamic|pp.dynamic|dynamic_ex|PPL|
+|Dynamic NPV IRR  and Linear Depreciation|new|pp.create_time|time|PPL|
+|Dynamic NPV IRR  and Linear Depreciation|linear depreciation|pp.linear_depreciation|linear_depreciation_ex|PPL|
 |Dynamic NPV IRR  and Linear Depreciation|or|¦|NA|XA|
-|Reading Data from Excel|nvx_da_source_cone|excel_connection|excel_connection_ex|PPL|
-|Reading Data from Excel|nvx_read_index|index_from_excel|reading_example_index|PPL|
-|Reading Data from Excel|nvx_read_table|dataarray_from_excel|dataarray_from_excel_ex|PPL|
-|Reading Data from Excel|nvx_read_table|pandas_from_excel|pandas_from_excel_ex|PPL|
+|Reading Data from Excel|nvx_da_source_cone|pp.excel_connection|excel_connection_ex|PPL|
+|Reading Data from Excel|nvx_read_index|pp.index_from_excel|reading_example_index|PPL|
+|Reading Data from Excel|nvx_read_table|pp.dataarray_from_excel|dataarray_from_excel_ex|PPL|
+|Reading Data from Excel|nvx_read_table|pp.pandas_from_excel|pandas_from_excel_ex|PPL|
 |Interacting with Pandas|new| pd.read_csv|pd_read_csv|Pandas|
-|Interacting with Pandas|new|index_from_pandas|orders_date|PPL|
-|Interacting with Pandas|new|reading from pandas see example|sales_data_by_orders_date|XA|| 
+|Interacting with Pandas|new|pp.index_from_pandas|orders_date|PPL|
+|Interacting with Pandas|new|reading from pandas (see example)|sales_data_by_orders_date|XA|| 
 
 
 ### Financial Planning Library for Cubeplan users
@@ -86,6 +86,6 @@ Use these functions as you used them in Cubeplan.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDg1MDA3NDgsMTgwNjUxOTkyNCwtOD
-E4NjQ0ODI1LC0xNzg2OTI2ODE2XX0=
+eyJoaXN0b3J5IjpbLTEwOTQyNjkwNywtMTI0ODUwMDc0OCwxOD
+A2NTE5OTI0LC04MTg2NDQ4MjUsLTE3ODY5MjY4MTZdfQ==
 -->

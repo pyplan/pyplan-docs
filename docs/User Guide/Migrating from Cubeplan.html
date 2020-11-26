@@ -206,35 +206,35 @@ Libraries can be installed and used with any model. The model file registers lib
 <tr>
 <td>Selecting Data from Array</td>
 <td>change index</td>
-<td>change_index</td>
+<td>pp.change_index</td>
 <td>change_index_ex  /change_index_by_pos_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Selecting Data from Array</td>
 <td>subscript</td>
-<td>subscript</td>
+<td>pp.subscript</td>
 <td>subscript_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Selecting Data from Array</td>
 <td>subscript looking up</td>
-<td>lookup</td>
+<td>pp.lookup</td>
 <td>lookup_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Selecting Data from Array</td>
 <td>subset</td>
-<td>subset</td>
+<td>pp.subset</td>
 <td>subset_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Selecting Data from Array</td>
 <td>slice</td>
-<td>slice_dataarray</td>
+<td>pp.slice_dataarray</td>
 <td>slice_dataarray_ex</td>
 <td>PPL</td>
 </tr>
@@ -255,7 +255,7 @@ Libraries can be installed and used with any model. The model file registers lib
 <tr>
 <td>Basic Math and Missing Values</td>
 <td>undef_filter</td>
-<td>fill_all</td>
+<td>pp.fill_all</td>
 <td>fillall_ex</td>
 <td>PPL</td>
 </tr>
@@ -269,21 +269,21 @@ Libraries can be installed and used with any model. The model file registers lib
 <tr>
 <td>Basic Math and Missing Values</td>
 <td>undef_filter</td>
-<td>fill_inf</td>
+<td>pp.fill_inf</td>
 <td>fillinf_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Basic Math and Missing Values</td>
 <td>min</td>
-<td>dataarray.min(teams.name)</td>
+<td>dataarray.min()</td>
 <td>min_along_indexes</td>
 <td>XA</td>
 </tr>
 <tr>
 <td>Basic Math and Missing Values</td>
 <td>max</td>
-<td>dataarray.max(teams.name)</td>
+<td>dataarray.max()</td>
 <td>max_along_indexes</td>
 <td>XA</td>
 </tr>
@@ -297,119 +297,119 @@ Libraries can be installed and used with any model. The model file registers lib
 <tr>
 <td>Basic Math and Missing Values</td>
 <td>min_</td>
-<td>xr.ufuncs.minimum</td>
+<td>np.minimum</td>
 <td>mini_maxi_among_2_dataarrays</td>
 <td>XA</td>
 </tr>
 <tr>
 <td>Basic Math and Missing Values</td>
 <td>max_</td>
-<td>xr.ufuncs.maximum</td>
+<td>np.maximum</td>
 <td>pp_maximum</td>
 <td>XA</td>
 </tr>
 <tr>
 <td>Aggregation and Rolling window operations</td>
 <td>sum</td>
-<td>dataarray.sum(teams.name)</td>
+<td>dataarray.sum()</td>
 <td>sum_ex</td>
 <td>XA</td>
 </tr>
 <tr>
 <td>Aggregation and Rolling window operations</td>
 <td>cumulate</td>
-<td>dataarray.cumsum(teams.name)</td>
+<td>dataarray.cumsum()</td>
 <td>cumsum_ex</td>
 <td>XA</td>
 </tr>
 <tr>
 <td>Aggregation and Rolling window operations</td>
 <td>cumproduct</td>
-<td>dataarray.cumprod(teams.name)</td>
+<td>dataarray.cumprod()</td>
 <td>cumprod_ex</td>
 <td>XA</td>
 </tr>
 <tr>
 <td>Aggregation and Rolling window operations</td>
 <td>backward looking sum</td>
-<td>dataarray.rolling</td>
+<td>dataarray.rolling()</td>
 <td>back_look_sum_example</td>
 <td>XA</td>
 </tr>
 <tr>
 <td>Aggregation and Rolling window operations</td>
 <td>filtered aggregate</td>
-<td>aggregate</td>
+<td>pp.aggregate</td>
 <td>aggregate_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Working with Indexes</td>
 <td>concat</td>
-<td>concat_index</td>
+<td>pp.concat_index</td>
 <td>concatindex_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Working with Indexes</td>
 <td>new</td>
-<td>add_periods_ex</td>
+<td>pp.add_periods</td>
 <td>add_periods_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Working with Indexes</td>
 <td>new</td>
-<td>apply_fn</td>
+<td>pp.apply_fn</td>
 <td>apply_fn_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Working with Indexes</td>
 <td>find in text</td>
-<td>find</td>
+<td>pp.find</td>
 <td>find_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Working with Indexes</td>
 <td>splittext</td>
-<td>split_text</td>
+<td>pp.split_text</td>
 <td>splittext_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Dynamic NPV IRR  and Linear Depreciation</td>
 <td>npv</td>
-<td>npv</td>
+<td>pp.npv</td>
 <td>npv_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Dynamic NPV IRR  and Linear Depreciation</td>
 <td>irr</td>
-<td>irr</td>
+<td>pp.irr</td>
 <td>irr_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Dynamic NPV IRR  and Linear Depreciation</td>
 <td>dynamic</td>
-<td>dynamic</td>
+<td>pp.dynamic</td>
 <td>dynamic_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Dynamic NPV IRR  and Linear Depreciation</td>
 <td>new</td>
-<td>create_time</td>
+<td>pp.create_time</td>
 <td>time</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Dynamic NPV IRR  and Linear Depreciation</td>
 <td>linear depreciation</td>
-<td>linear_depreciation</td>
+<td>pp.linear_depreciation</td>
 <td>linear_depreciation_ex</td>
 <td>PPL</td>
 </tr>
@@ -423,28 +423,28 @@ Libraries can be installed and used with any model. The model file registers lib
 <tr>
 <td>Reading Data from Excel</td>
 <td>nvx_da_source_cone</td>
-<td>excel_connection</td>
+<td>pp.excel_connection</td>
 <td>excel_connection_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Reading Data from Excel</td>
 <td>nvx_read_index</td>
-<td>index_from_excel</td>
+<td>pp.index_from_excel</td>
 <td>reading_example_index</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Reading Data from Excel</td>
 <td>nvx_read_table</td>
-<td>dataarray_from_excel</td>
+<td>pp.dataarray_from_excel</td>
 <td>dataarray_from_excel_ex</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Reading Data from Excel</td>
 <td>nvx_read_table</td>
-<td>pandas_from_excel</td>
+<td>pp.pandas_from_excel</td>
 <td>pandas_from_excel_ex</td>
 <td>PPL</td>
 </tr>
@@ -458,14 +458,14 @@ Libraries can be installed and used with any model. The model file registers lib
 <tr>
 <td>Interacting with Pandas</td>
 <td>new</td>
-<td>index_from_pandas</td>
+<td>pp.index_from_pandas</td>
 <td>orders_date</td>
 <td>PPL</td>
 </tr>
 <tr>
 <td>Interacting with Pandas</td>
 <td>new</td>
-<td>reading from pandas see example</td>
+<td>reading from pandas (see example)</td>
 <td>sales_data_by_orders_date</td>
 <td>XA</td>
 </tr>
@@ -562,8 +562,8 @@ Libraries can be installed and used with any model. The model file registers lib
 </tbody>
 </table><p>Use these functions as you used them in Cubeplan.</p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDg1MDA3NDgsMTgwNjUxOTkyNCwtOD
-E4NjQ0ODI1LC0xNzg2OTI2ODE2XX0=
+eyJoaXN0b3J5IjpbLTEwOTQyNjkwNywtMTI0ODUwMDc0OCwxOD
+A2NTE5OTI0LC04MTg2NDQ4MjUsLTE3ODY5MjY4MTZdfQ==
 --></div>
 </div>
 

@@ -197,8 +197,8 @@
 <h1>Pyplan Functions<a class="headerlink" href="#pyplan-functions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="pp-pandas-from-excel">
 <h2>pp.pandas_from_excel<a class="headerlink" href="#pp-pandas-from-excel" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">pp</span><span class="o">.</span><span class="n">pandas_from_excel</span><span class="o">**</span><span class="p">(</span><span class="o">*</span><span class="n">excel</span><span class="p">,</span> <span class="n">sheetName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">namedRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cellRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">indexes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="n">driver</span><span class="o">=</span><span class="s2">&quot;Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)}; DBQ=</span><span class="si">%s</span><span class="s2">; READONLY=TRUE&quot;</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">pandas_from_excel</span><span class="p">(</span><span class="n">excel</span><span class="p">,</span> <span class="n">sheetName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">namedRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cellRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">indexes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="n">driver</span><span class="o">=</span><span class="s2">&quot;Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)}; DBQ=</span><span class="si">%s</span><span class="s2">; READONLY=TRUE&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Creates a Pandas Dataframe from an Excel spreadsheet.</p>
@@ -221,8 +221,8 @@
 <hr class="docutils" />
 <div class="section" id="pp-index-from-excel">
 <h2>pp.index_from_excel<a class="headerlink" href="#pp-index-from-excel" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">pp</span><span class="o">.</span><span class="n">index_from_excel</span><span class="o">**</span><span class="p">(</span><span class="o">*</span><span class="n">excel</span><span class="p">,</span> <span class="n">sheetName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">namedRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cellRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="n">columnName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">removeEmpty</span><span class="o">=</span><span class="kc">True</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">index_from_excel</span><span class="p">(</span><span class="n">excel</span><span class="p">,</span> <span class="n">sheetName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">namedRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cellRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="n">columnName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">removeEmpty</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Creates a Pandas Index from an Excel spreadsheet.</p>
@@ -245,7 +245,7 @@
 <hr class="docutils" />
 <div class="section" id="pp-index-from-pandas">
 <h2>pp.index_from_pandas<a class="headerlink" href="#pp-index-from-pandas" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">pp</span><span class="o">.</span><span class="n">index_from_pandas</span><span class="o">**</span><span class="p">(</span><span class="o">*</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">columnName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">removeEmpty</span><span class="o">=</span><span class="kc">True</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">index_from_pandas</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">columnName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">removeEmpty</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Creates a Pandas Index from a Pandas DataFrame.</p>
@@ -265,8 +265,8 @@
 <hr class="docutils" />
 <div class="section" id="pp-dataarray-from-pandas">
 <h2>pp.dataarray_from_pandas<a class="headerlink" href="#pp-dataarray-from-pandas" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">pp</span><span class="o">.</span><span class="n">dataarray_from_pandas</span><span class="o">**</span><span class="p">(</span><span class="o">*</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">domainDic</span><span class="p">,</span> <span class="n">valueColumns</span><span class="p">,</span> <span class="n">defaultValue</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="n">valueColumnsAsDim</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sumDuplicateRecords</span><span class="o">=</span><span class="kc">True</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">dataarray_from_pandas</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">domainDic</span><span class="p">,</span> <span class="n">valueColumns</span><span class="p">,</span> <span class="n">defaultValue</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="n">valueColumnsAsDim</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sumDuplicateRecords</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Applies the pp.set_domain function to a Pandas DataFrame and returns:
@@ -293,9 +293,9 @@ Xarray Dataset, if (valueColumns is a list) or (valueColumns is a Pandas Index a
 <hr class="docutils" />
 <div class="section" id="pp-dataarray-from-excel">
 <h2>pp.dataarray_from_excel<a class="headerlink" href="#pp-dataarray-from-excel" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">pp</span><span class="o">.</span><span class="n">dataarray_from_excel</span><span class="o">**</span><span class="p">(</span><span class="o">*</span><span class="n">excel</span><span class="p">,</span> <span class="n">sheetName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">namedRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cellRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">dataarray_from_excel</span><span class="p">(</span><span class="n">excel</span><span class="p">,</span> <span class="n">sheetName</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">namedRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cellRange</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="n">indexes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">valueColumns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">indexColumnHeaders</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">replaceByIndex</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="n">defaultValue</span><span class="o">=</span><span class="mi">0</span><span class="o">*</span><span class="p">)</span>
+<span class="n">defaultValue</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Creates an Xarray DataArray from an Excel spreadsheet.</p>
@@ -318,7 +318,7 @@ Xarray Dataset, if (valueColumns is a list) or (valueColumns is a Pandas Index a
 <p>Xarray DataArray</p>
 <hr class="docutils" />
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU2NTAyNTg2LC05MTI2MjUyMzQsNzAwNj
+eyJoaXN0b3J5IjpbMTk2Mzg3ODA0MCw5NTY1MDI1ODYsNzAwNj
 UzNjk4LC0xMDM3MDEzNTg5LC0xNTAzMDQyOTAzLDEzMjYzMTk2
 NTUsLTIwMzU5NDE2NDgsLTg0NzcwMDQ2Ml19
 --></div>
