@@ -86,7 +86,6 @@ By clicking any of these items, we reopen the corresponding application directly
 
 he **Notifications** section is where we review and manage all alerts generated within Pyplan. Here we see updates on shared applications, collaboration requests, and important system announcements in a single, consolidated view. By centralizing this information, we stay informed about relevant activity, respond more quickly to changes, and maintain smoother collaboration with other users across the platform.
 
-![](../resources/images/user-guide/notifications.png)
 
 #### **Pyplan Resources**
 
