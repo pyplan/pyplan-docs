@@ -1,0 +1,8 @@
+{
+  "label": "Code",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Reference for the code side of Pyplan: influence diagram, coding window, node types, wizards, visualizations, console, and API functions."
+  }
+}
