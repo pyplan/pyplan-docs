@@ -1,0 +1,8 @@
+{
+  "label": "Tools",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Administrative tools in Pyplan: monitor instances, review logs, manage scheduled tasks, and securely store secrets."
+  }
+}

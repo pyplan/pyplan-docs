@@ -1,0 +1,8 @@
+{
+  "label": "App Management",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Manage application properties, versions, consolidation, integrations, virtual environments, analysis, translations, and automated testing in Pyplan."
+  }
+}

@@ -61,50 +61,16 @@ const config: Config = {
         alt: 'Pyplan Logo',
         src: 'img/favicon.png',
       },
-    //   items: [
-    //     {
-    //       type: 'docSidebar',
-    //       sidebarId: 'docsSidebar',
-    //       position: 'left',
-    //       label: 'Documentation',
-    //     },
-    //     {
-    //       href: 'https://github.com/pyplan/pyplan-docs',
-    //       label: 'GitHub',
-    //       position: 'right',
-    //     },
-    //   ],
+      items: [
+        {
+          href: 'https://github.com/pyplan/pyplan-docs',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Documentation',
-          items: [
-            {
-              label: 'User Guide',
-              to: '/user-guide/access-to-pyplan',
-            },
-            {
-              label: 'Tutorials',
-              to: '/tutorials/getting-started-with-pyplan',
-            },
-          ],
-        },
-        {
-          title: 'Resources',
-          items: [
-            {
-              label: 'Pyplan Website',
-              href: 'https://pyplan.com',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/pyplan/pyplan-docs',
-            },
-          ],
-        },
-      ],
       copyright: `Copyright © ${new Date().getFullYear()} Pyplan`,
     },
     prism: {
