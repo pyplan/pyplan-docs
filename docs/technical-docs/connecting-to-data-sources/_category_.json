@@ -1,0 +1,8 @@
+{
+  "label": "Connecting to Data Sources",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Different methods to connect Pyplan to external data sources including sFTP, Azure Data Lake, GCP BigQuery, Snowflake, and Power BI."
+  }
+}

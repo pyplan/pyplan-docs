@@ -1,6 +1,11 @@
-import urllib.request, os
+import urllib.request, ssl, os
 
 IMG = "/Users/fabian/devs/novix/others/pyplan-docs/docs/user-guide/img"
+
+# SSL context without hostname verification (needed for old_docs.pyplan.com)
+_ssl_no_verify = ssl.create_default_context()
+_ssl_no_verify.check_hostname = False
+_ssl_no_verify.verify_mode = ssl.CERT_NONE
 
 downloads = {
   "lowcode-nocode": {
@@ -66,6 +71,23 @@ downloads = {
   }
 }
 
+# Images for technical-docs/connecting-to-data-sources (sourced from old_docs.pyplan.com)
+TECHNICAL_IMG = "/Users/fabian/devs/novix/others/pyplan-docs/docs/technical-docs/img/connecting-to-data-sources"
+
+technical_downloads = {
+  "sftp": {
+    "base": "https://old_docs.pyplan.com/technical-docs",
+    "files": ["sftp.png", "pgp-diagram.png"]
+  },
+  "powerbi": {
+    "base": "https://old_docs.pyplan.com/user-guide/integration",
+    "files": [
+      "connect_pbi_1.png", "connect_pbi_2.png", "connect_pbi_3.png", "connect_pbi_4.png",
+      "connect_pbi_5.png", "connect_pbi_6.png", "connect_pbi_7.png", "connect_pbi_8.png"
+    ]
+  }
+}
+
 errors = []
 ok = 0
 for folder, info in downloads.items():
@@ -75,6 +97,20 @@ for folder, info in downloads.items():
     dest = os.path.join(IMG, folder, fname)
     try:
       urllib.request.urlretrieve(url, dest)
+      ok += 1
+    except Exception as e:
+      errors.append(f"FAIL {url}: {e}")
+
+# technical-docs/connecting-to-data-sources images
+os.makedirs(TECHNICAL_IMG, exist_ok=True)
+for folder, info in technical_downloads.items():
+  for fname in info["files"]:
+    url = f"{info['base']}/{fname}"
+    dest = os.path.join(TECHNICAL_IMG, fname)
+    try:
+      with urllib.request.urlopen(url, context=_ssl_no_verify) as r:
+        with open(dest, 'wb') as f:
+          f.write(r.read())
       ok += 1
     except Exception as e:
       errors.append(f"FAIL {url}: {e}")

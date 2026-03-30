@@ -13,11 +13,11 @@ Pyplan Enterprise can be connected to different data origins using the different
 
 There are different alternatives to have access to data placed in the customer's network from Pyplan Cloud. The main ones are:
 
-- **[Data synchronization using Secure File Transfer Protocol (sFTP)](https://docs.pyplan.com/technical-docs/connecting-to-data-sources/sftp)** — Use Pyplan's sFTP server to synchronize files between your environment and Pyplan Cloud.
+- **[Data synchronization using Secure File Transfer Protocol (sFTP)](./connecting-to-data-sources/sftp)** — Use Pyplan's sFTP server to synchronize files between your environment and Pyplan Cloud.
 - **Use of specific Python libraries** — Python clients for the main cloud providers (AWS, Azure, GCP):
-  - [Azure Datalake Connection](https://docs.pyplan.com/technical-docs/connecting-to-data-sources/az-datalake-conn)
-  - [GCP - BigQuery Connection](https://docs.pyplan.com/technical-docs/connecting-to-data-sources/gcp-big-query)
-  - [Snowflake Connection](https://docs.pyplan.com/technical-docs/connecting-to-data-sources/snowflake)
+  - [Azure Datalake Connection](./connecting-to-data-sources/az-datalake-conn)
+  - [GCP - BigQuery Connection](./connecting-to-data-sources/gcp-big-query)
+  - [Snowflake Connection](./connecting-to-data-sources/snowflake)
   - Others
-- **[Integration using APIs](https://docs.pyplan.com/user-guide/app-management/api-endpoints)** — Use Pyplan's REST API to exchange data programmatically.
-- **[Connecting with Power BI using Pyplan APIs](https://docs.pyplan.com/technical-docs/connecting-to-data-sources/powerbi)** — Integrate Pyplan output data directly with Power BI dashboards.
+- **[Integration using APIs](/user-guide/app-management/api-endpoints)** — Use Pyplan's REST API to exchange data programmatically.
+- **[Connecting with Power BI using Pyplan APIs](./connecting-to-data-sources/powerbi)** — Integrate Pyplan output data directly with Power BI dashboards.
