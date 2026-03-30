@@ -11,9 +11,9 @@ const config: Config = {
     v4: true,
   },
 
-  // GitHub Pages deployment config
-  url: 'https://pyplan.github.io',
-  baseUrl: '/pyplan-docs/',
+  // GitHub Pages deployment config (custom domain)
+  url: 'https://docs.pyplan.com',
+  baseUrl: '/',
   organizationName: 'pyplan',
   projectName: 'pyplan-docs',
   trailingSlash: false,

@@ -40,6 +40,12 @@ npm run typecheck
 
 This site is automatically deployed to GitHub Pages when changes are merged to the `main` branch via GitHub Actions.
 
+### Custom Domain (docs.pyplan.com)
+
+- The repository includes `static/CNAME` with `docs.pyplan.com`, so GitHub Pages keeps the custom domain on each deploy.
+- In the repository settings, set the Pages custom domain to `docs.pyplan.com` and enable HTTPS.
+- Configure DNS with a `CNAME` record from `docs.pyplan.com` to `pyplan.github.io`.
+
 ## Project Structure
 
 ```

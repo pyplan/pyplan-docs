@@ -18,3 +18,5 @@ Pyplan is a **no-code / low-code platform** for building and sharing **Planning 
 
 - **[User Guide](/user-guide/access-to-pyplan)** — Step-by-step instructions for using the platform.
 - **[Tutorials](/tutorials/getting-started-with-pyplan)** — Hands-on walkthroughs to learn by doing.
+- **[Technical Docs](/technical-docs/pyplan-cloud-aws)** — Infrastructure, security, compliance, and operational guidelines.
+- **[F.A.Q.](/faq/faqs)** — Answers to frequently asked questions about Pyplan.

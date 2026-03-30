@@ -1,0 +1,8 @@
+{
+  "label": "Technical Docs",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Technical documentation covering infrastructure, security, compliance, and operational guidelines for Pyplan."
+  }
+}
