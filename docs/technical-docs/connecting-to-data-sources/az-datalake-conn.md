@@ -2,7 +2,7 @@
 id: az-datalake-conn
 title: Azure Datalake Connection
 sidebar_label: Azure Datalake
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Azure Datalake Connection

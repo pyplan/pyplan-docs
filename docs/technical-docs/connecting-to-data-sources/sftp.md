@@ -2,7 +2,7 @@
 id: sftp
 title: Secure File Transfer Protocol (sFTP)
 sidebar_label: sFTP
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Secure File Transfer Protocol (sFTP)

@@ -15,6 +15,10 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+.hidden {
+  display: none;
+}
+
 [data-theme='dark'] {
   --ifm-color-primary: #4da3ff;
   --ifm-color-primary-dark: #2e93ff;

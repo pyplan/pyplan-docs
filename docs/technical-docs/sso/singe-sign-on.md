@@ -1,8 +1,6 @@
 ---
-id: sso
-title: SSO
-sidebar_label: SSO
-sidebar_position: 7
+sidebar_position: 1
+title: Single Sign On
 ---
 
 # Single Sign-On (SSO)
@@ -11,7 +9,7 @@ sidebar_position: 7
 
 **SAML 2.0** is the protocol chosen by Pyplan for SSO integrations.
 
-![SAML 2.0 Flow](./img/saml.png)
+![SAML 2.0 Flow](../img/saml.png)
 
 ## Requirements
 
@@ -43,5 +41,5 @@ The Identity Provider (IDP) must have the ability to edit attributes and make th
 
 Select the most suitable integration for your environment:
 
-- [Microsoft Entra ID / Azure AD](https://docs.pyplan.com/technical-docs/sso/microsoft) — Configuration guide for Microsoft Entra ID (formerly Azure Active Directory).
-- [General Configuration](https://docs.pyplan.com/technical-docs/sso/general-config) — Generic SSO configuration guide for other identity providers.
+- [Microsoft Entra ID / Azure AD](./microsoft-entra-id.md) — Configuration guide for Microsoft Entra ID (formerly Azure Active Directory).
+- [General Configuration](./general-configuration.md) — Generic SSO configuration guide for other identity providers.

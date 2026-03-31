@@ -1,7 +1,7 @@
 ---
 id: ai-data-privacy-policy
 title: AI Agents and Data Privacy Policy
-sidebar_label: AI Agents and Data Privacy Policy
+sidebar_label: AI Agents
 sidebar_position: 6
 ---
 

@@ -2,7 +2,7 @@
 id: gcp-big-query
 title: GCP - BigQuery Connection
 sidebar_label: GCP BigQuery
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # GCP - BigQuery Connection

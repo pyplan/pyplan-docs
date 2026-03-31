@@ -2,7 +2,7 @@
 id: powerbi
 title: Connecting with Power BI
 sidebar_label: Power BI
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Connecting with Power BI

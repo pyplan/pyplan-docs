@@ -2,7 +2,7 @@
 id: snowflake
 title: Snowflake Connection
 sidebar_label: Snowflake
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Snowflake Connection
