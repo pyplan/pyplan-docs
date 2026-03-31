@@ -8,6 +8,18 @@ sidebar_position: 99
 # Change log
 All notable changes to Pyplan will be documented in this page:
 
+## Version 3.18
+### Version 3.18.0 - 2026-03-30
+- Updates
+  - New agent chat sessions that allow resuming past conversations.
+  - Add the ability to undo/redo code in DynamicHtml.
+  - Improvements to Developer agent.
+  - Always send messages through Redis, ensuring that UI instances in different PODs receive messages from the Engine.
+- Fixed Issues
+  - Prevent multiple app creation calls when a user double-clicks to open an app.
+  - Fix an issue where changes are not properly saved when closing the filter component editor without confirming or canceling.
+  - Align node titles consistently by centering them in buttons and ensuring equal width for input aliases and original nodes.
+
 ## Version 3.17
 ### Version 3.17.20 - 2026-03-25
 - Updates
