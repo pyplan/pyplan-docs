@@ -16,6 +16,7 @@ The dialog opens with several tabs:
 - **Summary**
 - **Default interface**
 - **App configuration**
+- **Default settings**
 - **Additional information**
 
 ## Summary
@@ -77,6 +78,23 @@ The **App configuration** tab lets you change technical and behavioral settings 
 ![Version Selection Dialog](../img/app-management/app-properties-6.png)
 
 ![Quick Menu Config](../img/app-management/app-properties-7.png)
+
+## Default Settings
+
+The **Default settings** tab lets us define default visual and behavioral settings for the entire application.
+
+![Default Settings](../img/app-management/default_settings.png)
+
+| Option | Description |
+|---|---|
+| **Show component settings icon** | Shows or hides, by default, the icon used to configure a component. |
+| **Show column filter icon (Tables)** | Shows or hides, by default, the column filter icon in table components. |
+| **Show index (Tables)** | Shows or hides, by default, table indexes. |
+| **Component colors** | Lets us define default colors for component headers in tables, charts, indicators, forms, indexes, and selectors. |
+| **Chart color palettes** | Lets us choose default palettes for discrete and continuous chart color scales. |
+| **Default formats** | Lets us define default formats for values, dates, datetimes, indexes, and selectors. |
+
+These defaults are applied as a baseline for the application and help us maintain a consistent look and behavior across interfaces.
 
 ## Additional Information
 
