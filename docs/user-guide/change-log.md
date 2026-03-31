@@ -321,8 +321,8 @@ All notable changes to Pyplan will be documented in this page:
   - Add an option to select the “stacked columns” subtype in combined charts.
   - Highlight the selected row/column in a table.
   - New option to run a scheduled task when completing a task in a process.
-  - New pp.agent_chat function for interacting with an agent (https://docs.pyplan.com/en/user-guide/code/pyplan-functions#agent_chat).
-  - New pp.send_email function to simplify sending emails from an application (https://docs.pyplan.com/en/user-guide/code/pyplan-functions#send_email).
+  - New [pp.agent_chat](/user-guide/code/pyplan-functions#agent_chat) function for interacting with an agent.
+  - New [pp.send_email](/user-guide/code/pyplan-functions#send_email) function to simplify sending emails from an application.
 - Fixed Issues
   - Scroll bar is not visible in component configuration when editing a component in the diagram.
   - Error when creating app pools with more than one instance if the app needs to evaluate nodes that take minutes to execute.
@@ -466,7 +466,7 @@ All notable changes to Pyplan will be documented in this page:
 ## Version 3.14
 ### Version 3.14.11 - 2025-08-14
 - Updates
-  - Allow selectors to persist selected values to disk and in-memory (see new params in https://docs.pyplan.com/en/user-guide/code/pyplan-functions#selector).
+  - Allow selectors to persist selected values to disk and in-memory (see new params in [pp.selector](/user-guide/code/pyplan-functions#selector)).
   - Allow Form columns of type Selector or RelatedSelector to support multiple value selection.
   - Make interface error messages more user-friendly.
   - Show information about which user has a version open with edit permissions.
@@ -535,7 +535,7 @@ All notable changes to Pyplan will be documented in this page:
   - Minor fixes.
 ### Version 3.14.4 - 2025-07-18
 - Updates
-  - New interface component: Upload Manager (https://docs.pyplan.com/user-guide/interfaces/interface-components/upload-manager).
+  - New interface component: [Upload Manager](/user-guide/interfaces/interface-components/upload-manager).
   - Allow adding new rows in the Pyplan Excel Add-in.
   - Allow the use of pyodbc.
   - Add new system node: current_user_workspace_path.
@@ -572,7 +572,7 @@ All notable changes to Pyplan will be documented in this page:
   - Minor fixes.
 ### Version 3.14.0 - 2025-07-02
 - Updates
-  - Add "Visualizer" assistant (see https://docs.pyplan.com/user-guide/app-management/assistant-bots#visualizer).
+  - Add "Visualizer" assistant (see [Visualizer Agent](/user-guide/ai-agents#visualizer-agent)).
   - Add version description to the version table.
   - Add information in the version table indicating if a version is currently being used by another user with write permissions.
   - Add new permission for loading scenarios.
@@ -785,7 +785,7 @@ All notable changes to Pyplan will be documented in this page:
   - Applying a heatmap by rows or columns causes an error if the table has pagination.
 ### Version 3.12.6 - 2025-03-12
 - Updates
-  - Add a new Pyplan function to open a Pyplan application (https://docs.pyplan.com/en/user-guide/code/pyplan-functions#open_app).
+  - Add a new Pyplan function to open a Pyplan application ([pp.open_app](/user-guide/code/pyplan-functions#open_app)).
   - Update texts in the app loading progress bar.
   - Add 'allowed_items' in the department editing settings.
 - Fixed Issues
@@ -795,7 +795,7 @@ All notable changes to Pyplan will be documented in this page:
 - Updates
   - Allow adding icons to buttons.
   - New button display format.
-  - Add a new Pyplan function to navigate to different sections of Pyplan (see https://docs.pyplan.com/en/user-guide/code/pyplan-functions#navigate_to_pyplan_section).
+  - Add a new Pyplan function to navigate to different sections of Pyplan (see [pp.navigate_to_pyplan_section](/user-guide/code/pyplan-functions#navigate_to_pyplan_section)).
 - Fixed Issues
   - If a scheduled task takes more than two minutes to execute, the pod running it shuts down unexpectedly.
   - Minor fixes.
@@ -817,10 +817,10 @@ All notable changes to Pyplan will be documented in this page:
   - Code helper assistant bots are taking too long to respond.
 ### Version 3.12.0 - 2025-02-24
 - Updates
-  - Allow opening apps with different Python versions (3.9 and 3.12 - see https://docs.pyplan.com/user-guide/app-management/app-properties#app-configuration) and CPU architectures (x86 and arm).
+  - Allow opening apps with different Python versions (3.9 and 3.12) - [see App Configuration and CPU architectures (x86 and arm)](/user-guide/app-management/app-properties#app-configuration).
   - Implement quick pivoting and filtering.
-  - Implement an automatic translation tool (https://docs.pyplan.com/user-guide/app-management/translations-manager#using-the-translations-manager).
-  - Implement input validation in forms (https://docs.pyplan.com/en/user-guide/code/pyplan-functions#form).
+  - Implement an automatic [translation tool](/user-guide/app-management/translations-manager#using-the-translations-manager).
+  - Implement input validation in forms (/user-guide/code/pyplan-functions#form).
   - Add new column data type "Datetime" in forms and input cubes.
   - Add a UI parameter to fix columns in tables.
   - Allow selecting which set of resources to use (CPU and RAM) when opening an application.
@@ -857,7 +857,7 @@ All notable changes to Pyplan will be documented in this page:
 ## Version 3.11
 ### Version 3.11.8 - 2025-01-28
 - Updates
-  - New Quick menu functionality (see "Quick menu" option in https://docs.pyplan.com/en/user-guide/app-management/app-properties#app-configuration).
+  - New Quick menu functionality (see "Quick menu" option in [App Configuration](/user-guide/app-management/app-properties#app-configuration)).
   - Allow applying heatmaps to specific styles in tables.
   - Add support for multi-line node titles.
 - Fixed Issues
@@ -865,7 +865,7 @@ All notable changes to Pyplan will be documented in this page:
   - Minor fixes.
 ### Version 3.11.7 - 2025-01-22
 - Updates
-  - Add a Translations manager (https://docs.pyplan.com/en/user-guide/app-management/translations-manager).
+  - Add a [Translations manager](/user-guide/app-management/translations-manager).
   - Add functionality to capture a screenshot of the entire visible interface.
   - Allow selecting the aggregation method for calculating row and column totals in tables.
   - Enable creating a node within a text-type node.
@@ -880,7 +880,7 @@ All notable changes to Pyplan will be documented in this page:
 ### Version 3.11.6 - 2025-01-14
 - Updates
   - Add support for application internationalization (add translations to nodes and interfaces).
-  - Add new Pyplan function to update a process's properties (https://docs.pyplan.com/en/user-guide/code/pyplan-functions#update_process).
+  - Add new Pyplan function to update a process's properties ([pp.update_process](/user-guide/code/pyplan-functions#update_process)).
   - Display a more user-friendly message when a form's database write operation returns "Database is locked".
   - Add functionality to select all visible files in the File Manager.
   - Create user's workspace when allocating a user to a company.
@@ -926,7 +926,7 @@ All notable changes to Pyplan will be documented in this page:
   - Minor fixes.
 ### Version 3.11.0 - 2024-11-27
 - Updates
-  - New application analysis tool (https://docs.pyplan.com/en/user-guide/app-management/application-analysis).
+  - New [application analysis](/user-guide/app-management/application-analysis) tool.
   - Apply filter and pivot operations for Polars-type objects in interfaces.
   - Implement re-run functionality for a node.
   - Processes with the "Stopped" status are changed to "In Progress" status.
@@ -1027,12 +1027,12 @@ All notable changes to Pyplan will be documented in this page:
   - Minor fixes.
 ### Version 3.10.6 - 2024-09-17
 - Updates
-  - Allow users to create their own custom views of an interface (https://docs.pyplan.com/user-guide/interfaces/creation#saving-a-custom-view-of-an-interface).
+  - Allow users to [create their own custom views of an interface](/user-guide/interfaces/creation#saving-a-custom-view-of-an-interface).
 - Fixed Issues
   - Minor fixes.
 ### Version 3.10.5 - 2024-09-13
 - Updates
-  - Add the ability to "grant access to" departments in permission assignment dialogs (https://docs.pyplan.com/en/user-guide/security-options#grantdeny-access-to-information).
+  - Add the ability to "grant access to" departments in permission assignment dialogs (see [Grant/Deny access to information](/user-guide/security-options#grantdeny-access-to-information)).
   - Add new permissions for application options: Manage libraries, Show console, and Take screenshot.
   - Add property to hide the "Edit in Excel" button in Forms.
 - Fixed Issues
@@ -1186,7 +1186,7 @@ All notable changes to Pyplan will be documented in this page:
   - Minor fixes.
 ### Version 3.9.4 - 2024-07-11
 - Updates
-  - New Secrets manager (https://docs.pyplan.com/user-guide/tools/secrets_manager).
+  - New [Secrets manager](/user-guide/tools/secrets-manager)
   - Allow downloading files from an assistant bot.
   - Add predefined color palettes to charts.
 - Fixed Issues
@@ -1222,7 +1222,7 @@ All notable changes to Pyplan will be documented in this page:
   - Minor fixes.
 ### Version 3.9.0 - 2024-07-01
 - Updates
-  - New AI assistant bots functionalities (https://docs.pyplan.com/user-guide/app-management/assistant-bots).
+  - New [AI Agents](/user-guide/ai-agents) functionalities.
   - Give more space to action titles in Menu component (up to two lines).
   - When selecting a module type node, always show documentation widget only.	
 - Fixed Issues
@@ -1409,9 +1409,9 @@ All notable changes to Pyplan will be documented in this page:
 - Updates
   - Retain properties of components in interfaces whose tabs remain open but are not active.
   - New Pyplan home design.
-  - New wizard for creating reports (https://docs.pyplan.com/user-guide/code/coding-window#report).
-  - New Input Cube node that replaces former Input Cube and saves results in a database (https://docs.pyplan.com/user-guide/code/coding-window#cube).  
-  - Add validations for InputValue type components (https://docs.pyplan.com/user-guide/interfaces/creation#scalar).
+  - New wizard for creating [reports](/user-guide/code/coding-window#report).
+  - New [Input Cube](/user-guide/code/coding-window#cube) node that replaces former Input Cube and saves results in a database.
+  - Add validations for [InputValue](/user-guide/interfaces/creation#scalar) type components.
   - Allow hiding dimension titles in charts from chart options.
   - If a user does not have the "Can update an interface" permission, disable the interface edit button.
   - When creating a user via SAML, automatically assign role and department from Active Directory.

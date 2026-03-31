@@ -59,7 +59,7 @@ Pyplan supports multiple methods for connecting to external data:
 - **Cloud integrations**: Connect to Azure Data Lake, GCP BigQuery, Snowflake, and others using the available Python connectors.
 - **REST APIs**: Use Pyplan's API endpoints for programmatic data exchange.
 
-For more details, see [Connecting to Data Sources](/technical-docs/connecting-to-data-sources).
+For more details, see [Connecting to Data Sources](/technical-docs/connecting-to-data-sources/data-sources-summary).
 
 ### Can I share an interface with non-Pyplan users?
 
