@@ -18,6 +18,9 @@ You can use the visual editor or write raw HTML directly, offering both beginner
 - Code view for custom HTML styling and structure
 - Dynamic resizing and layout compatibility
 - Can embed media, images, links, and styled text
+- **Isolated Styles** option (enabled by default) evaluates HTML, JavaScript, and CSS inside an `iframe`, isolating component rendering from the rest of the interface
+
+![Isolated Styles Option](../../img/interfaces/component_html_isolate_styles.png)
 
 ## Configuration Options
 
