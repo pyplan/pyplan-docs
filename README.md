@@ -20,7 +20,7 @@ npm install
 npm start
 ```
 
-This starts a local development server at `http://localhost:3000` and opens a browser window. Most changes are reflected live without restarting the server.
+This starts a local development server at `http://localhost:3333` and opens a browser window. Most changes are reflected live without restarting the server.
 
 ### Build
 
