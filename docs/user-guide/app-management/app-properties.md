@@ -87,14 +87,14 @@ The **Default settings** tab lets us define default visual and behavioral settin
 
 | Option | Description |
 |---|---|
-| **Show component settings icon** | Shows or hides, by default, the icon used to configure a component. |
+| **Show component settings icon** | Shows or hides, by default, the icon used to open the component configuration sidebar in interfaces. |
 | **Show column filter icon (Tables)** | Shows or hides, by default, the column filter icon in table components. |
-| **Show index (Tables)** | Shows or hides, by default, table indexes. |
+| **Show index (Tables)** | Shows or hides, by default, the 'index' column in non-pivot tables. |
 | **Component colors** | Lets us define default colors for component headers in tables, charts, indicators, forms, indexes, and selectors. |
 | **Chart color palettes** | Lets us choose default palettes for discrete and continuous chart color scales. |
-| **Default formats** | Lets us define default formats for values, dates, datetimes, indexes, and selectors. |
+| **Default formats** | Lets us define default value formats for tables, charts, indicators, indexes, and selectors. |
 
-These defaults are applied as a baseline for the application and help us maintain a consistent look and behavior across interfaces.
+These defaults are applied as a baseline for the application and help us maintain a consistent look and behavior across interfaces. If a component has its own custom value for any of these properties, the custom value prevails over the default application value.
 
 ## Additional Information
 
