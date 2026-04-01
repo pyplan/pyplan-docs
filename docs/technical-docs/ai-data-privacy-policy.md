@@ -1,10 +1,9 @@
 ---
 id: ai-data-privacy-policy
 title: AI Agents and Data Privacy Policy
-sidebar_label: AI Agents
 sidebar_position: 6
+sidebar_label: AI Data Privacy Policy
 ---
-
 # AI Agents and Data Privacy Policy
 
 ## How Pyplan Uses AI Agents
