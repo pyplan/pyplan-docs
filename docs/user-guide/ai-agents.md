@@ -65,6 +65,33 @@ The **Visualizer Agent** focuses on interface creation and layout design. It ass
 
 Ideal for users who need to build dashboards but are not experts in interface design.
 
+## Form Completer / Input Cube Completer
+
+The **Form Completer** and **Input Cube Completer** agents are designed to assist users in filling out forms and data input cubes automatically, based on the user's needs and the context of the application. Their capabilities include:
+
+- Interpreting the structure of a form or input cube and proposing values for each field.
+- Using available context — such as previously loaded data, node values, or user instructions — to generate coherent and consistent entries.
+- Reducing manual data entry effort in planning, budgeting, or operational input scenarios.
+- Validating that proposed values align with expected formats, ranges, or business rules defined in the model.
+
+These agents are especially useful in planning and budgeting applications where users need to complete large input cubes efficiently.
+
+## Solution Architect
+
+The **Solution Architect** agent is designed for users who need to translate a business problem into a complete, working Pyplan solution. It operates in two phases:
+
+1. **Design phase**: The agent analyzes the problem described by the user, proposes a full solution design that includes the model structure, node logic, Python code, and the required interfaces and dashboards.
+2. **Implementation phase**: Once the user reviews and confirms the proposed design, the agent proceeds to build the entire solution autonomously — creating nodes, writing formulas, and assembling the interfaces.
+
+Its capabilities include:
+
+- Understanding complex business requirements expressed in natural language.
+- Producing a coherent end-to-end solution blueprint before any code is written.
+- Generating node code, interface layouts, and application structure based on the confirmed design.
+- Iterating on the design based on user feedback before committing to implementation.
+
+This agent is ideal for advanced users and developers who want to accelerate the initial construction of a new Pyplan application.
+
 ## Code Assistants
 
 **Code Assistants** support Python-related tasks within Pyplan. They can:
