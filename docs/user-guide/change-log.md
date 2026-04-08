@@ -9,6 +9,23 @@ sidebar_position: 99
 All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.18
+### Version 3.18.1 - 2026-04-08
+- Updates
+  - Remove the Assistant bots section from Pyplan.
+  - Include the total cost of tokens used in each trace.
+  - Add a button in the trace manager to view the complete session messages in a chat format.
+  - Allow the Developer agent to create and modify interfaces and access the Visualizer agent as a sub-agent.
+  - Clear the chat window when opening a new application to avoid displaying previous conversations.
+  - Improvements to Pyplan agent.
+  - Implement a cost management system for agents.
+  - Import modules at the click position when using the right-click context menu.
+  - Improvements to File manager.
+  - Add a new analysis to the application analysis section to check for nodes with non-existing module IDs.
+- Fixed Issues
+  - Fix the issue in the upload manager where newly uploaded files do not update the component's content, leading to an inconsistent state.
+  - Resolve the sorting issue in tables with custom order when multiple measures or dimensions are present in the columns.
+  - Improve the flow when access is denied via SAML by redirecting users to authentication with a notification message.
+  - Minor fixes.
 ### Version 3.18.0 - 2026-03-30
 - Updates
   - New agent chat sessions that allow resuming past conversations.
