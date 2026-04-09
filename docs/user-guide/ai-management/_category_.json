@@ -1,0 +1,8 @@
+{
+  "label": "AI Management",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Review AI traces, providers, models, and pricing settings in separate management pages within Pyplan."
+  }
+}
