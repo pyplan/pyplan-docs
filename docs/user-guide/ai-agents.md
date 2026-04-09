@@ -11,6 +11,54 @@ Pyplan includes several built-in agent types designed to assist users across dif
 
 ![Code Assistants](./img/ai-agents/code_assistants.png)
 
+## Agent Window Header
+
+The agent window header gives us quick access to the main chat actions. In this section we describe the actions available in the header, excluding the agent selector.
+
+![Agent Window Header](./img/ai-agents/header_actions_overview.png)
+
+### Session history
+
+To review previous conversations, we click **Session history** in the header.
+
+From this panel, we can:
+
+- Open a previous conversation and continue working on it.
+- Rename an existing session to identify it more easily later.
+- Delete a stored session when it is no longer needed.
+- Review the last update date and the number of messages in each session.
+
+![Session History Panel](./img/ai-agents/session_history_panel.png)
+
+:::info
+When we open a previous session, the current chat view is replaced with the selected conversation.
+:::
+
+### New chat
+
+To start from a clean conversation, we click **New chat**.
+
+This action clears the current session for the selected agent and opens an empty chat so we can begin a new interaction. If the session history panel is open, Pyplan returns to the main chat view.
+
+### Header options menu
+
+To access additional actions, we click **Options** in the header.
+
+![Header Options Menu](./img/ai-agents/header_options_menu.png)
+
+From this menu, we can use the following actions:
+
+- **Export**: downloads the current conversation as a Markdown file.
+- **Privacy statement**: opens the Pyplan privacy statement in a new browser tab.
+- **Update available agents**: refreshes the list of agents available in the selector.
+- **Dock to the left**: moves the agent window to the left side of the workspace.
+- **Dock to the right**: moves the agent window to the right side of the workspace.
+- **Undock**: changes the agent window to floating mode.
+
+:::tip
+The **Export** action is available only when the conversation has finished and the chat already contains messages.
+:::
+
 ## Pyplan Agent
 
 The **Pyplan Agent** focuses on platform-level knowledge. It understands the structure and capabilities of Pyplan and is able to:
