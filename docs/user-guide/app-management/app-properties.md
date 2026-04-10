@@ -28,7 +28,7 @@ The **Summary** tab provides a read-only overview of key application properties.
 | Field | Description |
 |---|---|
 | **Application name** | The name of the application. It corresponds to the folder that contains the app and its `app.ppl` file. |
-| **Application ID** | Unique identifier of the application, used to link the virtual environment, workflow processes, module/interface access restrictions, assistant bots, and thumbnail images. |
+| **Application ID** | Unique identifier of the application, used to link the virtual environment, workflow processes, module/interface access restrictions, and thumbnail images. |
 | **Application version** | Name of the currently open version (e.g., `Default`). |
 | **Python version** | Python version configured for this app (e.g., `3.9`). |
 | **Location** | File system path where the app folder is stored. |

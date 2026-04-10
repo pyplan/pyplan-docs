@@ -39,7 +39,7 @@ Controls that define how the selected node is shown on the right side:
 - **Result:** result widget at the top and documentation at the bottom.
 - **Code + Result:** coding window at the top and result at the bottom.
 
-### Assistant Bot
+### AI Agents
 
 Assistant that interprets natural language questions about Pyplan. We can ask how to use features, shortcuts, or best practices directly from the modeling environment, without leaving the app.
 
