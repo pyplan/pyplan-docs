@@ -10,6 +10,13 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.18
 
+### Version 3.18.3 - 2026-04-10
+- Updates
+  - Allow exporting application analysis report.
+- Fixed Issues
+  - Drilldown is not working in chart components.
+  - Minor fixes.
+
 ### Version 3.18.2 - 2026-04-09
 - Updates
   - Allow editing a previous user message in conversations with agents.
