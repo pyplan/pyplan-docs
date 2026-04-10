@@ -10,10 +10,6 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.18
 
-### Version 3.18.3 - 2026-04-10
-- Fixed Issues
-  - Minor fixes.
-
 ### Version 3.18.2 - 2026-04-09
 - Updates
   - Allow editing a previous user message in conversations with agents.
