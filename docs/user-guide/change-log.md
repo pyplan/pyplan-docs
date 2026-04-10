@@ -9,6 +9,11 @@ sidebar_position: 99
 All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.18
+
+### Version 3.18.3 - 2026-04-10
+- Fixed Issues
+  - Minor fixes.
+
 ### Version 3.18.2 - 2026-04-09
 - Updates
   - Allow editing a previous user message in conversations with agents.
@@ -17,6 +22,7 @@ All notable changes to Pyplan will be documented in this page:
   - The InputValue component does not display the formatted value correctly when the decimal separator is a comma.
   - Messages from user sessions other than the creator's do not load, resulting in an empty message list.
   - Minor fixes.
+
 ### Version 3.18.1 - 2026-04-08
 - Updates
   - Remove the Assistant bots section from Pyplan.
@@ -34,6 +40,7 @@ All notable changes to Pyplan will be documented in this page:
   - Resolve the sorting issue in tables with custom order when multiple measures or dimensions are present in the columns.
   - Improve the flow when access is denied via SAML by redirecting users to authentication with a notification message.
   - Minor fixes.
+
 ### Version 3.18.0 - 2026-03-30
 - Updates
   - New agent chat sessions that allow resuming past conversations.
@@ -44,7 +51,6 @@ All notable changes to Pyplan will be documented in this page:
   - Prevent multiple app creation calls when a user double-clicks to open an app.
   - Fix an issue where changes are not properly saved when closing the filter component editor without confirming or canceling.
   - Align node titles consistently by centering them in buttons and ensuring equal width for input aliases and original nodes.
-
 ## Version 3.17
 ### Version 3.17.20 - 2026-03-25
 - Updates
