@@ -9,6 +9,14 @@ sidebar_position: 99
 All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.18
+### Version 3.18.2 - 2026-04-09
+- Updates
+  - Allow editing a previous user message in conversations with agents.
+- Fixed Issues
+  - Diagram widgets are not displayed correctly in Result mode. Switching to node preview does not work either.
+  - The InputValue component does not display the formatted value correctly when the decimal separator is a comma.
+  - Messages from user sessions other than the creator's do not load, resulting in an empty message list.
+  - Minor fixes.
 ### Version 3.18.1 - 2026-04-08
 - Updates
   - Remove the Assistant bots section from Pyplan.
