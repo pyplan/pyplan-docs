@@ -59,6 +59,22 @@ From this menu, we can use the following actions:
 The **Export** action is available only when the conversation has finished and the chat already contains messages.
 :::
 
+## Actions Available In User Messages
+
+In each **user message**, Pyplan provides a set of contextual actions that become visible when we hover over the message.
+
+![User Message Actions](./img/ai-agents/user-message-actions-hover.png)
+
+The available actions are the following:
+
+- **Edit message**: This action allows us to restart the conversation from a selected user message. When we confirm the action, Pyplan restores the session checkpoint for that message and removes all subsequent messages in the conversation.
+- **View traces**: If traces are available and we have permission to access them, we can open the trace detail associated with that message.
+- **Copy message**: This action copies the full content of the user message to the clipboard.
+
+:::warning
+When we edit a previous message, all messages below that point in the session are removed after confirmation.
+:::
+
 ## Pyplan Agent
 
 The **Pyplan Agent** focuses on platform-level knowledge. It understands the structure and capabilities of Pyplan and is able to:
