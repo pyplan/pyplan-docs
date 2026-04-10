@@ -57,6 +57,8 @@ From this menu, we can use the following actions:
 
 :::tip
 The **Export** action is available only when the conversation has finished and the chat already contains messages.
+:::
+
 ## Actions Available In User Messages
 
 In each **user message**, Pyplan provides a set of contextual actions that become visible when we hover over the message.
