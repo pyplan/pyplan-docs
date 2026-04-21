@@ -10,6 +10,16 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.18
 
+### Version 3.18.4 - 2026-04-21
+- Updates
+  - Implement a quick access link for applications that allows direct sharing and access after user validation.
+  - Add an option to upload CSV files separated by semicolons in the upload manager.
+  - Allow exporting Performance analysis from console
+- Fixed Issues
+  - Task states for processes that are blocked by another task with an expiration date are not updating correctly.
+  - Changing the name of a version does not validate against archived version names, allowing duplicates.
+  - Minor fixes.
+
 ### Version 3.18.3 - 2026-04-10
 - Updates
   - Allow exporting application analysis report.
