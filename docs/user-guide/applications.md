@@ -98,6 +98,7 @@ For applications, we can perform the following actions:
 - **Open application in new instance:** open the application in a separate instance, useful for working in parallel on different apps or versions.
 - **Select version and open app:** choose a specific version of the application and open it, for example to review or reuse an earlier version.
 - **Select resources and open app:** open the application with a specific set of resources, different from those assigned by our Department.
+- **Direct access link:** generate a direct link to open the application, optionally selecting a version and enabling read-only access.
 - **Rename**
 - **Copy**
 - **Cut**
@@ -108,6 +109,27 @@ For applications, we can perform the following actions:
 - **Delete**
 
 ![Application actions](./img/app_manager.png)
+
+### Direct access link
+
+We can generate a **direct access link** from the application contextual menu to open a specific application directly. This option is useful when we need to share quick access to an app and, if necessary, point to a specific version.
+
+To generate a direct access link, we follow these steps:
+
+1. In the **Application Manager**, we open the contextual menu of the application.
+2. We select the **Direct access link** option.
+3. In the dialog, we choose whether we want to use the default version or a specific version.
+4. If needed, we enable **Open as read-only** so the application opens without allowing changes.
+5. We click **Generate link**.
+6. We copy the generated URL and share it with the corresponding users.
+
+![Direct access link option in the application menu](./img/app-management/application-menu-direct-access-link.png)
+
+![Direct access link dialog](./img/app-management/direct-access-link-dialog.png)
+
+:::info
+The generated link includes the selected application and can also include a specific version and the read-only mode configuration.
+:::
 
 ### Move folder app example
 
