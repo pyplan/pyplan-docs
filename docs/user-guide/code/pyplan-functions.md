@@ -55,6 +55,57 @@ Creates a UI Pyplan selector for decision nodes.
 )
 ```
 
+## date_selector
+
+date_selector(node_identifier, selected, multiselect = False, start_date = None, end_date = None, allowed_dates = None, display_date_format = None)
+
+Creates a UI Pyplan date selector for decision nodes.
+
+### Parameters
+
+- **node_identifier** (`str`): ID of node that holds the definition for the selector. Best option is adding `self.identifier` for this param (without quotes).
+- **selected** (`Union[datetime.date, datetime.datetime, str, List[Union[datetime.date, datetime.datetime, str]], None]`): Current selected date or dates. Values are normalized and stored as ISO date strings.
+- **multiselect** (`bool`, optional): Whether to allow multiple date selection. Defaults to `False`.
+- **start_date** (`Union[datetime.date, datetime.datetime, str, None]`, optional): Lower bound of the selectable date range. Required when `allowed_dates` is not provided.
+- **end_date** (`Union[datetime.date, datetime.datetime, str, None]`, optional): Upper bound of the selectable date range. Required when `allowed_dates` is not provided.
+- **allowed_dates** (`Optional[Union[List[Union[datetime.date, datetime.datetime, str]], pd.Index]]`, optional): Explicit list or pandas Index of allowed dates. When supplied, the selector uses these dates instead of a continuous range.
+- **display_date_format** (`Optional[str]`, optional): Display format used by the UI for the selected dates.
+- **persistence_type** (`PersistenceType`, optional): One of the following options: 'in_definition', 'in_memory' or 'on_disk'. Defaults to `in_definition`.
+- **persistence_params** (`Dict[str, Any]`, optional): Additional params for the different persistence_type values. If `persistence_type` is `on_disk`, the `path` (str) param must be supplied.
+
+### Returns
+
+- **DateSelector**: Pyplan DateSelector object.
+
+### Examples
+
+```python
+>>> selector = pp.date_selector(
+    self.identifier,
+    "2026-01-15",
+    start_date="2026-01-01",
+    end_date="2026-12-31"
+)
+
+>>> selector = pp.date_selector(
+    self.identifier,
+    ["2026-01-15", "2026-02-01"],
+    multiselect=True,
+    allowed_dates=["2026-01-15", "2026-02-01", "2026-03-01"]
+)
+
+>>> import datetime
+>>> selector = pp.date_selector(
+    self.identifier,
+    datetime.date(2026, 1, 15),
+    start_date="2026-01-01",
+    end_date="2026-12-31",
+    display_date_format="%d/%m/%Y",
+    persistence_type="on_disk",
+    persistence_params={"path": "selectors_data/dates.json"}
+)
+```
+
 ## form
 
 form(table_name, columns, settings)
