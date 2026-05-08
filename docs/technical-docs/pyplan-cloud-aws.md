@@ -17,7 +17,7 @@ The geographical location of Pyplan Cloud's storage and infrastructure is in the
 
 A reference diagram for our Cloud deployment is shown below:
 
-![Pyplan Architecture EKS](./img/pyplan-architecture-eks.png)
+![Pyplan Architecture EKS](./img/01-pyplan-architecture-eks.png)
 
 The access to infrastructure management is performed exclusively by qualified staff, implementing all the security measures offered by the supplier (i.e., VPN, Multi-factor Authentication (MFA), IP filtering, etc.).
 
@@ -27,7 +27,7 @@ Pyplan uses Kubernetes to grant a both scalable and high-availability service. T
 
 A reference diagram for our Kubernetes deployment is shown below:
 
-![Pyplan with Kubernetes - Architecture Overview](./img/pyplan_with_kubernetes_-_architecture_overview.png)
+![Pyplan with Kubernetes - Architecture Overview](./img/02-pyplan-kubernetes-overview.png)
 
 Some of the key technologies used in Pyplan are:
 
@@ -39,7 +39,7 @@ Some of the key technologies used in Pyplan are:
 
 The information is fully isolated within encrypted S3 buckets (both in transit and at rest), with access strictly limited to private endpoints deployed within the same VPCs as the container orchestrators. This architecture ensures that no access is possible from the public internet.
 
-![Cloud Data Infrastructure](./img/cloud-data-infra.png)
+![Cloud Data Infrastructure](./img/03-pyplan-data-infrastructure.png)
 
 ## Backup Policies
 
@@ -92,7 +92,7 @@ Pyplan runs over a Kubernetes cluster. The containers listed below are the main 
 
 In Kubernetes, a Pod represents a set of running containers on your cluster. Every time a user opens an application, Pyplan needs to interact with the Kubernetes Application Programming Interface (API) in order to instruct Kubernetes to generate a new pod — `PYPLAN-ENGINE` — that will be its workspace. Furthermore, when a user logs out or a timeout occurs, Pyplan destroys the pod belonging to that user, which results in a release of resources.
 
-![Pyplan Kubernetes Flow](./img/pyplan-kubernetes-flow.png)
+![Pyplan Kubernetes Flow](./img/04-pyplan-kubernetes-flow.png)
 
 ## Scaling
 
