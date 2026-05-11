@@ -10,6 +10,29 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.19
 
+### Version 3.19.0 - 2026-05-11
+- Updates
+  - Deploy Pyplan MCP.
+  - Unify Developer, Visualizer, Form Completer, and Input Cube Completer into a single Developer agent and adjust auto-switching logic.
+  - Create a selector node that natively supports date selection.
+  - Enhance the Developer agent to understand Pyplan Secrets and API endpoints.
+  - Allow the insertion of FontAwesome icons in HTML and DynamicHtml components.
+  - Add an option to configure grid settings in an interface.
+  - Add a property to center Table components with options for alignment.
+  - Enable filtering of dimension values to work with string values as well.
+  - Allow users to choose where to add a new row in a form.
+  - Allow passing an attribute to a function from dynamic HTML.
+  - Allow manipulation of the filter component as a normal component.
+  - Reduce input tokens when an agent complets a form.
+  - Improve the dialog for generating application access links.
+  - Include the file name in the upload dialog of the UploadManager.
+  - Update default values for department resources based on provided specifications.
+- Fixed Issues
+  - The 'Contains' and 'Regular expressions' options do not work when filtering by rows.
+  - A 500 error occurs when a selector has a NaN value.
+  - Inconsistent alignment of module titles when documentation is present.
+  - In the Docs Widget, buttons sometimes do not appear in the header when the text is too long.
+  - Minor fixes.
 ## Version 3.18
 
 ### Version 3.18.4 - 2026-04-21
