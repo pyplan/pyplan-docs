@@ -79,6 +79,78 @@ Security is the key consideration in our architecture. Authentication is through
 
 As with a regular browser connection, both HTTP and WebSocket traffic to Pyplan is encrypted over Transport Level Security (TLS). For that reason, the Transmission Control Protocol (TCP) port used by Pyplan is port **443**.
 
+## How Pyplan Cloud Works
+
+This section provides a functional overview of how Pyplan Cloud operates during a user session. The purpose is to describe the experience in a simple way while preserving the main security and infrastructure concepts.
+
+1. **Secure Sign-In**
+
+	Users sign in to Pyplan using either a username and password or their company's **Single Sign-On (SSO)** through **SAML**. All communication is encrypted end-to-end with **HTTPS** and **TLS**.
+
+2. **On-Demand Private Workspace**
+
+	Once a user opens a Python application, Pyplan automatically creates a dedicated Kubernetes pod for that session. Each pod runs a Docker container with the Python engine that powers the application.
+
+	Resources such as CPU and RAM are predefined per department or per application. For example, a lighter application may use 1 CPU and 4 GB of RAM, while a heavier modeling workload may use 2 CPUs and 16 GB of RAM. The platform scales automatically as more users connect.
+
+3. **The Application Runs Inside the Pod**
+
+	Each pod provides more than compute capacity. It is the secure environment where the application becomes available, including both the business rules and the user interfaces that define each Pyplan application. From there, users can:
+
+	- Build or modify business rules, calculations, and logic.
+	- Design, edit, or consume the application's interfaces, such as dashboards, forms, and reports.
+	- Explore and analyze results in real time.
+
+	All of this happens inside the user's private pod, helping ensure that logic, data, and interaction remain isolated within that environment.
+
+4. **Full Isolation Between Users**
+
+	Each user receives an independent pod. Processing space, memory, business logic, and session data are not shared across users. This design helps guarantee privacy and security by default.
+
+5. **Flexible Data Integration**
+
+	From within their private workspace, users can read data from multiple sources, including:
+
+	- A secure file system mounted within Pyplan.
+	- External sources such as public CSV files or APIs.
+	- S3 buckets, including data synchronized through the client's SFTP process.
+
+6. **Built-In Collaboration with Native Data Entry Forms**
+
+	Pyplan includes native data entry forms that allow users to persist information directly into a shared database. Multiple users can read and write to this database at the same time, enabling real-time collaboration across teams.
+
+	This capability is especially useful in scenarios such as:
+
+	- Demand planning, where sales, marketing, and operations contribute forecasts in parallel.
+	- Budgeting and financial planning, where different departments enter their own figures.
+	- S&OP processes, where multiple stakeholders align values in a shared source of truth.
+
+	Each user works from an isolated pod, while all users contribute to the same shared data layer. This combines private execution environments with collaborative data workflows.
+
+7. **Automatic Cleanup**
+
+	When the session ends, the pod is destroyed automatically. This frees infrastructure resources and ensures that no session data persists outside its secure environment. The shared database remains available for the rest of the team.
+
+8. **End-to-End Encryption**
+
+	Every interaction, from sign-in to data access, travels through encrypted HTTPS/TLS channels, helping protect information at all times.
+
+A reference diagram for this workflow is shown below:
+
+![Pyplan Cloud workflow overview](./img/05-pyplan-cloud-how-it-works-overview.png)
+
+## Key Benefits
+
+| Benefit | Description |
+| --- | --- |
+| Security and isolation | Each user works in a dedicated encrypted environment with independent business logic and interfaces. |
+| Scalability | The platform grows on demand as pods are created and destroyed according to active sessions. |
+| Full application experience | Users can build, modify, and consume business logic and interfaces from within their secure pod. |
+| Real-time collaboration | Native data entry forms allow multiple users to contribute simultaneously to a shared database. |
+| Data integration | Pyplan connects to internal file systems, S3, SFTP-based data flows, external APIs, and shared databases. |
+| Resource efficiency | Infrastructure resources are consumed only while a session is active. |
+| Cloud agnostic architecture | Pyplan can run on major cloud providers without depending on a single vendor. |
+
 ## How Pyplan Works
 
 Pyplan runs over a Kubernetes cluster. The containers listed below are the main structure of the application, where Kubernetes will ensure its deployment into pods or another Kubernetes resource and verify their status:
