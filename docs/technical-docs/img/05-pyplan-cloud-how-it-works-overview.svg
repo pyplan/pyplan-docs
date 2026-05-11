@@ -1,0 +1,125 @@
+<svg id="export-svg" width="100%" xmlns="http://www.w3.org/2000/svg" class="flowchart" style="max-width: 1400px; background: rgb(255, 255, 255);" viewBox="0 0 1400 470" role="graphics-document document" aria-roledescription="flowchart-v2">
+<style>
+#export-svg{font-family:"Recursive Variable",arial,sans-serif;font-size:14px;fill:#28253D;}
+#export-svg .marker{fill:#000000;stroke:#000000;}
+#export-svg .flowchart-link{stroke:#000000;fill:none;}
+#export-svg p{margin:0;}
+#export-svg .user>*{fill:#E3F2FD!important;stroke:#1976D2!important;}
+#export-svg .user span{color:#0D47A1!important;}
+#export-svg .auth>*{fill:#FFF3E0!important;stroke:#F57C00!important;}
+#export-svg .auth span{color:#E65100!important;}
+#export-svg .pod>*{fill:#E8F5E9!important;stroke:#388E3C!important;}
+#export-svg .pod span{color:#1B5E20!important;}
+#export-svg .data>*{fill:#F3E5F5!important;stroke:#7B1FA2!important;}
+#export-svg .data span{color:#4A148C!important;}
+</style>
+<defs>
+<marker id="arrowEnd" viewBox="0 0 11.5 14" refX="11" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto">
+<path d="M 0 0 L 11.5 7 L 0 14 z" fill="#000"/>
+</marker>
+<marker id="arrowStart" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto">
+<polygon points="0,7 11.5,14 11.5,0" fill="#000"/>
+</marker>
+<filter id="ds" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06"/></filter>
+</defs>
+
+<!-- Kubernetes cluster -->
+<rect x="724" y="8" width="312" height="431" fill="#F5F9FF" stroke="#1565C0" stroke-width="2" filter="url(#ds)"/>
+<text x="880" y="28" text-anchor="middle" fill="#0D47A1" font-size="14">☸️ Kubernetes Environment (auto-scalable)</text>
+
+<!-- Data Sources cluster (vertical) -->
+<rect x="1088" y="40" width="280" height="390" fill="#FAF5FF" stroke="#6A1B9A" stroke-width="2" filter="url(#ds)"/>
+<text x="1228" y="60" text-anchor="middle" fill="#4A148C" font-size="14">🗄️ Data Sources</text>
+
+<!-- Users -->
+<g class="user">
+<rect x="8" y="106" width="98" height="45"  filter="url(#ds)"/>
+<text x="57" y="133" text-anchor="middle"><tspan fill="#0D47A1">👤 User A</tspan></text>
+</g>
+<g class="user">
+<rect x="8" y="201" width="98" height="45" filter="url(#ds)"/>
+<text x="57" y="228" text-anchor="middle"><tspan fill="#0D47A1">👤 User B</tspan></text>
+</g>
+<g class="user">
+<rect x="8" y="296" width="98" height="45" filter="url(#ds)"/>
+<text x="57" y="323" text-anchor="middle"><tspan fill="#0D47A1">👤 User C</tspan></text>
+</g>
+
+<!-- Login -->
+<g class="auth">
+<rect x="261" y="180" width="232" height="87" filter="url(#ds)"/>
+<text x="377" y="215" text-anchor="middle"><tspan fill="#E65100">🔐 Pyplan Login</tspan></text>
+<text x="377" y="235" text-anchor="middle"><tspan fill="#E65100">User/Password or SSO (SAML)</tspan></text>
+</g>
+
+<!-- Platform -->
+<g class="auth">
+<rect x="543" y="201" width="165" height="45" filter="url(#ds)"/>
+<text x="625" y="228" text-anchor="middle"><tspan fill="#E65100">⚙️ Pyplan Platform</tspan></text>
+</g>
+
+<!-- Pods -->
+<g class="pod">
+<rect x="783" y="43" width="195" height="87" filter="url(#ds)"/>
+<text x="880" y="68" text-anchor="middle"><tspan fill="#1B5E20">📦 Pod – User A</tspan></text>
+<text x="880" y="86" text-anchor="middle"><tspan fill="#1B5E20">Docker + Python Engine</tspan></text>
+<text x="880" y="104" text-anchor="middle" font-weight="bold"><tspan fill="#1B5E20">1 CPU · 4 GB RAM</tspan></text>
+</g>
+<g class="pod">
+<rect x="783" y="180" width="195" height="87" filter="url(#ds)"/>
+<text x="880" y="205" text-anchor="middle"><tspan fill="#1B5E20">📦 Pod – User B</tspan></text>
+<text x="880" y="223" text-anchor="middle"><tspan fill="#1B5E20">Docker + Python Engine</tspan></text>
+<text x="880" y="241" text-anchor="middle" font-weight="bold"><tspan fill="#1B5E20">2 CPU · 16 GB RAM</tspan></text>
+</g>
+<g class="pod">
+<rect x="783" y="317" width="195" height="87" filter="url(#ds)"/>
+<text x="880" y="342" text-anchor="middle"><tspan fill="#1B5E20">📦 Pod – User C</tspan></text>
+<text x="880" y="360" text-anchor="middle"><tspan fill="#1B5E20">Docker + Python Engine</tspan></text>
+<text x="880" y="378" text-anchor="middle" font-weight="bold"><tspan fill="#1B5E20">1 CPU · 2 GB RAM</tspan></text>
+</g>
+
+<!-- Data Sources (vertical) -->
+<g class="data">
+<rect x="1108" y="80" width="240" height="60" filter="url(#ds)"/>
+<text x="1228" y="115" text-anchor="middle"><tspan fill="#4A148C">🔒 Secure File System</tspan></text>
+</g>
+<g class="data">
+<rect x="1108" y="160" width="240" height="60" filter="url(#ds)"/>
+<text x="1228" y="195" text-anchor="middle"><tspan fill="#4A148C">🌐 External CSV / APIs</tspan></text>
+</g>
+<g class="data">
+<rect x="1108" y="240" width="240" height="60" filter="url(#ds)"/>
+<text x="1228" y="275" text-anchor="middle"><tspan fill="#4A148C">☁️ S3 Buckets</tspan></text>
+</g>
+<g class="data">
+<rect x="1108" y="320" width="240" height="60" filter="url(#ds)"/>
+<text x="1228" y="355" text-anchor="middle"><tspan fill="#4A148C">🔁 Client SFTP Sync</tspan></text>
+</g>
+
+<!-- Edges users -> login -->
+<path d="M 106,128 L 261,200" class="flowchart-link" stroke="#000" stroke-width="2" fill="none" marker-end="url(#arrowEnd)"/>
+<path d="M 106,223 L 261,223" class="flowchart-link" stroke="#000" stroke-width="2" fill="none" marker-end="url(#arrowEnd)"/>
+<path d="M 106,318 L 261,248" class="flowchart-link" stroke="#000" stroke-width="2" fill="none" marker-end="url(#arrowEnd)"/>
+
+<!-- Labels HTTPS -->
+<rect x="130" y="118" width="105" height="20" fill="#ccc" fill-opacity="0.5"/>
+<text x="183" y="133" text-anchor="middle" font-size="12">🔒 HTTPS / TLS</text>
+<rect x="130" y="213" width="105" height="20" fill="#ccc" fill-opacity="0.5"/>
+<text x="183" y="228" text-anchor="middle" font-size="12">🔒 HTTPS / TLS</text>
+<rect x="130" y="308" width="105" height="20" fill="#ccc" fill-opacity="0.5"/>
+<text x="183" y="323" text-anchor="middle" font-size="12">🔒 HTTPS / TLS</text>
+
+<!-- Login -> Platform -->
+<path d="M 493,223 L 543,223" class="flowchart-link" stroke="#000" stroke-width="2" fill="none" marker-end="url(#arrowEnd)"/>
+
+<!-- Platform -> Pods -->
+<path d="M 708,210 L 783,87" class="flowchart-link" stroke="#000" stroke-width="2" fill="none" marker-end="url(#arrowEnd)"/>
+<path d="M 708,223 L 783,223" class="flowchart-link" stroke="#000" stroke-width="2" fill="none" marker-end="url(#arrowEnd)"/>
+<path d="M 708,238 L 783,360" class="flowchart-link" stroke="#000" stroke-width="2" fill="none" marker-end="url(#arrowEnd)"/>
+
+<!-- Pods <-> Data Sources block -->
+<path d="M 978,87 L 1088,87" class="flowchart-link" stroke="#000" stroke-width="2" fill="none" marker-start="url(#arrowStart)" marker-end="url(#arrowEnd)"/>
+<path d="M 978,223 L 1088,223" class="flowchart-link" stroke="#000" stroke-width="2" fill="none" marker-start="url(#arrowStart)" marker-end="url(#arrowEnd)"/>
+<path d="M 978,360 L 1088,360" class="flowchart-link" stroke="#000" stroke-width="2" fill="none" marker-start="url(#arrowStart)" marker-end="url(#arrowEnd)"/>
+
+</svg>
