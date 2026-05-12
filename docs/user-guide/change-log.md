@@ -10,20 +10,19 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.19
 
-### Version 3.19.0 - 2026-05-11
+### Version 3.19.0 - 2026-05-12
 - Updates
   - Deploy Pyplan MCP.
   - Unify Developer, Visualizer, Form Completer, and Input Cube Completer into a single Developer agent and adjust auto-switching logic.
-  - Create a selector node that natively supports date selection.
   - Enhance the Developer agent to understand Pyplan Secrets and API endpoints.
-  - Allow the insertion of FontAwesome icons in HTML and DynamicHtml components.
+  - Create a selector node that natively supports date selection ([pp.date_selector](/user-guide/code/pyplan-functions#date_selector)).
+  - Allow users to choose where to add a new row in a form.
   - Add an option to configure grid settings in an interface.
   - Add a property to center Table components with options for alignment.
+  - Allow the insertion of FontAwesome icons in HTML and DynamicHtml components.
   - Enable filtering of dimension values to work with string values as well.
-  - Allow users to choose where to add a new row in a form.
-  - Allow passing an attribute to a function from dynamic HTML.
+  - Allow passing an attribute to a function from DynamicHTML component.
   - Allow manipulation of the filter component as a normal component.
-  - Reduce input tokens when an agent complets a form.
   - Improve the dialog for generating application access links.
   - Include the file name in the upload dialog of the UploadManager.
   - Update default values for department resources based on provided specifications.
