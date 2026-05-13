@@ -10,6 +10,16 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.19
 
+### Version 3.19.2 - 2026-05-13
+- Updates
+  - Allow displaying a list of versions grouped by a field.
+  - Add group claims and enable role and department assignment via this new claim in SAML.
+- Fixed Issues
+  - Adding or removing a row in a form refreshes the form and returns the user to the top of the table.
+  - An error occurs when selecting only the 'Current' scenario while scenario comparison is enabled.
+  - When creating a new version from an existing one, the new version does not load the default interface.
+  - Minor fixes.
+
 ### Version 3.19.1 - 2026-05-13
 - Fixed Issues
   - Incompatibility between pydantic 2.x and Python 3.9 prevents the application from opening.
