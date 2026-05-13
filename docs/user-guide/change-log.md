@@ -10,6 +10,11 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.19
 
+### Version 3.19.1 - 2026-05-13
+- Fixed Issues
+  - Incompatibility between pydantic 2.x and Python 3.9 prevents the application from opening.
+  - Minor fixes.
+
 ### Version 3.19.0 - 2026-05-12
 - Updates
   - Deploy Pyplan MCP.
