@@ -110,7 +110,7 @@ The following Azure screenshots show the step-by-step configuration inside the E
 ![Group claim example step 7](../img/sso/azure-groups-claims-7.png)
 
 :::info
-The simplified flow shown in `azure-groups-claims-8.png` assumes one effective application group per user. If a user can belong to multiple Azure groups for the same app, define the precedence rule with the security team before enabling the integration.
+The Group Claims flow sends application-scoped group information in the SAML assertion. Ensure each tenant either assigns at most one application-scoped group per user or implements a deterministic precedence policy (for example: priority order, explicit group→role mappings, or a conflict-resolution lookup). Test sign-ins and inspect the SAML assertion to verify the expected group is emitted before enabling the integration.
 :::
 
 
