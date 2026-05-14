@@ -311,13 +311,12 @@ The `agent_tool` decorator transforms a Python function into an `AgentTool` obje
 ```python
 from pyplan_core.classes.ai.Agent import agent_tool
 from typing import Annotated
-from function_schema import Doc
 
 @agent_tool
 def send_email(
-    subject: Annotated[str, Doc('Email subject')],
-    address: Annotated[str, Doc('Email address')],
-    content: Annotated[str, Doc('HTML email body')],
+    subject: Annotated[str, 'Email subject'],
+    address: Annotated[str, 'Email address'],
+    content: Annotated[str, 'HTML email body'],
 ):
     """Send an email according to the parameters provided"""
     return pp.send_email(html_content=content, emails_to=[address], subject=subject)
