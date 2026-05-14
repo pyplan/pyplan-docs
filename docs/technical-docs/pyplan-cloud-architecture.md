@@ -1,13 +1,13 @@
 ---
-id: pyplan-cloud-aws
-title: Pyplan Cloud - AWS
-sidebar_label: Pyplan Cloud - AWS
+id: pyplan-cloud-architecture
+title: Pyplan Cloud Architecture
+sidebar_label: Pyplan Cloud Architecture
 sidebar_position: 1
 ---
 
-# Pyplan Cloud - AWS
+# Pyplan Cloud Architecture
 
-In order to ensure a strong, secure foundation, Pyplan Cloud shares security responsibilities with an industry-leading cloud infrastructure vendor and valued partner. These cloud computing services are used by Pyplan for internal purposes as well as Pyplan clients for their own cloud deployments.
+In order to ensure a strong, secure foundation, Pyplan Cloud shares security responsibilities with an industry-leading cloud infrastructure vendor and valued partner: Amazon Web Services (AWS). These cloud computing services are used by Pyplan for internal purposes as well as Pyplan clients for their own cloud deployments.
 
 Pyplan Cloud relies on cloud infrastructure for secure physical access, redundant (fault tolerant) infrastructure and scalability.
 

@@ -14,7 +14,7 @@ Pyplan offers several deployment options:
 
 ## Pyplan Enterprise SaaS
 
-Pyplan Cloud solution offers businesses a world-class analytics and planning platform without the complexities of installing and managing their own deployment. For more details refer to [Pyplan Cloud - AWS](./pyplan-cloud-aws).
+Pyplan Cloud solution offers businesses a world-class analytics and planning platform without the complexities of installing and managing their own deployment. For more details refer to [Pyplan Cloud Architecture](./pyplan-cloud-architecture).
 
 ## On Customer Cloud
 
