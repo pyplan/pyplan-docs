@@ -10,6 +10,16 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.19
 
+### Version 3.19.3 - 2026-05-14
+- Updates
+  - Develop new tools for Pyplan MCP.
+- Fixed Issues
+  - Some styles in HTML are lost after implementing FontAwesome icons.
+  - The formatting of values on the secondary axis in combined charts incorrectly applies to the primary axis as well.
+  - Enhance support for Form Completer to correctly load multiselect columns.
+  - Create "View interface manager" permission.
+  - Minor fixes.
+
 ### Version 3.19.2 - 2026-05-13
 - Updates
   - Allow displaying a list of versions grouped by a field.
