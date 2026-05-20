@@ -20,4 +20,5 @@ There are different alternatives to have access to data placed in the customer's
   - [Snowflake Connection](./snowflake)
   - Others
 - **[Integration using APIs](/user-guide/app-management/api-endpoints)** — Use Pyplan's REST API to exchange data programmatically.
+- **[SAP integration via APIs](./sap)** — Exchange data between SAP and Pyplan in both directions using middleware/API gateways and Pyplan API endpoints.
 - **[Connecting with Power BI using Pyplan APIs](./powerbi)** — Integrate Pyplan output data directly with Power BI dashboards.
