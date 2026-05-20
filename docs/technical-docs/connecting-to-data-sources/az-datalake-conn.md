@@ -1,29 +1,91 @@
 ---
 id: az-datalake-conn
-title: Azure Datalake Connection
-sidebar_label: Azure Datalake
+title: Azure Data Lake Connection
+sidebar_label: Azure Data Lake
 sidebar_position: 3
 ---
 
-# Azure Datalake Connection
+# Azure Data Lake Connection
+
+Pyplan connects to Azure Data Lake Storage Gen2 (ADLS Gen2) using the Azure SDK for Python. This integration is outbound from Pyplan to Azure and supports both file upload and download operations.
+
+For IT and infrastructure teams, the most important point is that access is controlled from the Azure Storage Account side: Pyplan reaches ADLS Gen2 over HTTPS and Azure should allow only the public IPs used by Pyplan NAT Gateways.
+
+## Reference architecture
+
+![Azure Data Lake integration flow](../img/connecting-to-data-sources/pyplan_azure_datalake.png)
+
+## Integration flow
+
+1. Pyplan runs inside Pyplan Cloud on AWS.
+2. Outbound traffic leaves Pyplan through public NAT Gateways.
+3. Azure Storage Account firewall and network rules allow access only from those registered public IPs.
+4. Pyplan authenticates against ADLS Gen2 using either an Azure AD Service Principal or a SAS token.
+5. Pyplan reads or writes files in the configured filesystem/container over `HTTPS 443`.
+
+## Network and security requirements
+
+- Communication is outbound only: `Pyplan -> Azure`.
+- Protocol: `HTTPS`
+- Port: `443`
+- Azure Storage Account firewall/network rules must allow the public IPs used by Pyplan NAT Gateways. Request the corresponding IPs from the Pyplan team.
+- Authentication can be done with:
+  - Azure AD Service Principal
+  - SAS token
+- Access control is enforced on the Azure side through RBAC and ACLs, according to the folders and operations required.
+- Encryption at rest and audit capabilities remain managed within Azure.
 
 ## Requirements
 
 ### Default
 
-- `account_name`: Storage Account name
-- `file_system`: File System name of the Datalake
-- `tenant_id`: Directory Id of the Service Principal associated with the Datalake
-- Enable the firewalls in the Datalake: Request the corresponding IPs to the Pyplan Team.
+- `account_name`: Storage Account name used to build the endpoint `https://<account_name>.dfs.core.windows.net/`
+- `file_system`: File System or container name in ADLS Gen2
+- Enable the firewall/network rules in the Azure Storage Account: Request the corresponding IPs from the Pyplan team.
 
 ### ClientSecretCredential
 
+- `tenant_id`: Directory ID of the Service Principal associated with the Data Lake
 - `client_id`: Application ID of the Service Principal associated with the Datalake.
 - `client_secret`: Client secret of the Service Principal associated with the Datalake.
 
 ### SharedKeyCredential
 
 - `sas_token`: To connect to Azure Data Lake Storage Gen2 using a SAS token, the `SharedKeyCredential` class must be used instead of `ClientSecretCredential`.
+
+## Authentication options for IT teams
+
+### Option 1: Azure AD Service Principal
+
+Recommended when the customer wants centralized identity management in Azure.
+
+- Register an application in Azure AD.
+- Create a client secret or certificate for that application.
+- Grant the required permissions on the Storage Account and filesystem.
+- Share with Pyplan:
+  - `tenant_id`
+  - `client_id`
+  - `client_secret`
+  - `account_name`
+  - `file_system`
+
+### Option 2: SAS token
+
+Recommended when the customer prefers scoped, time-bounded access to a specific storage resource.
+
+- Generate a SAS token with the required permissions.
+- Restrict scope and expiration according to the security policy.
+- Share with Pyplan:
+  - `account_name`
+  - `file_system`
+  - `sas_token`
+
+## What this integration enables
+
+- Upload files from Pyplan to ADLS Gen2.
+- Download files from ADLS Gen2 into Pyplan processes.
+- Organize files in directories and containers.
+- Keep Azure networking and access policies under customer control.
 
 ---
 
