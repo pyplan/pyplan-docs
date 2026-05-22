@@ -10,6 +10,23 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.19
 
+### Version 3.19.4 - 2026-05-22
+- Updates
+  - Improvements to Pyplan MCP.
+  - Improvements to date selector.
+  - Allow hiding specific filters for defined node outputs in Filter component.
+  - Add new properties to handle NaN and division by zero in scenario calculations.
+  - UI design and style changes have been implemented.
+- Fixed Issues
+  - Fix performance issues in interfaces with multiple components when scrolling up and down.
+  - An error occurs when uploading a .docx file in agents.
+  - The Developer Agent encounters an error when retrieving information from alias nodes whose original node no longer exists.
+  - Fix code editor issues.
+  - Using a node within a DynamicHtml does not display that interface as output.
+  - Creating a version with quotes in the name results in an error in the current_version_path node.
+  - Conditional formatting does not apply on subsequent pages of a table after the first page.
+  - Minor fixes.
+
 ### Version 3.19.3 - 2026-05-14
 - Updates
   - Develop new tools for Pyplan MCP.
