@@ -10,6 +10,10 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.19
 
+### Version 3.19.5 - 2026-05-25
+- Updates
+  - Application default header color are not applying to component header icons.
+
 ### Version 3.19.4 - 2026-05-22
 - Updates
   - Improvements to Pyplan MCP.
