@@ -35,8 +35,30 @@ From the Version Manager you can:
 
 - Create new versions.
 - Edit version properties (name, tags, status).
+- Organize versions into groups using a logical path structure.
 - Export and import versions.
 - Change the status of a version (Active, Closed, Archived).
+
+## Version Groups
+
+Pyplan allows us to organize versions using a **Version group** field. This field behaves like a logical path and uses the `/` character as a separator, which lets us represent a directory-like structure inside the Version Manager.
+
+For example, we can define values such as:
+
+- `Planning`
+- `Planning/2026`
+- `Planning/2026/Q1`
+- `Planning/2026/Q2`
+
+When at least one non-archived version has a value in **Version group**, the Version Manager automatically switches to a grouped view. In this view, versions are displayed in a tree structure that follows the path defined in the field.
+
+This behavior helps us keep long version lists organized without requiring any additional configuration when opening the manager.
+
+![Grouped Version Manager](../img/app-management/version-manager-grouped-versions.png)
+
+:::tip
+We can use **Version group** to represent environments, planning cycles, business areas, or any hierarchy that helps us organize versions consistently.
+:::
 
 ### Creating a New Version
 
@@ -47,12 +69,29 @@ A dialog opens where you configure:
 - **Base version**: every new version is created from an existing one, so all content of the selected base version is copied to the new version.
 - **Name**: the name of the new version.
 - **Tags**: optional labels to help search and organize versions (type a tag and press Enter to add it).
+- **Version group**: an optional logical path used to organize versions in the grouped view. We can write a single level such as `Planning`, or a multi-level path such as `Planning/2026/Q1`.
 - **Set as default version**: if enabled, this new version becomes the default version that opens when the application is launched.
 - **Open after creating**: if enabled, the new version is opened immediately after creation.
 
 Click **Confirm** to create the version.
 
 ![Create Version](../img/app-management/create_version.png)
+
+![Create Version with Version Group](../img/app-management/create-version-group.png)
+
+### Grouped Navigation in the Version Manager
+
+When versions are organized with **Version group**, we can expand and collapse the groups directly in the Version Manager. Each path segment becomes a grouping level, and versions are shown at the corresponding leaf level.
+
+For example, if we define these groups:
+
+- `Planning/2026/Q1`
+- `Planning/2026/Q2`
+- `Operations/Weekly`
+
+Pyplan renders them as nested groups, making it easier to browse related versions and identify the context of each one.
+
+Versions without a group are displayed in a separate uncategorized section within the grouped view.
 
 ## Version Status
 
