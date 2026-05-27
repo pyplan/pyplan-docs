@@ -5,7 +5,7 @@ title: Filter Component
 
 # Filter Component
 
-The Filter component groups all indices and selectors present in the interface into a single component. It is added to the interface during the editing phase, just like any other component. 
+The Filter component groups all indices and selectors present in the interface into a single component. We add it during the editing phase, just like any other component.
 
 :::note
 Only one Filter component is allowed per interface. When added, it automatically positions itself at the top with a fixed width and height, and it cannot be moved.
@@ -46,6 +46,47 @@ When indices or selectors are selected, they are added to a list of filters wher
 When editing, a new view opens allowing you to modify the format, mode, and other filter properties.
 
 ![Filter Edit View](../../img/interfaces/filter_8.png)
+
+## Controlling Filter Visibility
+
+The Filter component can use a **visibility controller** to decide which filters are shown in the interface. We configure this controller with a node that returns the ids of the indices and selectors that must remain visible inside the component.
+
+### Configuring the Visibility Controller
+
+1. Open the interface in edit mode.
+2. Select the **Filter** component.
+3. In the component toolbar, click **Select visibility controller**.
+4. Choose the node that will control which filters remain visible.
+5. Save the component configuration.
+
+![Visibility Controller in Toolbar](../../img/interfaces/filter_visibility_controller_toolbar.png)
+
+### How Visibility Works
+
+Once the controller is configured, the Filter component only displays the filters whose ids are returned by that node.
+
+1. In the **Filter component** interface, the Filter component initially shows all configured filters: **year**, **tournament_continent**, **surface**, **selector_2**, and **selector_3**.
+
+![Visible Filters Controlled by Node Output](../../img/interfaces/filter_visibility_controller_result_1.png)
+
+2. In the **filter controllers** interface, a selector node defines which filter ids must remain visible in the Filter component. In this example, we remove **tournament_continent** from that list, as indicated by the red arrow.
+
+![Visible Filters Controlled by Node Output](../../img/interfaces/filter_visibility_controller_result_2.png)
+
+3. When we return to the **Filter component** interface, the Filter component updates its visible filters and **tournament_continent** is no longer displayed.
+
+![Visible Filters Controlled by Node Output](../../img/interfaces/filter_visibility_controller_result_3.png)
+
+
+:::info
+The visibility controller only affects how filters are displayed in the interface. It does not remove filters from the component and it does not clear the values already selected in hidden filters.
+:::
+
+:::tip
+If no visibility controller is configured, the Filter component continues to display all filters normally.
+:::
+
+In edit mode, we can still open the Filter configuration and manage the complete list of filters, including the ones that are currently hidden in the interface.
 
 ## Applying Filters
 
