@@ -5,7 +5,7 @@ title: AI Agents
 
 # AI Agents
 
-Pyplan includes several built-in agent types designed to assist users across different workflows. These agents come pre-configured with specialized roles, optimized behaviors, and access capabilities tailored to their purpose. They simplify user interactions, automate complex tasks, and guide users through model logic, analysis, or interface creation.
+Pyplan includes several built-in agent types designed to assist users across different workflows. These agents come pre-configured with specialized roles, optimized behaviors, and access capabilities tailored to their purpose. They simplify user interactions, automate complex tasks, and guide users through model logic, analysis, and operational workflows.
 
 ![Agents Selection](./img/ai-agents/agents_selection.png)
 
@@ -117,28 +117,6 @@ The **Developer Agent** assists in the technical construction and maintenance of
 - Suggest optimizations or improvements to node structure.
 
 It accelerates model development and promotes best practices.
-
-## Visualizer Agent
-
-The **Visualizer Agent** focuses on interface creation and layout design. It assists with:
-
-- Suggesting and generating charts, tables, filters, and other UI components.
-- Guiding users on best practices for dashboard clarity and usability.
-- Configuring interface properties such as formatting, interactions, and layout.
-- Helping align visualizations with the analytical purpose of the application.
-
-Ideal for users who need to build dashboards but are not experts in interface design.
-
-## Form Completer / Input Cube Completer
-
-The **Form Completer** and **Input Cube Completer** agents are designed to assist users in filling out forms and data input cubes automatically, based on the user's needs and the context of the application. Their capabilities include:
-
-- Interpreting the structure of a form or input cube and proposing values for each field.
-- Using available context — such as previously loaded data, node values, or user instructions — to generate coherent and consistent entries.
-- Reducing manual data entry effort in planning, budgeting, or operational input scenarios.
-- Validating that proposed values align with expected formats, ranges, or business rules defined in the model.
-
-These agents are especially useful in planning and budgeting applications where users need to complete large input cubes efficiently.
 
 ## Solution Architect
 
