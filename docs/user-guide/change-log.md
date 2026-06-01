@@ -10,6 +10,21 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.19
 
+### Version 3.19.6 - 2026-06-01
+- Updates
+  - New tools for automatic documentation of [nodes](/user-guide/code/automatic-documentation), [interfaces](/user-guide/interfaces/manager#automatic-documentation) and [application](/user-guide/app-management/app-documentation#generating-the-documentation-automatically).
+  - New MCP tools.
+  - Create a new component that renders HTML with native data filtering for agents.
+  - Add a local search bar to filter fields in advanced pivoting.
+  - Automatically close download and upload windows in the file manager after successful completion.
+  - Add a button to stop the execution of a trace.
+  - Display an alert with a non-intrusive message when there are a large number of components in the interface.
+- Fixed Issues
+  - Addressed performance issues with tables.
+  - Fixed overflow issue in the filter component when there are many selected options.
+  - The file list does not refresh when a file is uploaded in the File Manager.
+  - Minor fixes.
+
 ### Version 3.19.5 - 2026-05-25
 - Updates
   - Application default header color are not applying to component header icons.
