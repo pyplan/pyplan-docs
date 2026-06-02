@@ -10,6 +10,15 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.20
 
+### Version 3.20.1 - 2026-06-02
+- Updates
+  - Improvements to Pyplan MCP.
+- Fixed Issues
+  - The droppable area does not function correctly when pivoting in tables.
+  - Styles are not applied to the first column of a table when the index hide option is used.
+  - Date type selectors do not respect minimum and maximum dates when opened from a node in the diagram.
+  - Minor fixes.
+
 ### Version 3.20.0 - 2026-06-01
 - Updates
   - New tools for automatic documentation of [nodes](/user-guide/code/automatic-documentation), [interfaces](/user-guide/interfaces/manager#automatic-documentation) and [application](/user-guide/app-management/app-documentation#generating-the-documentation-automatically).
@@ -24,7 +33,6 @@ All notable changes to Pyplan will be documented in this page:
   - Fixed overflow issue in the filter component when there are many selected options.
   - The file list does not refresh when a file is uploaded in the File Manager.
   - Minor fixes.
-
 ## Version 3.19
 
 ### Version 3.19.5 - 2026-05-25
