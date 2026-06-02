@@ -26,7 +26,7 @@ In addition to the dynamic tools created inside an application, Pyplan MCP also 
 
 - List the applications available to the authenticated user.
 - Open an application and keep its running instance associated with the MCP session.
-- Send questions to the **Analyst** agent for the open application.
+- Build and modify the application logic and interfaces using AI assistance.
 - Discover application-specific tools.
 - Execute application-specific tools.
 
@@ -72,6 +72,7 @@ The server can return the applications the current user can access, including:
 
 - Public applications.
 - Applications available through teams.
+- Applications in the user's workspace.
 - User and company context associated with the session.
 
 This is the starting point for all application-specific interactions, because the application URI returned here is later used to open the target application.
@@ -82,14 +83,19 @@ Once we identify the desired application, we open it through MCP using its URI. 
 
 Opening the application is required before using:
 
-- The **Analyst** built-in capability.
+- The built-in AI capabilities for building and interacting with the application.
 - The dynamic tools defined inside the application.
 
-### 3. Ask the Analyst agent
+### 3. Build and interact with the application using AI
 
-After an application is open, the MCP server can send natural-language questions to the built-in **Analyst** agent. This allows us to explore the application, request calculations, and continue a conversation using the session identifier returned by previous calls.
+After an application is open, Pyplan MCP enables us to work with the application through natural language. We can:
 
-This capability is useful when we want conversational analysis without creating a dedicated dynamic tool.
+- Build and modify the calculation logic of the application.
+- Create and update interfaces (dashboards, forms, visualizations).
+- Explore data, request calculations, and analyze results.
+- Manage files, inputs, and application structure.
+
+This means that from any compatible AI client we can develop, maintain, and interact with a Pyplan application without leaving the chat environment.
 
 ### 4. Discover application tools
 
@@ -187,27 +193,19 @@ In practice, this means that MCP tools should behave like direct executable func
 Creating a regular Python function in a node is not enough. If the node is not exposed with `@mcp_tool` and returned as `result`, the MCP server will not discover it as a dynamic tool.
 :::
 
-## When To Use Dynamic Tools Instead of the Analyst
+## When To Use Dynamic Tools
 
-Both approaches are useful, but they solve different problems.
-
-We prefer the built-in **Analyst** capability when:
-
-- We want exploratory questions in natural language.
-- We need conversational analysis.
-- The exact structure of the response does not need to be predefined.
-
-We prefer a dynamic MCP tool when:
+Dynamic tools are particularly useful when:
 
 - We need a predictable input and output contract.
-- We want to expose a specific business action.
+- We want to expose a specific business action to external AI clients.
 - We need the client to understand the parameter schema explicitly.
 - We want the action to be reusable and deterministic.
 
-In many applications, both approaches can coexist: the Analyst is useful for exploration, while dynamic tools are better for structured operations.
+In practice, dynamic tools complement the built-in AI capabilities: we use natural-language interaction for development and exploration, while dynamic tools provide structured, repeatable operations for specific business processes.
 
 ## Summary
 
-Pyplan MCP allows us to connect AI clients to Pyplan through a standard protocol. After registration and OAuth authorization, we can list applications, open one application, ask the Analyst, discover dynamic tools, and execute them.
+Pyplan MCP allows us to connect AI clients to Pyplan through a standard protocol. After registration and OAuth authorization, we can list applications, open one application, build and interact with it using AI, discover dynamic tools, and execute them.
 
 To make an application-specific tool visible through MCP, we must define it in the application as an `MCPTool` using `@mcp_tool`, document its parameters clearly, and return a serializable result. Once the application is open, the MCP client can discover that tool automatically and invoke it with structured parameters.
