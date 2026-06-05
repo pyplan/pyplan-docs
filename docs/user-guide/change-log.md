@@ -10,6 +10,23 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.20
 
+### Version 3.20.2 - 2026-06-05
+- Updates
+  - New options have been added to the default settings for applications related to tables and charts.
+  - HTML rendering is now allowed in the agent's response.
+  - Automatic hierarchies for date-type dimensions can now be disabled.
+  - Dates will now be displayed in the format corresponding to the selected language.
+  - Improvements have been made to the data reading wizard.
+  - Enhancements have been made to the file duplication feature in File Manager.
+- Fixed Issues
+  - In the office add-in, obtaining a form displays hidden columns.
+  - Conditional styles based on other columns do not work if the column used in the calculation is hidden.
+  - Clicking 'Go to node' from a component does not center the diagram on the selected node if it is outside the initial view.
+  - Button components are not correctly applying properties in the component code.
+  - Changing a property in a pivoted scenario component repositions the scenario dimension to Scenario placement.
+  - Improved translations to error messages.
+  - Minor fixes.
+
 ### Version 3.20.1 - 2026-06-02
 - Updates
   - Improvements to Pyplan MCP.
