@@ -10,6 +10,17 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.20
 
+### Version 3.20.3 - 2026-06-08
+- Updates
+  - Added support for conditional formatting based on another column for multiple pivoted columns.
+  - Applications opened from the Office Add-in will now launch in read-only mode.
+- Fixed Issues
+  - Automated tests do not detect errors in the filter component when an index with an error is present.
+  - Sorting a dimension that is set as a nested column causes the nested format to be lost.
+  - Fixed an issue where running tests with the same department sometimes resulted in repeated department entries, causing test results to display incorrectly.
+  - In some cases, the list of app versions does not correctly display those opened by a user with write permissions.
+  - Minor fixes.
+
 ### Version 3.20.2 - 2026-06-05
 - Updates
   - New options have been added to the default settings for applications related to tables and charts.
