@@ -130,6 +130,7 @@ Its capabilities include:
 - Understanding complex business requirements expressed in natural language.
 - Producing a coherent end-to-end solution blueprint before any code is written.
 - Generating node code, interface layouts, and application structure based on the confirmed design.
+- Building [HTML interfaces](./interfaces/html-interfaces.md) — fully custom, web-based interfaces connected to the model — when a tailored layout is needed.
 - Iterating on the design based on user feedback before committing to implementation.
 
 This agent is ideal for advanced users and developers who want to accelerate the initial construction of a new Pyplan application.

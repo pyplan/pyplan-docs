@@ -9,6 +9,10 @@ Transform your data into actionable insights using user-friendly interfaces. Beg
 
 ![Interface Example](../img/interfaces/interface_example.png)
 
+:::tip
+This page describes **component interfaces**, built by assembling components on a grid. If you need a fully custom layout or tool, you can also build an [HTML interface](./html-interfaces.md) with Pyplan's AI agent.
+:::
+
 ## Create an Interface
 
 Begin by clicking on the **Create** button to initiate the process.
