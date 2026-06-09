@@ -8,6 +8,8 @@ sidebar_position: 99
 # Change log
 All notable changes to Pyplan will be documented in this page:
 
+## Version 3.21
+
 ## Version 3.20
 
 ### Version 3.20.3 - 2026-06-08
