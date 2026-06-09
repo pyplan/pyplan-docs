@@ -1,6 +1,6 @@
 {
   "label": "Interface Components",
-  "position": 4,
+  "position": 5,
   "link": {
     "type": "generated-index",
     "description": "Reference for all available interface components in Pyplan: index selectors, input fields, indicators, HTML blocks, buttons, menus, tasks, notifications, scheduled tasks, filters, and the upload manager."
