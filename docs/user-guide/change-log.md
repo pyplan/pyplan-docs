@@ -10,6 +10,11 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.21
 
+### Version 3.21.0 - 2026-06-09
+- Updates
+  - New HTML interface type.
+- Fixed Issues
+  - Minor fixes.
 ## Version 3.20
 
 ### Version 3.20.3 - 2026-06-08
