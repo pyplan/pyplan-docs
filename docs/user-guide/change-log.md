@@ -12,7 +12,7 @@ All notable changes to Pyplan will be documented in this page:
 
 ### Version 3.21.0 - 2026-06-09
 - Updates
-  - New HTML interface type.
+  - New HTML interface type ([HTML Interfaces](/user-guide/interfaces/html-interfaces)).
 - Fixed Issues
   - Minor fixes.
 ## Version 3.20
