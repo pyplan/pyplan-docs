@@ -1,15 +1,15 @@
 ---
 sidebar_position: 5
-title: Dynamic HTML Component
+title: HTML Menu
 ---
 
-# Dynamic HTML Component
+# HTML Menu
 
-The **Dynamic HTML** component lets us embed custom HTML into a Pyplan interface and connect HTML elements to application actions without writing additional integration code. We can write or paste HTML and then configure actions that link specific elements to interfaces, application sections, nodes, or dynamic content returned by the model.
+The **HTML Menu** component lets us embed custom HTML into a Pyplan interface and connect HTML elements to application actions without writing additional integration code. We can write or paste HTML and then configure actions that link specific elements to interfaces, application sections, nodes, or dynamic content returned by the model.
 
 Using this component, we can build highly customized panels such as cards, buttons, alerts, banners, and summary blocks while keeping the interaction logic connected to the Pyplan model.
 
-![Dynamic HTML Component](../../img/interfaces/html_dynamic.png)
+![HTML Menu Component](../../img/interfaces/html_dynamic.png)
 
 ## Main Areas
 
@@ -32,7 +32,7 @@ In the **Code** area, the toolbar provides several actions that help us edit and
 
 This toolbar is especially useful while we iterate on the HTML structure and verify that the configured actions still point to the expected elements.
 
-![Dynamic HTML Code Widget Actions](../../img/interfaces/dynamic-html-code-widget-actions.png)
+![HTML Menu Code Widget Actions](../../img/interfaces/dynamic-html-code-widget-actions.png)
 
 **HTML preview**
 - Live preview of how the HTML will be rendered in the interface.
@@ -42,7 +42,7 @@ This toolbar is especially useful while we iterate on the HTML structure and ver
 - A table at the bottom where you define dynamic behaviors for specific HTML elements.
 - Each row links an HTML attribute, for example `id="execute-app"` or `data-role="customer-link"`, with an action type and its corresponding configuration.
 
-![Dynamic HTML Actions Panel](../../img/interfaces/dynamic-html-actions-panel.png)
+![HTML Menu Actions Panel](../../img/interfaces/dynamic-html-actions-panel.png)
 
 ## Defining Actions on HTML Elements
 
@@ -100,7 +100,7 @@ If the HTML contains several elements such as:
 
 then clicking **Customer 002** sends the value `CUST-002` to the configured node parameter.
 
-![Dynamic HTML Send Attribute To Node](../../img/interfaces/dynamic-html-send-attribute-to-node.png)
+![HTML Menu Send Attribute To Node](../../img/interfaces/dynamic-html-send-attribute-to-node.png)
 
 **Attributes from node**
 Sets one or more HTML attributes based on the result of a node. A typical use case is to dynamically assign values to attributes such as `src`, `href`, `title`, or `style`.

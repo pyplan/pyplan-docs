@@ -1,15 +1,15 @@
 ---
 sidebar_position: 4
-title: HTML Component
+title: Rich text
 ---
 
-# HTML Component
+# Rich Text Component
 
-The HTML component in Pyplan allows users to insert formatted content — such as text, images, links, and styling — into their dashboards or interfaces using HTML. It's especially useful for adding titles, descriptions, instructions, or branding elements.
+The Rich text component in Pyplan allows users to insert formatted content — such as text, images, links, and styling — into their dashboards or interfaces. It's especially useful for adding titles, descriptions, instructions, or branding elements.
 
 You can use the visual editor or write raw HTML directly, offering both beginner-friendly and developer-oriented editing experiences.
 
-![HTML Component](../../img/interfaces/component_html.png)
+![Rich Text Component](../../img/interfaces/component_html.png)
 
 ## Key Features
 
@@ -28,11 +28,11 @@ You can use the visual editor or write raw HTML directly, offering both beginner
 
 **Visual editor**: User-friendly toolbar with formatting buttons for bold, italic, lists, etc.
 
-![HTML Editor](../../img/interfaces/component_html_editor.png)
+![Rich Text Editor](../../img/interfaces/component_html_editor.png)
 
 **Source code**: Toggle to raw HTML for full control over formatting.
 
-![HTML Editor Code](../../img/interfaces/component_html_editor_code.png)
+![Rich Text Editor Code](../../img/interfaces/component_html_editor_code.png)
 
 ### Content
 
