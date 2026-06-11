@@ -20,3 +20,6 @@ yarn-debug.log*
 yarn-error.log*
 
 /download_images.py
+
+# Claude Code (local/personal config only — keep .claude/CLAUDE.md and settings.json tracked)
+.claude/settings.local.json
