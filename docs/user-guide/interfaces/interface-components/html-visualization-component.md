@@ -5,7 +5,7 @@ title: HTML Visualization Component
 
 # HTML Visualization Component
 
-The **HTML Visualization** component turns the data of a Pyplan node into a custom, fully styled HTML view rendered inside an `iframe`. Unlike the static [HTML component](./html-component.md), it is **data-bound**: it takes the result of a node, runs it through a small Python `render()` method, and returns the HTML to display — so the output reacts to changes in the Pyplan node and to the interface's filters.
+The **HTML Visualization** component turns the data of a Pyplan node into a custom, fully styled HTML view rendered inside an `iframe`. Unlike the static [Rich Text component](./rich-text-component.md), it is **data-bound**: it takes the result of a node, runs it through a small Python `render()` method, and returns the HTML to display — so the output reacts to changes in the Pyplan node and to the interface's filters.
 
 It is the right choice when the standard table, chart, and indicator components cannot express the layout you need: bespoke KPI dashboards, styled summary cards, mixed chart-and-table panels, or any data-driven block where you want full control over the markup, CSS, and JavaScript.
 
@@ -99,11 +99,11 @@ Pyplan offers several ways to work with HTML. It helps to know how they differ:
 | Option | What it is | When to use it |
 |---|---|---|
 | **[HTML component](./html-component.md)** | Static formatted content (text, images, links) written in a visual or code editor. | Headers, descriptions, instructions, branding — content that does not depend on a Pyplan node data. |
-| **[Dynamic HTML component](./dynamic-html-component.md)** | A block of hand-written HTML wired to actions through an actions table (clicks open interfaces, run nodes, send attributes…). | A custom card, banner, or interactive block whose markup you write yourself. |
+| **[HTML Menu component](./html-menu-component.md)** | A block of hand-written HTML wired to actions through an actions table (clicks open interfaces, run nodes, send attributes…). | A custom card, banner, or interactive block whose markup you write yourself. |
 | **HTML Visualization component** | A node's data transformed into custom HTML by a Python `render()` method, shown in an `iframe`. | A data-driven visualization (chart, KPI dashboard, styled table) that reacts to Pyplan node changes and to filters. |
 | **[HTML interface](../html-interfaces.md)** | The *whole interface* is a self-contained web page calling Python callbacks. | A fully custom screen or tool, not a single component on a grid. |
 
-The key distinction: the **HTML component** is static, the **Dynamic HTML component** wires static markup to actions, and the **HTML Visualization component** generates its markup *from data* every time the data or filters change.
+The key distinction: the **Rich Text component** is static, the **HTML Menu component** wires static markup to actions, and the **HTML Visualization component** generates its markup *from data* every time the data or filters change.
 
 :::tip
 Let the AI assistant produce the first version, then refine it. Describe the data story you want ("compare this year vs last", "rank the top 10", "show as cards"), and edit the resulting code only where you need precise control.

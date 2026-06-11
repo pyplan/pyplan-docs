@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: Rich text
+title: Rich Text Component
 ---
 
 # Rich Text Component
@@ -9,7 +9,7 @@ The Rich text component in Pyplan allows users to insert formatted content — s
 
 You can use the visual editor or write raw HTML directly, offering both beginner-friendly and developer-oriented editing experiences.
 
-![Rich Text Component](../../img/interfaces/component_html.png)
+![Rich Text Component](../../img/interfaces/component_rich_text.png)
 
 ## Key Features
 
@@ -28,11 +28,11 @@ You can use the visual editor or write raw HTML directly, offering both beginner
 
 **Visual editor**: User-friendly toolbar with formatting buttons for bold, italic, lists, etc.
 
-![Rich Text Editor](../../img/interfaces/component_html_editor.png)
+![Rich Text Editor](../../img/interfaces/rich_text_editor.png)
 
 **Source code**: Toggle to raw HTML for full control over formatting.
 
-![Rich Text Editor Code](../../img/interfaces/component_html_editor_code.png)
+![Rich Text Editor Code](../../img/interfaces/rich_text_source_code.png)
 
 ### Content
 

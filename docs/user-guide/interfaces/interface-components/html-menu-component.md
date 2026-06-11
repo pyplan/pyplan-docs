@@ -13,7 +13,7 @@ Using this component, we can build highly customized panels such as cards, butto
 
 ## Main Areas
 
-When we add a Dynamic HTML component to an interface and open its configuration, we work with three main areas:
+When we add a HTML Menu component to an interface and open its configuration, we work with three main areas:
 
 **Code**
 - Large text area where we write or paste the HTML markup.
