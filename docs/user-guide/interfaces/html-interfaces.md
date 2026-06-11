@@ -19,12 +19,12 @@ Pyplan offers three different ways to work with custom presentation. It helps to
 
 | Option | What it is | When to use it |
 |---|---|---|
-| **Component interface** | A grid of draggable components (tables, charts, selectors, indicators, buttons…). See [Creating an Interface](./creation.md). | The standard choice for most dashboards and input/output screens. |
-| **[Dynamic HTML component](./interface-components/dynamic-html-component.md)** | A *single component* placed inside a component interface, where a block of HTML is wired to the model through an actions table. | You need a custom card, banner or block **inside** an otherwise standard interface. |
+| **Component interface** | A grid of draggable components (tables, charts, selectors, indicators, buttons…). See [Creating an Interface](./creation.md). | The standard choice for most dashboards and input/output screens. | 
+| **[HTML Menu component](./interface-components/html-menu-component.md)** | A *single component* placed inside a component interface, where a block of HTML is wired to the model through an actions table. | You need a custom card, banner or block **inside** an otherwise standard interface. |
 | **[HTML Visualization component](./interface-components/html-visualization-component.md)** | A *single component* placed inside a component interface, where a Pyplan node's data is turned into custom HTML by a Python `render()` method. | You need a data-driven visualization (chart, KPI dashboard, styled table) that reacts to the change in a Pyplan node and filters, **inside** a standard interface. |
 | **HTML interface** | The *whole interface* is a web page with its own logic, calling Python methods you define. | You need a fully custom layout or a tailored tool that the standard components can't express. |
 
-The key distinction: a Dynamic HTML component lives *inside* a component interface, while an HTML interface *replaces* the component grid entirely and drives its interaction through Python code you (or the agent) write.
+The key distinction: a HTML Menu component lives *inside* a component interface, while an HTML interface *replaces* the component grid entirely and drives its interaction through Python code you (or the agent) write.
 
 ## How an HTML interface is built
 
