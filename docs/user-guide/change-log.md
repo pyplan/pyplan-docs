@@ -10,6 +10,18 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.21
 
+### Version 3.21.1 - 2026-06-16
+- Updates
+  - Make necessary adjustments to MCP tools to qualify for submission to the Anthropic directory.
+  - Allow specific workflow expiration dates by company preference.
+  - Add an option in Indicator styles to choose how to vertically align the component's content within its container.
+  - Centralize agent configuration in the AI management section.
+- Fixed Issues
+  - Data handling does not work in combined charts within interfaces.
+  - The information icon in the component interface has stopped functioning.
+  - Fixed an error in automatic translations that caused the UI to hang and requests to remain pending.
+  - Minor fixes.
+
 ### Version 3.21.0 - 2026-06-09
 - Updates
   - New HTML interface type ([HTML Interfaces](/user-guide/interfaces/html-interfaces)).
