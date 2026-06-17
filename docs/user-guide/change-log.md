@@ -10,6 +10,14 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.21
 
+### Version 3.21.2 - 2026-06-17
+- Updates
+  - Enhance table and form skills for the HTML interface creator.
+  - Visually differentiate the dev enviroment from production environments.
+- Fixed Issues
+  - An issue arises when opening an app from an app pool if a specific version is not selected, causing it to not recognize the app pool's version.
+  - An error occurs when copying a module into itself, resulting in a loop and preventing access to the module.
+
 ### Version 3.21.1 - 2026-06-16
 - Updates
   - Make necessary adjustments to MCP tools to qualify for submission to the Anthropic directory.
