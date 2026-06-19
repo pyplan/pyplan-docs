@@ -10,6 +10,23 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.21
 
+### Version 3.21.2 - 2026-06-19
+- Updates
+  - Enhance table and form skills for the HTML interface creator.
+  - Implement CDN caching techniques in the chat window and HTML Visualization component.
+  - Enhance agent instructions for creating HTML interfaces to account for dimension changes and scenario usage.
+  - Improve scheduled tasks table by modifying displayed columns and enabling search and filter functionalities.
+  - Allow resource selection when opening applications from the file manager.
+  - Facilitate the addition of interface components to the agent chat context.
+  - Display options for components without headers when hovering over them.
+  - Visually differentiate the dev enviroment from production environments.
+- Fixed Issues
+  - Rewrote deleted methods in Form to maintain compatibility with existing applications.
+  - Corrected an error that occurred when opening an app pool with a specific version that did not reflect the app pool's version.
+  - Fixed an error related to filtering with null values in Polars.
+  - Resolved an issue where copying a module into itself caused a looping error.
+  - Minor fixes.
+
 ### Version 3.21.1 - 2026-06-16
 - Updates
   - Make necessary adjustments to MCP tools to qualify for submission to the Anthropic directory.
