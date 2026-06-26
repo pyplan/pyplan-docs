@@ -10,6 +10,18 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.21
 
+### Version 3.21.3 - 2026-06-26
+- Updates
+  - Add resource usage (RAM) information to emails sent after application tests.
+  - Hide the link when navigating HTML interfaces.
+- Fixed Issues
+  - The Analyst agent executes buttons when the current interface has one.
+  - Boolean values are not displayed in the Values column when creating style conditions.
+  - The Stop button does not function when executing nodes.
+  - The filter component sometimes loses reference to the names of the components.
+  - The environment variable for distinguishing between dev and cloud is not being read.
+  - Minor fixes.
+
 ### Version 3.21.2 - 2026-06-19
 - Updates
   - Enhance table and form skills for the HTML interface creator.
