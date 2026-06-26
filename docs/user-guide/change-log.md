@@ -10,10 +10,6 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.21
 
-### Version 3.21.3 - 2026-06-23
-- Fixed Issues
-  - The environment variable for distinguishing between development and cloud is not being read.
-
 ### Version 3.21.2 - 2026-06-19
 - Updates
   - Enhance table and form skills for the HTML interface creator.
