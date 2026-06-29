@@ -67,12 +67,16 @@ In each **user message**, Pyplan provides a set of contextual actions that becom
 
 The available actions are the following:
 
-- **Edit message**: This action allows us to restart the conversation from a selected user message. When we confirm the action, Pyplan restores the session checkpoint for that message and removes all subsequent messages in the conversation.
+- **Restore conversation**: This action allows us to restart the conversation from a selected user message. When we confirm the action, Pyplan restores the session checkpoint for that message and removes all subsequent messages in the conversation. If the **Developer** or **Analyst** agent modified an interface during that turn, Pyplan checks whether a snapshot of the interface state exists for that checkpoint. If one is found, the confirmation dialog includes a **Revert interface changes** checkbox that we can enable to also restore the interface to the state it had before those modifications. This restoration is applied in memory only — the interface file on disk is not modified until we explicitly save the application.
 - **View traces**: If traces are available and we have permission to access them, we can open the trace detail associated with that message.
 - **Copy message**: This action copies the full content of the user message to the clipboard.
 
 :::warning
-When we edit a previous message, all messages below that point in the session are removed after confirmation.
+When we restore a previous conversation point, all messages below that point in the session are removed after confirmation.
+:::
+
+:::info
+The **Revert interface changes** checkbox is only shown when there is a saved snapshot for that checkpoint in the current chat session. Snapshots are created automatically before each Developer or Analyst turn and are discarded when a turn completes without any interface changes.
 :::
 
 ## Pyplan Agent
