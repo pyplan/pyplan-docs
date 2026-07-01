@@ -10,6 +10,21 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.21
 
+### Version 3.21.4 - 2026-07-01
+- Updates
+  - Allow undoing changes made by the Developer agent.
+  - New Application tests section for testing multiple applications at once.
+  - Add dynamic HTML and HTML interfaces to automated application tests.
+  - Improvements in the naming of node IDs.
+  - Add a new property to hide disabled tasks in the Scheduled Tasks component.
+  - In the user manager, add a switch to hide disabled users.
+- Fixed Issues
+  - When a custom agent fails, other agents do not function.
+  - The control-click functionality for navigating to nodes is not working properly.
+  - In stacked percentage bar chart format, applying percentage numeric formatting causes Y-axis labels to display from 100% to 10000%.
+  - In some cases, folder permission data is not retrieved correctly.
+  - Minor fixes.
+
 ### Version 3.21.3 - 2026-06-26
 - Updates
   - Add resource usage (RAM) information to emails sent after application tests.
