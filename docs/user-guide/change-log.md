@@ -13,7 +13,7 @@ All notable changes to Pyplan will be documented in this page:
 ### Version 3.21.4 - 2026-07-01
 - Updates
   - Allow undoing changes made by the Developer agent.
-  - New Application tests section for testing multiple applications at once.
+  - New Application tests section for testing multiple applications at once ([Test applications](/user-guide/tools/test-applications)).
   - Add dynamic HTML and HTML interfaces to automated application tests.
   - Improvements in the naming of node IDs.
   - Add a new property to hide disabled tasks in the Scheduled Tasks component.
