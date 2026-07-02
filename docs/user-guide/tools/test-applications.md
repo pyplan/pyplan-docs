@@ -9,6 +9,10 @@ The **Test Applications** tool lets us run the [automation tests](/user-guide/ap
 
 Unlike the Automation Tests screen, which lives inside a single opened application, Test Applications works across applications and versions: we register each application by its file-manager path and run its tests in the background.
 
+:::info Where the tests come from
+Test Applications **runs** the tests that already exist in each application — it does not create them. The tests of an application are built and maintained inside the application itself, as described in the [Automation Tests](/user-guide/app-management/automation-tests) guide.
+:::
+
 It can be accessed from the main menu of the application, within the **Tools** submenu.
 
 ![Test Applications menu option](../img/tools/test-applications/test-applications-menu-option.png)
