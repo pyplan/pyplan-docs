@@ -10,6 +10,33 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.21
 
+### Version 3.21.5 - 2026-07-08
+- Updates
+  - Implement application-level skills.
+  - Add a button to refresh form data from the database.
+  - Add functionality to delete companies.
+  - Improvements to SAML login.
+  - Differentiate between component-type interfaces and HTML interfaces.
+  - Allow company switching via MCP without needing to reconnect.
+  - Show nested headers in Excel add-in.
+  - Add search tools for agents.
+  - Improve handling of attachments for agents in Pyplan.
+  - Register nodes that are part of HTML interfaces as outputs.
+  - Restrict agents from creating interfaces with prohibited characters in names.
+  - Add a shortcut to go to the application folder in the File manager.
+- Fixed Issues
+  - When there are unclosed apostrophes or quotes in code comments, some node IDs defined as variables may not be recognized.
+  - Sorting does not work on the Total column in pivoted tables.
+  - Resizing the console to the top disables the option to adjust it again.
+  - There are issues navigating menus with DynamicHtml that link to interfaces.
+  - The text field for adding comments in workflow tasks is not displayed correctly.
+  - The log export in Log Manager is inconsistent with the number of rows displayed.
+  - Fix errors in sessions.
+  - Pressing ctrl + a in a table while in the '/code' view triggers the hotkey that selects all nodes.
+  - The margin of the pyplan dev logo needs to be corrected to prevent overflow issues.
+  - A KeyError: exclude_none occurs when serializing styles due to a missing check in the InputValueProperties class.
+  - Minor fixes.
+
 ### Version 3.21.4 - 2026-07-01
 - Updates
   - Allow undoing changes made by the Developer agent.
