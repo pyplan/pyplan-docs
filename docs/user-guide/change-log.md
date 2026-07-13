@@ -33,7 +33,7 @@ All notable changes to Pyplan will be documented in this page:
   - The log export in Log Manager is inconsistent with the number of rows displayed.
   - Fix errors in sessions.
   - Pressing ctrl + a in a table while in the '/code' view triggers the hotkey that selects all nodes.
-  - The margin of the pyplan dev logo needs to be corrected to prevent overflow issues.
+  - The margin of the Pyplan Dev logo needs to be corrected to prevent overflow issues.
   - A KeyError: exclude_none occurs when serializing styles due to a missing check in the InputValueProperties class.
   - Minor fixes.
 
