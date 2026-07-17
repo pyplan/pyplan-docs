@@ -30,7 +30,7 @@ Once we click the **Code** icon in the main menu, we access the application's in
 
 ### Influence Diagram
 
-Visual representation of the application logic. Each node corresponds to a step in the data flow (loading, transformation, calculation, output), and the arrows show dependencies between nodes. From here we can select nodes, open their coding window, and run them.
+Visual representation of the application logic. Each node materializes a business concept of the model (an input, a dimension, a calculated measure, an output), and the arrows show how those concepts influence each other. From here we can select nodes, open their coding window, and run them.
 
 ### Node Display Modes
 
@@ -92,7 +92,7 @@ In the top‑right of the coding area we find controls specific to the selected 
 
 ## Features of a Node
 
-A node is the smallest building block of the calculation process. To add a node, we drag the desired node type onto the diagram.
+A node is the smallest building block of the model: it materializes a single business concept, and its `result` is the value of that concept. To add a node, we drag the desired node type onto the diagram.
 
 ### Node Title
 

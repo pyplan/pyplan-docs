@@ -5,13 +5,13 @@ title: Influence Diagram
 
 # Influence Diagram
 
-One of the distinctive aspects of Pyplan is the way we organize code through a hierarchical influence diagram, where each node represents a step in the loading, transformation, or processing of information.
+One of the distinctive aspects of Pyplan is the way we organize code through a hierarchical influence diagram, where each node materializes a unique business concept — an input, a dimension, a calculated measure, an output (for example, *Projected Demand*, *Net Sales*, or *Transport Cost*) — and the arrows show how those concepts influence each other.
 
 ![diagram-nodes.png](../img/lowcode-nocode/diagram-nodes.png)
 
-Nodes act as visual containers for model logic. In each node we define the underlying Python code in its coding window, either by writing the code directly or by using one of Pyplan's code assistants to help generate it.
+Nodes act as visual containers for model logic. In each node we define the underlying Python code in its coding window, either by writing the code directly or by using one of Pyplan's code assistants to help generate it. The mechanical steps needed to compute a concept (loading, filtering, merging, calculating) live inside a single node's definition as local variables — we create a separate node when the information is a different business concept, not to stage the calculation of the same one.
 
-We build the influence diagram by dragging node types from the left palette (Code, Input data, Data reading, Variable, Index, Button, Text, Module, etc.) onto the diagram area and arranging them into flows. Dependencies between steps are represented by arrows. These arrows are created automatically when a node's definition references another node.
+We build the influence diagram by dragging node types from the left palette (Code, Input data, Data reading, Variable, Index, Button, Text, Module, etc.) onto the diagram area and arranging them into flows. Dependencies between concepts are represented by arrows. These arrows are created automatically when a node's definition references another node.
 
 Each node type has a specific color and style. This color scheme lets us quickly understand the role of each node and the structure of the model at a glance.
 
