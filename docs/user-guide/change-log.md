@@ -10,6 +10,29 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.21
 
+### Version 3.21.6 - 2026-07-22
+- Updates
+  - Add an option to export to Excel/CSV for table-type components in HTML Interfaces.
+  - Enable export and import of processes (workflows) between applications/servers.
+  - Restrict access to application versions based on department permissions.
+  - Enhancements in application consolidation.
+  - Implement Personal Access Tokens (PATs) for headless MCP client usage.
+  - Allow version managements from the application open dialog.
+  - Implement a new subtotal option 'By Item' in table components.
+  - Ensure department selectors return alphabetically ordered lists and allow filtering in autocomplete.
+  - Add automatic retries for 503 errors from Vertex AI.
+  - Implement screen section capture functionality from the chat window.
+- Fixed Issues
+  - The open_app function does not correctly redirect to an interface when executed from another interface.
+  - The versions dialog consumes a lot of memory when opened with a version grouping set.
+  - Fix bug when logging via SAML if two users share the same email.
+  - Bug in the box-type menu when moving actions to other items.
+  - Timeout error occurs when copying large volumes of data.
+  - Issues arise when executing nodes, causing Pyplan to become unresponsive.
+  - Error in version grouping when creating a version from another, retaining the original's grouping.
+  - Displaying results from high-dimensionality data arrays causes memory spikes.
+  - Minor fixes.
+
 ### Version 3.21.5 - 2026-07-08
 - Updates
   - Implement application-level skills.
