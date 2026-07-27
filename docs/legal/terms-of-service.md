@@ -35,9 +35,9 @@ To use the Service, you must be at least the age of majority in your jurisdictio
 
 ## 3. Account registration
 
-To access most features of the Service, you must register for an account. When registering, you agree to:
+Access to the Service requires an account, which is provisioned as part of your organization's subscription. When registering or maintaining an account, you agree to:
 
-- Provide accurate, current, and complete information as prompted by the registration form.
+- Provide accurate, current, and complete information.
 - Keep your account information up to date.
 - Be responsible for all activity that occurs under your account.
 
@@ -45,34 +45,28 @@ Pyplan may suspend or terminate your account and refuse any and all current or f
 
 ---
 
-## 4. Types of service
+## 4. How Pyplan is provided
 
-When you create something on Pyplan — applications, models, dashboards, functions, libraries, and similar assets (collectively, "**apps**") — you retain the rights to your content (see [User Content](#10-user-content-and-licenses)) and you control whether your creations are public or private. Pyplan offers different subscription options for individuals and organizations, which may include:
+Pyplan is a commercial planning and analytics platform provided to organizations under a subscription. Access is arranged directly with Pyplan (for example, by requesting a demo or contacting our team). Pyplan does not offer a free, community, or self-service consumer tier.
 
-| Version | Description |
-| --- | --- |
-| **Community** | Free subscription hosted on pyplan.com with limited CPU and storage. Creations are publicly viewable and searchable. |
-| **Personal** | Subscription for individuals hosted on pyplan.com, with the ability to create private apps. |
-| **Professional** | Subscription for individuals with extended storage, CPU capacity, and additional capabilities beyond the Personal version. |
-| **Enterprise** | Private cloud environment provided by Pyplan as software and infrastructure as a service. |
-| **Enterprise Server** | Private Pyplan Server for the enterprise, installed behind the customer's firewall. |
-| **Student** | Annual subscription for students and instructors, with the ability to create private apps. |
+Pyplan may be provided through either of the following deployment models:
 
-The features, capacity, and pricing associated with each version may change over time. The version available to you is determined by your subscription.
+- **Pyplan Cloud (SaaS)** — a fully managed environment hosted by Pyplan on leading cloud infrastructure (such as Amazon Web Services), so your organization does not have to install or operate the platform itself.
+- **Customer-managed deployment** — Pyplan deployed in your organization's own cloud account (AWS, Azure, GCP, or OCI) or behind your firewall.
+
+The specific features, capacity, deployment model, and commercial terms that apply to you are set out in the subscription agreement or order form between your organization and Pyplan. When you create applications, models, dashboards, functions, or other assets (collectively, "**apps**") in Pyplan, you retain the rights to your content (see [User Content and licenses](#10-user-content-and-licenses)) and control how it is shared within your environment.
 
 ---
 
-## 5. Paid services
+## 5. Fees
 
-Pyplan may charge fees for access to certain portions of the Service based on your subscription level ("**Paid Service**") and will notify you of those fees at the time we offer you the Paid Service. By electing to access a Paid Service, you authorize Pyplan (through its third-party payment processor) to charge the payment method you provide for all applicable fees and taxes in U.S. dollars. You represent and warrant that you are authorized to use the payment method you provide.
+Access to the Service is subject to the fees set out in the subscription agreement or order form between your organization and Pyplan. Unless that agreement states otherwise:
 
-- If we do not receive payment from your payment provider, you agree to pay all amounts due upon demand, and we may suspend your access to the Paid Service until all outstanding amounts are paid.
-- You agree to reimburse any reasonable costs (including reasonable attorneys' fees) incurred by Pyplan to collect amounts that are past due.
-- You may cancel your use of a Paid Service or your account at any time. Except as expressly provided in these Terms, all sales are final and Pyplan will not refund amounts already paid.
-- We may change our fees at any time upon prior notice to you. You will not be charged without your prior knowledge and consent.
-- Sharing access to a Paid Service with another individual is a violation of these Terms.
+- Fees are invoiced according to the terms of your subscription agreement.
+- Fees are exclusive of applicable taxes, which are your responsibility.
+- If any undisputed amount is past due, Pyplan may suspend access to the Service until it is paid, and you agree to reimburse the reasonable costs (including reasonable attorneys' fees) incurred by Pyplan to collect past-due amounts.
 
-See [Payments and refunds](#16-payments-and-refunds) for renewal and refund details.
+Billing, renewal, and any refund terms are governed by your subscription agreement or order form. In the event of a conflict between this section and your subscription agreement, the subscription agreement controls.
 
 ---
 
@@ -84,14 +78,12 @@ You are responsible for maintaining the confidentiality of the username and pass
 
 ## 7. Account termination
 
-Either party may terminate your access to the Service:
+Either party may terminate your access to the Service, subject to your subscription agreement:
 
-- **By you:** You may terminate your account and access to the Service at any time, for any reason, by contacting us at [info@pyplan.com](mailto:info@pyplan.com).
-- **By Pyplan:** We may suspend or terminate your account and access to the Service (including any Paid Service) at any time, for any reason, with or without notice.
+- **By you:** You may request termination of your account and access to the Service by contacting us at [info@pyplan.com](mailto:info@pyplan.com) or your Pyplan representative.
+- **By Pyplan:** We may suspend or terminate your account and access to the Service where permitted by your subscription agreement or these Terms — for example, for non-payment, a breach of these Terms, or a risk to the security or integrity of the Service.
 
-Even after your account is terminated, these Terms remain in effect to the extent required to give effect to their meaning. Terminating your account does not entitle you to a refund, except that if Pyplan terminates your access to a Paid Service solely for its own convenience, Pyplan will refund amounts you paid for use of that Paid Service that are attributable to the period after the effective termination date.
-
-Pyplan may delete any free-plan container after **three (3) weeks of inactivity**.
+Even after your account is terminated, these Terms remain in effect to the extent required to give effect to their meaning. If Pyplan terminates your subscription solely for its own convenience, Pyplan will refund any prepaid fees attributable to the period after the effective termination date. Any other refund terms are governed by your subscription agreement.
 
 ---
 
@@ -131,11 +123,12 @@ Without limiting any other section of these Terms, you agree not to:
 
 - Reverse engineer or otherwise attempt to derive source code or trade secrets from the Service;
 - Access the Service to build a competitive product or service, or to monitor its availability, performance, or functionality for benchmarking or competitive purposes;
-- Sell, resell, distribute, lease, or rent your access to the Service;
+- Sell, resell, distribute, lease, or rent your access to the Service, or share, sell, or transfer your account credentials, except as permitted by your subscription agreement;
 - Remove, circumvent, disable, damage, or otherwise interfere with security-related features of the Service;
 - Copy, "frame," or "mirror" any part of the Service;
+- Modify, adapt, or hack the Service, or modify another website to falsely imply that it is associated with the Service;
 - Use the Service in any manner that could damage, disable, overburden, or impair it;
-- Use automated scripts to collect information from, or otherwise interact with, the Service;
+- Use automated scripts to collect information from, or otherwise interact with, the Service, except as expressly authorized;
 - Impersonate any person or entity or misrepresent your affiliation with a person or entity;
 - Solicit personal information from anyone under 18, or solicit passwords or personally identifying information for commercial or unlawful purposes;
 - Intimidate or harass another person; or
@@ -143,23 +136,17 @@ Without limiting any other section of these Terms, you agree not to:
 
 Violations of system or network security may result in civil or criminal liability. Pyplan may investigate and cooperate with law enforcement authorities to prosecute users involved in such violations.
 
-### 9.4 Community, Personal, and Professional subscriptions
-
-Pyplan subscriptions are intended for use by individuals for personal, commercial, and educational purposes. Sharing access to a Paid Service with another individual is a violation of these Terms. Creating generic user accounts (for example, `department@yourcompany.com`) solely to share a Personal or Professional account is strictly prohibited.
-
-You must not modify, adapt, or hack the Service, or modify another website to falsely imply that it is associated with the Service. You also agree not to reproduce, duplicate, copy, sell, resell, or exploit any portion of the Service without the express written permission of Pyplan.
-
 ---
 
 ## 10. User Content and licenses
 
 **You retain all rights to your User Content.** "User Content" means the data, graphs, code, commentary, and derivative works you import, create, share, modify, or distribute through the Service.
 
-- **Public content.** By setting your work to be viewed publicly, you agree to allow others to view, copy, and re-use your work and its underlying data. For any User Content you upload or generate and publicly share, you grant Pyplan a worldwide, perpetual, royalty-free, transferable right to use, reproduce, modify, adapt, publish, prepare derivative works of, distribute, and publicly display that User Content. You may modify or remove your User Content through your account or by terminating your account.
+- **Content you choose to share.** If you choose to make any User Content available to others through the Service (for example, by sharing an interface or app), you grant Pyplan a worldwide, royalty-free right to host, reproduce, adapt, and display that User Content solely as necessary to operate the Service and make it available to the recipients you designate. You may modify or remove your User Content through your account.
 - **Content standards.** You agree not to upload, post, or distribute any material that: (a) breaches any duty toward, or rights of, any person or entity, including publicity or privacy rights; (b) contains corrupted data or harmful code; (c) is offensive or otherwise objectionable; (d) restricts or inhibits others from using the Service; (e) may expose Pyplan or its users to harm or liability; (f) constitutes unsolicited advertising or spam; (g) contains the private or confidential information of another person or entity (including personal health information) without authorization; or (h) violates any law or regulatory requirement.
 - **Moderation.** Although Pyplan has no obligation to screen, edit, or monitor User Content, we reserve the right, in our sole discretion, to screen, edit, or remove any User Content at any time and for any reason without notice. We may also use or disclose information related to you (including User Content) to investigate or prevent prohibited or unlawful activity, to exercise our legal rights, or to protect the rights and property of Pyplan or any third party.
 - **No liability for User Content.** To the maximum extent permitted by law, Pyplan assumes no liability for any User Content, including any loss of or damage to your User Content, your inability to access it, or any unauthorized third-party access to it.
-- **Publicity.** Pyplan may use your trade names, trademarks, service marks, logos, and domain names in presentations, marketing materials, customer lists, and website listings for the purpose of publicizing your use of Pyplan. If you prefer that we not do so, contact us at [info@pyplan.com](mailto:info@pyplan.com).
+- **Publicity.** Pyplan may reference your organization's name and logo to identify you as a customer in customer lists and marketing materials, subject to any restrictions in your subscription agreement. If you prefer that we not do so, contact us at [info@pyplan.com](mailto:info@pyplan.com).
 
 ---
 
@@ -175,7 +162,7 @@ The handling of personal data is described in detail in our [Privacy Policy](./p
 
 THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE." TO THE MAXIMUM EXTENT PERMITTED BY LAW, PYPLAN EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
 
-Without limiting the foregoing, Pyplan makes no warranty that: (a) the information, graphs, charts, data, and other content provided through the Service will be accurate, reliable, complete, or free from errors, omissions, or delays; (b) the Service will be available at any particular time or location; (c) defects or errors will be corrected; or (d) the Service is free of viruses or other harmful components. Technical support is available by email only and with no guarantee of a solution.
+Without limiting the foregoing, Pyplan makes no warranty that: (a) the information, graphs, charts, data, and other content provided through the Service will be accurate, reliable, complete, or free from errors, omissions, or delays; (b) the Service will be available at any particular time or location; (c) defects or errors will be corrected; or (d) the Service is free of viruses or other harmful components. Support levels, if any, are defined in your subscription agreement.
 
 ---
 
@@ -185,7 +172,7 @@ TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT WILL PYPLAN, ITS AFFILIATES,
 
 IF YOU HAVE A DISPUTE WITH ANOTHER USER, YOU RELEASE PYPLAN FROM ANY CLAIMS, DEMANDS, AND DAMAGES ARISING OUT OF OR CONNECTED WITH THAT DISPUTE.
 
-THE MAXIMUM TOTAL LIABILITY OF PYPLAN, ITS AFFILIATES, AND ITS LICENSORS TO YOU FOR ANY CLAIM UNDER THESE TERMS IS THE LESSER OF: (A) THE AMOUNT RECEIVED BY PYPLAN FROM YOU DURING THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (B) ONE HUNDRED U.S. DOLLARS (US$100).
+Except where a different limitation is set out in your subscription agreement, the maximum total liability of Pyplan, its affiliates, and its licensors to you for any claim under these Terms is the amount received by Pyplan from you during the twelve (12) months preceding the claim.
 
 These limitations apply whether the alleged liability is based on contract, tort, negligence, strict liability, or any other basis, even if Pyplan has been advised of the possibility of such damage, and even if a limited remedy fails of its essential purpose. Because some jurisdictions do not allow the exclusion or limitation of certain damages, Pyplan's liability in those jurisdictions will be limited to the extent permitted by law.
 
@@ -201,26 +188,17 @@ Pyplan reserves the right, at your expense, to assume the exclusive defense and 
 
 ## 15. Term and survival
 
-These Terms remain in effect while you use the Service. The sections that by their nature should survive termination — including [User Content and licenses](#10-user-content-and-licenses), [Disclaimer of warranties](#12-disclaimer-of-warranties), [Limitation of liability](#13-limitation-of-liability), [Indemnification](#14-indemnification), and [Miscellaneous](#19-miscellaneous) — will survive termination of your account.
+These Terms remain in effect while you use the Service. The sections that by their nature should survive termination — including [User Content and licenses](#10-user-content-and-licenses), [Disclaimer of warranties](#12-disclaimer-of-warranties), [Limitation of liability](#13-limitation-of-liability), [Indemnification](#14-indemnification), and [Miscellaneous](#18-miscellaneous) — will survive termination of your account.
 
 ---
 
-## 16. Payments and refunds
-
-If you upgrade to a paid account, Pyplan will charge you on a recurring basis (monthly or yearly, depending on your selection). You will receive an email reminder before each recurring payment and are free to cancel at no cost no later than 48 hours before the automatic renewal, without penalty.
-
-- Pyplan offers refunds for **Enterprise** services only, within seven (7) days of the initial sign-up or recurring payment.
-- Pyplan does **not** provide refunds for **Personal**, **Professional**, or **Student** subscriptions.
-
----
-
-## 17. No waiver
+## 16. No waiver
 
 Pyplan's failure to enforce any provision of these Terms, or to respond to a breach by you or others, does not waive our right to enforce any term or condition subsequently, or to act with respect to similar breaches.
 
 ---
 
-## 18. Notices
+## 17. Notices
 
 Pyplan may provide you with notices by email, regular mail, or postings on the Service.
 
@@ -230,17 +208,18 @@ Pyplan may provide you with notices by email, regular mail, or postings on the S
 
 ---
 
-## 19. Miscellaneous
+## 18. Miscellaneous
 
 - **No agency.** No joint venture, partnership, employment, or agency relationship exists between you and Pyplan as a result of these Terms.
 - **Assignment.** You may not transfer or assign these Terms or any rights granted hereunder. Pyplan may assign them without restriction, including by operation of law, merger, or sale of substantially all of its assets. Any assignment in violation of this section is void.
-- **Entire agreement.** Unless otherwise specified, these Terms constitute the entire agreement between you and Pyplan and govern your use of the Service.
+- **Precedence.** These Terms govern your use of the Service. If your organization has signed a separate subscription agreement or order form with Pyplan, that agreement controls to the extent of any conflict with these Terms.
+- **Entire agreement.** Together with any applicable subscription agreement, these Terms constitute the entire agreement between you and Pyplan regarding the Service.
 - **Severability.** If any portion of these Terms is held invalid or unenforceable, that portion will be construed to reflect the parties' original intent as nearly as possible, and the remaining portions will remain in full force and effect.
 - **Admissibility.** A printed version of these Terms and of any electronic notice will be admissible in judicial or administrative proceedings to the same extent as other business records originally generated and maintained in printed form.
 
 ---
 
-## 20. Contact
+## 19. Contact
 
 The Service is offered by:
 
