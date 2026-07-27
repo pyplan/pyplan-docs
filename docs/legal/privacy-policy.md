@@ -118,7 +118,6 @@ We retain personal information for as long as your account is active or as neede
 - **Account data** is retained for the life of your account and deleted or anonymized after termination, subject to legal retention requirements.
 - **User Content** remains in your account (or your tenant) under your control and your organization's retention policy.
 - **Operational logs** are retained for a limited period for security, debugging, and abuse prevention, then deleted or anonymized.
-- Pyplan may delete any free-plan container after **three (3) weeks of inactivity**.
 
 ---
 
