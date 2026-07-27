@@ -13,7 +13,7 @@ All notable changes to Pyplan will be documented in this page:
 ### Version 3.21.7 - 2026-07-24
 - Updates
   - Unify Pyplan agents into a single agent.
-  - Add validation for related selectors in forms.
+  - Add validation when pasting values in forms for fields with related selectors.
   - Improve performance in the File Manager.
   - Enhance OTP code validation during Pyplan login.
 - Fixed Issues
