@@ -5,11 +5,9 @@ title: AI Agents
 
 # AI Agents
 
-Pyplan includes several built-in agent types designed to assist users across different workflows. These agents come pre-configured with specialized roles, optimized behaviors, and access capabilities tailored to their purpose. They simplify user interactions, automate complex tasks, and guide users through model logic, analysis, and operational workflows.
+Pyplan includes a built-in **Pyplan Agent**: a single, unified AI assistant that helps users across every workflow — from understanding the platform to analyzing data and building models and interfaces. Alongside it, **Code Assistants** provide inline help while writing code, and **Custom Agents** let application developers create their own specialized assistants.
 
-![Agents Selection](./img/ai-agents/agents_selection.png)
-
-![Code Assistants](./img/ai-agents/code_assistants.png)
+The Pyplan Agent comes pre-configured with the knowledge and tools it needs to work directly on the open application, so users can interact in natural language without switching between different assistants for questions, analysis, or building.
 
 ## Agent Window Header
 
@@ -67,7 +65,7 @@ In each **user message**, Pyplan provides a set of contextual actions that becom
 
 The available actions are the following:
 
-- **Restore conversation**: This action allows us to restart the conversation from a selected user message. When we confirm the action, Pyplan restores the session checkpoint for that message and removes all subsequent messages in the conversation. If the **Developer** or **Analyst** agent modified an interface during that turn, Pyplan checks whether a snapshot of the interface state exists for that checkpoint. If one is found, the confirmation dialog includes a **Revert interface changes** checkbox that we can enable to also restore the interface to the state it had before those modifications. This restoration is applied in memory only — the interface file on disk is not modified until we explicitly save the application.
+- **Restore conversation**: This action allows us to restart the conversation from a selected user message. When we confirm the action, Pyplan restores the session checkpoint for that message and removes all subsequent messages in the conversation. If the agent modified an interface during that turn, Pyplan checks whether a snapshot of the interface state exists for that checkpoint. If one is found, the confirmation dialog includes a **Revert interface changes** checkbox that we can enable to also restore the interface to the state it had before those modifications. This restoration is applied in memory only — the interface file on disk is not modified until we explicitly save the application.
 - **View traces**: If traces are available and we have permission to access them, we can open the trace detail associated with that message.
 - **Copy message**: This action copies the full content of the user message to the clipboard.
 
@@ -76,68 +74,27 @@ When we restore a previous conversation point, all messages below that point in 
 :::
 
 :::info
-The **Revert interface changes** checkbox is only shown when there is a saved snapshot for that checkpoint in the current chat session. Snapshots are created automatically before each Developer or Analyst turn and are discarded when a turn completes without any interface changes.
+The **Revert interface changes** checkbox is only shown when there is a saved snapshot for that checkpoint in the current chat session. Snapshots are created automatically before each agent turn and are discarded when a turn completes without any interface changes.
 :::
 
 ## Pyplan Agent
 
-The **Pyplan Agent** focuses on platform-level knowledge. It understands the structure and capabilities of Pyplan and is able to:
+The **Pyplan Agent** is the single assistant available in the chat. It brings together capabilities that were previously split across separate agents, so a single conversation can move naturally from a question, to an analysis, to building something in the model — without switching assistants.
 
-- Answer questions about navigation, model organization, and core features.
-- Explain how to use nodes, interfaces, dashboards, and tools.
-- Provide guidance on best practices for building and organizing a Pyplan model.
-- Help new users understand the platform's workflow and concepts.
+It can:
 
-This agent acts as the user's first point of contact when learning or troubleshooting Pyplan functionality.
+- **Understand the platform**: answer questions about navigation, model organization, nodes, interfaces, dashboards, and tools, and guide new users through Pyplan's concepts and best practices.
+- **Analyze data**: explore the open application's data, generate summaries, trends, and comparisons, identify best/worst cases and anomalies, and explain results in business language — rendering charts or tables directly in the chat when it helps.
+- **Build and maintain the model**: create and update nodes, write node formulas and Python code, explain logic and dependencies, and follow Pyplan's modeling conventions.
+- **Build interfaces**: create and edit dashboards, including fully custom [HTML interfaces](./interfaces/html-interfaces.md). Before building a new interface it proposes a short plan and waits for our confirmation.
+- **Edit data**: add, update, or remove rows and values in the application's Form and Input Cube components.
+- **Guide processes and workflows**: report our tasks and processes, highlight delays, and search the application's own documentation to explain how it works.
 
-## Analyst Agent
+The Pyplan Agent works only on the application and company that are currently open, and uses the diagram nodes, interface components, and files we have attached to the conversation as context.
 
-The **Analyst Agent** specializes in data analysis, offering analytical insights directly within Pyplan. Its capabilities include:
-
-- Exploring datasets and generating summaries, trends, and descriptive statistics.
-- Producing output in the form of interfaces, tables, or charts.
-- Assisting with segmentation, comparison, anomaly detection, and basic modeling.
-- Helping users interpret numerical results inside the context of the application.
-
-It is ideal for applications that require quick, natural-language-driven analytical support.
-
-## Process Agent
-
-The **Process Agent** guides users through the workflow of the current application, ensuring proper execution of steps. It can:
-
-- Explain how to interact with specific interfaces or nodes.
-- Provide step-by-step instructions based on documentation embedded in the app.
-- Validate whether the user is following the expected workflow.
-- Reduce friction by helping non-technical users execute complex processes.
-
-This agent is useful in operational applications where consistency and guidance are important.
-
-## Developer Agent
-
-The **Developer Agent** assists in the technical construction and maintenance of the Pyplan model. It is designed for advanced users and can:
-
-- Help write node formulas or custom Python code.
-- Explain logic flows, dependencies, and advanced modeling concepts.
-- Suggest optimizations or improvements to node structure.
-
-It accelerates model development and promotes best practices.
-
-## Solution Architect
-
-The **Solution Architect** agent is designed for users who need to translate a business problem into a complete, working Pyplan solution. It operates in two phases:
-
-1. **Design phase**: The agent analyzes the problem described by the user, proposes a full solution design that includes the model structure, node logic, Python code, and the required interfaces and dashboards.
-2. **Implementation phase**: Once the user reviews and confirms the proposed design, the agent proceeds to build the entire solution autonomously — creating nodes, writing formulas, and assembling the interfaces.
-
-Its capabilities include:
-
-- Understanding complex business requirements expressed in natural language.
-- Producing a coherent end-to-end solution blueprint before any code is written.
-- Generating node code, interface layouts, and application structure based on the confirmed design.
-- Building [HTML interfaces](./interfaces/html-interfaces.md) — fully custom, web-based interfaces connected to the model — when a tailored layout is needed.
-- Iterating on the design based on user feedback before committing to implementation.
-
-This agent is ideal for advanced users and developers who want to accelerate the initial construction of a new Pyplan application.
+:::info
+When a request takes several steps, the agent's work (its reasoning and the tools it runs) is grouped into a single collapsible activity block shown above the answer. We can expand it to review exactly what the agent did.
+:::
 
 ## Code Assistants
 
