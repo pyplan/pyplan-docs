@@ -68,6 +68,31 @@ When we click the **Settings** icon in a table widget, Pyplan opens the table co
 
 ![settings.png](../img/visualization-configuration/settings.png)
 
+### Data
+
+The **Data** section groups the options that control how the table data is shaped and summarized. Besides the **Pivot** and **Pagination** subsections, it includes a **Totals** subsection.
+
+#### Totals
+
+From the **Totals** subsection we can add summary rows and columns to the table:
+
+- **Show row totals** — Adds a totals **column** on the right (aggregating each row across the column dimensions).
+- **Show column totals** — Adds a totals **row** at the bottom (aggregating each column across the row dimensions).
+
+For each total we can choose:
+
+- **Position** — Whether the total is shown at the **Beginning** or the **End**.
+- **Aggregation method** — The general method applied to the whole total: **Sum**, **Average**, **Min**, **Max**, or **Count**.
+
+##### Aggregation by member
+
+By default a total uses a single aggregation method for every value. When a dimension mixes values that must be summarized differently — for example a **KPIs** dimension with members like `Sales` and `Sales/Cost`, where `Sales` should be **summed** but the `Sales/Cost` ratio should be **averaged** — click **Aggregation by member** to override the method per member.
+
+- The method is defined **per dimension member**, not per total. It feeds the **column totals** (bottom) when the dimension is placed in **columns**, and the **row totals** (right) when it is placed in **rows**.
+- The setting is **kept when the dimension is moved between axes or hidden**, and reapplies automatically wherever the dimension lands.
+- Members left as **General** use the total's general aggregation method.
+- Works with multiple dimensions on the same axis: each dimension keeps its own per‑member methods.
+
 ### Styles
 
 Within the **Styles** section we control the visual appearance of the table cells.
