@@ -68,6 +68,124 @@ Edit the **Signing Option** and the **Algorithm**.
 The **Sign SAML assertion** setting is mandatory.
 :::
 
+## SCIM 2.0 Automatic Provisioning
+
+In addition to SAML sign-in, Pyplan supports **SCIM 2.0 automatic provisioning** from Microsoft Entra ID. SCIM keeps user access synchronized with Entra ID, including user creation, updates, deactivation, reactivation, and removal from a company.
+
+:::info
+Automatic provisioning to a custom SCIM application requires Microsoft Entra ID P1, or a Microsoft subscription that includes it. Licenses are required only for the users being provisioned.
+:::
+
+### Create Authentication Credentials in Pyplan
+
+We configure authentication credentials for each company in Pyplan. Go to **Companies**, select the company, and then select **SCIM tokens**.
+
+Pyplan supports two authentication methods. Each credential is restricted to one company.
+
+#### Secret Token
+
+The **Secret Token** tab creates a bearer token that we paste directly into the Entra provisioning configuration.
+
+1. Select the **Secret Token** tab.
+2. Select **Create** and enter a descriptive name for the credential.
+3. Optionally, configure an expiration date.
+4. Copy and store the token when Pyplan displays it. The complete value is available only once.
+
+![Create a Secret Token in Pyplan](../img/sso/scim-pyplan-secret-token.png)
+
+#### OAuth 2.0 Client Credentials
+
+The **OAuth 2.0 Client Credentials** tab creates a client identifier and secret. Entra exchanges these values for a short-lived access token before calling the SCIM endpoints.
+
+1. Select the **OAuth 2.0 Client Credentials** tab.
+2. Select **Create** and enter a descriptive name for the client.
+3. Copy and securely store the displayed `client_id` and `client_secret`. The secret is available only once.
+
+![Create OAuth 2.0 credentials in Pyplan](../img/sso/scim-pyplan-oauth-client-credentials.png)
+
+### Configure Provisioning in Microsoft Entra ID
+
+In the Enterprise Application, open **Provisioning** and select **Get started**. Under **Admin Credentials**, select the authentication method that matches the credential created in Pyplan.
+
+| Field | Secret Token | OAuth 2.0 Client Credentials Grant |
+|---|---|---|
+| **Tenant URL** | `https://[DNS_CLUSTER_INGRESS]/api/scim/v2/` | `https://[DNS_CLUSTER_INGRESS]/api/scim/v2/` |
+| **Authentication method** | **Secret Token** | **OAuth2 Client Credentials Grant** |
+| **Secret Token** | The token created in Pyplan | Not used |
+| **Token Endpoint** | Not used | `https://[DNS_CLUSTER_INGRESS]/api/oauth2/token` |
+| **Client Identifier** | Not used | The `client_id` created in Pyplan |
+| **Client Secret** | Not used | The `client_secret` created in Pyplan |
+
+After entering the values, select **Test Connection**. When the connection succeeds, save the configuration.
+
+![Configure Secret Token authentication in Entra](../img/sso/scim-entra-secret-token-authentication.png)
+
+![Configure OAuth 2.0 Client Credentials authentication in Entra](../img/sso/scim-entra-oauth-client-credentials.png)
+
+### Configure Roles and Attribute Mapping
+
+SCIM sends a raw Entra role value to Pyplan through the `role` attribute of the Pyplan SCIM extension. Pyplan resolves that value to the final role and departments through the company's `saml_role_mapping` configuration.
+
+Create the corresponding **App Roles** in the Microsoft Entra ID application registration. In this example, we create the `IT`, `QA`, and `Trainee` roles.
+
+![Create App Roles in Microsoft Entra ID](../img/sso/scim-entra-create-app-role-1.png)
+![Create App Roles in Microsoft Entra ID](../img/sso/scim-entra-create-app-role-2.png)
+![Create App Roles in Microsoft Entra ID](../img/sso/scim-entra-create-app-role-3.png)
+
+In **Provisioning** > **Mappings**, edit the user attribute mapping so that Entra sends the assigned App Role in each SCIM request:
+
+| Field | Value |
+|---|---|
+| **Source Attribute** | `SingleAppRoleAssignment([appRoleAssignments])` |
+| **Target attribute** | `role` |
+| **Mapping Type** | **Expression** |
+
+![Map the Attribute mapping in Microsoft Entra ID](../img/sso/scim-entra-create-attribute-mapping-1.png)
+![Map the Attribute mapping in Microsoft Entra ID](../img/sso/scim-entra-create-attribute-mapping-2.png)
+![Map the Attribute mapping in Microsoft Entra ID](../img/sso/scim-entra-create-attribute-mapping-3.png)
+![Map the Attribute mapping in Microsoft Entra ID](../img/sso/scim-entra-create-attribute-mapping-4.png)
+
+Configure the company role mapping in Pyplan with the Entra App Role values as keys:
+
+```json
+{
+	"role": {
+		"IT": "Administrator",
+		"QA": "App Administrator",
+		"Trainee": "Explorer"
+	},
+	"department": {
+		"IT": ["pyplan-default", "guest", "social_account"],
+		"QA": "guest",
+		"Trainee": "pyplan-default"
+	}
+}
+```
+
+In **Provisioning** > **Mappings**, map the Entra App Role value to the `role` attribute in the Pyplan SCIM extension. Pyplan uses this value to apply the role and department mapping.
+
+:::tip
+Use a controlled vocabulary for the App Role values and keep it aligned with the keys in the Pyplan role mapping.
+:::
+
+### Assign Users and Roles
+
+Create or select a test user in Microsoft Entra ID before assigning access to the Enterprise Application.
+
+![Create a user in Microsoft Entra ID](../img/sso/scim-entra-create-user.png)
+
+In the Enterprise Application, select **Users and groups**, add the user, and assign the corresponding App Role. Enable provisioning for the assigned users and run an on-demand provisioning cycle to validate the configuration.
+
+![Assign an App Role to a user in Microsoft Entra ID](../img/sso/scim-entra-assign-user-role.png)
+
+### Provisioning Lifecycle
+
+When provisioning runs, Pyplan creates or updates the user and company access. Entra changes to the assigned App Role update the Pyplan role and department through the configured mapping. When Entra sends `active: false`, Pyplan deactivates both the user account and the access to the current company. Removing a user from the application follows the same deprovisioning process.
+
+:::warning
+The literal App Role value `User` is treated as an empty claim because Entra can send it when no explicit App Role is assigned. Use a specific App Role such as `IT`, `QA`, or `Trainee` for users whose Pyplan access must be determined by the mapping.
+:::
+
 ## Azure Groups (Optional)
 
 Pyplan allows matching an Azure group with a set of specific permissions within the application to facilitate the tasks of the security team.
