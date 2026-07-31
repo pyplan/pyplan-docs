@@ -8,6 +8,26 @@ sidebar_position: 99
 # Change log
 All notable changes to Pyplan will be documented in this page:
 
+## Version 3.22
+
+### Version 3.22.0 - 2026-07-31
+- Updates
+  - Implement SCIM integration.
+  - Enhancements to the scheduled tasks table.
+  - Add a new "Technical version" field to app versions.
+  - Allow defining the aggregation method of table totals by dimension member.
+  - Enable filtering component values by calculated measures.
+  - Fix policy and privacy terms links.
+  - Allow defining the CPU architecture for an application.
+- Fixed Issues
+  - Various issues have been reported regarding the diagram.
+  - There is a discrepancy between the performance tool's reported times and real-time measurements.
+  - The default formatted selector component does not display correctly when multiple options are selected.
+  - Pasting values into forms while the agent chat is open also captures them as an image.
+  - An 'Authentication credentials were not provided' error occurs when logging in with SAML in two tabs.
+  - The Public, Media, and Teams folders no longer appear at the beginning of the folder list in File Manager.
+  - Minor fixes.
+
 ## Version 3.21
 
 ### Version 3.21.7 - 2026-07-24
