@@ -10,7 +10,7 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.22
 
-### Version 3.22.0 - 2026-07-31
+### Version 3.22.1 - 2026-07-31
 - Updates
   - Implement SCIM integration.
   - Enhancements to the scheduled tasks table.
@@ -26,6 +26,10 @@ All notable changes to Pyplan will be documented in this page:
   - Pasting values into forms while the agent chat is open also captures them as an image.
   - An 'Authentication credentials were not provided' error occurs when logging in with SAML in two tabs.
   - The Public, Media, and Teams folders no longer appear at the beginning of the folder list in File Manager.
+  - Minor fixes.
+
+### Version 3.22.0 - 2026-07-31
+- Fixed Issues
   - Minor fixes.
 
 ## Version 3.21
