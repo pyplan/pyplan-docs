@@ -10,6 +10,14 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.22
 
+### Version 3.22.2 - 2026-08-03
+- Updates
+  - Enable or disable AI features by company and role.
+  - Detect user intent in chat and adjust the model accordingly.
+- Fixed Issues
+  - HTML code inspection is not functioning in some HTML interfaces.
+  - Minor fixes.
+
 ### Version 3.22.1 - 2026-07-31
 - Updates
   - Implement SCIM integration.
@@ -31,7 +39,6 @@ All notable changes to Pyplan will be documented in this page:
 ### Version 3.22.0 - 2026-07-31
 - Fixed Issues
   - Minor fixes.
-
 ## Version 3.21
 
 ### Version 3.21.7 - 2026-07-24
