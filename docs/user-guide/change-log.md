@@ -10,6 +10,12 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.22
 
+### Version 3.22.3 - 2026-08-04
+- Fixed Issues
+  - Pyplan Agent cannot create nodes if the app is opened from a Team or in read-only mode.
+  - Inconsistent behavior in different index formats when filtering.
+  - Minor fixes.
+
 ### Version 3.22.2 - 2026-08-03
 - Updates
   - Enable or disable AI features by company and role.
