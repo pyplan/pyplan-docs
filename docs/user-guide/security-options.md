@@ -230,8 +230,8 @@ File Manager folders are matched **by name**, so a rule on a folder reaches ever
 
 For each department you can manage access to:
 - Interfaces and interface folders
-- Folders in the File Manager
 - Modules in the influence diagram
+- Folders in the File Manager
 
 ### Example 1: Configuring permissions for interfaces
 
@@ -252,19 +252,7 @@ The dialog lets you choose between:
 
 After applying the change, the interface shows a padlock icon to indicate restricted access.
 
-### Example 2: Configuring permissions in the File Manager
-
-In the File Manager, you can restrict one folder at a time:
-
-1. Navigate to the folder you want to restrict.
-2. Open its options menu.
-3. Use the same permissions dialog.
-
-![Set File Manager Permissions](./img/security-options/set_filemanager_permissions.png)
-
-![Deny Accounting File Manager](./img/security-options/deny_accounting_filemanager.png)
-
-### Example 3: Configuring permissions for modules
+### Example 2: Configuring permissions for modules
 
 To restrict access to diagram modules:
 
@@ -279,6 +267,18 @@ The dialog lets you choose between Deny or Allow access to selected departments.
 
 When access to a module is denied for a department, users from that department will not see those modules when opening the diagram.
 
+### Example 3: Configuring permissions in the File Manager
+
+In the File Manager, you can restrict one folder at a time:
+
+1. Navigate to the folder you want to restrict.
+2. Open its options menu.
+3. Use the same permissions dialog.
+
+![Set File Manager Permissions](./img/security-options/set_filemanager_permissions.png)
+
+![Deny Accounting File Manager](./img/security-options/deny_accounting_filemanager.png)
+
 ### Exempt paths on folder rules
 
 A rule on a File Manager folder matches **by folder name**, so it reaches every folder called the same way in the company, including folders that belong to different applications. That is convenient when the same structure repeats across applications, but sometimes one particular folder has to behave differently.
@@ -287,7 +287,7 @@ A rule on a File Manager folder matches **by folder name**, so it reaches every 
 
 To add an exception:
 
-1. Open the folder's permissions dialog, as described in Example 2.
+1. Open the folder's permissions dialog, as described in Example 3.
 2. Choose the rule under **Set permissions** — **Deny access** or **Allow access only to** — and select the departments.
 3. Under **Exceptions**, every selected department shows its own list. We select **Add exception** on the department we want to configure.
 4. In **Add exception for _folder_**, we browse the tree and select the folder to exempt. Only folders with the same name as the rule can be selected, because an exception is matched against the folder's full path.
@@ -322,4 +322,74 @@ Exceptions are stored as folder paths. When we rename or move the folder — or 
 
 :::info
 When a user belongs to several departments, a folder is exempted only if **all** of their departments exempt it. Adding a department to a user never grants access that another one of their departments restricts.
+:::
+
+### Example 4: Exempting a folder from a Deny access rule
+
+In this example the company has three applications that happen to contain a folder called `Working files`:
+
+```
+Novix/
+├── Public/
+│   ├── Budget 2026/
+│   │   └── Working files
+│   └── Sales Forecast/
+│       └── Working files
+└── Teams/
+    └── Finance/
+        └── Consolidation/
+            └── Working files
+```
+
+We want the **Sales** department to stop seeing the working files of the budgeting applications, but to keep the ones of the consolidation application it collaborates on. We open the permissions dialog on any `Working files` folder and configure:
+
+- Rule: **Deny access**
+- Departments: **Sales**
+- Exceptions for **Sales**: `Novix/Teams/Finance/Consolidation/Working files`
+
+The result:
+
+| Folder | A user in Sales | A user in any other department |
+| --- | :---: | :---: |
+| `Public/Budget 2026/Working files` | restricted | visible |
+| `Public/Sales Forecast/Working files` | restricted | visible |
+| `Teams/Finance/Consolidation/Working files` | **visible** | visible |
+
+The rule reaches the three folders because it matches the name, and the exception releases only the one we listed. The other departments are not part of the rule, so nothing changes for them.
+
+### Example 5: Exempting a folder from an Allow access only to rule
+
+This example uses a different company, where several applications keep sensitive documentation in a folder called `Confidential`:
+
+```
+Contoso/
+├── Public/
+│   ├── Headcount Planning/
+│   │   └── Confidential
+│   └── Compensation Review/
+│       └── Confidential
+└── Teams/
+    └── Legal/
+        └── Litigation Tracker/
+            └── Confidential
+```
+
+Only the **People** department should reach those folders. The one inside the litigation application is the exception: it is under legal hold, so it must stay out of everyone's reach, including the department that handles all the others. We configure:
+
+- Rule: **Allow access only to**
+- Departments: **People**
+- Exceptions for **People**: `Contoso/Teams/Legal/Litigation Tracker/Confidential`
+
+The result:
+
+| Folder | A user in People | A user in any other department |
+| --- | :---: | :---: |
+| `Public/Headcount Planning/Confidential` | visible | restricted |
+| `Public/Compensation Review/Confidential` | visible | restricted |
+| `Teams/Legal/Litigation Tracker/Confidential` | **restricted** | restricted |
+
+Here the exception works the other way around than in the previous example. An **Allow access only to** rule grants the name to People and restricts it for every other department, so taking a folder out of the rule takes it away from People as well. The rest of the departments were restricted on that folder to begin with, so the exempted one ends up reachable by nobody — which is exactly what a legal hold needs.
+
+:::tip
+When in doubt about which rule to use, we can read the exception as *"this folder is not part of the rule"*. On a **Deny access** rule that means the folder is not restricted; on an **Allow access only to** rule it means the folder is not granted.
 :::
