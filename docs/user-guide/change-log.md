@@ -10,6 +10,20 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.22
 
+### Version 3.22.4 - 2026-08-07
+- Updates
+  - Add performance profiler tool to agents.
+  - Allow adding exceptions to folder restrictions in the File Manager.
+  - Enable sorting of tables/graphs by clicking on the title of the chip in the Quick Pivot.
+- Fixed Issues
+  - The inline chat does not allow for text correction as the cursor jumps to the end of the text when attempting to edit.
+  - Dependent components are re-rendered after performing actions following a filter selection change.
+  - Changes in HTML interfaces are not detected when selecting the 'Include all' option during application consolidation.
+  - When selecting a dataframe node as the base for a form in the wizard, it incorrectly links to the alias ID instead of the original ID.
+  - The application version creation button is hidden on small screens.
+  - A bug occurs when changing versions while in an interface, resulting in an 'interface not found' error.
+  - Minor fixes.
+
 ### Version 3.22.3 - 2026-08-04
 - Fixed Issues
   - Pyplan Agent cannot create nodes if the app is opened from a Team or in read-only mode.
