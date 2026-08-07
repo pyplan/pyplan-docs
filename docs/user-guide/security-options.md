@@ -224,6 +224,8 @@ Pyplan automatically resolves conflicts:
 - If an item is added to the allowed list, it is removed from the denied list.
 - If an item is added to the denied list, it is removed from the allowed list.
 
+File Manager folders are matched **by name**, so a rule on a folder reaches every folder called the same way in the company. We can single out specific folders with [exempt paths](#exempt-paths-on-folder-rules).
+
 ### What you can control
 
 For each department you can manage access to:
@@ -260,7 +262,7 @@ In the File Manager, you can restrict one folder at a time:
 
 ![Set File Manager Permissions](./img/security-options/set_filemanager_permissions.png)
 
-![Allow Accounting File Manager](./img/security-options/allow_accounting_filemanager.png)
+![Deny Accounting File Manager](./img/security-options/deny_accounting_filemanager.png)
 
 ### Example 3: Configuring permissions for modules
 
@@ -276,3 +278,48 @@ The dialog lets you choose between Deny or Allow access to selected departments.
 ![Module Modal](./img/security-options/module_modal.png)
 
 When access to a module is denied for a department, users from that department will not see those modules when opening the diagram.
+
+### Exempt paths on folder rules
+
+A rule on a File Manager folder matches **by folder name**, so it reaches every folder called the same way in the company, including folders that belong to different applications. That is convenient when the same structure repeats across applications, but sometimes one particular folder has to behave differently.
+
+**Exceptions** cover that case. The rule keeps matching by name, and we list the exact folders it must not reach. Exceptions are configured **per department**, so two departments can be exempted on different folders.
+
+To add an exception:
+
+1. Open the folder's permissions dialog, as described in Example 2.
+2. Choose the rule under **Set permissions** — **Deny access** or **Allow access only to** — and select the departments.
+3. Under **Exceptions**, every selected department shows its own list. We select **Add exception** on the department we want to configure.
+4. In **Add exception for _folder_**, we browse the tree and select the folder to exempt. Only folders with the same name as the rule can be selected, because an exception is matched against the folder's full path.
+5. We select **Confirm**, repeat for as many folders as needed, and save the dialog with **Confirm**.
+
+![Exceptions in the folder permissions dialog](./img/security-options/folder-exceptions-dialog.png)
+
+![Selecting the folder to exempt](./img/security-options/folder-exception-picker.png)
+
+:::info
+The **Access** column of the File Manager, and the **Set permissions** option in the folder menu, are only visible to users who are allowed to configure restrictions. Users without those permissions never see which folders are restricted.
+:::
+
+### How exempt paths are resolved
+
+What an exception means depends on the rule it belongs to:
+
+| Rule | The exempted folder… |
+| --- | --- |
+| **Deny access** | is visible to the selected departments, while every other folder with that name stays restricted. |
+| **Allow access only to** | is left out of the permission, so it becomes restricted for the selected departments and stays restricted for the rest. |
+
+An exception always points at one exact folder, never at a name:
+
+- Other folders with the same name keep behaving as the rule says.
+- The exemption also covers the content of that folder, including its subfolders and files.
+- A folder with the same name located **inside** an exempted folder is not exempted, and the rule still applies to it.
+
+:::warning
+Exceptions are stored as folder paths. When we rename or move the folder — or any of its parent folders — the exception stops matching and the folder goes back to what the rule says. The dialog marks those entries with a warning icon, so we can remove them and select the folder again in its new location.
+:::
+
+:::info
+When a user belongs to several departments, a folder is exempted only if **all** of their departments exempt it. Adding a department to a user never grants access that another one of their departments restricts.
+:::
