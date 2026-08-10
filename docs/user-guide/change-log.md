@@ -10,6 +10,12 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.22
 
+### Version 3.22.5 - 2026-08-10
+- Fixed Issues
+  - Logging in with an iPhone triggers a UI error stating 'ReferenceError: Can't find variable: Notification'.
+  - Disabling the ability to add rows to a form still allows new rows to be added when pasting more rows than the remaining space in the table.
+  - Minor fixes.
+
 ### Version 3.22.4 - 2026-08-07
 - Updates
   - Add performance profiler tool to agents.
