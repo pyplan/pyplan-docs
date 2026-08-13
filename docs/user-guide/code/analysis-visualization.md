@@ -92,6 +92,9 @@ By default a total uses a single aggregation method for every value. When a dime
 - The setting is **kept when the dimension is moved between axes or hidden**, and reapplies automatically wherever the dimension lands.
 - Members left as **General** use the total's general aggregation method.
 - Works with multiple dimensions on the same axis: each dimension keeps its own per‑member methods.
+- Available in table‑derived components too: **Input Cube** and **Input Data Array** behave like tables.
+
+**Forms** work differently: their columns are fields (not dimension members), so the exception is configured **by field**. The dialog (**Aggregation by field**) shows a method per numeric field column, so each field of the bottom total is totalized on its own (e.g. sum `Sales`, average a ratio field). Fields left as **General** use the total's general method. Forms do not offer the per‑dimension‑member option.
 
 ### Styles
 
