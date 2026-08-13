@@ -10,6 +10,20 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.22
 
+### Version 3.22.6 - 2026-08-13
+- Updates
+  - Add custom total functionality to Forms and subtotals.
+  - Allow users to select which interfaces to document in the application documentation agent.
+  - Improve the renaming process of files/folders in the file manager by using a dialog for long names.
+  - Set the property tableShowColumnFilterIcon to True when creating a new application.
+- Fixed Issues
+  - When opening an HTML interface, there is no feedback indicating that nodes are being executed.
+  - Subtotal by item functions incorrectly when there is more than one pivoted dimension in columns.
+  - Drilldown does not display all records when the number of results exceeds the visible rows in the table.
+  - Some views are displayed incorrectly on mobile devices.
+  - Closing a selected tab results in a blank interface.
+  - Minor fixes.
+
 ### Version 3.22.5 - 2026-08-10
 - Fixed Issues
   - Logging in with an iPhone triggers a UI error stating 'ReferenceError: Can't find variable: Notification'.
