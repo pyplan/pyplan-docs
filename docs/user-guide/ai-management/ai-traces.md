@@ -9,6 +9,10 @@ The **AI Traces** page helps us inspect AI execution history and investigate how
 
 To access this page, we open **AI Management** and select **AI Traces**.
 
+:::info
+AI Traces covers the runs of Pyplan's own agents, including their token usage and cost. Calls made by external MCP clients are recorded separately in [MCP Usage](../mcp/usage.md), because they consume no Pyplan tokens.
+:::
+
 ## 1. Trace list
 
 The main table shows the traces returned by the platform and lets us select one row at a time.

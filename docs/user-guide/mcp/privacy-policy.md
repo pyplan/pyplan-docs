@@ -1,12 +1,14 @@
 ---
-sidebar_position: 15
+sidebar_position: 3
 title: MCP Privacy Policy
+sidebar_label: Privacy
 description: Privacy policy for the Pyplan Model Context Protocol (MCP) connector.
+slug: /user-guide/mcp-privacy-policy
 ---
 
 # Privacy Policy — Pyplan MCP Connector
 
-**Last updated:** June 15, 2026
+**Last updated:** August 18, 2026
 
 This Privacy Policy explains how Pyplan ("Pyplan", "we", "us") collects, uses, and protects information when you connect a Pyplan tenant to an AI assistant — such as Anthropic's Claude — through the Pyplan Model Context Protocol (MCP) connector (the "Connector").
 
@@ -52,6 +54,7 @@ When you use the Connector, the following categories of data may be processed:
 **Operational and request data**
 - The tool calls the assistant makes to the Connector, the parameters provided, and the responses returned.
 - Timestamps, source IP address, request identifiers, and basic error/diagnostic information.
+- An audit record of each call — the user it was made on behalf of, the MCP client used, the operation or tool invoked, the target application, and the outcome — which administrators of your Pyplan tenant can review. Tool parameters, tool results, and application data are not kept in this record.
 
 We do not collect special categories of personal data (such as health or biometric data) through the Connector.
 
@@ -128,6 +131,7 @@ If you are located in a different region from your tenant (for example, an EU-ba
 
 - **OAuth tokens** are retained for the lifetime of the authorized session and are revoked when you disconnect the Connector or rotate credentials.
 - **Operational logs** (tool calls, timestamps, error data) are retained for up to 90 days for security, debugging, and abuse prevention, then deleted or anonymized.
+- **MCP usage audit records** (user, client, operation, target application, and outcome, without any payload) are retained for up to 400 days by default — the same window as AI execution traces — and are then deleted. A deployment can configure a shorter period.
 - **Application data** itself is not duplicated by the Connector — it remains in your Pyplan tenant under your tenant's retention policy.
 
 ---
