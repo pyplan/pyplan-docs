@@ -1,6 +1,8 @@
 ---
-sidebar_position: 14
+sidebar_position: 1
 title: Pyplan MCP
+sidebar_label: Overview
+slug: /user-guide/mcp
 ---
 
 # Pyplan MCP
@@ -8,6 +10,8 @@ title: Pyplan MCP
 The **Model Context Protocol (MCP)** is a standard that allows AI clients to connect to external systems through a structured interface. In Pyplan, MCP makes it possible to connect a compatible client, authenticate with our Pyplan instance, discover available applications, open one or more applications (even across different companies), load domain-specific skills, and execute tools against the running applications.
 
 This article explains how we register the Pyplan MCP server, what capabilities it exposes, and how we create dynamic tools in a Pyplan application so they can be discovered through MCP.
+
+Every call made through MCP is also recorded for auditing. Administrators can review who used MCP, from which client, and how each call ended on the [Usage](./usage.md) page.
 
 ## What Pyplan MCP Provides
 

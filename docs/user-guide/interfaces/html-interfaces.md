@@ -7,7 +7,7 @@ title: HTML Interfaces
 
 An **HTML interface** is a type of interface whose entire screen is a single, self-contained web page (HTML, CSS and JavaScript) instead of a grid of draggable components. It is rendered as a fully interactive mini-app that talks to your Pyplan model, so you can build bespoke dashboards, forms and tools whose layout and styling go beyond what the standard components express.
 
-HTML interfaces are designed to be **created by Pyplan's AI agents** — or by external AI clients through [Pyplan MCP](../mcp.md) tools. You describe the dashboard or tool you want, and the agent generates both the page and the Python code that connects it to your model. You can then refine the result by talking to the agent or by editing the code directly.
+HTML interfaces are designed to be **created by Pyplan's AI agents** — or by external AI clients through [Pyplan MCP](../mcp/overview.md) tools. You describe the dashboard or tool you want, and the agent generates both the page and the Python code that connects it to your model. You can then refine the result by talking to the agent or by editing the code directly.
 
 :::info Default interface type for agents
 When you ask an agent to create an interface, Pyplan builds an **HTML interface by default**. They are the recommended way for agents to produce custom screens; the classic [component interfaces](./creation.md) remain available and are built manually by assembling components on a grid.
@@ -103,7 +103,7 @@ The same `window.pyplan` bridge also offers:
 
 ## Creating and editing an HTML interface
 
-HTML interfaces are meant to be built **by Pyplan's AI agents** — or by external AI clients through [Pyplan MCP](../mcp.md) tools — and they are the type Pyplan creates by default whenever you ask an agent to make an interface. Describe the dashboard or tool you want — the data it should show, the actions it should offer — and the agent generates the HTML layout together with the Python callbacks that connect it to your model.
+HTML interfaces are meant to be built **by Pyplan's AI agents** — or by external AI clients through [Pyplan MCP](../mcp/overview.md) tools — and they are the type Pyplan creates by default whenever you ask an agent to make an interface. Describe the dashboard or tool you want — the data it should show, the actions it should offer — and the agent generates the HTML layout together with the Python callbacks that connect it to your model.
 
 From there you can:
 

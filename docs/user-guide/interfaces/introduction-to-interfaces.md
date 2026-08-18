@@ -16,7 +16,7 @@ To access the interfaces module, navigate to the **Interfaces** section in the m
 Pyplan offers two ways to build an interface:
 
 - **Component interfaces** — the classic approach, where you assemble a screen from draggable components (tables, charts, selectors, indicators, buttons…) on a grid. This is the focus of the pages that follow.
-- **[HTML interfaces](./html-interfaces.md)** — an interface whose entire screen is a custom web page connected to your model through Python code. Created by Pyplan's AI agents (or via [MCP](../mcp.md) tools) — and the **default** type when you ask an agent to build an interface — they are ideal for bespoke dashboards and tools whose layout goes beyond the standard components.
+- **[HTML interfaces](./html-interfaces.md)** — an interface whose entire screen is a custom web page connected to your model through Python code. Created by Pyplan's AI agents (or via [MCP](../mcp/overview.md) tools) — and the **default** type when you ask an agent to build an interface — they are ideal for bespoke dashboards and tools whose layout goes beyond the standard components.
 
 Both types live side by side in the Interface Manager and can link to each other.
 
