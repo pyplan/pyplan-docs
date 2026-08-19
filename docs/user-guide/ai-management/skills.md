@@ -9,7 +9,11 @@ The **Skills** page lets us define reusable **guidance and policies** that Pypla
 
 Skills turn one-off instructions ("make the P&L without decimals and highlight negatives in red") into **persistent policy**: once written, every future request respects them without us repeating ourselves.
 
-To access this page, we open **AI Management** and select **Skills**.
+To access this page, we open **AI Management** and select **Skills and memory**, then the **Skills** tab.
+
+:::info
+The same page has a second tab, **Memory**, with the lessons the agents pick up on their own while working in an application. Skills are the policy we write; memories are what the AI learns. See [Memory](./memory.md).
+:::
 
 ## 1. What a skill is
 

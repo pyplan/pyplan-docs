@@ -96,6 +96,20 @@ The Pyplan Agent works only on the application and company that are currently op
 When a request takes several steps, the agent's work (its reasoning and the tools it runs) is grouped into a single collapsible activity block shown above the answer. We can expand it to review exactly what the agent did.
 :::
 
+### What the agent remembers
+
+The Pyplan Agent keeps a **memory of each application**: durable lessons about how to work in it — conventions, sequences that must be respected, and mistakes already made there — which it takes into account in every later conversation about that application.
+
+We do not have to do anything for this to happen. When a conversation actually teaches something — we state a rule, we correct the agent, or it has to redo work it had just finished — Pyplan stores it on its own. When we want to be explicit, we type `/remember` in the chat followed by what should be kept:
+
+```
+/remember charts in this app are built with Plotly
+```
+
+Whenever something is stored, a note appears under the agent's answer with the memory text and a **Manage** link.
+
+Everything the agent has learned can be reviewed, edited or deleted from the **Memory** tab — see [Memory](./ai-management/memory.md). Custom Agents keep their own separate memory in the same way; the inline Code Assistants do not.
+
 ## Code Assistants
 
 **Code Assistants** support Python-related tasks within Pyplan. They can:
