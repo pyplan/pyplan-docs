@@ -134,6 +134,16 @@ Custom Agents allow application developers to create their own specialized AI as
 
 This flexibility enables fully tailored agents for finance, operations, demand planning, forecasting, and more.
 
+### Agents in business processes
+
+A custom agent — or the built-in Pyplan agent — can also be put to work inside a
+[process](./processes.md): it is assigned to a task as its responsible or its
+reviewer, does the work when the process reaches that task, and reports back
+with a comment. The agent is represented by a user created with the **This user
+is an agent** checkbox, so its permissions and departments define exactly what
+it can see and do; which agent actually runs a given task is chosen on the task
+itself. See [Agents in a Process](./processes.md#agents-in-a-process).
+
 ### `Agent` Class
 
 ```python
