@@ -8,6 +8,37 @@ sidebar_position: 99
 # Change log
 All notable changes to Pyplan will be documented in this page:
 
+## Version 3.23
+
+### Version 3.23.0 - 2026-08-25
+- Updates
+  - Add the ability to assign workflow tasks to an agent.
+  - Implement persistent memory for agents in applications.
+  - Define actions for the Pyplan Agent to list, select, and save scenarios.
+  - Design a mechanism to log external MCP usage.
+  - Make the open app call asynchronous.
+  - Prevent the entire application from redrawing when opening or closing the agents window.
+  - Handle save failure safely during 'Save and force stop'.
+  - Implement department selector with Autocomplete for user department assignment and other missing locations.
+  - Adjust various HTML interfaces.
+  - Enhance user experience when filtering with our TransferList.
+  - Improve file manager search to allow navigation to the containing folder for files.
+- Fixed Issues
+  - Fixed an issue where interface components did not load on networks with a proxy, leading to orphaned websockets.
+  - Fixed an issue where a selector persisted as integers instead of strings when saving a pandas Index to disk.
+  - Fixed an inconsistency where the overall application status in test-applications did not match the status of its individual tests.
+  - Fixed a bug in the process manager table where clicking on a row did not select the process.
+  - Fixed an issue where the application analysis did not correctly detect outputs from nodes.
+  - Fixed an inconsistency in index filtering within the Filter component.
+  - Fixed an error in the Add-in when trying to save a form with a selector column containing many options.
+  - Fixed a rendering issue in cascading selectors where the second selector did not update correctly based on the first selector's options.
+  - Fixed a bug related to translations that caused UI messages to display incorrectly.
+  - Fixed a bug in the process manager table where deselecting an item sometimes left the row marked as 'selected'.
+  - Fixed an issue where exporting the version table in the version manager resulted in incorrect data.
+  - Fixed a bug in the file manager where the checkbox did not appear checked after filtering with one option.
+  - Fixed a bug in the AI skills table where a row could not be deselected by clicking on it again.
+  - Minor fixes.
+
 ## Version 3.22
 
 ### Version 3.22.6 - 2026-08-13
