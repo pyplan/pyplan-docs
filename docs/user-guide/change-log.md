@@ -10,6 +10,29 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.1 - 2026-09-03
+- Updates
+  - Design a new user interface for task visualization.
+  - Adjust the process creation UI to align with the new table-style process visualization.
+  - Enable the Pyplan Agent to generate files for user download via chat.
+  - Create a skill and tools for analyzing usage audit logs.
+  - Implement skeleton loading for components on first load.
+  - Batch updates forms made from the Pyplan add-in.
+  - Introduce a new 'by condition' filter type for tables and charts.
+  - Add an option to download information about Teams and departments.
+  - Remember the viewport settings for each module.
+  - Optimize performance for large diagrams.
+  - Add an option to hide the index in pivot tables.
+  - Update the design for the login and home screens.
+- Fixed Issues
+  - Fixed problems with nested selectors not updating correctly when the first selector was changed.
+  - Fixed an issue where the version list of an app did not indicate if another user had it open.
+  - Fixed a bug in the file manager where 'Go to containing folder' did not navigate correctly if another user had a similar name.
+  - Fixed an irregularity with the 'Copy with headers' option in tables that sometimes failed to function.
+  - Fixed an error when saving a scenario with a DataFrame that had column names of type numpy.int64.
+  - Fixed an issue where the Excel Add-in did not display data for multiselect type columns.
+  - Minor fixes.
+
 ### Version 3.23.0 - 2026-08-25
 - Updates
   - Add the ability to assign workflow tasks to an agent.
