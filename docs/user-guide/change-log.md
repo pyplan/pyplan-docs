@@ -8,6 +8,8 @@ sidebar_position: 99
 # Change log
 All notable changes to Pyplan will be documented in this page:
 
+## Version 3.23
+
 ### Version 3.23.0 - 2026-08-25
 - Updates
   - Add the ability to assign workflow tasks to an agent.
