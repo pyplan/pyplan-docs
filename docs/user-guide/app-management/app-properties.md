@@ -81,20 +81,82 @@ The **App configuration** tab lets you change technical and behavioral settings 
 
 ## Default Settings
 
-The **Default settings** tab lets us define default visual and behavioral settings for the entire application.
+The **Default settings** tab lets us define default visual and behavioral settings for the entire application. These defaults act as a baseline: any component that does not define its own value for a property inherits the value set here.
 
 ![Default Settings](../img/app-management/default_settings.png)
 
+The tab is organized into five sections.
+
+### Component options
+
+![Component options](../img/app-management/default_settings_component_options.png)
+
+| Option | Default | Description |
+|---|---|---|
+| **Show component settings icon** | Enabled | Shows or hides the icon used to open the component configuration sidebar in interfaces. |
+| **Build automatic date hierarchies (Tables, Charts, Indicators, Indexes)** | Enabled | When a date column is used in a table, chart, indicator or index, automatically builds a hierarchy with year, quarter, month and day levels. |
+| **Fill missing values with zero (Scenarios)** | Disabled | In scenario comparison calculations, replaces missing values (null/NaN) with zero before computing the difference. |
+| **Zero division returns zero (Scenarios)** | Disabled | In scenario comparison calculations, returns zero instead of an undefined value when the percentage difference has a zero denominator. |
+
+### Component header colors
+
+![Component header colors](../img/app-management/default_settings_header_colors.png)
+
 | Option | Description |
 |---|---|
-| **Show component settings icon** | Shows or hides, by default, the icon used to open the component configuration sidebar in interfaces. |
-| **Show column filter icon (Tables)** | Shows or hides, by default, the column filter icon in table components. |
-| **Show index (Tables)** | Shows or hides, by default, the 'index' column in non-pivot tables. |
-| **Component colors** | Lets us define default colors for component headers in tables, charts, indicators, forms, indexes, and selectors. |
-| **Chart color palettes** | Lets us choose default palettes for discrete and continuous chart color scales. |
-| **Default formats** | Lets us define default value formats for tables, charts, indicators, indexes, and selectors. |
+| **Component header background color - tables, charts, indicators, forms** | Default header background color for table, chart, indicator and form components. |
+| **Component header text color - tables, charts, indicators, forms** | Default header text color for table, chart, indicator and form components. |
+| **Component header background color - indices, selectors** | Default header background color for index, filter and selector components. |
+| **Component header text color - indices, selectors** | Default header text color for index, filter and selector components. |
 
-These defaults are applied as a baseline for the application and help us maintain a consistent look and behavior across interfaces. If a component has its own custom value for any of these properties, the custom value prevails over the default application value.
+### Table options
+
+![Table options](../img/app-management/default_settings_table_options.png)
+
+| Option | Default | Description |
+|---|---|---|
+| **Show column filter icon** | Disabled | Shows or hides the column filter icon in table components. |
+| **Show index** | Enabled | Shows or hides the 'index' column in non-pivot tables. |
+| **Font family** | Theme default | Font used to render table cells. |
+
+Below these options, cell colors can be defined separately for **Light theme** and **Dark theme**, so tables look right regardless of the theme each user has selected. Both groups offer the same six colors:
+
+| Option | Description |
+|---|---|
+| **Non-editable cell background color** | Background color for read-only cells. |
+| **Non-editable cell text color** | Text color for read-only cells. |
+| **Editable cell background color** | Background color for cells that accept input. |
+| **Editable cell text color** | Text color for cells that accept input. |
+| **Labels background color** | Background color for row and column label cells. |
+| **Labels text color** | Text color for row and column label cells. |
+
+### Chart options
+
+![Chart options](../img/app-management/default_settings_chart_options.png)
+
+| Option | Description |
+|---|---|
+| **Font family** | Font used to render chart labels, legends and axes. |
+| **Discrete sequence** | Default color palette applied when a chart colors its data by category. |
+| **Continuous scale** | Default color scale applied when a chart colors its data by a continuous value. |
+
+The **Discrete sequence** field also lets us manage custom palettes: the **+** button creates a new one, and when a custom palette is selected, the pencil and trash icons let us edit or delete it. Built-in palettes are marked with a chart icon and custom ones with a star.
+
+### Default formats
+
+![Default formats](../img/app-management/default_settings_formats.png)
+
+| Option | Description |
+|---|---|
+| **Value format** | Default value format preset (number, currency, percentage, date, etc.) for tables, charts, indicators and forms. |
+| **Dates format** | Default date pattern, used only when the value format type is *date*. Defaults to `yyyy/MM/dd`. |
+| **Datetime format** | Default date and time pattern, used only when the value format type is *datetime*. Defaults to `yyyy/MM/dd HH:mm:ss`. |
+| **Indices format** | Default format applied to indexes when they are displayed in interfaces. |
+| **Selectors format** | Default format applied to selectors when they are displayed in interfaces. |
+
+### How defaults are applied
+
+These defaults help us maintain a consistent look and behavior across interfaces. They are only applied to components that have no explicit value of their own: if a component defines a custom value for any of these properties, the custom value always prevails over the application default.
 
 ## Additional Information
 
