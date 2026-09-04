@@ -10,6 +10,15 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.2 - 2026-09-04
+- Updates
+  - Add an option to document interfaces using the MCP.
+  - Validate selected values of form selectors upon initial rendering.
+  - Implement improvements and fixes for scheduled tasks.
+- Fixed Issues
+  - Fixed an issue where the input cubes modification tool was not functioning correctly.
+  - Minor fixes.
+
 ### Version 3.23.1 - 2026-09-03
 - Updates
   - Design a new user interface for task visualization.
