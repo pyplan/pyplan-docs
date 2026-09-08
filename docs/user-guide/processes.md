@@ -51,3 +51,56 @@ After creating processes, the respective responsible parties for each task can a
 The task's status reflects its position in the process, and if there are designated reviewers, they can assess whether the task is completed correctly. Additionally, a comments section is available for each task, facilitating communication and providing a space for necessary annotations.
 
 ![Task Viewer](./img/processes/task_viewer.png)
+
+## Email Notifications
+
+Besides the in-app notifications, Pyplan sends emails as a process advances. Who receives each one depends on the role the user has on the task or the process:
+
+| Email | Sent when | Recipients |
+| --- | --- | --- |
+| **Process started** | The process reaches its start date, or somebody starts it manually. | Process subscribers. |
+| **Task ready to start** | The process starts, or the last blocking task is completed or expires — in both cases only for tasks that nothing is holding up any more. | Task responsibles. |
+| **Task waiting for a blocking task** | The same moments as above, but for a task that still cannot start because another task has not finished. | Task responsibles. |
+| **The status of a task has changed** | A task moves to *In progress*, *Pending review*, back to *In progress* from review, *Completed* or *Expired*. | Task subscribers, plus responsibles and/or reviewers depending on the transition. |
+| **Delayed task notification** | The task passes its due date. Sent on days 1, 2, 3, 4, 10, 20 and 30 of delay, not every day. | Responsibles, reviewers, task subscribers and process subscribers — and, separately, the responsibles of the tasks that this one is blocking. |
+| **Process up to date** | The last overdue task of a delayed process is cleared. | Process subscribers. |
+| **New comment in a task** | Somebody comments on a task. | Responsibles, subscribers and reviewers, except the author of the comment. |
+
+### What the emails tell you
+
+Every task email identifies the process and the task group it belongs to, its responsibles, the **description of the task** and the **description of the process** — so the message is readable on its own, without opening the app to remember what the work is about. Both descriptions are optional; an empty one is simply left out.
+
+- **Due dates, not just counters.** Emails state the exact date and time a task is due — "It is due on September 9, 2026, 2:30 p.m. (UTC) — 5 days left" — and "It was due on September 1, 2026, 2:30 p.m. (UTC) — 3 days overdue" when it is late. Dates are always in **UTC** and the emails say so.
+- **Under a day left, emails count hours instead of naming a date.** A message that says "you have until September 4" is misleading when it arrives *on* September 4. So when less than 24 hours remain the email leads with "It is due in 7 hours" (or "in less than an hour"), and gives the exact moment underneath. The same applies just after the deadline: "It was due 3 hours ago".
+- **Due dates are projected for tasks that have not started.** For a task whose expiration is counted *since the blocking task was completed*, the date is estimated from the deadlines of the tasks it is waiting on, so a due date is available even before the task can start.
+![Task ready to start email](./img/processes/email_task_ready.png)
+
+- **A task that cannot start says so, and says why.** When a task is assigned to you but is waiting on another task, you get an email listing each blocking task with its status, its due date, and **who is responsible for it** — instead of silence until the blocker finishes, or a "ready to start" message for a task you cannot touch. The same block appears in the overdue email of a task that is late because it is blocked.
+![Task waiting for a blocking task email](./img/processes/email_task_waiting.png)
+
+- **If a task you depend on is late**, you get an email that names the blocking task, its responsibles, and the due date of *your own* task, so it is clear whose delay it is.
+
+![Overdue task email](./img/processes/email_task_overdue.png)
+- **Completed and expired tasks drop the deadline.** The status-change email for a task that reached a final status does not show a countdown, since there is nothing left to do by that date.
+
+### Configuration
+
+Workflow emails follow the company's **Email Settings** preferences, described in [Security Options](./security-options.md#email-settings):
+
+- `email_language` sets the language of every email (`en`, `es` or `pt`), including the format of the dates.
+- The **Email logo** uploaded for the company in the Company Manager replaces the Pyplan logo in every email. It is set separately from the company logo shown in the application — see [When the logo does not appear](./security-options.md#when-the-logo-does-not-appear) if it does not show up.
+- `email_service_active` turns email sending off entirely for the company.
+
+:::note
+These settings are taken from the company that **owns the process**, which is the company you were working in when you created it — not from the company of each recipient. A process created in company A sends its emails with A's language and A's logo to everybody on it.
+:::
+
+The check that detects delayed tasks and queues the overdue notifications runs once a day, at the hour set by the `workflow_check_time` company preference (an hour of the day in UTC, `4` by default):
+
+```json
+{
+  "hour": 4
+}
+```
+
+Emails are not sent the instant they are generated: they are placed in a queue that a background job drains every few minutes, so expect a short delay between the event and the message arriving.
