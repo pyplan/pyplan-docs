@@ -159,6 +159,118 @@ Manage company-level preferences by selecting a company and clicking the **Prefe
 
 ![Company Preferences 2](./img/security-options/company_preferences_2.png)
 
+### Email Settings
+
+The **Email Settings** preference module controls how Pyplan sends the notification emails of the platform — including every workflow (Processes) notification. All of these are company preferences, so different companies on the same installation can have different settings.
+
+| Preference | What it does |
+| --- | --- |
+| `email_service_active` | Master switch. When `false`, nothing is queued or sent for that company. |
+| `email_language` | Language of the emails: `en`, `es` or `pt`. Defaults to `en`. |
+| `email_default_from_name` | Display name shown as the sender. |
+| `smtp_host`, `smtp_port`, `smtp_use_tls`, `smtp_use_ssl`, `smtp_timeout`, `smtp_ssl_keyfile`, `smtp_ssl_certfile` | SMTP server connection. |
+| `smtp_user`, `smtp_password` | SMTP credentials. These are read from the `SMTP_USER` / `SMTP_PASSWORD` environment variables of the server, not from the preference value. |
+
+All of them are edited from the same screen: **Company Manager → select the company → Preferences**, shown under [Companies](#companies) above.
+
+Each row shows the platform **Default** and an editable **Custom** value. To override one:
+
+1. Click **Copy Default value** (the copy icon) to bring the default JSON into the Custom box.
+2. Edit the value.
+3. Click **Save custom value** (the save icon).
+
+**Remove custom value** (the bin icon) drops the override and returns the company to the default.
+
+The remaining icon, **Edit Default value** (the pencil), changes the platform-wide default rather than this company's override, and affects every company that has not set one.
+
+#### Changing the email language
+
+Set the **Custom** value of `[Email Settings] Email language messages (en|es|pt)` to `en`, `es` or `pt`:
+
+```json
+{
+  "value": "es"
+}
+```
+
+![Email language preference](./img/security-options/company_email_language.png)
+
+The setting applies to the **whole email**: subject line, body text, status names, and the format of the dates (for example `September 4, 2026, 2:30 p.m.` in English versus `4 de septiembre de 2026 a las 14:30` in Spanish). Any value other than `en`, `es` or `pt` falls back to English.
+
+The language is per company, not per recipient: every user of the company receives the emails in the configured language.
+
+:::note
+Dates in emails are always expressed in **UTC**, and the emails say so explicitly next to each date.
+:::
+
+#### The email logo
+
+Emails carry their own logo, set separately from the company logo shown on the login page. They are deliberately independent: the mark that works inside the application is often the wrong one on an email card — a dark logo disappears on the white background, and a square crop reads worse than a wide one.
+
+To set it, go to **Company Manager → select the company → Update**, scroll to **Email logo**, and drop the image on the area below it.
+
+![Company email logo upload](./img/security-options/company_email_logo.png)
+
+As with the company logo, the file uploads as soon as you drop it — there is no need to press **Save**, which only applies the name, folder and license fields. The **Email logo** section only appears when editing an existing company, not when creating one.
+
+The image must be a **PNG, JPG or GIF**. SVG is accepted by the uploader and renders in the browser, but no major mail client displays it, so emails fall back to the Pyplan logo when the uploaded file is one. It is rendered at 36 px height on a white background, so a wide, light image around 300 × 100 px works best.
+
+Whatever the file is called when you upload it, it is stored under one fixed name in the company's media folder, which is what tells it apart from the company logo sitting in that same directory:
+
+```
+<MEDIA_ROOT>/<company_code>/<company logo>      the application logo, under its original name
+<MEDIA_ROOT>/<company_code>/email_logo.png      the email logo, always under this name
+```
+
+Images that are not already PNG are re-encoded on upload, so the stored file matches the name it is served under.
+
+That file **is** the setting — nothing is recorded in the database. Uploading replaces it, and deleting it from the server removes the logo, with emails going back to the Pyplan one. It also means an administrator with server access can set the logo by placing an `email_logo.png` in the company folder, without going through the interface — which is how installations configured it before this screen existed, and those files keep working untouched.
+
+:::note
+Because the file always has the same name, its URL never changes. After replacing the logo, a mail client that already fetched the previous one may keep showing it until its cache expires.
+:::
+
+For the logo to reach the recipient, the `CUSTOMER_TRUSTED_ORIGINS` environment variable of the server must contain the public URL of the installation — the image is linked, not attached, and travels as an absolute URL such as `https://<your-host>/media/<company_code>/email_logo.png` — and `/media/` must be publicly served, which it is in the standard nginx configuration.
+
+:::note
+Because the image is linked rather than attached, mail clients that block remote images by default will not show it until the reader allows images for that message. This is the deliberate trade-off: attaching the file instead makes every message carry it, and a logo uploaded at full resolution is enough to push a message past the size at which providers stop rendering it — Gmail clips anything over about 102 KB.
+:::
+
+If the company has no email logo, or it is in an unsupported format, or the file is missing from disk, emails show the Pyplan logo. Nothing breaks. Note that setting only the *company* logo does not change the emails: the two are separate settings.
+
+##### When the logo does not appear
+
+Emails fall back to the Pyplan logo silently — nothing fails and nothing is reported to the sender — so work through these in order.
+
+**1. Is there a file?** The logo is the file itself, so check it exists on the server:
+
+```bash
+ls -l <MEDIA_ROOT>/<company_code>/email_logo.png
+```
+
+**2. Is the email being sent by the company you think?** Each email carries the company that owns the thing it is about — the process, in the case of a workflow notification. A process created while logged into company A sends with **A's** logo and **A's** language, whoever the recipients are and whichever companies they belong to. Setting the logo on a different company changes nothing for it.
+
+**3. Is `CUSTOMER_TRUSTED_ORIGINS` set on the server?** The logo travels as an absolute URL, and this variable is where its host comes from. When it is empty, **no logo is emitted at all** — this is the most common cause and the least visible one, because everything else can be perfectly configured.
+
+```bash
+# what the API process actually sees, which is what counts
+printenv CUSTOMER_TRUSTED_ORIGINS
+```
+
+**4. Is that URL current and reachable from outside?** The address has to be the public one for the installation *right now*, and `/media/` has to be served on it:
+
+```bash
+curl -o /dev/null -w "%{http_code}\n" https://<your-host>/media/<company_code>/email_logo.png
+```
+
+Anything other than `200` and the recipient's mail client will not get the image either. A stale value here — a tunnel or preview URL that has since changed — produces an email with a broken image rather than the Pyplan fallback.
+
+**5. Is the reader's mail client blocking remote images?** Outlook and several others do by default. The image only appears once the reader allows images for that message.
+
+:::warning
+On Kubernetes, `CUSTOMER_TRUSTED_ORIGINS` has to be present in the ConfigMap the API and Celery deployments read, and **the pods have to be restarted** after adding it — environment taken through `envFrom` is read when the container starts and does not reload while it is running. Setting it only in a `.env` file used by another deployment method has no effect on the running pods.
+:::
+
 ### Single Sign-On (SSO) with SAML
 
 To enable SSO with SAML, add a preference called **SAML Configuration** with the following JSON structure:
