@@ -49,27 +49,71 @@ The Params section lets you configure:
 
 ## App Pool
 
-An app pool is a tool that allows you to run a node of an application and make it available for other users to access it and continue working once the corresponding node has finished running.
+An **app pool** keeps one or more instances of an application already open and ready. A pool task runs a node of the application and, once the node finishes, leaves the resulting instance available so that the next user who opens that application continues from there instead of waiting for it to load.
 
 ![Add App Pool](../img/tools/add_app_pool.png)
 
 ### Create App Pool
 
-Select the **Add app tool** option at the top.
+We select the **Add app pool** option at the top.
 
 ### General Options
 
-In the General options section, choose a name for the app pool and indicate whether it will be enabled.
+The first step of the wizard groups the configuration into three sections: **Pool**, **Capacity** and **Expiration**. On the right, the **This pool will** panel restates the whole configuration in plain sentences, so we can confirm the combination of options we chose without having to work it out ourselves.
 
-The **Action on done** option:
-1. **Keep for everyone**: Specify the number of apps available after node execution.
-2. **Keep for user**: Designate the user with access to the app after node execution.
+![App Pool General Options](../img/tools/app_pool_general_options.png)
 
-The **Enable instance expire** option lets you set a time when the app would be shut down.
+#### Pool
+
+We choose a name for the pool and whether it is enabled. A disabled pool keeps its configuration but creates no instances.
+
+#### Capacity
+
+The **Action on done** option defines who can claim the instances the pool keeps ready:
+
+| Option | Who can claim an instance | Instances |
+|---|---|---|
+| **Keep for everyone** | Any user in the company. | We set how many instances are kept ready. |
+| **Keep for departments** | Any member of the departments we choose. | We set how many instances are kept ready. |
+| **Keep for user** | Only the user we choose. | One instance. |
+
+When an instance is claimed, the pool creates a new one to replace it, so the configured number stays available.
+
+#### Expiration
+
+Instances that nobody claims can be recycled, so that the application does not stay open with data that is no longer current. The **Time zone** we select here is the one every hour in this section is read in.
+
+The **Instance expiration** option offers three variants:
+
+| Variant | Behaviour |
+|---|---|
+| **Never expire** | Instances stay in the pool until a user claims one. |
+| **At a time of day** | Every instance is recycled when that hour comes, each day. |
+| **After a period of time** | Each instance is recycled once it reaches that age, counted from the moment it entered the pool. |
+
+:::info
+**After a period of time** cannot be shorter than 10 minutes: below that, an instance would be recycled before it is of any use to whoever opens the application.
+:::
+
+An instance that has expired is never handed to a user — it is released and replaced by a new one.
+
+#### Active periods
+
+By default a pool is kept up around the clock. With **Limit to active periods** we restrict it to the stretches of the week when the application is actually used, which avoids holding instances — and the resources they consume — overnight or at weekends.
+
+![App Pool Active Periods](../img/tools/app_pool_active_periods.png)
+
+Each period is a row with the days it applies to and a start and end time. We can add as many periods as we need, for example Monday to Friday from 08:00 to 18:15 plus Saturday from 08:00 to 13:00.
+
+Outside these periods the pool is taken down: the task stops creating instances and releases the ones it is holding. Once a period starts again, the pool refills on its own.
+
+:::info
+The start time is included in the period and the end time is not: a period that ends at 18:00 is already closed at 18:00 sharp. A period whose end is earlier than its start crosses midnight — from 22:00 to 06:00 runs into the following day.
+:::
 
 ### App Path
 
-Select the application and the corresponding node to be executed.
+We select the application and the corresponding node to be executed.
 
 ### Params
 
