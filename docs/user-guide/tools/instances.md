@@ -25,7 +25,7 @@ The Instance Manager is a central table that shows all active instances in real 
 | **Current Application** | The application currently open in the instance. |
 | **Is Pool** | Indicates whether the instance belongs to a shared pool or is dedicated to a single user. |
 | **Active** | Time during which the user has been actively interacting with the application. |
-| **Timeout in** | Remaining time before the instance is automatically closed due to inactivity. |
+| **Timeout in** | Remaining time before the instance is automatically closed due to inactivity. For pool instances it is the time left before they are recycled, and a dash when the pool was configured never to expire them. |
 | **Actions** | Administrative actions: **Kill instance** (immediately terminate and release resources) or **Logout required** (send a message asking the user to close the instance voluntarily). |
 
 ![Instances Manager](../img/tools/instances_manager.png)
