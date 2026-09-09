@@ -11,7 +11,7 @@ The Processes manager provides an intuitive and user-friendly interface for crea
 
 This section of Pyplan is essential for maintaining a clear and organized record of the steps followed in application creation. It allows better collaboration among team members, defines clear responsibilities, and facilitates the review and validation of each completed task.
 
-![Open Processes](./img/processes/open_processes.png)
+![Open Processes](./img/processes/menu-process.png)
 
 ## Create a Process
 
@@ -42,7 +42,7 @@ Creating tasks within a process provides a way to divide work into smaller units
 - **Auto-complete on due date**: Automatically mark task as completed when due date is reached.
 - **Description**: Space for writing a more detailed description of the task, including additional instructions, requirements, or any other relevant information.
 
-![Add Task](./img/processes/add_task_3.png)
+![Add Task](./img/processes/add-new-task.png)
 
 ## Agents in a Process
 
@@ -104,4 +104,9 @@ After creating processes, the respective responsible parties for each task can a
 
 The task's status reflects its position in the process, and if there are designated reviewers, they can assess whether the task is completed correctly. Additionally, a comments section is available for each task, facilitating communication and providing a space for necessary annotations. Tasks assigned to an agent are marked with an agent icon, and the agent's own notes appear in that same comments section.
 
-![Task Viewer](./img/processes/task_viewer.png)
+
+The process can be reviewed from two complementary views. The **Table view** organizes tasks in a single overview, making it easy to compare status, due dates, responsible users, reviewers, and comments at a glance. The **Timeline view** complements it by showing the workflow in chronological order, helping users understand dependencies and how tasks progress from start to finish. Together, these views provide a clear operational summary and a structured view of the process over time.
+
+![Task Table](./img/processes/process-table.png)
+
+![Task Timeline](./img/processes/process-timeline.png)
