@@ -10,6 +10,10 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.4 - 2026-09-09
+- Fixed Issues
+  - Minor fixes.
+
 ### Version 3.23.3 - 2026-09-08
 - Updates
   - Allow agents to delete alias nodes without their original identifier.
