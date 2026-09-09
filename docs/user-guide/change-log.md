@@ -10,6 +10,15 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.3 - 2026-09-08
+- Updates
+  - Allow agents to delete alias nodes without their original identifier.
+- Fixed Issues
+  - Fixed the color of disabled icons in the top bar and made additional adjustments.
+  - Fixed incorrect sorting of values in a polar table with headers.
+  - Fixed an issue with clearing synchronized filters in the interface.
+  - Minor fixes.
+
 ### Version 3.23.2 - 2026-09-04
 - Updates
   - Add an option to document interfaces using the MCP.
