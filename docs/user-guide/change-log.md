@@ -10,6 +10,19 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.5 - 2026-09-11
+- Updates
+  - Standardize filter styles and functionalities in HTML interfaces.
+  - Introduce a new instance expiration type based on age since creation and allow task-specific operational periods for app pool instances.
+  - Redesign the global progress bar to improve visual hierarchy and functionality, including new title and message displays.
+  - Enhance AI Traces manager.
+- Fixed Issues
+  - Fixed an issue where the app pool did not recognize the instance if a version was not specified.
+  - Fixed an issue where saving the app took a long time in certain applications.
+  - Fixed a problem with the index when having more than 1000 options, preventing selection of all options.
+  - Fixed an error in the Polars table with column totals when multiple dimensions were used in pivot columns.
+  - Minor fixes.
+
 ### Version 3.23.4 - 2026-09-09
 - Fixed Issues
   - Minor fixes.
