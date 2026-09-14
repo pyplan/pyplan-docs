@@ -79,3 +79,56 @@ Each node type has a specific color and style. This color scheme lets us quickly
 ### General Shortcuts (outside the diagram)
 
 - **Ctrl+Shift+D** (Cmd+Shift+D on Mac): Go to (or return to) the influence diagram.
+
+---
+
+## Pinned Nodes
+
+When we work on a large model, we can pin the nodes we visit most often so they stay one click away, no matter which module we are in.
+
+To pin a node, we right-click it in the diagram and choose **Pin node**.
+
+![pin-node-menu.png](../img/lowcode-nocode/pin-node-menu.png)
+
+The pinned nodes bar appears at the bottom of the influence diagram, showing each pinned node with the color and style of its node type.
+
+![pinned-nodes-bar.png](../img/lowcode-nocode/pinned-nodes-bar.png)
+
+From the bar we can:
+
+- **Navigate to a node:** click a pinned node to select it and center the diagram on it. Clicking a pinned module node opens that module.
+- **Insert its ID into the code:** with a node open in the code editor, **Alt + click** a pinned node to insert its ID into the current definition.
+- **See details and copy the ID:** hover a pinned node to display a tooltip with its title and ID, plus a button to copy the ID to the clipboard.
+- **Unpin:** click the pin icon on the right of the pinned node, or right-click the node in the diagram and choose **Unpin node**.
+- **Reorder:** drag a pinned node and drop it in a new position within the bar.
+
+The bar is hidden automatically when no node is pinned.
+
+### Groups of Pinned Nodes
+
+Pinned nodes can be organized into groups, for example one group per topic, process, or work in progress.
+
+The tabs at the top of the bar filter the nodes by group. The **All** tab lists every pinned node, and each tab shows a color dot and the number of nodes it contains.
+
+![pinned-nodes-groups.png](../img/lowcode-nocode/pinned-nodes-groups.png)
+
+- **Create a group:** click **New group**, then enter a name and choose a color.
+
+![pinned-nodes-group-dialog.png](../img/lowcode-nocode/pinned-nodes-group-dialog.png)
+
+- **Add nodes to a group:** select the group's tab and pin the nodes from the diagram. Nodes pinned while a group tab is active are added to that group, and an already pinned node is moved to it. Nodes pinned from the **All** tab keep the group they already had, or no group at all.
+- **Move a node to another group:** drag a pinned node and drop it on the tab of the destination group. While we drag a node, every tab is highlighted as a drop target. Dropping the node on the **All** tab takes it out of its group, leaving it pinned without a group.
+- **Rename a group:** double-click its tab, or right-click the tab and choose **Rename group**. We can also change its color.
+- **Delete a group:** right-click its tab and choose **Delete group**. The nodes of that group stay pinned, without a group.
+
+![pinned-nodes-group-menu.png](../img/lowcode-nocode/pinned-nodes-group-menu.png)
+
+### Showing and Hiding the Bar
+
+The application menu includes the **Hide pinned nodes** / **Show pinned nodes** option to toggle the bar without unpinning anything. The option is only available in the Code section and when at least one node is pinned.
+
+![pinned-nodes-topbar-option.png](../img/lowcode-nocode/pinned-nodes-topbar-option.png)
+
+:::note
+Pinned nodes, their groups, and their order are stored per app in the browser we are working with, so they are not shared with other users or other browsers.
+:::
