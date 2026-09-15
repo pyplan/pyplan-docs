@@ -10,6 +10,16 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.6 - 2026-09-15
+- Updates
+  - Improve interfaces performance under heavy load.
+  - Adjusts workflow emails to allow language changes, include company logos, enhance design, add overdue dates, and inform users of blocking tasks.
+  - Enables drag and drop for pinned nodes and allows repositioning of pinned nodes.
+  - Adds functionality to reorder open tabs using drag and drop.
+- Fixed Issues
+  - Fixed an issue where the Celery pod crashes when processing large logs.
+  - Minor fixes.
+
 ### Version 3.23.5 - 2026-09-11
 - Updates
   - Standardize filter styles and functionalities in HTML interfaces.
