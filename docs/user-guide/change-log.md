@@ -10,6 +10,13 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.7 - 2026-09-16
+- Updates
+  - Enhance user experience by improving navigation through interfaces.
+  - Add logging to system tasks.
+- Fixed Issues
+  - Minor fixes.
+
 ### Version 3.23.6 - 2026-09-15
 - Updates
   - Improve interfaces performance under heavy load.
