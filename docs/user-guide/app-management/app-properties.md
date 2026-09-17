@@ -35,7 +35,7 @@ The **Summary** tab provides a read-only overview of key application properties.
 | **Virtual environment path** | Path to the virtual environment associated with this Application ID. |
 | **Is in Public folder** | Indicates whether the app is under the Public workspace. |
 | **Has write permission** | Shows whether the current user has write permissions in the app folder. |
-| **CPU architecture** | CPU architecture used to run the app, such as `x86` or `ARM`. Configured at department level. |
+| **CPU architecture** | CPU architecture the open instance is running on, such as `x86` or `ARM`. It comes from the app's **CPU architecture** setting when one is defined, and from the resources in effect otherwise. |
 
 ## Default Interface
 
@@ -68,16 +68,48 @@ The **App configuration** tab lets you change technical and behavioral settings 
 |---|---|
 | **Application ID** | The same ID shown in the Summary. Used for virtual environment, workflows, access restrictions, AI assistants, and thumbnails. |
 | **Python version** | Python version the app will use. If changed, the application must be reloaded. A new virtual environment is created for the selected version if it does not exist yet. |
+| **CPU architecture** | Processor family the app runs on: `x86`, `ARM`, or *None* to take it from the resources in effect. If changed, the application must be reloaded: it runs on a different engine and uses a different virtual environment. |
 | **Application language** | Default language for node titles, node documentation, interface titles, component titles, and menu items. |
 | **Install libraries on open** | When enabled, Pyplan installs the libraries listed in `requirements.txt` every time the application is opened. |
 | **Open default version on open** | When enabled, the default version opens automatically. When disabled, a version selection dialog appears. |
 | **Quick menu** | Defines which interface provides the Quick menu used when navigating between interfaces. Options: Default (from the app's default interface) or From interface (choose a specific interface). |
-| **Resources** | Optional resource set to associate with the application. |
+| **Resources** | Optional resource set (CPU and memory) the application's instance runs with. It overrides the resources assigned by the user's department. If changed, the application must be reloaded. |
 | **Instance timeout in seconds** | Maximum idle time before an application instance is automatically closed. |
 
 ![Version Selection Dialog](../img/app-management/app-properties-6.png)
 
 ![Quick Menu Config](../img/app-management/app-properties-7.png)
+
+### How resources and CPU architecture are resolved
+
+**Resources** and **CPU architecture** look related, but they answer different questions: resources define *how much* CPU and memory the instance gets, while the CPU architecture defines *which processor family* it runs on. Each one is resolved on its own.
+
+Resources are resolved from these levels, where each one overrides the previous:
+
+1. The resources assigned to the user's [department](../security-options.md#departments). When the user belongs to several departments, the Main Department's resources are used.
+2. The app's **Resources** setting.
+3. The resources chosen for a single run: *Select resources and open app* in the [application menu](../applications.md#actions-on-applications), or the **Resources** of a [scheduled task](../tools/scheduled-tasks.md).
+
+The CPU architecture is resolved from two levels:
+
+1. The architecture of the resources in effect.
+2. The app's **CPU architecture** setting, which always prevails when it is not *None*.
+
+So each part of the instance is decided as follows:
+
+| | Decided by |
+|---|---|
+| CPU and memory | The resources in effect |
+| Processor family, and the machines the app runs on | The app's **CPU architecture** when set; the resources otherwise |
+| Engine and virtual environment | The same architecture as above |
+
+:::info
+Every resource is labeled with the architecture it was defined for, for example *1 CPU, 8 GB RAM (x86)*. When the app defines its own CPU architecture, that label no longer tells us where the app runs: only the CPU and memory of the resource are applied, and the app runs on the architecture it declares. An app set to `ARM` that uses the resource above runs with 1 CPU and 8 GB of RAM on ARM.
+:::
+
+:::tip
+Each architecture keeps its own [virtual environment](./virtual-environments.md), so the first time an app opens after switching between `x86` and `ARM` its libraries are installed again and the app takes longer to open.
+:::
 
 ## Default Settings
 
