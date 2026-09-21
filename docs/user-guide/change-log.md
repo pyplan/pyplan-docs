@@ -10,6 +10,20 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.8 - 2026-09-21
+- Updates
+  - Enhance performance when interacting with large tables and forms.
+  - Develop new HTML components aligned with HTMLFilter, including styles for KPIs and various input types.
+  - Fix issues with downloading performance reports in xlsx format.
+  - Implement Redis persistence to prevent loss of instances during node recycling.
+  - Suppress confirmation dialog for changes in consolidation if the selected changes do not have immediate impact.
+- Fixed Issues
+  - Fixed an issue where the application failed to open when the CPU architecture was ARM and the assigned resources were x86.
+  - Fixed an issue where copying a node as values resulted in a KeyError.
+  - Fixed an issue where the go-to-node functionality from a DynamicHtml component led to a blank diagram due to an invalid codeLayoutId.
+  - Fixed an issue where editing the title of a filter in the Filter component did not display the custom title in view mode.
+  - Minor fixes.
+
 ### Version 3.23.7 - 2026-09-16
 - Updates
   - Enhance user experience by improving navigation through interfaces.
