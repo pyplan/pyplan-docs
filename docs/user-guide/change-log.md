@@ -10,6 +10,27 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.9 - 2026-09-25
+- Updates
+  - Introduce a new filter option to dynamically filter based on node values.
+  - Improve tools for completing agent forms.
+  - Add information in active instances view.
+  - Add module IDs in the hover of model breadcrumbs.
+  - Allow enabling/disabling synchronization of all indices in a component at once.
+- Fixed Issues
+  - Fixed performance issues related to interface rendering.
+  - Fixed a bug where drag and drop functionality for pivot items in quick pivot stopped working under certain conditions.
+  - Fixed a visualization problem when editing documentation of interfaces, which incorrectly displayed the edited documentation for other interfaces.
+  - Fixed a bug that occurred when resizing panes to the left in the HTML interface.
+  - Fixed an issue where the component selector icon overlapped with the options icon, causing confusion during hover.
+  - Fixed a problem where selecting the 'Release memory' option on a node caused it to execute multiple times.
+  - Fixed an error that occurred when copying and pasting a version of an application with an active instance, which was likely due to the backup changing every 60 seconds.
+  - Fixed an issue where agent reports were not displaying correctly in the chat, remaining hidden in dropdowns until the session was refreshed.
+  - Fixed a visualization issue in the file manager where navigating to a specific folder displayed incorrect contents.
+  - Fixed a problem where the UI remained blocked on 'Running node...' if execution failed from 'Next step' or while confirming Handling data.
+  - Fixed an issue when adding multiple users with Super permissions, where department options were not displayed due to endpoint limitations.
+  - Minor fixes.
+
 ### Version 3.23.8 - 2026-09-23
 - Updates
   - Enhance performance when interacting with large tables and forms.
