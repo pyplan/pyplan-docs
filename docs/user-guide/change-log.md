@@ -10,6 +10,32 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.10 - 2026-10-05
+- Updates
+  - Add and standardize table components in HTML interfaces.
+  - Restrict visibility and actions in UploadManager based on user/department settings.
+  - Change the behavior of multi-select dropdowns to display selected items first.
+  - Open the console directly in the Error tab when clicking on an error icon.
+  - Sort selected departments alphabetically in access allow/deny dialogs.
+  - Add a new option to application analysis to warn about bad practices in node definitions.
+  - Adjust the width of options in multi-select form selectors to fit the longest item text.
+  - Allow the Administrator role to view the AI costs section without errors.
+- Fixed Issues
+  - Fixed an issue where removing the 'Show system tasks' filter in the Scheduled Tasks Manager resulted in an invalid page error.
+  - Fixed an issue where the progress percentage did not update during bulk user import via CSV, allowing multiple confirmations while processing.
+  - Fixed an issue where renaming a node ID caused the cursor to jump to the end of the input field.
+  - Fixed a bug that caused the chat window to malfunction when resized in the HTML interface.
+  - Fixed a bug where the user settings icon appeared for users without edit permissions.
+  - Fixed an issue where the secrets manager did not display the key correctly.
+  - Fixed a bug in the AI chat functionality using Gemini that resulted in a BadRequestError when querying component schemas.
+  - Fixed an issue where table filters could leave the table empty if a non-existent value was selected.
+  - Fixed an issue where the application became unresponsive until a page reload occurred after a company change failed.
+  - Fixed a bug where changing the rows per page could result in an empty list being displayed.
+  - Fixed a bug where scrolling in the from/to selectors did not retrieve the second page.
+  - Fixed an issue where toggling the same permission in the permissions by role section resulted in unintended changes on the server.
+  - Fixed an issue where deleting a search of one or two characters left the list loading indefinitely.
+  - Minor fixes.
+
 ### Version 3.23.9 - 2026-09-25
 - Updates
   - Introduce a new filter option to dynamically filter based on node values.
