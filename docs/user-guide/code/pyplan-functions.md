@@ -185,8 +185,60 @@ def _quantities_change_validation_fn(
   - **related_columns (str or List[str])**: Name or list of names of columns in `related_map` that will filter the results of the `related_map_column_values` column. These columns should be present in the form as field names and in `related_map` as columns.
   - **nested_headers (List[str])**: List of headers to display in nested columns. For example, `['header1', 'header2']` will display a column with `header1` as a child and `header2` as a parent. It's important to note that this is a nested structure, so children cannot be wider than parents. If so, headers and `nested_headers` will not be rendered.
   - **strict (bool)**: for `ColumnType.selector` and `ColumnType.related_selector` only. When `True`, it only allows values that are defined as options in the selector.
-  - **multiselect (bool)**: for `ColumnType.selector` and `ColumnType.related_selector` only. When `True`, it allows selecting multiple values in the selector.
+  - **multiselect (bool)**: for `ColumnType.selector` and `ColumnType.related_selector` only. When `True`, it allows selecting multiple values in the selector. See [Multiselect columns](#multiselect-columns).
   - **count_values_to_render (int)**: for `ColumnType.selector` and `ColumnType.related_selector` only. When `multiselect` is `True`, this integer will be used to limit the number of values rendered in the selector. Defaults to `1`.
+
+### Multiselect columns
+
+When a `selector` or `related_selector` column sets `multiselect=True`, each cell can hold several values. The cell shows the first `count_values_to_render` values followed by a `+N` badge with the number of additional values. Hovering over the cell shows the full list.
+
+```python
+FormColumn(
+    field='skus',
+    title='SKU',
+    column_type=ColumnType.selector,
+    data_type=DataType.string,
+    values=skus,
+    multiselect=True,
+    count_values_to_render=1,
+)
+```
+
+![multiselect_column.png](../img/forms/multiselect_column.png)
+
+Double-click a cell, or select it and press **Enter**, to open the dropdown. The dropdown has a search box and two sections:
+
+- **Selected (N)**: the values selected in the cell. `N` is the total number of selected values and updates every time a value is checked or unchecked.
+- **Not selected**: the rest of the available values.
+
+![multiselect_dropdown.png](../img/forms/multiselect_dropdown.png)
+
+Checking or unchecking a value does not move it while the dropdown is open, so the list stays in place while you work. The sections are rebuilt the next time the dropdown opens or when the search text changes. The section titles stay visible at the top of the list while scrolling.
+
+#### Searching values
+
+Typing in the search box filters the available values by any part of their text (case-insensitive). The **Selected** section keeps only the selected values that match the search, while its counter still shows the total number of selected values.
+
+![multiselect_search.png](../img/forms/multiselect_search.png)
+
+#### Loading more values
+
+Columns with many available values load them in pages (100 values by default). When you scroll near the end of the list, the next page is requested and **Loading more...** is shown until it arrives. Selected values are always listed in the **Selected** section, even when they belong to a page that has not been loaded yet.
+
+![multiselect_load_more.png](../img/forms/multiselect_load_more.png)
+
+#### Keyboard shortcuts
+
+| Key | Action |
+|-----|--------|
+| **Arrow Down** (in the search box) | Moves the focus to the first value. |
+| **Arrow Up / Arrow Down** | Moves the focus between values. |
+| **Enter** | Checks or unchecks the focused value. |
+| **Escape** | Closes the dropdown and keeps the selected values. |
+
+#### Pasting values
+
+To select several values at once, select the cell without opening the dropdown and paste a text with the values separated by a comma and a space, for example `1000037 - FILME BEB ATDC CARAM SAL 1L, 1000148 - ROTULO ADOCANTE TRES EMBARQ STICK`. Each value must match an available value exactly; cells with values that are not available are marked as invalid. Copying a multiselect cell produces text in the same format, so it can be pasted into other cells.
 
 ### FormSettings
 Dataclass with all accepted parameters for form settings.
