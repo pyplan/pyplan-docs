@@ -63,6 +63,22 @@ At the bottom, you can choose to show or hide action icons for each item:
 3. Show upload new file button
 4. Show upload history button
 
+#### Access
+
+The **Access** section defines which users can see the item and upload files to it:
+
+- **Everyone** (default): The item is available to every user who can open the interface.
+- **By departments**: Only users who belong to at least one of the selected departments can see the item.
+- **By users**: Only the selected users can see the item.
+
+When a restriction is chosen, at least one department or user must be selected.
+
+![Upload Manager Access](../../img/interfaces/uploadmanager_access_1.png)
+
+Users without access don't see the item in the table, and cannot upload files to it or view, restore or delete its history.
+
+Users who can edit interfaces see every item while the interface is in edit mode, so they can configure them. Outside edit mode they follow the same rules as any other user. In edit mode, restricted items show a lock icon next to their name; hovering over it lists the allowed departments or users.
+
 ## Table with New Configured Item
 
 Once configured, items are displayed in the component's table with: item name, base file name, current file, date and time of last modification, the user who modified it, and available actions.
