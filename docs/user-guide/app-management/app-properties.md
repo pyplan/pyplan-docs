@@ -72,6 +72,7 @@ The **App configuration** tab lets you change technical and behavioral settings 
 | **Application language** | Default language for node titles, node documentation, interface titles, component titles, and menu items. |
 | **Install libraries on open** | When enabled, Pyplan installs the libraries listed in `requirements.txt` every time the application is opened. |
 | **Open default version on open** | When enabled, the default version opens automatically. When disabled, a version selection dialog appears. |
+| **Open as read-only by default** | When enabled, the application opens in read-only mode unless the user explicitly chooses **Open in write mode** from the application menu. Useful for apps whose users only occasionally need to save, so that opening the app does not block other users. See [Opening an application read-only by default](../applications.md#opening-an-application-read-only-by-default). |
 | **Quick menu** | Defines which interface provides the Quick menu used when navigating between interfaces. Options: Default (from the app's default interface) or From interface (choose a specific interface). |
 | **Resources** | Optional resource set (CPU and memory) the application's instance runs with. It overrides the resources assigned by the user's department. If changed, the application must be reloaded. |
 | **Instance timeout in seconds** | Maximum idle time before an application instance is automatically closed. |

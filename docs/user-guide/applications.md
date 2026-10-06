@@ -94,7 +94,8 @@ For folders, we can perform the following actions:
 
 For applications, we can perform the following actions:
 
-- **Open as read-only:** open the application in read-only mode so no changes can be made.
+- **Open as read-only:** open the application in [read-only mode](#read-only-and-write-mode), so changes cannot be saved.
+- **Open in write mode:** shown instead of *Open as read-only* when the application is configured to [open as read-only by default](#opening-an-application-read-only-by-default). It opens the application in write mode.
 - **Open application in new instance:** open the application in a separate instance, useful for working in parallel on different apps or versions.
 - **Select version and open app:** choose a specific version of the application and open it, for example to review or reuse an earlier version.
 - **Select resources and open app:** open the application with a specific set of resources, different from those assigned by our Department.
@@ -119,7 +120,7 @@ To generate a direct access link, we follow these steps:
 1. In the **Application Manager**, we open the contextual menu of the application.
 2. We select the **Direct access link** option.
 3. In the dialog, we choose whether we want to use the default version or a specific version.
-4. If needed, we enable **Open as read-only** so the application opens without allowing changes.
+4. If needed, we enable **Open as read-only** so the application opens without allowing changes. If the application is configured to [open as read-only by default](#opening-an-application-read-only-by-default), the link always opens it in read-only mode, even with this option disabled.
 5. We click **Generate link**.
 6. We copy the generated URL and share it with the corresponding users.
 
@@ -129,6 +130,55 @@ To generate a direct access link, we follow these steps:
 
 :::info
 The generated link includes the selected application and can also include a specific version and the read-only mode configuration.
+:::
+
+## Read-only and write mode
+
+Only one session at a time can save changes to a given version of an application. The first user who opens that version, and has permission to edit it, gets **write mode**. Anyone who opens the same version afterwards gets **read-only mode**, and Pyplan shows a notification with the name of the user who is working on it.
+
+An application also opens in read-only mode when:
+
+- We choose **Open as read-only** in the application menu.
+- We do not have permission to edit the application.
+- The status of the version is not *Active*.
+- The application belongs to a Team where our Department only has read-only access.
+
+In read-only mode we can still navigate the application, run nodes and modify it within our session, but the **Save** button is disabled. Hovering over it shows why the application is read-only.
+
+### Opening an application read-only by default
+
+When an application is used by people who only occasionally need to save, simply opening it would leave them in write mode and block other users, such as the developers maintaining the app, until they close it. For these applications we can enable **Open as read-only by default** in [App properties > App configuration](./app-management/app-properties.md#app-configuration).
+
+With this option enabled:
+
+- Opening the application by clicking its card opens it in read-only mode. The same applies when it opens on login, in a new instance, or after selecting a version.
+- The application menu shows **Open in write mode** instead of **Open as read-only**. It is only shown to users who can edit the application.
+- In **Select resources and open app**, the **Open as read-only** option starts enabled. Disabling it opens the application in write mode.
+- [Direct access links](#direct-access-link) and the [`pp.open_app`](./code/pyplan-functions.md#open_app) function always open it in read-only mode.
+- Reloading the application keeps the mode it was opened in.
+
+![Open in write mode option in the application menu](./img/app-management/application-menu-open-in-write-mode.png)
+
+:::tip
+Write mode still follows the rule of one session per version: if another user is already working on the version in write mode, choosing **Open in write mode** opens it in read-only mode and shows who is using it.
+:::
+
+### Claiming write mode while the application is open
+
+If we opened an application in read-only mode and then need to save our changes, we do not have to close it and open it again. From the top bar we click **Save as** and choose **Claim write mode**. The option is shown while the application is read-only and we have permission to edit it.
+
+![Claim write mode option in the Save as menu](./img/app-management/save-as-menu-claim-write-mode.png)
+
+If the claim succeeds, Pyplan shows *You can now save your changes*, the **Save** button is enabled, and every change we made in the session is kept.
+
+Pyplan refuses the claim, and the application stays in read-only mode, when:
+
+- **Another user is working on the version in write mode.** The message shows who is using it. We can claim write mode again once that user closes the application.
+- **Someone saved the version after we opened it.** Saving our session would overwrite their work, so the message shows who saved it.
+- **We do not have permission to edit the application, or the version is not active.**
+
+:::warning
+When someone saved the version after we opened it, our session no longer matches the saved application. To keep our changes, we use another **Save as** option, such as *Save as new version*. To work on the latest saved version, we reopen the application.
 :::
 
 ### Move folder app example
