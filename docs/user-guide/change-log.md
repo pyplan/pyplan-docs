@@ -10,6 +10,13 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.12 - 2026-10-07
+- Updates
+  - Enhance the HTML table to allow cell range selection and display summary statistics below, similar to Excel, and add the option to export the visible table data.
+- Fixed Issues
+  - Fixed an issue where the task to purge in-progress tasks from the API could mistakenly purge the wrong instances.
+  - Minor fixes.
+
 ### Version 3.23.11 - 2026-10-07
 - Updates
   - Add a grouping selector in the AI Traces manager to view traces by session or user, while maintaining existing filters.
