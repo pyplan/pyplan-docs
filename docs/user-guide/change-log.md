@@ -10,13 +10,13 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
-### Version 3.23.11 - 2026-10-06
+### Version 3.23.11 - 2026-10-07
 - Updates
   - Add a grouping selector in the AI Traces manager to view traces by session or user, while maintaining existing filters.
 - Fixed Issues
   - Fixed an issue where tools for forms/input cubes failed with interface_id and component_id if the interface was not opened in the instance.
-  - Fixed an issue where templates uploaded to the file manager could not be read in an app using Python 3.9 due to incompatible PKL files.
-  - Fixed unnecessary scroll behavior when creating interfaces in the dialog for Spanish and Portuguese languages.
+  - Fixed an issue where templates uploaded to the file manager could not be read in applications using Python 3.9 due to incompatible PKL files.
+  - Fixed unnecessary scrolling behavior when creating interfaces in dialogs for Spanish and Portuguese languages.
   - Minor fixes.
 
 ### Version 3.23.10 - 2026-10-05
