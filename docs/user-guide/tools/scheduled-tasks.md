@@ -65,7 +65,7 @@ The first step of the wizard groups the configuration into three sections: **Poo
 
 #### Pool
 
-We choose a name for the pool and whether it is enabled. A disabled pool keeps its configuration but creates no instances.
+We choose a name for the pool and whether it is enabled. A disabled pool keeps its configuration but creates no instances, not even when we run it by hand from the task list, and disabling it closes the instances it was keeping ready. Instances that users already opened are not affected. Deleting the pool, or changing its application version, does the same.
 
 #### Capacity
 
@@ -75,9 +75,30 @@ The **Action on done** option defines who can claim the instances the pool keeps
 |---|---|---|
 | **Keep for everyone** | Any user in the company. | We set how many instances are kept ready. |
 | **Keep for departments** | Any member of the departments we choose. | We set how many instances are kept ready. |
-| **Keep for user** | Only the user we choose. | One instance. |
+| **Keep for user** | Only the user we choose. | One instance, and none while that user already has the application open at the pool's version. |
 
-When an instance is claimed, the pool creates a new one to replace it, so the configured number stays available.
+When an instance is claimed, the pool creates a new one to replace it on its next run, so the configured number stays available. There are two exceptions:
+
+- A **Keep for user** pool does not create an instance while the user has the application open at the pool's version, whether that session came from the pool or not. Once the user closes it, or it expires, the next run creates the instance again.
+- A **Keep for departments** pool with a maximum of open instances stops creating them once that maximum is reached. See below.
+
+##### Maximum open instances
+
+With **Keep for departments**, we can turn on **Limit open instances** and set **Max open at once**. The maximum caps what this pool and its audience have open at the same time: the free instances this pool holds plus the sessions that members of the chosen departments have open at the pool's version. Sessions of people outside those departments, and the free instances of other pools, are not counted.
+
+Each time the task runs, it creates only what fits under the maximum. The cap applies to the instances open at that moment, so when someone closes their session a slot is freed and the next run can create again.
+
+For example, a department of 10 people with **Instances** set to 2 and a maximum of 8:
+
+| Situation | What the pool does |
+|---|---|
+| Nobody is connected. | Keeps 2 instances waiting. |
+| 6 members have the application open and 2 instances are free. | Creates nothing: 8 are open. |
+| 7 members have it open and no instance is free. | Creates 1. |
+| 8 members have it open. | Creates nothing. |
+| One of those 8 closes the application. | Creates 1 on its next run. |
+
+Each user is counted once even if they belong to several of the chosen departments, but a user with two sessions of the application counts twice, since each session is an engine. The maximum cannot be lower than **Instances**. Without the limit, the pool behaves as before: it always keeps the configured number of instances ready.
 
 #### Expiration
 
