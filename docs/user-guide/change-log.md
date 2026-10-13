@@ -10,6 +10,26 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.23
 
+### Version 3.23.13 - 2026-10-13
+- Updates
+  - **Add default read-only access to applications.**
+  - **Simplify the application opening process.**
+  - **Prevent creating additional instances in App Pool when users already have the app open.**
+  - Introduce new tools for Pyplan Agent: version consolidation, automated tests, and color palette access.
+  - Add tools to read and write translations for an app.
+  - Display ellipsis icon in components with hidden headers.
+  - Review Pyplan translations (ES and PT) for tone unification and neutral language.
+  - Adjust external links in interfaces to show a loader during password validation.
+  - Allow scrolling with the mouse wheel when moving items in a menu.
+- Fixed Issues
+  - Fixed an issue where renaming the active version resulted in an "Interface not found" error upon saving changes.
+  - Fixed a problem where filters applied in the scheduled tasks manager persisted after leaving and re-entering the page.
+  - Fixed an issue where scheduled tasks configured to "send email only in case of failure" incorrectly sent emails on successful executions.
+  - Fixed a problem where filtering from the column filter icon prevented scrolling in the table view.
+  - Fixed an issue where accessing a pinned node after moving it to another module did not redirect correctly.
+  - Fixed a problem where pasting rows that exceed the end of the table did not work when there were strict selector columns.
+  - Minor fixes.
+
 ### Version 3.23.12 - 2026-10-07
 - Updates
   - Enhance the HTML table to allow cell range selection and display summary statistics below, similar to Excel, and add the option to export the visible table data.
