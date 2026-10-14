@@ -51,6 +51,7 @@ Pyplan then opens the **Form settings** window to configure how the form will be
 | **Database engine** | Storage engine used for the form data (e.g., `sqlite`, PostgreSQL). |
 | **Database path** | Physical path or connection string to the database. |
 | **From DataFrame** | When checked, the form can be initialized from an existing DataFrame's structure. |
+| **Track data history** | When checked (the default for new forms), every confirmed change is recorded with its user, date, source and previous value. See [Data History](../interfaces/data-history.md). |
 
 ### Cube Input
 
@@ -64,6 +65,8 @@ The dialog has four main parts:
 - **Filter indexes** — Optional filter to help search indexes when there are many.
 - **Available indexes** — Lists all Index nodes that can be used as dimensions of the cube.
 - **Selected indexes** — Shows the indexes that will define the dimensions of this Cube input.
+
+The dialog also has the **Track data history** option, checked by default for new cubes: every confirmed change of a value is recorded with its user, date, source and previous value. See [Data History](../interfaces/data-history.md).
 
 ### Data Source Reading
 
