@@ -66,9 +66,10 @@ The ellipsis menu to the right of the app title opens the App menu, where we can
 
 ### Top‑Left Code Toolbar
 
-**Save** — Saves the current application.
+**Save** — Saves the current application. It is disabled when the application is in [read-only mode](../applications.md#read-only-and-write-mode); hovering over it shows the reason.
 
 **Save as** — Opens a menu with options such as:
+- Claim write mode: shown while the application is read-only and we have permission to edit it. It switches the session to write mode without reopening the application, keeping our changes. See [Claiming write mode while the application is open](../applications.md#claiming-write-mode-while-the-application-is-open).
 - Save as new version: creates a new version of the current application.
 - Save application in my workspace: saves a copy of the app in My workspace.
 - Save application in my team: saves a copy of the app in a Team workspace.

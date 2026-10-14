@@ -2701,7 +2701,7 @@ Sends message to command UI to open an application.
 ### Args
 - **folder**: (str) Path to the folder containing the application.
 - **version**: (Optional[str]) Name of the version to open.
-- **read_only**: (Optional[bool]) If True, the application will be opened in read-only mode.
+- **read_only**: (Optional[bool]) If True, the application will be opened in read-only mode. If False, the application opens in write mode, unless it is configured to [open as read-only by default](../applications.md#opening-an-application-read-only-by-default), in which case it opens in read-only mode.
 - **resources**: (Optional[Dict]) Dictionary with the desired resources to be used when opening the application.
 - **open_on_new_instance**: (Optional[bool]) If True, the application will be opened in a new instance.
 - **show_versions_on_open**: (Optional[bool]) If True, the application will show the list of available versions on open.
