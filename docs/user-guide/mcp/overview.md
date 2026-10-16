@@ -217,9 +217,9 @@ Skills are domain-specific documentation bundles that the LLM loads on demand. E
 | `ABOUT_PYPLAN` | Fundamental rules, workflow, global imports, code conventions. **Mandatory** — should be loaded once per session. | No |
 | `DEVELOPMENT` | Create, update, delete, and navigate nodes. Evaluate code. Includes all development tool schemas. | No |
 | `FORMS` | Create Form nodes (FormColumn, FormSettings, code patterns). | No |
-| `FORMS_DATA` | Modify data in existing forms. Tools: modify_form_data, add_rows, remove_rows, get_form_context, batch operations. | No |
+| `FORMS_DATA` | Modify data in existing forms, and read their [data history](../interfaces/data-history.md). Tools: modify_form_data, add_rows, remove_rows, get_form_context, batch operations, get_form_history, get_form_history_batches. | No |
 | `INPUT_CUBES` | Create InputCube nodes (dimensions, settings, code patterns). | No |
-| `INPUT_CUBES_DATA` | Modify data in existing input cubes. Tools: modify_input_cube_data, get_input_cube_context. | No |
+| `INPUT_CUBES_DATA` | Modify data in existing input cubes, and read their [data history](../interfaces/data-history.md). Tools: modify_input_cube_data, get_input_cube_context, get_input_cube_history, get_input_cube_history_batches. | No |
 | `SELECTORS` | Create selector and date-selector nodes. | No |
 | `SECRETS` | Pyplan Secrets Manager usage (`pp.get_secret`). | No |
 | `AGENTS_AND_MCP` | Create custom AI agents and MCP tool nodes inside the application. | No |

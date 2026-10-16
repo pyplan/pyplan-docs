@@ -288,6 +288,7 @@ def _confirm_validation_fn(df: pd.DataFrame) -> tuple[bool, str]:
 - **source_dataframe_node (pd.DataFrame)**: used when `from_dataframe` is `True` only. Pandas DataFrame object that will be the source of every row in the form.
 - **source_dataframe_id_column (str)**: used when `from_dataframe` is `True` only. Column name in `source_dataframe_node` DataFrame that will be used to uniquely identify rows in the form.
 - **remove_old_rows (str)**: used when `from_dataframe` is `True` only. When set to `True`, it deletes rows where its ID column value was previously stored in the database but is not currently present in the source pandas DataFrame.
+- **track_history (bool)**: if set to `True`, every confirmed change is recorded in the form's [data history](../interfaces/data-history.md): changed cells, added and removed rows, with the user, date, source and previous value. Defaults to `False`; the wizard turns it on for new forms. See [Reading the data history](#reading-the-data-history).
 
 ## input_cube
 
@@ -341,6 +342,72 @@ Dataclass with all accepted parameters for InputCube settings.
 - **default_value (Union[float, int, str])**: value to be set by default. If `default_value_type` is `'scalar'`, it can be `float`, `int`, or `str`. If it is `'app_node'`, it must be a `str` with the node identifier from which its result will be taken as a default value.
 - **remove_non_existing_combinations (bool)**: if `True`, removes any combination of dimensions that is not present in the actual set of combinations from given dimensions.
 - **allow_dimension_changes (bool)**: if `False`, raises an error when a new dimension is added or removed.
+- **track_history (bool)**: if set to `True`, every confirmed change of a value is recorded in the cube's [data history](../interfaces/data-history.md), with its combination of dimension members. Defaults to `False`; the wizard turns it on for new cubes. See [Reading the data history](#reading-the-data-history).
+
+## Reading the data history
+
+Forms and InputCubes with `track_history=True` can read their [data history](../interfaces/data-history.md) from code, for example in a node that reports or audits changes, or in a scheduled task. On a node without `track_history` these methods raise a `ValueError`. Before the first confirmed change they return nothing.
+
+### get_history
+
+`my_form.get_history(row_id=None, limit=50, offset=0, **filters)`
+
+Returns the confirmed changes, newest first, as `{'items': [...], 'total': int, 'has_more': bool}`. `total` counts every change that matches the filters.
+
+Each item has:
+
+- **id**, **row_id** and, in an InputCube, **keys** (`{dimension: member}`).
+- **operation**: `'update'` (one cell: `column_name`, `old_value`, `new_value`), `'insert'` (an added row, whole in `new_value`) or `'delete'` (a removed row, whole in `old_value`).
+- **user_id**, **user_name** and **user_full_name**.
+- **source**: `'interface'`, `'diagram'`, `'html_interface'`, `'agent'`, `'office_addin'` or `'code'`.
+- **changed_at** (UTC datetime), **batch_id**, **app_uri** and **app_version**.
+
+### Filters
+
+Every filter is optional and they can be combined:
+
+- **row_id**: only the changes of this row.
+- **batch_id**: only the changes confirmed together in this batch, or in any of a list of batches.
+- **session_id**: only the changes of the batches of this edit session.
+- **user_id**: only the changes of this user id, or of any of a list of them.
+- **user_name**: only the changes of the user with this user name or full name, in any case, or of any of a list of them.
+- **source**: only the changes from this source, or from any of a list of them.
+- **date_from** / **date_to**: only the changes at or after `date_from` and before `date_to`. Both take an ISO string or a datetime; without a time zone they are taken as UTC.
+- **search**: only the changes whose row, column, previous or new value contains this text, in any case.
+- **limit** / **offset**: page size and number of changes to skip.
+
+### get_history_batches
+
+`my_form.get_history_batches(limit=50, offset=0, group_edit_sessions=False, **filters)`
+
+Returns one summary per batch (everything confirmed together), newest first, with **batch_id**, **changed_at**, the user, **source**, **app_version**, **changed_cells**, **changed_rows**, **inserted_rows**, **deleted_rows** and **columns** (`{column: changed cells}`). It takes the same filters as `get_history`, except that `search` matches the changed columns. With `group_edit_sessions=True` it returns one item per edit session instead, with its number of **batches** and its **first_changed_at**.
+
+### get_history_by_user
+
+`my_form.get_history_by_user(limit=50, offset=0, **filters)`
+
+Returns one summary per user, latest change first, with **batches**, **changes** and **last_changed_at**. `search` matches the user id, user name and full name.
+
+### get_history_users
+
+`my_form.get_history_users()`
+
+Returns the users that appear in the history (`user_id`, `user_name`, `user_full_name`), sorted by name.
+
+### Example
+
+```python
+>>> import pandas as pd
+
+# The changes confirmed today by user1 in the sales form, as a table
+today = pd.Timestamp.now(tz='America/Argentina/Buenos_Aires').normalize()
+changes = sales_form.get_history(
+    user_name='user1',
+    date_from=today.isoformat(),
+    limit=500,
+)
+result = pd.DataFrame(changes['items'])
+```
 
 # Process
 Functions related to process management within Pyplan allow you to retrieve and manage processes, including their statuses and updates.

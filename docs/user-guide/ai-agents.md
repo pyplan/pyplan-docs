@@ -88,6 +88,7 @@ It can:
 - **Build and maintain the model**: create and update nodes, write node formulas and Python code, explain logic and dependencies, and follow Pyplan's modeling conventions.
 - **Build interfaces**: create and edit dashboards, including fully custom [HTML interfaces](./interfaces/html-interfaces.md). Before building a new interface it proposes a short plan and waits for our confirmation.
 - **Edit data**: add, update, or remove rows and values in the application's Form and Input Cube components.
+- **Answer who changed the data**: read the [data history](./interfaces/data-history.md) of Forms and Input Cubes to tell who changed what, when and from where, filtering by user name, dates or source.
 - **Guide processes and workflows**: report our tasks and processes, highlight delays, and search the application's own documentation to explain how it works.
 
 The Pyplan Agent works only on the application and company that are currently open, and uses the diagram nodes, interface components, and files we have attached to the conversation as context.
