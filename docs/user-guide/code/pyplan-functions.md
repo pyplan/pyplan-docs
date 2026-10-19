@@ -1864,19 +1864,129 @@ pp.aggregate(dataArray, timeToYearsMap, time, years)
 
 dynamic(dataArray, index, shift, initialValues=None, sliceInputs=True)
 
-Performs cyclic calculations between nodes.
+Reads a node's value shifted along an index; required to close a cycle between nodes.
+
+Typical uses are stocks, balances, accumulated values and projections that grow from the previous period: any node that depends on its own earlier values.
+
+A node can depend on itself, directly or through other nodes, only if every such cycle goes through a `pp.dynamic` call. Otherwise evaluation fails with *"Cyclic dependency detected between nodes"*.
+
+### Outside a cycle
+
+When no node depends back on this one, `pp.dynamic` is a plain shift, equivalent to `dataArray.shift({index.name: -shift}).fillna(initialValues)`.
+
+### Inside a cycle
+
+Inside a cycle, `pp.dynamic` is not run as a function. Pyplan evaluates all the nodes of the cycle together, one element of `index` at a time, and replaces the call with the value `dataArray` had `abs(shift)` elements before (after, when `shift` is positive). This changes three things.
+
+**1. `initialValues` is added to the whole node.** In the first `abs(shift)` elements (the last ones when `shift` is positive) the call is worth `0`, and `initialValues` is **added** to the result of the node. It is not used as the previous value.
+
+:::warning
+With `pp.dynamic(price, time, -1, 50) * 1.1` the first period is `0 * 1.1 + 50 = 50`, not `55`. For anything other than a plain sum, set the first period explicitly with `xr.where(pp.get_pos(time) == 0, ...)`.
+:::
+
+**2. Inputs hold one element at a time.** While the cycle is evaluated, the nodes of the cycle hold only the current element of `index`, without that dimension. The same happens to the inputs from outside the cycle that have `index` as a dimension, unless `sliceInputs` is `False`. Operations along `index` on them, such as `x.sum('time')`, fail.
+
+**3. Pyplan reads the call from the definition text.** Inside a cycle:
+
+- `dataArray` and `index` must be node identifiers, not expressions: `pp.dynamic(stock, time, -1)` works, `pp.dynamic(stock * 2, time, -1)` does not.
+- `shift` must be an integer number written in the call, not a variable.
+- Pass the arguments by position, or by keyword in the same order as the signature, never `dataArray=`. To set `sliceInputs`, also pass `initialValues`: `pp.dynamic(stock, time, -1, 0, False)`.
+- Write `dataArray` on the same line as `pp.dynamic(`, with no line break between them.
+- Use one `pp.dynamic` call per node, and do not write `dynamic(` earlier in the definition, not even in a comment.
+- Every `pp.dynamic` of the same cycle must use the same `index` and the same `shift`.
 
 ### Parameters
 
-- **dataArray** (`xr.DataArray`): The DataArray to perform the cyclic dependency calculation on.
-- **index** (`pd.Index`): Index from `dataArray` to shift. Must have a name.
-- **shift** (`int`): Number of elements to shift. Can be positive or negative.
-- **initialValues** (`Union[xr.DataArray, float, int]`, optional): Initial values to apply to the first "shift" elements. Defaults to `None`.
-- **sliceInputs** (`bool`, optional): Boolean to apply subscript to every input in the dynamic loop. If one of the nodes in the dynamic loop is set to `True`, it applies it to every other node in the loop. Defaults to `True`.
+- **dataArray** (`xr.DataArray`): The node whose shifted value is read. Inside a cycle, a node of that cycle, often the node being defined.
+- **index** (`pd.Index`): The index to shift along, usually time. Its name must be a dimension of `dataArray`.
+- **shift** (`int`): How many elements to move. Negative reads earlier elements: `-1` is the previous period, `-12` the same month of the previous year when the index is monthly. Positive reads later elements, and inside a cycle the index is walked from the last element to the first.
+- **initialValues** (`Union[xr.DataArray, float, int]`, optional): Value for the first `abs(shift)` elements. Outside a cycle, it fills the positions left empty by the shift. Inside a cycle, it is added to the result of the node in those elements. Defaults to `None`: `NaN` outside a cycle, `0` inside one.
+- **sliceInputs** (`bool`, optional): Only used inside a cycle. `True` reduces the inputs from outside the cycle to the current element of `index` before each step, which is faster. Set it to `False` when the definition operates along `index` on one of those inputs. If any `pp.dynamic` of the cycle passes `False`, the whole cycle uses `False`. Defaults to `True`.
 
 ### Returns
 
-- **xr.DataArray**: DataArray shifted by the specified amount.
+- **xr.DataArray**: Outside a cycle, `dataArray` shifted along `index`. Inside a cycle, the node is computed element by element and its result is the full array.
+
+### Examples
+
+The examples use a monthly index `time` with four periods, `2024.01` to `2024.04`.
+
+**Inventory**: previous closing stock plus inflow minus outflow, with an opening stock of 100.
+
+```python
+# Node stock. inflow = [10, 20, 30, 40], outflow = [5, 5, 5, 5]
+result = pp.dynamic(stock, time, -1, 100) + inflow - outflow
+# [105, 120, 145, 180]
+```
+
+**Growth from a base value**: price growing 10% per period from a base price of 50.
+
+```python
+# Node price
+result = xr.where(
+    pp.get_pos(time) == 0,
+    base_price,
+    pp.dynamic(price, time, -1) * (1 + growth),
+)
+# [50, 55, 60.5, 66.55]
+```
+
+**Actuals then forecast**: actual sales up to `last_actual_month` (`'2024.02'`), then a 10% growth forecast.
+
+```python
+# Node forecast. sales = [100, 120, 0, 0]
+result = xr.where(
+    pp.to_dataarray(time) <= last_actual_month,
+    sales,
+    pp.dynamic(forecast, time, -1) * (1 + growth),
+)
+# [100, 120, 132, 145.2]
+```
+
+**Two nodes in the same cycle**: cash earns interest on the previous balance.
+
+```python
+# Node cash. net_flow = [10, 20, 30, 40], opening balance of 1000
+result = pp.dynamic(cash, time, -1, 1000) + net_flow + interest
+# [1010, 1131, 1274.1, 1441.51]
+
+# Node interest. rate = 0.1
+result = pp.dynamic(cash, time, -1) * rate
+# [0, 101, 113.1, 127.41]
+```
+
+`interest` has no `initialValues`: with `1000` its first value would be `1000` instead of `0`, because the initial value is added to the node, not multiplied by the rate.
+
+**Two periods back**: value two periods before plus the current inflow.
+
+```python
+result = pp.dynamic(stock, time, -2, 0) + inflow
+# [10, 20, 40, 60]
+```
+
+**Positive shift**: what remains from each period to the end, walked backwards.
+
+```python
+result = pp.dynamic(remaining, time, 1, 0) + inflow
+# [100, 90, 70, 40]
+```
+
+**`sliceInputs=False`**: the definition needs `inflow` along time to compute its share.
+
+```python
+result = pp.dynamic(accumulated_share, time, -1, 0, False) + inflow / inflow.sum('time')
+# [0.1, 0.3, 0.6, 1.0]
+```
+
+**Outside a cycle**: previous period and variation against it.
+
+```python
+result = pp.dynamic(inflow, time, -1)
+# [nan, 10, 20, 30]
+
+result = inflow - pp.dynamic(inflow, time, -1, 0)
+# [10, 10, 10, 10]
+```
 
 ## lookup
 
