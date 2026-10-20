@@ -28,12 +28,17 @@ Clicking **Add** opens a dialog with the basic configuration options for each it
 The file path fields must refer to a file that already exists in the system and has been previously uploaded via the file manager.
 :::
 
-Below the file path configuration, there is an optional section to define nodes that perform actions when a new file is uploaded:
+Below the file path configuration, there is an optional section to define nodes that perform actions when a new file is uploaded or a file is restored from history:
 
 - **Validation node**: Runs custom validations when a new file is being uploaded. It should be a function-type node that receives a file path as a parameter and returns a boolean indicating validation success.
-- **Callback node**: Executed once the file has been successfully uploaded. It allows for additional actions such as notifying the user or updating other components. It is a function-type node that receives no parameters and returns no value.
-- **Invalidation node**: Also executed after a successful upload but used to invalidate a selected node for a specific purpose. No specific structure is required.
+- **Callback node**: Executed once the file has been successfully uploaded or restored from history. It allows for additional actions such as notifying the user or updating other components. It is a function-type node that receives no parameters and returns no value.
+- **Invalidation node**: Also executed after a successful upload or restore, but used to invalidate a selected node for a specific purpose. No specific structure is required.
 - **History count**: A numeric field to define how many historical versions of the uploaded files the item will keep.
+- **Run callback and invalidate nodes when restoring a file from history**: Enabled by default. When checked, restoring a file from history runs the invalidation node and the callback node, just like a new upload. Uncheck it if these nodes should only run on new uploads, for example when the callback has side effects that shouldn't be repeated. The option is available only when a callback or invalidation node is set, and it's hidden in folder mode, which has no history.
+
+:::note
+The invalidation node and the callback node run after the file is saved. If one of them fails, the file stays uploaded (or restored) and the table shows it, but an error message indicates which node failed. If the invalidation node fails, the callback node doesn't run.
+:::
 
 **File mode options:**
 - **Select file mode** (default): A checkbox lets you choose to preserve the current file name or replace it with the uploaded file's name. In this mode, the current file path input must be a file — folders are not allowed.
@@ -99,7 +104,7 @@ Click the upload button to open a dialog where you can select the file to upload
 
 ![Upload Manager Upload 2](../../img/interfaces/uploadmanager_8.png)
 
-Once selected, automatic validations are performed and the file is uploaded into the system.
+Once selected, automatic validations are performed and the file is uploaded into the system. If the item has an invalidation node or a callback node, they run after the file is saved.
 
 ![Upload Manager Upload 3](../../img/interfaces/uploadmanager_9.png)
 
@@ -111,11 +116,17 @@ After a successful upload, the component's table is updated to reflect the new f
 
 ### Viewing Upload History
 
-Click the history button to open a dialog showing previously uploaded files with details such as upload date, the user who uploaded them, and file size. From this dialog, you can also download previously uploaded files, restore a file from history (replacing the current file with the selected version), or delete a history item.
+Click the history button to open a dialog listing the previous versions of the file. Each entry is a version that was replaced by an upload or a restore, and shows the date it was replaced, the user who replaced it, and its size. From this dialog, you can download a previous version, restore it, or delete it from the history.
 
 ![Upload Manager History 1](../../img/interfaces/uploadmanager_12.png)
 
 ![Upload Manager History 2](../../img/interfaces/uploadmanager_config_4.png)
+
+#### Restoring a File
+
+Restoring a version replaces the current file with the selected one, after a confirmation. The replaced file is added to the history as a new entry, so you can go back to it by restoring it. If **Preserve existing filename** is checked, the restored file keeps the current file name; otherwise, it gets back the name it had when it was uploaded.
+
+If **Run callback and invalidate nodes when restoring a file from history** is checked (the default), the invalidation node and the callback node run after the file is restored, as they do after a new upload. If one of them fails, the file is still restored, and a warning notification shows which node failed and why.
 
 ### Folder Mode
 
