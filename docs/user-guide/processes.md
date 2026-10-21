@@ -31,9 +31,11 @@ Creating tasks within a process provides a way to divide work into smaller units
 - **Task responsibles**: Selects the users who will be responsible for completing the task. The list contains both people and agents (see [Agents in a process](#agents-in-a-process) below).
 - **Require all responsibles to complete the task**: All responsibles must complete the task before it can be marked as completed. If unchecked, only one responsible is required.
 - **Action type**: Defines the type of action that needs to be performed in this task.
-- **Blocked by**: If this task depends on another previous task to be carried out, it can be specified here. This means the current task can only be undertaken once the mentioned task is complete.
+- **Blocked by**: If this task depends on another previous task to be carried out, it can be specified here. This means the current task can only be undertaken once the mentioned task is complete. Tasks cannot wait for each other in a loop, so the list leaves out the tasks that already wait for this one, directly or through others. A process that contains a loop cannot be saved, and the message names the tasks that form it.
 - **Expiration days**: Specify the number of days available to complete the task.
-- **Expiration type**: Determines from what point the expiration days start to count — from the creation of the task or from another relevant event.
+- **Expiration type**: Determines from what point the expiration days start to count:
+  - **since the process was initiated**: the days count from the start date of the process.
+  - **since blocking task was completed**: the days count from when the tasks in *Blocked by* are completed. It needs at least one blocking task, so it is disabled until one is chosen. A task with no blocking task always counts from the process start.
 - **Subscribers**: Users who will receive notifications about the status of the task.
 - **Reviewers**: Users in charge of checking and approving the task once it is completed. An agent can review just as a person can.
 - **Reviewer interface**: Interface that reviewers can open and use to evaluate task compliance.
@@ -43,6 +45,23 @@ Creating tasks within a process provides a way to divide work into smaller units
 - **Description**: Space for writing a more detailed description of the task, including additional instructions, requirements, or any other relevant information.
 
 ![Add Task](./img/processes/add-new-task.png)
+
+### Due date warnings
+
+Pyplan warns about due dates that cannot work out. The warnings never stop you from saving: they point at the task so you can fix it.
+
+- **A task due no later than a task it waits for.** If a task counts *since the process was initiated* and is due before, or at the same time as, a task in its *Blocked by*, there is no time left to do it. The task dialog shows a warning that names the blocking task and both due dates, with a **Count the days from when it is completed** button that switches the expiration type in one click. With several blocking tasks, the warning is about the one due last. Due dates are projected through chains of tasks, including hours and minutes.
+- **A task due after the process ends.** A process can have a planned end date (it is set by chat; once it has one, the form shows it). A task due after that date is warned about too.
+
+When you save the process, the warnings of every task are listed together under **Some due dates do not fit**. **Review** takes you back to the form and **Save anyway** saves the process as it is.
+
+![Due date warnings when saving](./img/processes/due-date-warnings.png)
+
+### Deleting a task other tasks wait for
+
+Deleting a task, or a group, that other tasks wait for asks for confirmation first and lists the tasks that wait for it, including those in other groups.
+
+A task that loses its last blocking task this way **keeps its due date**: from then on it counts from the process start, and it can start right away. If that date falls before the process start (for example, because the start was moved later), the task is due at the process start. A task that still has another blocking task keeps waiting for it.
 
 ## Agents in a Process
 
@@ -85,6 +104,17 @@ runs with your own permissions: authoring needs the same right the Processes
 section requires, and anybody involved in a task can read it, comment on it and
 move their own task exactly as they can here. Restarting or deleting a process
 is asked for explicitly before it happens.
+
+The same rules apply as in this screen: a loop of tasks waiting for each other is
+refused, and nothing is saved. When the assistant saves tasks it also tells you
+two kinds of things:
+
+- **What Pyplan adjusted on its own**, such as a task that lost its last blocking
+  task and now counts from the process start, or a task that no longer waits for
+  anything and can start.
+- **Due dates that cannot work out**: the [due date warnings](#due-date-warnings)
+  above, each with the change that would fix it. The assistant applies the fix only
+  if you ask.
 
 ### Running an agent on demand
 
