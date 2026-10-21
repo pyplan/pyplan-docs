@@ -20,16 +20,16 @@ All notable changes to Pyplan will be documented in this page:
   - Allow scheduled tasks and app pools to execute an interface in addition to a node.
   - Add "Filter by condition" and "Filter by node values" to form column selection.
   - Enable editing of node titles from the MCP.
-  - Enhance schedule tasks with confirmation pop-ups and notifications for running tasks.
+  - Implement improvements for scheduled tasks.
   - Configure email recipients for upcoming license expiration notifications.
   - Group AI Sessions by user.
   - Allow customizable HTML messages in the Button confirmation dialog.
   - Ensure callbacks and nodes to invalidate run when restoring files in the upload manager.
 - Fixed Issues
-  - Fixed an issue where tooltips would remain displayed when clicking outside the breadcrumb in the module.
+  - Fixed an issue where tooltips would sometimes remain displayed when clicking outside the breadcrumb.
   - Fixed an issue where instances closed due to memory shortages still appeared as active in the instance manager.
   - Fixed an issue where previously opened interfaces or the last active tab would appear when opening or creating a new interface.
-  - Fixed an issue where querying logs would occasionally return a 502 or 503 error.
+  - Fixed an issue where querying logs would sometimes return a 502 or 503 error.
   - Minor fixes.
 
 ### Version 3.23.13 - 2026-10-13
