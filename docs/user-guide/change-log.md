@@ -8,6 +8,23 @@ sidebar_position: 99
 # Change log
 All notable changes to Pyplan will be documented in this page:
 
+## Version 3.24
+
+### Version 3.24.0 - 2026-10-22
+- Updates
+  - **New HTML forms.**
+  - **Add a tool for agents to capture the user's screen.**
+  - Creating a custom broadcast WebSocket message.
+  - Notify when a task's due date conflicts with its blocking tasks.
+  - Improve data copying from the performance table to respect order and filters.
+  - Display the path or indicate if a file is in a subfolder in search results.
+  - Enable navigation of search results using keyboard arrow keys.
+  - Integrate inline developer functionality in HTML code editors.
+- Fixed Issues
+  - Fixed an issue where an error was displayed upon uploading files despite a success notifier appearing.
+  - Fixed an issue where the cursor would jump to the beginning when replacing text with a node ID using Alt + Click.
+  - Minor fixes.
+
 ## Version 3.23
 
 ### Version 3.23.14 - 2026-10-20
