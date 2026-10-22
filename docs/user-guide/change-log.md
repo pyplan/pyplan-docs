@@ -17,14 +17,13 @@ All notable changes to Pyplan will be documented in this page:
   - Creating a custom broadcast WebSocket message.
   - Notify when a task's due date conflicts with its blocking tasks.
   - Improve data copying from the performance table to respect order and filters.
-  - Display the path or indicate if a file is in a subfolder in search results.
-  - Enable navigation of search results using keyboard arrow keys.
+  - Display file paths or indicate if a file is in a subfolder in search results.
+  - Enable keyboard navigation through search results for nodes.
   - Integrate inline developer functionality in HTML code editors.
 - Fixed Issues
-  - Fixed an issue where an error was displayed upon uploading files despite a success notifier appearing.
+  - Fixed an issue where an error was displayed when uploading files, despite showing a success notifier.
   - Fixed an issue where the cursor would jump to the beginning when replacing text with a node ID using Alt + Click.
   - Minor fixes.
-
 ## Version 3.23
 
 ### Version 3.23.14 - 2026-10-20
