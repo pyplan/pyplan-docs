@@ -51,9 +51,10 @@ Creating tasks within a process provides a way to divide work into smaller units
 Pyplan warns about due dates that cannot work out. The warnings never stop you from saving: they point at the task so you can fix it.
 
 - **A task due no later than a task it waits for.** If a task counts *since the process was initiated* and is due before, or at the same time as, a task in its *Blocked by*, there is no time left to do it. The task dialog shows a warning that names the blocking task and both due dates, with a **Count the days from when it is completed** button that switches the expiration type in one click. With several blocking tasks, the warning is about the one due last. Due dates are projected through chains of tasks, including hours and minutes.
+- **A task with no time after the task it waits for.** A task that counts *since blocking task was completed* with no days, hours or minutes is due the moment its blocking task is, so it is warned about too.
 - **A task due after the process ends.** A process can have a planned end date (it is set by chat; once it has one, the form shows it). A task due after that date is warned about too.
 
-When you save the process, the warnings of every task are listed together under **Some due dates do not fit**. **Review** takes you back to the form and **Save anyway** saves the process as it is.
+When you save the process, the warnings of every task are listed together under **Some due dates do not fit**, with the due dates involved. **Review** takes you back to the form and **Save anyway** saves the process as it is.
 
 ![Due date warnings when saving](./img/processes/due-date-warnings.png)
 
