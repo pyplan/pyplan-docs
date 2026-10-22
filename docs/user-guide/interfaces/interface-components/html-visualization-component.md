@@ -98,7 +98,7 @@ Pyplan offers several ways to work with HTML. It helps to know how they differ:
 
 | Option | What it is | When to use it |
 |---|---|---|
-| **[HTML component](./html-component.md)** | Static formatted content (text, images, links) written in a visual or code editor. | Headers, descriptions, instructions, branding — content that does not depend on a Pyplan node data. |
+| **[Rich Text component](./rich-text-component.md)** | Static formatted content (text, images, links) written in a visual or code editor. | Headers, descriptions, instructions, branding — content that does not depend on a Pyplan node data. |
 | **[HTML Menu component](./html-menu-component.md)** | A block of hand-written HTML wired to actions through an actions table (clicks open interfaces, run nodes, send attributes…). | A custom card, banner, or interactive block whose markup you write yourself. |
 | **HTML Visualization component** | A node's data transformed into custom HTML by a Python `render()` method, shown in an `iframe`. | A data-driven visualization (chart, KPI dashboard, styled table) that reacts to Pyplan node changes and to filters. |
 | **[HTML interface](../html-interfaces.md)** | The *whole interface* is a self-contained web page calling Python callbacks. | A fully custom screen or tool, not a single component on a grid. |

@@ -29,42 +29,35 @@ Adding components to your interface opens up a world of possibilities for custom
 
 ![Components](../img/interfaces/components.png)
 
-## Saving a Custom View of an Interface
+## Custom Views of an Interface
 
-Each user can save their own custom view of an interface. A custom view may include different components from the default view, custom pre-applied filters, and a unique arrangement of components within the interface grid.
+Each user can save their own custom views of an interface. A custom view may include different components from the original interface, pre-applied filters, and its own arrangement of components within the interface grid. A user can keep several custom views of the same interface and switch between them.
 
-A custom view is only visible to the user who created it. No write permissions on the application are required for the user to create a custom view.
+Custom views are only visible to the user who created them. No write permissions on the application are required to create them.
+
+### The custom views menu
+
+Click the bookmark button on the interface toolbar to open the custom views menu. Its tooltip shows the view you are looking at, and the icon turns solid while a custom view is shown.
+
+![Custom views menu](../img/interfaces/custom_views_menu.png)
+
+The menu lists the **Original view** (the interface as its author defined it) and each of your custom views. The view being shown is highlighted. Click a view to switch to it.
 
 ### Create a Custom View
 
-To create a custom view, click the following button and then select the **Save custom view** option:
+Select **Save as new view…**, give the view a name and, if you want it to open whenever you open the application, check **Open this view by default**. The new view saves the interface as it is on screen and becomes the view shown.
 
-![Custom Views 1](../img/interfaces/custom_views_1.png)
+![New custom view](../img/interfaces/custom_views_new.png)
 
-The custom view icon will turn solid when it becomes active:
-
-![Custom Views 2](../img/interfaces/custom_views_2.png)
-
-Afterward, you can begin modifying various settings in the interface grid — for example, changing one of the components from a chart to a table, switching the Surface filter format to a selector, and selecting specific values. You can also rearrange the positions of certain components within the interface:
+While a custom view is shown, the changes you make to the interface grid — for example, changing a component from a chart to a table, switching a filter format to a selector, selecting specific values or moving components around — are saved into that view, never into the original interface:
 
 ![Custom Views 3](../img/interfaces/custom_views_3.png)
 
-To save all the changes you've made, click on the **Save custom view** option:
+### Choose the view that opens by default
 
-![Custom Views Save](../img/interfaces/custom_views_7.png)
+The check on the right of each row marks the view that opens when you open the application. Click the check of another view to make it the default one, or the check of **Original view** to open the interface as defined. Only one view can be the default.
 
-### Switch from Custom View to Default View
+### Rename or delete a Custom View
 
-When you open an interface with a custom view, Pyplan will automatically load your custom view the first time. To switch back to the default view, select the **Show default view** option.
+Use the pencil icon of a view to rename it or change whether it opens by default, and the trash icon to delete it. Deleting the view being shown takes you back to the original view.
 
-![Custom Views Default](../img/interfaces/custom_views_4.png)
-
-To return to your custom view, click on the **Show custom view** option:
-
-![Custom Views Return](../img/interfaces/custom_views_5.png)
-
-### Delete a Custom View
-
-To delete your custom view, click on the **Delete custom view** option:
-
-![Custom Views Delete](../img/interfaces/custom_views_6.png)
