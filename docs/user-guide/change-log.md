@@ -8,29 +8,6 @@ sidebar_position: 99
 # Change log
 All notable changes to Pyplan will be documented in this page:
 
-## Version 3.24
-
-### Version 3.24.0 - 2026-10-23
-- Updates
-  - **New HTML forms.**
-  - **Allow saving and selecting multiple custom views per interface, including HTML interfaces.**
-  - **Add a tool for agents to capture the user's screen.**
-  - **Support editing and sending Checkbox/Boolean type columns in the Excel Add-in.**
-  - Enable maximizing components in HTML interfaces.
-  - Creating a custom broadcast WebSocket message.
-  - Notify when a task's due date contradicts its blocking tasks.
-  - Improve data copying from the Performance table.
-  - Show the path or indicate if a file is in a subfolder in the search results list.
-  - Enable navigation of search results for nodes using keyboard arrows.
-  - Integrate inline developer functionality in HTML interface code editors.
-  - Allow company code in the ACS and SLO paths.
-  - Allow agents to create or edit nodes without executing them.
-- Fixed Issues
-  - Fixed an issue where columns did not respect the custom sorting order when two dimensions were sorted.
-  - Fixed an issue where the cursor moved to the beginning when replacing text with a node ID using Alt + Click.
-  - Fixed intermittent behavior where users from a configured department did not automatically open the app upon logging in via SAML.
-  - Minor fixes.
-
 ## Version 3.23
 
 ### Version 3.23.14 - 2026-10-20
