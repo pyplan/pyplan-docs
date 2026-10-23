@@ -1615,7 +1615,7 @@ All notable changes to Pyplan will be documented in this page:
   - Minor fixes.
 ### Version 3.10.6 - 2024-09-17
 - Updates
-  - Allow users to [create their own custom views of an interface](/user-guide/interfaces/creation#saving-a-custom-view-of-an-interface).
+  - Allow users to [create their own custom views of an interface](/user-guide/interfaces/creation#custom-views-of-an-interface).
 - Fixed Issues
   - Minor fixes.
 ### Version 3.10.5 - 2024-09-13
