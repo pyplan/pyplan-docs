@@ -1,0 +1,9 @@
+{
+  "label": "Deployments and Requirements",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "/technical-docs/deployments-and-requirements",
+    "description": "Deployment options for Pyplan and the infrastructure requirements to deploy it on each cloud provider: AWS, Azure, Google Cloud and Oracle."
+  }
+}
