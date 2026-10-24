@@ -35,6 +35,10 @@ Each user can save their own custom views of an interface. A custom view may inc
 
 Custom views are only visible to the user who created them. No write permissions on the application are required to create them.
 
+:::info HTML interfaces
+[HTML interfaces](./html-interfaces.md) have custom views too, from the same menu. There, a view saves the page's filters and the setup of its tables, and it is only updated when we choose **Save changes to "…"**. See [Custom views of an HTML interface](./html-interfaces.md#custom-views).
+:::
+
 ### The custom views menu
 
 Click the bookmark button on the interface toolbar to open the custom views menu. Its tooltip shows the view you are looking at, and the icon turns solid while a custom view is shown.
