@@ -21,7 +21,7 @@ The filter bar shows one field per dimension. Each field:
 
 The bar stays pinned at the top of the page while you scroll. Ticking several members in a row sends a single change, when you stop or close the dropdown, and then the widgets the bar refreshes reload.
 
-The selection is remembered while the browser tab lives, so leaving the interface and coming back finds it as you left it. A [custom view](./creation.md#custom-views-of-an-interface) saves it for good.
+The selection is remembered while the browser tab lives, so leaving the interface and coming back finds it as you left it. A [custom view](./html-interfaces.md#custom-views) saves it for good.
 
 ### Building a filter bar
 
@@ -107,7 +107,7 @@ A table of the standard library offers, with no code from the author:
 - **Export** — **Export table…**, on the right-click menu, downloads the whole table — every row, with your filters and layout — to Excel or CSV, as you see it or as a list.
 - **Excel** — the Excel button beside the title downloads the table to Excel or opens it with the Pyplan Excel add-in. On an [editable table](./html-interface-editing-data.md) it also offers to download it to edit in Excel and bring the edited sheet back. The button needs permission to export components, and the author can hide it with `excel=False`.
 
-The table remembers its page, order, filters, drilldown, levels and layout while the browser tab lives; a [custom view](./creation.md#custom-views-of-an-interface) saves them, except the page. **Refresh** puts the table back as defined. Exporting requires permission to export components.
+The table remembers its page, order, filters, drilldown, levels and layout while the browser tab lives; a [custom view](./html-interfaces.md#custom-views) saves them, except the page. **Refresh** puts the table back as defined. Exporting requires permission to export components.
 
 ### Building a table
 
@@ -152,15 +152,17 @@ On the page, the table loads itself as a widget, named by its container's `data-
 | Argument | Meaning |
 |---|---|
 | `rows`, `columns`, `values` | The fields shown as rows, across the top, and as measures. With `aggregate=True` (default) the data is pivoted and summed (`agg` changes how). |
-| `subtotals`, `total_row`, `total_column`, `column_subtotals` | Totals and subtotals. |
+| `values_in` | `'rows'` puts the measures down the side, one row per measure under each row's labels, with only the column fields across the top. |
+| `subtotals`, `total_row`, `total_column`, `column_subtotals` | Totals and subtotals. `total_row='frozen'` keeps the total row in view at the bottom, and `total_column='frozen'` the total column at the right edge. |
+| `empty_as_zero` | Shows as 0 a sum with no values (a month with no actuals yet), which is otherwise shown empty. |
 | `format`, `currency` | How values are shown: `'num'`, `'int'`, `'money'`, `'pct'` (a share: 0.12 shows as 12%), dates like `'month'`, or a `{field: format}` map with decimals, prefixes and how negatives look. |
 | `calculated`, `calculated_rows` | Measures or rows computed from others (a margin, a variance). |
 | `render` | Inline visuals in cells: bars, heat colors, chips, sparklines, deltas. |
 | `tone` | Colors a value as good, bad or a warning. |
-| `drilldown`, `hierarchies`, `filterable`, `selectable` | Turn on or restrict drilldown, levels, column filters and row picking. |
+| `drilldown`, `hierarchies`, `filterable`, `selectable` | Turn on or restrict drilldown, levels, column filters and row picking. For an index with a hierarchy map, `hierarchies=self.index_hierarchies('products')` takes its levels from the model. |
 | `frozen`, `frozen_rows`, `page_size` | Frozen columns or rows, and rows per page. |
 | `configurable`, `cell_selection`, `cell_stats`, `excel` | Turn off the layout panel, cell picking, the footer statistics or the Excel button. |
-| `edit`, `menu` | Make the table editable, and its right-click menu. See [Editing Data](./html-interface-editing-data.md). |
+| `edit`, `menu` | Make the table editable, and its right-click menu. See [Forms and Editing Data](./html-interface-editing-data.md). |
 
 `pyplan.ui.table(element, options)` accepts, among others, `pageSize`, `height`, `select` (`'single'` or `'multi'`) with `onSelect`, `onRowClick(row)` to open a detail, `render` to draw a cell yourself, `exportable: false` and `persist: false`. Its handle has `reload()`, `state()`, `selection()` and `select(ids)`.
 
@@ -170,4 +172,4 @@ For a small statement that doesn't come from a single node — a profit and loss
 
 ### Comparing scenarios
 
-When the user compares [scenarios](../scenarios.md), a table can show the values of each scenario side by side. The callback builds its data with `self.get_scenario_comparison('sales', current=sales)` — the node's values in each selected scenario, or `current` when none is selected — and the page reloads it when the comparison changes with `pyplan.on('scenarios', …)`. The node must be among the ones the scenarios saved.
+When the user compares [scenarios](../scenarios.md), a table can show the values of each scenario side by side. The callback builds its data with `self.get_scenario_comparison('sales', current=sales)` — the node's values in each selected scenario, or `current` when none is selected — and the page reloads it when the comparison changes with `pyplan.on('scenarios', …)`. The node must be among the ones the scenarios saved. `self.is_comparing_scenarios()` tells whether any scenario is selected, and `self.get_selected_scenarios()` returns their names in the order chosen, handy for a legend or to order columns.

@@ -22,7 +22,7 @@ Pyplan offers three different ways to work with custom presentation. It helps to
 | **Component interface** | A grid of draggable components (tables, charts, selectors, indicators, buttons…). See [Creating an Interface](./creation.md). | The standard choice for most dashboards and input/output screens. |
 | **[HTML Menu component](./interface-components/html-menu-component.md)** | A *single component* placed inside a component interface, where a block of HTML is wired to the model through an actions table. | You need a custom card, banner or block **inside** an otherwise standard interface. |
 | **[HTML Visualization component](./interface-components/html-visualization-component.md)** | A *single component* placed inside a component interface, where a Pyplan node's data is turned into custom HTML by a Python `render()` method. | You need a data-driven visualization (chart, KPI dashboard, styled table) that reacts to the change in a Pyplan node and filters, **inside** a standard interface. |
-| **HTML interface** | The *whole interface* is a web page with its own logic, calling Python methods you define. | You need a fully custom layout or a tailored tool that the standard components can't express. |
+| **HTML interface** | The *whole interface* is a web page with its own logic, calling Python methods you define. | You need a fully custom layout or a tailored tool that the standard components can't express — including data entry over a form node, with an [editable table](./html-interface-editing-data.md). |
 
 The key distinction: a HTML Menu component lives *inside* a component interface, while an HTML interface *replaces* the component grid entirely and drives its interaction through Python code you (or the agent) write.
 
@@ -37,7 +37,7 @@ An HTML interface has two parts, stored together on the same interface:
 
 The Python code runs **inside your model's namespace** — exactly like a node definition — so it can reference any node by name, and `pd` and `np` are available. The page calls into that Python code through a small built-in bridge, `window.pyplan`. Nothing else is needed to connect the two.
 
-You rarely build either part from scratch: Pyplan ships a **standard library** of filters, tables, editable forms, KPI cards, charts and dialogs that already look like Pyplan, follow the light and dark themes, speak the user's language and remember what the user did. An interface built with it is mostly a matter of saying *what* to show.
+You rarely build either part from scratch: Pyplan ships a **standard library** of filters, tables, [editable forms](./html-interface-editing-data.md), KPI cards, charts and dialogs that already look like Pyplan, follow the light and dark themes, speak the user's language and remember what the user did. An interface built with it is mostly a matter of saying *what* to show.
 
 ### The Python side: callbacks
 
@@ -87,6 +87,7 @@ To change model data from a callback, use the built-in helpers instead of touchi
 | `self.set_form_values(node_id, changes, confirm=True)` | Writes values into a **form** from code (`changes` is a list of `{'row', 'column', 'value'}`). For a table the user types into, use an [editable table](./html-interface-editing-data.md) instead. |
 | `self.confirm_form_changes(node_id)`, `self.cancel_form_changes(node_id)` | Confirms or discards the pending changes of a form. |
 | `self.add_form_rows(node_id, ...)`, `self.remove_form_rows(node_id, row_ids)` | Adds or removes rows of a form. |
+| `self.broadcast(event, data, interface_id=None, usernames=None)` | Sends a message to the other sessions that have the application open. See [Messages to other sessions](#messages-to-other-sessions). |
 
 ### The page side: widgets
 
@@ -123,13 +124,16 @@ The same id ties the three sides together: the node in `WIDGET_NODES`, `pyplan.w
 | `pyplan.callback(method, params)` | Calls a Python `@callback` and returns a promise with its result. A failed call shows an error notification unless the page catches it. |
 | `pyplan.widget(id, loader)`, `pyplan.load(id)`, `pyplan.loadAll()`, `pyplan.refresh(result)` | Register, load and reload widgets. `refresh` takes the `{refresh: [...]}` a mutator returned. |
 | `pyplan.ui.filters`, `pyplan.ui.table` | The standard filter bar and table. See [Filters and Tables](./html-interface-filters-and-tables.md). |
+| `pyplan.filters()` | The current selection of every filter on the page, for code outside a callback (callbacks already receive it). |
 | `pyplan.ui.kpi`, `pyplan.ui.kpis` | KPI cards. See [KPIs, charts and dialogs](#kpis-charts-and-dialogs). |
 | `pyplan.chart.plot` | Plotly charts that follow Pyplan's look and theme. |
 | `pyplan.ui.dialog` | A modal dialog. |
+| `pyplan.ui.maximize(card)`, `pyplan.ui.restore()` | Maximizes a card to the whole page, and restores it. See [Maximizing a card](#maximizing-a-card). |
 | `pyplan.fmt.num`, `.int`, `.money`, `.pct`, `.compact` | Number formatting in the user's number format. |
 | `pyplan.state.get(key)`, `pyplan.state.set(key, value)` | Small view state (a chosen tab, a collapsed panel) kept while the browser tab lives. See [What the page remembers](#what-the-page-remembers). |
-| `pyplan.on(event, handler)` | Reacts to `theme` (light or dark), `locale` (the user's language), `scenarios` (the scenarios being compared changed) and `ready`. |
-| `pyplan.theme`, `pyplan.locale`, `pyplan.numberLocale`, `pyplan.t(map)` | The user's theme, language and number format, and a helper to pick the text in the user's language. |
+| `pyplan.on(event, handler)` | Reacts to `theme` (light or dark), `locale` (the user's language), `scenarios` (the scenarios being compared changed), `broadcast` (a message from another session) and `ready`. |
+| `pyplan.broadcast(event, data, options)` | Sends a message to the other sessions that have the application open. See [Messages to other sessions](#messages-to-other-sessions). |
+| `pyplan.theme`, `pyplan.locale`, `pyplan.language`, `pyplan.numberLocale`, `pyplan.t(map)` | The user's theme, language (as a locale like `es-AR` or a short code like `es`) and number format, and a helper to pick the text in the user's language. |
 | `pyplan.toast(message, kind)` | Shows a notification (`"info"`, `"success"`, `"warning"`, `"error"`). |
 | `pyplan.esc(value)` | Escapes a value to insert it into HTML. |
 | `pyplan.import(url)` | Dynamically imports an external JavaScript module (see [External libraries and resources](#external-libraries-and-resources)). |
@@ -177,6 +181,39 @@ You can use external charting libraries, fonts, stylesheets and images by writin
 
 An HTML interface follows the user's settings: it switches between light and dark with the app, and `pyplan.locale` and `pyplan.numberLocale` tell it the user's language and number format. The standard library uses them on its own; text the page writes itself can be translated with `pyplan.t({en: '…', es: '…', pt: '…'})`, and numbers formatted with `pyplan.fmt`.
 
+### Messages to other sessions
+
+An HTML interface can tell the other people working on the same application that something changed — for example, that a user confirmed new figures — so their pages can reload or show a notice. The message goes to the other live sessions of the same company and application, never back to the session that sent it.
+
+From Python, a callback sends it with `self.broadcast`:
+
+```python
+@callback
+def save(self, edits: list) -> dict:
+    self.set_form_values('sales_form', edits)
+    self.broadcast('sales-saved', {'rows': len(edits)})
+    return {"refresh": self.get_nodes_to_refresh(self.WIDGET_NODES)}
+```
+
+The page can also send one with `pyplan.broadcast('sales-saved', {rows: 3})`. Every HTML interface that receives it handles it with `pyplan.on('broadcast', …)`:
+
+```js
+pyplan.on('broadcast', (msg) => {
+  // msg = { event, data, from: { userName, userFullName, interfaceId } }
+  if (msg.event === 'sales-saved') {
+    pyplan.toast(`${msg.from.userFullName} updated the sales plan`, 'info');
+    pyplan.load('sales_table');
+  }
+});
+```
+
+A few things to note:
+
+- `interface_id` (`interfaceId` on the page) limits the message to the sessions showing that interface, and `usernames` to those users.
+- `data` must be JSON-friendly. `self.broadcast` returns how many sessions received the message, and `pyplan.broadcast` resolves to `{recipients}`.
+- A message that cannot be delivered never makes the callback fail: it is logged and `self.broadcast` returns 0.
+- Messages are not stored: a page that isn't open at that moment doesn't get them.
+
 ## Creating and editing an HTML interface
 
 HTML interfaces are meant to be built **by Pyplan's AI agents** — or by external AI clients through [Pyplan MCP](../mcp/overview.md) tools — and they are the type Pyplan creates by default whenever you ask an agent to make an interface. Describe the dashboard or tool you want — the data it should show, the actions it should offer — and the agent proposes a plan, then generates the HTML layout together with the Python callbacks that connect it to your model.
@@ -191,22 +228,54 @@ From there you can:
   - **Reset** goes back to the code as it was when you started editing.
   - The editor's footer lists the callbacks the Python code defines (hover one to see its parameters), or the error that keeps it from compiling.
   - **Inspect mode** (the crosshair button, on the HTML tab): click any element of the preview and the editor jumps to the line that builds it. Press Esc to leave it.
+  - **Ask AI** (**Ctrl/⌘ + I**, or right-click in the editor): opens the inline assistant over the code of the tab we are on. We describe the change, and the assistant proposes it with both tabs in mind; when it only needs to change the other tab, it says so. Its changes are undone with **Ctrl/⌘ + Z**, like any edit.
 
 ## Working with an HTML interface
 
 Because an HTML interface is a single page rather than a grid of components, a few toolbar actions behave differently from component interfaces:
 
 - **Refresh** reloads the interface — it re-fetches the page and re-runs its initial calls. This also picks up any edits made to the interface's code. The page opens as defined or, when a custom view is shown, as that view saved it.
-- **Custom views** save how the page is set up: the selection of its filters and, for each table, its order, column filters, drilldown, levels and layout. They don't save the page's code, so a view keeps working when the interface is edited. Unlike component interfaces, a view only changes when you choose **Save changes to "…"** in the custom views menu. While you work, the page keeps your current selection; picking a view in the menu, or **Refresh**, brings the view back. If the interface changed since the view was saved — a filter, a member or a table field it used is gone — the page applies what still fits and tells you once; save the view again to update it. See [Custom Views of an Interface](./creation.md#custom-views-of-an-interface).
+- **Custom views** work on HTML interfaces too, but they save the page's setup rather than a grid. See [Custom views](#custom-views) below.
 - The toolbar's **Screenshot** button is not shown for HTML interfaces. An agent can still capture what the page shows when it needs to see it.
+
+### Custom views
+
+As with component interfaces, each user can keep several **custom views** of an HTML interface, open them from the bookmark button on the toolbar and choose which one opens by default (see [Custom Views of an Interface](./creation.md#custom-views-of-an-interface)). What changes is what a view holds and when it is saved.
+
+A custom view of an HTML interface saves how the page is set up:
+
+- the selection of its filters;
+- for each table, its order, column filters, drilldown, levels and layout;
+- the small view state the page keeps with `pyplan.state` (a chosen tab, a collapsed panel).
+
+It doesn't save the page's code, so a view keeps working when the interface is edited. Nor does it save a table's page, its picked rows or its scroll: each table opens on its first page.
+
+To save a view, we set the page up as we want it and then:
+
+1. Click the bookmark button on the interface toolbar.
+2. Select **Save as new view…** to create a view, or **Save changes to "…"** to update the view being shown.
+
+Unlike component interfaces, where changes go into the view as we make them, an HTML interface only changes its view when we choose **Save changes to "…"**. While we work, the page keeps our current selection; picking the view again in the menu, or **Refresh**, brings the saved view back.
+
+When a view holds the selection of a [filter bound to a selector](./html-interface-filters-and-tables.md#filters-bound-to-a-selector), opening the view also writes that selection into the model.
+
+:::info When the interface changes
+If the interface changed since the view was saved — a filter, a member or a table field it used is gone — the page applies what still fits and tells us once. Saving the view again updates it.
+:::
+
+### Maximizing a card
+
+Every card (`.card`) that holds a chart or a table gets a **Maximize** button to the right of its title, which expands the card to the whole interface. The same button, now **Restore**, or **Esc** brings it back. Filters and KPI cards don't get the button.
+
+The author can change which cards offer it with the `data-pyplan-maximize` attribute: `"false"` on a card removes the button from that card, `"false"` on `<body>` removes it from the whole page, and `"true"` adds it to a card that wouldn't get it on its own.
 
 ### What the page remembers
 
 | What | How long it lasts |
 |---|---|
 | Filter selections, how each table is set up (order, column filters, drilldown, levels, layout, page and scroll) and `pyplan.state` | While the browser tab lives, per application and interface. **Refresh** clears it. |
-| A custom view | Saved for the user until changed or deleted. It doesn't keep a table's page, its picked rows or the scroll. |
-| Changes typed into an editable table | Pending until the user confirms or cancels them. See [Editing Data](./html-interface-editing-data.md). |
+| A [custom view](#custom-views) | Saved for the user until changed or deleted, and updated only with **Save changes to "…"**. It doesn't keep a table's page, its picked rows or the scroll. |
+| Changes typed into an editable table | Pending until the user confirms or cancels them. See [Forms and Editing Data](./html-interface-editing-data.md). |
 | Filters bound to a selector, and values set with `set_input` | They are model values: they change the model for the whole session. |
 
 ## Security and sandboxing

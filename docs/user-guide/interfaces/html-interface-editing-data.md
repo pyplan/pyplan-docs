@@ -1,10 +1,10 @@
 ---
 sidebar_position: 4.2
-title: "HTML Interfaces: Editing Data"
-sidebar_label: Editing Data in HTML Interfaces
+title: "HTML Interfaces: Forms and Editing Data"
+sidebar_label: Forms and Editing Data in HTML Interfaces
 ---
 
-# Editing Data in HTML Interfaces
+# Forms and Editing Data in HTML Interfaces
 
 The standard table of [HTML interfaces](./html-interfaces.md) becomes an editable grid over a **form** node: users type into it as they would in a spreadsheet, and the changes stay pending until they confirm them. It is how an HTML interface collects data — a purchase request, a sales forecast, adjustments over a plan.
 
@@ -34,7 +34,16 @@ While you work, the table shows:
 
 ### Editing in Excel
 
-With permission to export components, the Excel button beside the table's title offers **Download to edit in Excel**: a workbook with the editable cells highlighted. After editing it, **Bring back the edited Excel…** loads the sheet's changes as pending changes, checked like the ones typed on the page, and tells you about any cell it skipped. The table can also be opened with the Pyplan Excel add-in.
+With permission to export components, the Excel button beside the table's title offers **Download to edit in Excel**: a workbook with the editable cells highlighted. After editing it, **Bring back the edited Excel…** loads the sheet's changes as pending changes, checked like the ones typed on the page, and tells you about any cell it skipped. The table can also be opened with the Pyplan Excel add-in, which sends its changes back to the table.
+
+Checkbox, date, selector and multiselect columns can be edited in Excel too:
+
+- **Checkboxes** take `TRUE`/`FALSE` (or 1 and 0).
+- **Dates** are typed as dates; a plain number isn't taken as one.
+- **Selectors** take one of their options, whatever their capitalization.
+- **Multiselect** cells hold their options separated by `;`.
+
+A value the column can't take is refused, keeping the previous one.
 
 ## Building an editable table
 
@@ -102,7 +111,14 @@ The table's data can also be a DataFrame — a forecast, a budget — whose edit
 
 ### The right-click menu
 
-`HtmlTable(..., menu=[...])` sets the right-click menu: built-in entries (`'copy'`, `'export'`, `'insert_above'`, `'delete_rows'`, `'clear_cells'`, `'history'`), `'-'` for a separator, and your own actions with `MenuItem(label, action=...)`, whose method receives the picked rows and cells. `menu=False` turns the menu off.
+`HtmlTable(..., menu=[...])` sets the right-click menu: built-in entries, `'-'` for a separator, and your own actions with `MenuItem(label, action=...)`, whose method receives the picked rows and cells. `menu=False` turns the menu off. The built-in entries are:
+
+| Group | Entries |
+|---|---|
+| Copy | `'copy'`, `'copy_with_headers'`, `'copy_as_shown'`, `'copy_as_shown_with_headers'`, `'copy_table'`, `'copy_table_as_shown'` |
+| Select | `'select_cell'`, `'select_row'`, `'select_column'`, `'select_table'` |
+| Rows | `'insert_above'`, `'insert_below'`, `'add_row'`, `'delete_rows'` |
+| Other | `'clear_cells'`, `'export'`, `'history'` |
 
 ## Good to know
 
