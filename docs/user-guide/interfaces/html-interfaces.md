@@ -22,7 +22,7 @@ Pyplan offers three different ways to work with custom presentation. It helps to
 | **Component interface** | A grid of draggable components (tables, charts, selectors, indicators, buttons…). See [Creating an Interface](./creation.md). | The standard choice for most dashboards and input/output screens. |
 | **[HTML Menu component](./interface-components/html-menu-component.md)** | A *single component* placed inside a component interface, where a block of HTML is wired to the model through an actions table. | You need a custom card, banner or block **inside** an otherwise standard interface. |
 | **[HTML Visualization component](./interface-components/html-visualization-component.md)** | A *single component* placed inside a component interface, where a Pyplan node's data is turned into custom HTML by a Python `render()` method. | You need a data-driven visualization (chart, KPI dashboard, styled table) that reacts to the change in a Pyplan node and filters, **inside** a standard interface. |
-| **HTML interface** | The *whole interface* is a web page with its own logic, calling Python methods you define. | You need a fully custom layout or a tailored tool that the standard components can't express. |
+| **HTML interface** | The *whole interface* is a web page with its own logic, calling Python methods you define. | You need a fully custom layout or a tailored tool that the standard components can't express — including data entry over a form node, with an [editable table](./html-interface-editing-data.md). |
 
 The key distinction: a HTML Menu component lives *inside* a component interface, while an HTML interface *replaces* the component grid entirely and drives its interaction through Python code you (or the agent) write.
 
@@ -37,7 +37,7 @@ An HTML interface has two parts, stored together on the same interface:
 
 The Python code runs **inside your model's namespace** — exactly like a node definition — so it can reference any node by name, and `pd` and `np` are available. The page calls into that Python code through a small built-in bridge, `window.pyplan`. Nothing else is needed to connect the two.
 
-You rarely build either part from scratch: Pyplan ships a **standard library** of filters, tables, editable forms, KPI cards, charts and dialogs that already look like Pyplan, follow the light and dark themes, speak the user's language and remember what the user did. An interface built with it is mostly a matter of saying *what* to show.
+You rarely build either part from scratch: Pyplan ships a **standard library** of filters, tables, [editable forms](./html-interface-editing-data.md), KPI cards, charts and dialogs that already look like Pyplan, follow the light and dark themes, speak the user's language and remember what the user did. An interface built with it is mostly a matter of saying *what* to show.
 
 ### The Python side: callbacks
 
@@ -275,7 +275,7 @@ The author can change which cards offer it with the `data-pyplan-maximize` attri
 |---|---|
 | Filter selections, how each table is set up (order, column filters, drilldown, levels, layout, page and scroll) and `pyplan.state` | While the browser tab lives, per application and interface. **Refresh** clears it. |
 | A [custom view](#custom-views) | Saved for the user until changed or deleted, and updated only with **Save changes to "…"**. It doesn't keep a table's page, its picked rows or the scroll. |
-| Changes typed into an editable table | Pending until the user confirms or cancels them. See [Editing Data](./html-interface-editing-data.md). |
+| Changes typed into an editable table | Pending until the user confirms or cancels them. See [Forms and Editing Data](./html-interface-editing-data.md). |
 | Filters bound to a selector, and values set with `set_input` | They are model values: they change the model for the whole session. |
 
 ## Security and sandboxing

@@ -1,10 +1,10 @@
 ---
 sidebar_position: 4.2
-title: "HTML Interfaces: Editing Data"
-sidebar_label: Editing Data in HTML Interfaces
+title: "HTML Interfaces: Forms and Editing Data"
+sidebar_label: Forms and Editing Data in HTML Interfaces
 ---
 
-# Editing Data in HTML Interfaces
+# Forms and Editing Data in HTML Interfaces
 
 The standard table of [HTML interfaces](./html-interfaces.md) becomes an editable grid over a **form** node: users type into it as they would in a spreadsheet, and the changes stay pending until they confirm them. It is how an HTML interface collects data — a purchase request, a sales forecast, adjustments over a plan.
 

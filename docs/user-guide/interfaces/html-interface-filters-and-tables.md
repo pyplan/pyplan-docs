@@ -162,7 +162,7 @@ On the page, the table loads itself as a widget, named by its container's `data-
 | `drilldown`, `hierarchies`, `filterable`, `selectable` | Turn on or restrict drilldown, levels, column filters and row picking. For an index with a hierarchy map, `hierarchies=self.index_hierarchies('products')` takes its levels from the model. |
 | `frozen`, `frozen_rows`, `page_size` | Frozen columns or rows, and rows per page. |
 | `configurable`, `cell_selection`, `cell_stats`, `excel` | Turn off the layout panel, cell picking, the footer statistics or the Excel button. |
-| `edit`, `menu` | Make the table editable, and its right-click menu. See [Editing Data](./html-interface-editing-data.md). |
+| `edit`, `menu` | Make the table editable, and its right-click menu. See [Forms and Editing Data](./html-interface-editing-data.md). |
 
 `pyplan.ui.table(element, options)` accepts, among others, `pageSize`, `height`, `select` (`'single'` or `'multi'`) with `onSelect`, `onRowClick(row)` to open a detail, `render` to draw a cell yourself, `exportable: false` and `persist: false`. Its handle has `reload()`, `state()`, `selection()` and `select(ids)`.
 
