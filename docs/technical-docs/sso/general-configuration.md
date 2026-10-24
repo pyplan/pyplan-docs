@@ -32,3 +32,7 @@ title: General Configuration
 
 For more information on the use of Role&Department, please see [Security Options](/user-guide/security-options)
 
+## Identity Providers That Reject the `code` Parameter
+
+Some identity providers, such as Keycloak, reject return URLs that contain reserved OAuth/OIDC query parameters like `code`. For them, Pyplan accepts the company code in the URL path. See [Keycloak](./keycloak.md).
+
