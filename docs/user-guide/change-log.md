@@ -10,6 +10,20 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.24
 
+### Version 3.24.1 - 2026-10-28
+- Updates
+  - **Enable testing of permissions (folders, apps, interfaces) in automated tests.**
+  - **Implement a postMessage bridge to resolve CORS issues for interfaces in Azure.**
+  - Make visual adjustments to HTML tables to improve pagination footer visibility and disable hierarchy selectors when not applicable.
+  - Prevent state changes of a version if it is currently in use by a user with edit permissions.
+  - Enhance loading skeletons for tables and forms to better reflect the final component structure.
+- Fixed Issues
+  - Fixed an issue where invalidating a form in one interface did not properly update the data in specific cases.
+  - Fixed various bugs in forms, including issues with comments, docstrings, silent discarding of changes, and dependency on the order of changes.
+  - Fixed issues in the interface related to closing tabs, where closing a selected tab incorrectly reopened a previously closed tab and keyboard shortcuts did not function as expected.
+  - Fixed an issue where links to interfaces in the documentation navigated incorrectly to a full page reload instead of within the SPA.
+  - Minor fixes.
+
 ### Version 3.24.0 - 2026-10-23
 - Updates
   - **New HTML forms.**
@@ -30,7 +44,6 @@ All notable changes to Pyplan will be documented in this page:
   - Fixed an issue where the cursor moved to the beginning when replacing text with a node ID using Alt + Click.
   - Fixed intermittent behavior where users from a configured department did not automatically open the app upon logging in via SAML.
   - Minor fixes.
-
 ## Version 3.23
 
 ### Version 3.23.14 - 2026-10-20
