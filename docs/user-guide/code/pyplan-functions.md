@@ -1140,11 +1140,11 @@ Executes tests by their IDs.
 ### Parameters
 
 - **test_ids** (`List[str]`, optional): List of test IDs to execute. If not provided, all tests are executed.
-- **detached_run** (`bool`, optional): If True, the tests are executed in detached mode. This can be useful for a periodic task that runs tests. Otherwise, tests are run using the current instance. Defaults to False.
+- **detached_run** (`bool`, optional): If True, the tests are added to the execution queue and executed in detached mode, once per department. This can be useful for a periodic task that runs tests. Otherwise, tests are run using the current instance and their permission assertions are skipped. Defaults to False.
 
 ### Returns
 
-- **Dict[str, Any]**: A dictionary with test IDs as keys and their execution results as values.
+- **Dict[str, Any]**: A dictionary with test IDs as keys and their execution results as values. When `detached_run` is True, the tests are only queued and their results are reviewed in the Automation tests execution logs.
 
 ### Example
 
