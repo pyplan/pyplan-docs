@@ -9,7 +9,9 @@ The **bell** in the top bar gathers everything Pyplan notifies us about, from al
 
 ## The Notifications Panel
 
-The bell shows a badge with the number of unread notifications. Clicking it opens the panel, which has two tabs:
+The bell shows a badge with the number of unread notifications. Right after we log in, if we have unread messages, a notice next to the bell tells us how many: clicking it opens the panel on our messages, and its **X** dismisses it.
+
+Clicking the bell opens the panel, which has two tabs:
 
 - **Received**: the notifications and messages we received, from every application.
 - **Sent**: the messages we sent. See [Following Up on a Message](#following-up-on-a-message).
