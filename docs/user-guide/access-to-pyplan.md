@@ -83,6 +83,8 @@ By clicking any of these items, we reopen the corresponding application directly
 
 The **Notifications** section is where we review and manage all alerts generated within Pyplan. Here we see updates on shared applications, collaboration requests, and important system announcements in a single, consolidated view. By centralizing this information, we stay informed about relevant activity, respond more quickly to changes, and maintain smoother collaboration with other users across the platform.
 
+The bell in the top bar holds every notification we receive, from all our applications, and lets us write messages to other users. See [Notifications and Messages](./notifications-and-messages.md).
+
 ### Pyplan Resources
 
 The **Pyplan resources** section is also located in the left sidebar. It provides quick access to learning and support materials, typically including:
