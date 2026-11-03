@@ -10,6 +10,20 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.24
 
+### Version 3.24.2 - 2026-11-03
+- Updates
+  - **Improve performance of HTML interfaces by analyzing caching options for CDN elements.**
+  - **Adjust HTML controls by implementing a new chip-like format for filters that allows quick value selection.**
+  - Add an "Open in new instance" option when creating a version to allow opening in a separate tab.
+  - Enhance the Log Manager view by improving column widths, visibility, and adding detailed log information.
+  - Fix MCP backend to include text nodes in search and listing functions as defined in the tool documentation.
+  - Allow multiple selections in the Consolidation section dropdowns without closing the menu.
+- Fixed Issues
+  - Fixed an issue where company/domain restrictions were not properly enforced when connecting via MCP.
+  - Fixed an issue where Go to Definition and hover features misaligned due to leading empty lines in node code.
+  - Fixed various improvements and adjustments in the process manager, including button alignment and task validation.
+  - Minor fixes.
+
 ### Version 3.24.1 - 2026-10-28
 - Updates
   - **Enable testing of permissions (folders, apps, interfaces) in automated tests.**
