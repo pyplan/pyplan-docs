@@ -72,6 +72,7 @@ The page adds the current selection, as `filters`, to every callback of the inte
 | `cascade` | Narrows the members to the ones that exist under the other filters' selection. A filter whose members come from an index also needs `frame`, the DataFrame node to narrow over. |
 | `width`, `placeholder`, `max_values` | How the field looks. |
 | `display` | `'dropdown'` (default) draws the field with its dropdown; `'chips'` shows every member as a chip. See below. |
+| `all_chip` | On a multi-select filter drawn as chips, `True` (default) puts an **All** chip first and `False` leaves it out. See below. |
 
 `self.apply_filters(data, filters)` works with pandas and polars DataFrames and with xarray DataArrays. It matches labels to the column's type and skips the filters whose column the data doesn't have.
 
@@ -88,9 +89,10 @@ CONTROLS = [
 ```
 
 - On a **single-select** filter (`multi=False`) one chip is always on. It starts on the `default`, on the value of the bound selector, or on the first member. Clicking another chip moves the selection; clicking the one already on does nothing.
-- On a **multi-select** filter each click turns a chip on or off. **No chip on means no filter** — every member counts, like **All** in a dropdown — so to drop the filter, turn the chips off one by one. Several clicks in a row send a single change.
+- On a **multi-select** filter each click turns a chip on or off. **No chip on means no filter** — every member counts, like **All** in a dropdown. Several clicks in a row send a single change.
+- A multi-select filter starts its row with an **All** chip, which is on while no member is. Clicking **All** turns every other chip off and drops the filter; clicking any other chip turns **All** off. It shows the same text as an empty dropdown: **All**, translated, or the filter's `placeholder`. To leave it out, declare the filter with `all_chip=False`; then, to drop the filter, turn the chips off one by one. A single-select filter has no **All** chip.
 
-Chips are meant for a short list the user flips between — a scenario, a version, a few regions or years — and the dropdown stays the default: a filter is drawn as chips only when its author asks for it, or when the AI assistant building the interface judges a short list reads better that way. Past **30 members**, the filter is drawn as the regular dropdown whatever `display` says. `bind`, `default` and `cascade` work the same as on a dropdown; with `cascade`, a member that is on and gets narrowed away stays on show so it can be turned off. `placeholder` and `max_values` only apply to the dropdown.
+Chips are meant for a short list the user flips between — a scenario, a version, a few regions or years — and the dropdown stays the default: a filter is drawn as chips only when its author asks for it, or when the AI assistant building the interface judges a short list reads better that way. Past **30 members**, the filter is drawn as the regular dropdown whatever `display` says. `bind`, `default` and `cascade` work the same as on a dropdown; with `cascade`, a member that is on and gets narrowed away stays on show so it can be turned off. `max_values` only applies to the dropdown.
 
 #### Filters bound to a selector
 
