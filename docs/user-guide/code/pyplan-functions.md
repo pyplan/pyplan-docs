@@ -1335,13 +1335,13 @@ Sends a message to the UI. Only used with Pyplan UI.
 
 ## send_notification
 
-send_notification(target_usernames, message, notification_type='general', application_id=None, extra_params=None, notify_live_users=False)
+send_notification(target_usernames, message, notification_type='general', application_id=None, extra_params=None, notify_live_users=False, target_departments=None, target_teams=None, version=None, send_email=False)
 
 ### Summary
-Creates a new app notification for a given user.
+Creates a new app notification for the given users, departments and teams. Recipients see it in the [bell](../notifications-and-messages.md) and in the Notifications component.
 
 ### Args
-- **target_usernames**: (Union[str, List[str]]) Usernames that will receive the notification. It can be a string (single user) or a list of strings.
+- **target_usernames**: (Union[str, List[str], None]) Usernames that will receive the notification. It can be a string (single user), a list of strings, or None when only departments or teams are given.
 - **message**: (str) String with the desired message. It can contain HTML tags for custom formatting.
 - **notification_type**: (Optional[str]) Application section to which the link will redirect the user. Must be one of the following types:
   - 'workflow'
@@ -1360,6 +1360,12 @@ Creates a new app notification for a given user.
   - When **notification_type** is 'scheduler', you may provide a 'task_id' parameter if you want the link to redirect the user to the given task logs.
   - When **notification_type** is 'interface', you must provide an 'interface_id' parameter.
 - **notify_live_users**: (Optional[bool]) If True, users that have the application open will be notified immediately. Default is False.
+- **target_departments**: (Union[str, List[str], None]) Codes of the company departments whose members will receive the notification. Default is None.
+- **target_teams**: (Union[str, List[str], None]) Names of the company teams whose members (the users of the departments with access to the team) will receive the notification. Default is None.
+- **version**: (Optional[str]) Name of the application version that opens when the user clicks the notification. If not supplied, the version currently open is used.
+- **send_email**: (Optional[bool]) If True, each recipient also receives the notification by email, with a button to open it in Pyplan. Default is False.
+
+Each user receives a single notification, even when reached through several usernames, departments or teams. Agents and the user who sends the notification are left out of departments and teams. An unknown department code or team name raises an error.
 
 ### Returns
 - **bool**
@@ -1374,6 +1380,14 @@ pp.send_notification(
     notification_type='interface',
     extra_params={'interface_id': '444ef11c-fec3-4ec8-9297-2a7034ec48b2'},
     notify_live_users=True
+)
+
+pp.send_notification(
+    target_usernames=None,
+    message='The demand plan for November was released.',
+    target_departments=['supply'],
+    target_teams='S&OP',
+    send_email=True
 )
 ```
 
