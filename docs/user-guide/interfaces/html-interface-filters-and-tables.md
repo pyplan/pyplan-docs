@@ -88,7 +88,7 @@ CONTROLS = [
 ```
 
 - On a **single-select** filter (`multi=False`) one chip is always on. It starts on the `default`, on the value of the bound selector, or on the first member. Clicking another chip moves the selection; clicking the one already on does nothing.
-- On a **multi-select** filter each click turns a chip on or off, and a tick marks the ones that are on. **No chip on means no filter** — every member counts, like **All** in a dropdown. The **×** next to the chips turns them all off at once, and several clicks in a row send a single change.
+- On a **multi-select** filter each click turns a chip on or off. **No chip on means no filter** — every member counts, like **All** in a dropdown — so to drop the filter, turn the chips off one by one. Several clicks in a row send a single change.
 
 Chips are meant for a short list the user flips between — a scenario, a version, a few regions or years — and the dropdown stays the default: a filter is drawn as chips only when its author asks for it, or when the AI assistant building the interface judges a short list reads better that way. Past **30 members**, the filter is drawn as the regular dropdown whatever `display` says. `bind`, `default` and `cascade` work the same as on a dropdown; with `cascade`, a member that is on and gets narrowed away stays on show so it can be turned off. `placeholder` and `max_values` only apply to the dropdown.
 
