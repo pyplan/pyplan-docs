@@ -182,6 +182,15 @@ In the Enterprise Application, select **Users and groups**, add the user, and as
 
 When provisioning runs, Pyplan creates or updates the user and company access. Entra changes to the assigned App Role update the Pyplan role and department through the configured mapping. When Entra sends `active: false`, Pyplan deactivates both the user account and the access to the current company. Removing a user from the application follows the same deprovisioning process.
 
+Provisioning respects the [company license](../../user-guide/security-options.md#licenses):
+
+- Creating a user, or adding an existing one to the company, without a free seat for the total or for the mapped role returns **403** with the limit that was reached, and nothing is created. When the mapped role is full but the total has room, an existing user joins with their current role.
+- Activating a user (`active: true`) whose role has no free seat returns **403**.
+- A role change to a role without free seats is skipped, and the user keeps the current role.
+- Deactivating a user (`active: false`) is always accepted.
+
+Entra shows the 403 message in the provisioning logs, so the seat can be freed or a license with more seats requested before retrying.
+
 :::warning
 The literal App Role value `User` is treated as an empty claim because Entra can send it when no explicit App Role is assigned. Use a specific App Role such as `IT`, `QA`, or `Trainee` for users whose Pyplan access must be determined by the mapping.
 :::
