@@ -19,6 +19,8 @@ The filter bar shows one field per dimension. Each field:
 - offers **Select all** (up to 2,000 members by default; past that, narrow the list with the search first) and, for a multi-select field, a button to clear it. A single-select field always holds a value;
 - opens the node's information when you click its label.
 
+A filter with only a few members can instead show them all as **chips**, so the user changes the selection with a single click, without opening a dropdown. See [Chips](#chips) below.
+
 The bar stays pinned at the top of the page while you scroll. Ticking several members in a row sends a single change, when you stop or close the dropdown, and then the widgets the bar refreshes reload.
 
 The selection is remembered while the browser tab lives, so leaving the interface and coming back finds it as you left it. A [custom view](./html-interfaces.md#custom-views) saves it for good.
@@ -69,8 +71,26 @@ The page adds the current selection, as `filters`, to every callback of the inte
 | `bind` | A selector node the filter writes into. See below. |
 | `cascade` | Narrows the members to the ones that exist under the other filters' selection. A filter whose members come from an index also needs `frame`, the DataFrame node to narrow over. |
 | `width`, `placeholder`, `max_values` | How the field looks. |
+| `display` | `'dropdown'` (default) draws the field with its dropdown; `'chips'` shows every member as a chip. See below. |
 
 `self.apply_filters(data, filters)` works with pandas and polars DataFrames and with xarray DataArrays. It matches labels to the column's type and skips the filters whose column the data doesn't have.
+
+#### Chips
+
+With `display='chips'`, the filter shows every member as a **chip** under its label, in the same bar, colors and dark mode as the other fields. One click changes the selection, and the callbacks receive it exactly as they would from a dropdown:
+
+```python
+CONTROLS = [
+    HtmlFilter('scenario', source=['Actual', 'Budget', 'Forecast'], multi=False, display='chips'),
+    HtmlFilter('region', source='regions', display='chips'),
+    HtmlFilter('customer', source='sales_detail.customer'),  # a regular dropdown
+]
+```
+
+- On a **single-select** filter (`multi=False`) one chip is always on. It starts on the `default`, on the value of the bound selector, or on the first member. Clicking another chip moves the selection; clicking the one already on does nothing.
+- On a **multi-select** filter each click turns a chip on or off, and a tick marks the ones that are on. **No chip on means no filter** — every member counts, like **All** in a dropdown. The **×** next to the chips turns them all off at once, and several clicks in a row send a single change.
+
+Chips are meant for a short list the user flips between — a scenario, a version, a few regions or years — and the dropdown stays the default: a filter is drawn as chips only when its author asks for it, or when the AI assistant building the interface judges a short list reads better that way. Past **30 members**, the filter is drawn as the regular dropdown whatever `display` says. `bind`, `default` and `cascade` work the same as on a dropdown; with `cascade`, a member that is on and gets narrowed away stays on show so it can be turned off. `placeholder` and `max_values` only apply to the dropdown.
 
 #### Filters bound to a selector
 
@@ -102,6 +122,7 @@ A table of the standard library offers, with no code from the author:
 - **Drilldown** — click a row label (or a column heading) and choose **Drilldown by** a dimension to open its detail; click again to close it.
 - **Levels** — click a dimension's name to show it by levels (for a date: year, quarter and month) and choose how levels roll up (sum, average, maximum, minimum or count).
 - **Layout** — the layout button beside the table's title opens a panel to drag fields between rows, columns and values, change each value's aggregation and turn subtotals on or off. Changes apply at once or, with live update off, when you apply them.
+- **Read grouped rows while scrolling** — with several fields in rows, a group's label is written once, on its first row. Once that row scrolls out of sight, the first row in view shows, a shade lighter, the label of every group it belongs to, so each dimension's value stays readable whatever the scroll.
 - **Pick cells** like in a spreadsheet — click, drag, Shift + click, arrows, Ctrl/⌘ + A. The footer shows the sum, average and count of the picked cells; right-click it to add others (minimum, maximum…).
 - **Copy** — Ctrl/⌘ + C copies the picked cells, ready to paste into Excel. The right-click menu also copies them as shown, with headings, or the whole table.
 - **Export** — **Export table…**, on the right-click menu, downloads the whole table — every row, with your filters and layout — to Excel or CSV, as you see it or as a list.
@@ -159,6 +180,7 @@ On the page, the table loads itself as a widget, named by its container's `data-
 | `calculated`, `calculated_rows` | Measures or rows computed from others (a margin, a variance). |
 | `render` | Inline visuals in cells: bars, heat colors, chips, sparklines, deltas. |
 | `tone` | Colors a value as good, bad or a warning. |
+| `merge_repeated` | `False` writes a label on every row instead of once per group. While it is on (the default, except on an editable table), the label of each group stays visible on the first row in view as the table scrolls. |
 | `drilldown`, `hierarchies`, `filterable`, `selectable` | Turn on or restrict drilldown, levels, column filters and row picking. For an index with a hierarchy map, `hierarchies=self.index_hierarchies('products')` takes its levels from the model. |
 | `frozen`, `frozen_rows`, `page_size` | Frozen columns or rows, and rows per page. |
 | `configurable`, `cell_selection`, `cell_stats`, `excel` | Turn off the layout panel, cell picking, the footer statistics or the Excel button. |
