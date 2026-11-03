@@ -92,7 +92,7 @@ CONTROLS = [
 - On a **multi-select** filter each click turns a chip on or off. **No chip on means no filter** — every member counts, like **All** in a dropdown. Several clicks in a row send a single change.
 - A multi-select filter starts its row with an **All** chip, which is on while no member is. Clicking **All** turns every other chip off and drops the filter; clicking any other chip turns **All** off. It shows the same text as an empty dropdown: **All**, translated, or the filter's `placeholder`. To leave it out, declare the filter with `all_chip=False`; then, to drop the filter, turn the chips off one by one. A single-select filter has no **All** chip.
 
-Chips are meant for a short list the user flips between — a scenario, a version, a few regions or years — and the dropdown stays the default: a filter is drawn as chips only when its author asks for it, or when the AI assistant building the interface judges a short list reads better that way. Past **30 members**, the filter is drawn as the regular dropdown whatever `display` says. `bind`, `default` and `cascade` work the same as on a dropdown; with `cascade`, a member that is on and gets narrowed away stays on show so it can be turned off. `max_values` only applies to the dropdown.
+Chips are meant for a short list the user flips between — a scenario, a version, a few regions or years — and the dropdown stays the default: a filter is drawn as chips only when its author asks for it, or when the AI assistant building the interface judges a short list reads better that way. Past **30 members**, the filter is drawn as the regular dropdown whatever `display` says. `bind`, `default` and `cascade` work the same as on a dropdown. **All** on a bound filter selects every option of the selector, so a selector with every option selected opens with **All** on. With `cascade`, a member that is on and gets narrowed away stays on show so it can be turned off. `max_values` only applies to the dropdown.
 
 #### Filters bound to a selector
 
@@ -182,7 +182,7 @@ On the page, the table loads itself as a widget, named by its container's `data-
 | `calculated`, `calculated_rows` | Measures or rows computed from others (a margin, a variance). |
 | `render` | Inline visuals in cells: bars, heat colors, chips, sparklines, deltas. |
 | `tone` | Colors a value as good, bad or a warning. |
-| `merge_repeated` | `False` writes a label on every row instead of once per group. While it is on (the default, except on an editable table), the label of each group stays visible on the first row in view as the table scrolls. |
+| `merge_repeated` | `False` writes a label on every row instead of once per group. While it is on (the default, except on a table edited row by row), the label of each group stays visible on the first row in view as the table scrolls. |
 | `drilldown`, `hierarchies`, `filterable`, `selectable` | Turn on or restrict drilldown, levels, column filters and row picking. For an index with a hierarchy map, `hierarchies=self.index_hierarchies('products')` takes its levels from the model. |
 | `frozen`, `frozen_rows`, `page_size` | Frozen columns or rows, and rows per page. |
 | `configurable`, `cell_selection`, `cell_stats`, `excel` | Turn off the layout panel, cell picking, the footer statistics or the Excel button. |
