@@ -1352,8 +1352,7 @@ Creates a new app notification for the given users, departments and teams. Recip
   - 'version_manager'
   - 'scenario_manager'
   - 'app_consolidation'
-  - 'interface_links'
-  - 'external_link_endpoints'
+  - 'automation_tests'
   - 'general' (default): in this case, the notification will not redirect anywhere.
 - **application_id**: (Optional[str]) ID of the application. It will use the current application ID if it is not supplied.
 - **extra_params**: (Optional[dict]) Dictionary with additional parameters to be supplied:

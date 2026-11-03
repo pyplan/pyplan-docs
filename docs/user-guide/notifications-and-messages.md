@@ -47,7 +47,7 @@ We write a message with the **+** (**New message**) button of the panel, or of t
 - **Link to**: where the message takes its recipients.
   - **None**: the message is only text.
   - **Interface**: an interface of the open application. It starts with the interface we have open, and we can pick another one.
-  - **Section**: My tasks, Scheduled tasks, Versions, Scenarios, Files, or Code.
+  - **Section**: My tasks, Scheduled tasks, Versions, Scenarios, Files, Code, or Automation tests.
 - **Also send by email**: checked by default. Each recipient also receives the message by email, with a button that opens it in Pyplan: it asks them to log in if needed, and then opens the application and version and goes to the interface or section the message is linked to.
 
 Linking a message requires an open application. By default the message is linked to the application and version we have open. In **Advanced options** we can leave the application out, or keep the application without tying the message to our version.
