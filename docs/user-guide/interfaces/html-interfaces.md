@@ -140,7 +140,7 @@ The same id ties the three sides together: the node in `WIDGET_NODES`, `pyplan.w
 
 ### KPIs, charts and dialogs
 
-- **KPI cards** — `pyplan.ui.kpis(element, specs)` renders a row of cards, each with a title, a value, a comparison badge (`delta`), an optional sparkline (`spark`) and a footer. A card's `node` makes its title open the node's information, and `link` turns it into a link to another interface.
+- **KPI cards** — `pyplan.ui.kpis(element, specs)` renders a row of cards, each with a title, a value, a comparison badge (`delta`), an optional sparkline (`spark`) and a footer. A card's `node` makes its title open the node's information, and `link` turns it into a link to another interface. The cards fill as many columns as the width allows and move to a new row below that; with `{ singleRow: true }` they stay on one row and shrink with the screen, and only on a narrow one, such as a phone's, do they still break into rows.
 - **Charts** — `pyplan.chart.plot(element, traces, layout)` draws a [Plotly](https://plotly.com/javascript/) chart with Pyplan's palette, fonts and number format. It repaints when the user switches between light and dark, keeps the user's zoom when its data reloads and resizes with its card. The interface loads Plotly itself, with a fixed version (for example `https://cdn.plot.ly/plotly-2.35.2.min.js`).
 - **Dialogs** — `pyplan.ui.dialog({title, subtitle, onPrev, onNext})` opens a modal over the page, closed with Esc, the × button or a click outside. With `onPrev`/`onNext` the user can move between records with arrows. Its body holds the same widgets as the page, a table included.
 
@@ -245,7 +245,7 @@ As with component interfaces, each user can keep several **custom views** of an 
 A custom view of an HTML interface saves how the page is set up:
 
 - the selection of its filters;
-- for each table, its order, column filters, drilldown, levels and layout;
+- for each table, its order, column filters, drilldown, levels, layout and frozen columns;
 - the small view state the page keeps with `pyplan.state` (a chosen tab, a collapsed panel).
 
 It doesn't save the page's code, so a view keeps working when the interface is edited. Nor does it save a table's page, its picked rows or its scroll: each table opens on its first page.
