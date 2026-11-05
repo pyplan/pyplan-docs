@@ -119,7 +119,7 @@ The **Default settings** tab lets us define default visual and behavioral settin
 
 ![Default Settings](../img/app-management/default_settings.png)
 
-The tab is organized into five sections.
+The tab is organized into six sections.
 
 ### Component options
 
@@ -163,6 +163,23 @@ Below these options, cell colors can be defined separately for **Light theme** a
 | **Editable cell text color** | Text color for cells that accept input. |
 | **Labels background color** | Background color for row and column label cells. |
 | **Labels text color** | Text color for row and column label cells. |
+
+### Form and InputCube options
+
+![Form and InputCube options](../img/app-management/default_settings_form_options.png)
+
+These options define when a form or input cube component **invalidates its outputs**, that is, when the nodes that depend on its data are marked to be recalculated the next time they are needed. Like the rest of the default settings, they are saved with the current version of the application.
+
+| Option | Default | Description |
+|---|---|---|
+| **Invalidate outputs on change** | Enabled | Invalidates the outputs each time a user edits, adds or removes data in the component. |
+| **Invalidate outputs on confirm** | Disabled | Invalidates the outputs when a user confirms the changes made in the component. |
+
+Each component can override these values from its **Form properties** or **Input cube properties** menu while we edit the interface. There, the **Invalidate outputs on change** and **Invalidate outputs on confirm** checkboxes show the value of this tab until we check or uncheck them; from then on, the component keeps its own value even if we change the default settings.
+
+:::info
+Form and input cube components saved with an earlier version of Pyplan keep the value they had, regardless of this tab. The exception is forms created before these checkboxes existed and not saved again since: they follow this tab, so while it keeps its default values they behave as before. To fix their behavior, it is enough to check or uncheck the checkbox once in their properties menu, leaving it at the value we need.
+:::
 
 ### Chart options
 
