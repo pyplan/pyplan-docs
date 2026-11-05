@@ -123,14 +123,14 @@ A table of the standard library offers, with no code from the author:
 - **Filter columns** — the funnel on a heading filters by members, or by a condition on numbers (equal, greater than, between…).
 - **Drilldown** — click a row label (or a column heading) and choose **Drilldown by** a dimension to open its detail; click again to close it.
 - **Levels** — click a dimension's name to show it by levels (for a date: year, quarter and month) and choose how levels roll up (sum, average, maximum, minimum or count).
-- **Layout** — the layout button beside the table's title opens a panel to drag fields between rows, columns and values, change each value's aggregation and turn subtotals on or off. Changes apply at once or, with live update off, when you apply them.
+- **Layout** — the layout button beside the table's title opens a panel to drag fields between rows, columns and values, change each value's aggregation and turn subtotals on or off. In a table that lists its rows (nothing in values), the pin beside each column freezes the columns up to that one, so they stay in view while the rest scroll; in a summary the row labels are frozen on their own. Changes apply at once or, with live update off, when you apply them.
 - **Read grouped rows while scrolling** — with several fields in rows, a group's label is written once, on its first row. Once that row scrolls out of sight, the first row in view shows, a shade lighter, the label of every group it belongs to, so each dimension's value stays readable whatever the scroll.
 - **Pick cells** like in a spreadsheet — click, drag, Shift + click, arrows, Ctrl/⌘ + A. The footer shows the sum, average and count of the picked cells; right-click it to add others (minimum, maximum…).
 - **Copy** — Ctrl/⌘ + C copies the picked cells, ready to paste into Excel. The right-click menu also copies them as shown, with headings, or the whole table.
 - **Export** — **Export table…**, on the right-click menu, downloads the whole table — every row, with your filters and layout — to Excel or CSV, as you see it or as a list.
 - **Excel** — the Excel button beside the title downloads the table to Excel or opens it with the Pyplan Excel add-in. On an [editable table](./html-interface-editing-data.md) it also offers to download it to edit in Excel and bring the edited sheet back. The button needs permission to export components, and the author can hide it with `excel=False`.
 
-The table remembers its page, order, filters, drilldown, levels and layout while the browser tab lives; a [custom view](./html-interfaces.md#custom-views) saves them, except the page. **Refresh** puts the table back as defined. Exporting requires permission to export components.
+The table remembers its page, order, filters, drilldown, levels, layout and frozen columns while the browser tab lives; a [custom view](./html-interfaces.md#custom-views) saves them, except the page. **Refresh** puts the table back as defined. Exporting requires permission to export components.
 
 ### Building a table
 
