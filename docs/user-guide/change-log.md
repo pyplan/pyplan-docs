@@ -10,6 +10,20 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.24
 
+### Version 3.24.3 - 2026-11-05
+- Updates
+  - **Enable users to send short notifications to each other through the notification bell and widget.**
+  - **Add a 'Support' menu in Pyplan that opens Pyplan Support with a signed token.**
+  - **Optimize HTML interface components to improve layout and reduce unnecessary column widths.**
+  - Adjust the width of modals or version columns to prevent horizontal scrolling.
+  - Make the default invalidation of forms and input cubes configurable in the version's Default settings.
+  - Correct the hover text for 'Has documentation' to better indicate that the node has documentation.
+- Fixed Issues
+  - Fixed an issue where the login action to open an app was executed even when the user had denied access.
+  - Fixed an issue where the last column of a table was displayed first, disrupting the chronological order.
+  - Fixed an issue where consolidation failed if the version name had a trailing space.
+  - Minor fixes.
+
 ### Version 3.24.2 - 2026-11-03
 - Updates
   - **Improve performance of HTML interfaces by analyzing caching options for CDN elements.**
