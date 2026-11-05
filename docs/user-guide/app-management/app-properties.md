@@ -119,7 +119,7 @@ The **Default settings** tab lets us define default visual and behavioral settin
 
 ![Default Settings](../img/app-management/default_settings.png)
 
-The tab is organized into six sections.
+The tab is organized into seven sections.
 
 ### Component options
 
@@ -164,21 +164,40 @@ Below these options, cell colors can be defined separately for **Light theme** a
 | **Labels background color** | Background color for row and column label cells. |
 | **Labels text color** | Text color for row and column label cells. |
 
-### Form and InputCube options
+### Form options
 
-![Form and InputCube options](../img/app-management/default_settings_form_options.png)
+![Form options](../img/app-management/default_settings_form_options.png)
 
-These options define when a form or input cube component **invalidates its outputs**, that is, when the nodes that depend on its data are marked to be recalculated the next time they are needed. Like the rest of the default settings, they are saved with the current version of the application.
+These options define how form components behave unless they set their own value. Like the rest of the default settings, they are saved with the current version of the application. To **invalidate the outputs** of a component means to mark the nodes that depend on its data to be recalculated the next time they are needed.
 
 | Option | Default | Description |
 |---|---|---|
-| **Invalidate outputs on change** | Enabled | Invalidates the outputs each time a user edits, adds or removes data in the component. |
-| **Invalidate outputs on confirm** | Disabled | Invalidates the outputs when a user confirms the changes made in the component. |
+| **Invalidate outputs on change** | Enabled | Invalidates the outputs each time a user edits, adds or removes data in the form. |
+| **Invalidate outputs on confirm** | Disabled | Invalidates the outputs when a user confirms the changes made in the form. |
+| **Confirm on change** | Disabled | Confirms each change as soon as it is made, so the form does not show the **Confirm** and **Cancel** buttons. |
+| **Update calculated columns on change** | Enabled | Recalculates the calculated columns each time a user edits, adds or removes data. When disabled, editing data does not invalidate the outputs either. |
+| **Update calculated columns on confirm** | Enabled | Recalculates the calculated columns when a user confirms the changes. |
+| **Show Select columns icon** | Enabled | Shows the toolbar icon to choose which columns are visible. |
+| **Show Edit in Excel icon** | Enabled | Shows the toolbar icon to edit the form data in Excel. |
+| **Hide ID column** | Enabled | Hides the column that holds the identifier of each row. |
 
-Each component can override these values from its **Form properties** or **Input cube properties** menu while we edit the interface. There, the **Invalidate outputs on change** and **Invalidate outputs on confirm** checkboxes show the value of this tab until we check or uncheck them; from then on, the component keeps its own value even if we change the default settings.
+### Input cube options
+
+![Input cube options](../img/app-management/default_settings_input_cube_options.png)
+
+These options define how input cube components behave unless they set their own value. They are independent from the **Form options**: changing one section does not affect the other type of component.
+
+| Option | Default | Description |
+|---|---|---|
+| **Invalidate outputs on change** | Enabled | Invalidates the outputs each time a user edits data in the input cube. |
+| **Invalidate outputs on confirm** | Disabled | Invalidates the outputs when a user confirms the changes made in the input cube. |
+| **Confirm on change** | Disabled | Confirms each change as soon as it is made, so the input cube does not show the **Confirm** and **Cancel** buttons. |
+| **Update calculated columns on change** | Enabled | Refreshes the values shown in the input cube, such as its totals, each time a user edits data. When disabled, the edits stay pending without refreshing the view, and the outputs are not invalidated on change. |
+
+Each form or input cube can override the values of its section from its **Form properties** or **Input cube properties** menu while we edit the interface. There, each checkbox shows the value of this tab until we check or uncheck it; from then on, the component keeps its own value even if we change the default settings.
 
 :::info
-Form and input cube components saved with an earlier version of Pyplan keep the value they had, regardless of this tab. The exception is forms created before these checkboxes existed and not saved again since: they follow this tab, so while it keeps its default values they behave as before. To fix their behavior, it is enough to check or uncheck the checkbox once in their properties menu, leaving it at the value we need.
+Form and input cube components saved with an earlier version of Pyplan keep the value they had, regardless of this tab. The exception is components created before one of these checkboxes existed: for that option they follow this tab, so while it keeps its default value they behave as before. To fix their behavior, it is enough to check or uncheck the checkbox once in their properties menu, leaving it at the value we need.
 :::
 
 ### Chart options
