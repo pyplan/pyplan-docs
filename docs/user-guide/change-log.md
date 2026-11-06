@@ -12,7 +12,7 @@ All notable changes to Pyplan will be documented in this page:
 
 ### Version 3.24.3 - 2026-11-05
 - Updates
-  - **Enable users to send short notifications to each other through the notification bell and widget.**
+  - **Enable users to send short notifications to each other through the notification bell and widget.** ([Notifications](/user-guide/notifications-and-messages))
   - **Add a 'Support' menu in Pyplan that opens Pyplan Support with a signed token.**
   - **Optimize HTML interface components to improve layout and reduce unnecessary column widths.**
   - Adjust the width of modals or version columns to prevent horizontal scrolling.
