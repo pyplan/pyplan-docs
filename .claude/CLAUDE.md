@@ -15,9 +15,14 @@ npm run build        # production build into build/ — this is the CI gate (see
 npm run serve        # serve the built site at :3333
 npm run typecheck    # tsc, no emit
 npm run clear        # clear the .docusaurus cache (use when the dev server behaves oddly)
+node legal/third-party-licenses/license-check.mjs check                  # third-party license check
+node legal/third-party-licenses/license-check.mjs check --update-readme  # and refresh its README state
+node --test legal/third-party-licenses/tests/*.test.mjs                  # tests of that tool
 ```
 
-There is no test suite. **`npm run build` is the only validation gate** — every PR runs it (`.github/workflows/test-build.yml`) and a merge to `main` rebuilds and deploys (`deploy.yml`). Before considering content changes done, run `npm run build` to catch broken links and MDX parse errors.
+The site has no test suite. **`npm run build` is the only validation gate** — every PR runs it (`.github/workflows/test-build.yml`) and a merge to `main` rebuilds and deploys (`deploy.yml`). Before considering content changes done, run `npm run build` to catch broken links and MDX parse errors.
+
+Licenses are not checked in CI (the GitHub workflows only build and deploy): whenever a change adds, upgrades or removes an npm dependency, run the `license-check` skill (`.claude/skills/license-check/`) before handing it over. It runs `node legal/third-party-licenses/license-check.mjs check`, which blocks a production dependency with a forbidden license that is not in `allowlist.json` and fails when the generated *Estado actual* block of `legal/third-party-licenses/README.md` is out of date (fix: `check --update-readme`). `legal/` is outside `docs/`, so it is not published on the site.
 
 ## Content architecture
 

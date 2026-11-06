@@ -1,0 +1,3 @@
+{
+  "_description": "Excepciones aprobadas al control de licencias. La clave lleva versión o patrón por major (paquete@14.*): una versión fuera del patrón, que puede cambiar de licencia, vuelve a revisión. Se agregan por PR, con el motivo."
+}
