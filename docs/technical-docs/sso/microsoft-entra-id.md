@@ -72,6 +72,10 @@ The **Sign SAML assertion** setting is mandatory.
 
 In addition to SAML sign-in, Pyplan supports **SCIM 2.0 automatic provisioning** from Microsoft Entra ID. SCIM keeps user access synchronized with Entra ID, including user creation, updates, deactivation, reactivation, and removal from a company.
 
+Below we show the high-level integration flow for SCIM provisioning:
+
+![SCIM provisioning flow diagram](../img/sso/scim-provisioning-flow.png)
+
 :::info
 Automatic provisioning to a custom SCIM application requires Microsoft Entra ID P1, or a Microsoft subscription that includes it. Licenses are required only for the users being provisioned.
 :::
@@ -155,9 +159,9 @@ Configure the company role mapping in Pyplan with the Entra App Role values as k
 		"Trainee": "Explorer"
 	},
 	"department": {
-		"IT": ["pyplan-default", "guest", "social_account"],
-		"QA": "guest",
-		"Trainee": "pyplan-default"
+		"IT": "IT",
+		"QA": "QA",
+		"Trainee": "Trainee"
 	}
 }
 ```
