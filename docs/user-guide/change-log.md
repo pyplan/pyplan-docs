@@ -10,6 +10,17 @@ All notable changes to Pyplan will be documented in this page:
 
 ## Version 3.24
 
+### Version 3.24.4 - 2026-11-07
+- Updates
+  - **Implement caching for HTML interfaces to reduce full reloads when switching between them.**
+  - **Add a property in app configuration to define where to store and retrieve cached HTML resources, allowing options for Default (shared) and Application.**
+  - Include the path of each interface in the response of the 'list_interfaces' tool.
+  - Enable full name search (First Name + Last Name) in the User Manager to improve user lookup functionality.
+- Fixed Issues
+  - Fixed an issue where the calculation time for a node evaluating others was being counted twice in the Performance console.
+  - Fixed translation issues in nodes and interfaces, ensuring proper behavior when the application language is not set.
+  - Minor fixes.
+
 ### Version 3.24.3 - 2026-11-05
 - Updates
   - **Enable users to send short notifications to each other through the notification bell and widget.** ([Notifications](/user-guide/notifications-and-messages))
