@@ -150,8 +150,74 @@ When creating a new company, define:
 To activate a new company, assign a Pyplan license, which determines:
 - For how long the company is enabled.
 - The maximum number of users allowed.
+- Optionally, the maximum number of users for specific roles.
 
 ![Company Update](./img/security-options/company_update.png)
+
+### Licenses
+
+The license is pasted in the **License** field of **Company Manager → select the company → Update**. Each license belongs to one company: it carries the company's **Activation code**, shown in the field above it.
+
+#### How seats are counted
+
+A seat is taken by each **active member** of the company. The following users do not take one:
+
+- Inactive users.
+- System users, such as the task executors, the `super` user and the company guest user (`<company_code>-guest`).
+
+A role limit counts the members that hold that role. Both the roles of the company and the global roles, such as **Administrator** or **Creator**, count. Roles of other companies never do.
+
+Limits are exact: a role limited to 5 allows exactly 5 members with it. Role names are matched without distinguishing upper and lower case, so a limit on `analyst` applies to a role called `Analyst`.
+
+#### Checking a license before saving it
+
+When we paste a license different from the stored one, the information next to the field shows **the pasted license**, before we save anything:
+
+- Its expiration date, the licenses assigned, occupied and available.
+- **Seats by role**: a bar for each role it limits, with the occupied seats and the limit. The bar turns amber when the role is full and red, with an **Exceeded** label, when it is over its limit. A name that matches no role of the company is labeled **No matching role**. When the license limits many roles, the list scrolls.
+- Its warnings, if any.
+
+![License preview before saving](./img/security-options/company_license_preview.png)
+
+Warnings do not block saving: the license is stored and the same warnings appear once more after **Update**. They are:
+
+- **A role over its limit.** The members keep working, but no users can be added to that role until the license is updated.
+- **A limit for a role the company does not have.** Usually a typo, or a role renamed after the license was issued.
+
+![License saved with warnings](./img/security-options/license_saved_with_warnings.png)
+
+An invalid license — expired, or issued for another company — is not saved. The reason is shown under the field while we edit it, and again if we press **Update**.
+
+![Invalid license](./img/security-options/company_license_invalid.png)
+
+#### When the license is exceeded
+
+A company can end up with more members than seats, for example after a license is renewed with fewer seats. In that case:
+
+- **Users can still log in.** Only an invalid license, such as an expired one, blocks the login.
+- **Administrators are warned** when they log in. The notice lists the exceeded limits:
+
+  ![License seats exceeded notice](./img/security-options/license_seats_exceeded.png)
+
+- **No users can be added to an exceeded limit**: creating a user, adding a company to a user, activating a user or giving a user that role fails with the limit that was reached. The same applies to the users created or updated by [SAML](#license-seats-and-saml-sign-in) and SCIM.
+
+  ![Role limit reached in the user wizard](./img/security-options/user_wizard_license_error.png)
+
+Removing users from a role, deactivating them or removing them from the company is always allowed.
+
+#### When the license is invalid
+
+When the license has expired, or is not valid for the company, choosing the company at login opens the **License information** dialog. It shows the reason and the activation code, so a new license can be requested and pasted there.
+
+![Invalid license at login](./img/security-options/login_invalid_license.png)
+
+As in the Company Manager, a pasted license that is not valid shows its reason under the field, and a valid one with warnings is saved and shows them after the login.
+
+#### Renaming roles limited by a license
+
+A license limits roles **by name**. To keep a limit from being bypassed, a role named in the license of its company cannot be renamed: the license has to be issued with the new name first. For a global role, every company's license is checked.
+
+Changing only the upper or lower case of the name is allowed, because it does not change the limit it matches.
 
 Manage company-level preferences by selecting a company and clicking the **Preferences** button.
 
@@ -321,6 +387,30 @@ To define default roles and departments based on values from Active Directory, a
     }
 }
 ```
+
+By default the mapping only applies when a user is created. Add `"sync_mode": true` to apply it on every login, so that role and department changes made in the identity provider reach existing users too.
+
+### License seats and SAML sign-in
+
+SAML follows the same [license rules](#licenses) as the User Manager:
+
+| Situation | Result |
+| --- | --- |
+| New user, with a free seat for the total and for the mapped role | The user is created with the mapped role and departments. |
+| New user, without a free seat | The user is not created and the login fails with the limit that was reached. |
+| Existing member of the company | Always logs in, even if the license is exceeded. |
+| Existing member, `sync_mode` maps a role without free seats | Logs in keeping the current role; the role change is skipped and logged. |
+| User of another company logging in for the first time, with `sync_mode` | Joins the company if there is a free seat, with the mapped role or, if that role is full, with the current one. Without a free seat the login fails. |
+
+A failed login shows the reason, for example:
+
+```
+Authentication Error.
+Access Denied.
+Pyplan - Maximum number of users for the group Administrator has been reached. Contact your system administrator
+```
+
+so the user can forward it to an administrator, who has to free a seat or request a license with more.
 
 ## Grant/Deny Access to Information
 
