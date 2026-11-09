@@ -69,6 +69,15 @@ New HTML Visualization components come with the same standard components as [HTM
 
 Components created before this feature keep working exactly as they did; nothing changes for them.
 
+### Where the data comes from
+
+| The component shows | Its data |
+|---|---|
+| Only things to look at: KPI cards, charts, text | Written into the page by `render()` from `df`, with `self.embed_json(value)`, which writes a value as JSON that is safe inside a `<script>`. |
+| A table, or anything the user acts on: sorting, column filters, drilldown, paging, buttons, edits | Loaded by each widget from a `@callback`, with a page that holds no data (see below). |
+
+When the data is written into the page, every filter change of the interface loads the frame again. That is fine for KPIs and charts, but a table would lose its page, its order and its scroll; so a component with a table loads all its data from callbacks. One component per widget on the grid (KPIs, a chart and a table as three components) keeps each one simple.
+
 ### Loading data from callbacks
 
 The page of the component asks its data from methods of the component class marked with `@callback`, through `pyplan.callback(...)`, just like an HTML interface does. Inside a callback, `self.get_filtered_data()` returns the component's data with the interface's filters applied:
@@ -125,13 +134,13 @@ component: MyComponent = MyComponent.model_validate(component_definition)
 result = component
 ```
 
-When a filter of the interface changes and `render()` returns the same HTML, the page is not loaded again: every widget registered with `pyplan.widget` loads its data again, so a table keeps its page, its order and its scroll. If you prefer, `render()` can still write the data straight into the HTML; `self.embed_json(value)` writes a value as JSON that is safe inside a `<script>`. A table drawn from data written into the HTML (`pyplan.ui.table('#t', { payload })`) shows its first page and does not sort, filter or page.
+When a filter of the interface changes and `render()` returns the same HTML, the page is not loaded again: every widget registered with `pyplan.widget` loads its data again, so a table keeps its page, its order and its scroll. A table drawn from data written into the HTML (`pyplan.ui.table('#t', { payload })`) shows its first page and does not sort, filter or page.
 
 ### Tables and editing
 
 `pyplan.ui.table` works as in HTML interfaces: `HtmlTable(df, ...).respond(request)` sorts, filters and pages on the server, over all the rows, and over a form node `edit=HtmlEdit(...)` lets the user type into it. Its Excel button downloads the table and brings an edited sheet back; the workbook linked to the Excel add-in is only available in HTML interfaces. See [filters and tables](../html-interface-filters-and-tables.md#tables) and [editing data](../html-interface-editing-data.md).
 
-When a callback changes the model, the other components of the interface that show the affected nodes render again on their own. Inside a callback, read other nodes with `self.model.getNode('node_id').result`, and use `self.html_helpers` for the helpers of HTML interfaces, such as `set_input` or `set_form_values`.
+When a callback changes the model, the other components of the interface that show the affected nodes render again on their own. Inside a callback, or `render()`, read another node by its id as in a node definition (`float(total_demand.sum())`), which reads the node's result when the method runs; a parameter or variable of the method with the same name is that variable, not the node. `self.model.getNode('node_id').result` works too. Use `self.html_helpers` for the helpers of HTML interfaces, such as `set_input` or `set_form_values`.
 
 ### Sandboxing
 
