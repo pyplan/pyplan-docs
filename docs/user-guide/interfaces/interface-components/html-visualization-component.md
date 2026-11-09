@@ -63,6 +63,89 @@ A few things to know about the render code:
 
 Inside `render()` you can build charts with **Plotly** (`plotly.graph_objects` / `plotly.express`) and export them to HTML. In the HTML itself you can pull in any public CDN — Chart.js, D3, Plotly.js, Tailwind, Bootstrap, Google Fonts, Font Awesome — since the output runs in its own `iframe`.
 
+## Pyplan's standard components
+
+New HTML Visualization components come with the same standard components as [HTML interfaces](../html-interfaces.md#kpis-charts-and-dialogs): KPI cards (`pyplan.ui.kpis`), server-driven tables (`pyplan.ui.table`), charts with Pyplan's look (`pyplan.chart.plot`) and dialogs (`pyplan.ui.dialog`), along with Pyplan's design tokens and classes, its light and dark themes, and the user's language and number format. A dashboard built from them looks like the rest of Pyplan without any CSS of its own.
+
+Components created before this feature keep working exactly as they did; nothing changes for them.
+
+### Where the data comes from
+
+| The component shows | Its data |
+|---|---|
+| Only things to look at: KPI cards, charts, text | Written into the page by `render()` from `df`, with `self.embed_json(value)`, which writes a value as JSON that is safe inside a `<script>`. |
+| A table, or anything the user acts on: sorting, column filters, drilldown, paging, buttons, edits | Loaded by each widget from a `@callback`, with a page that holds no data (see below). |
+
+When the data is written into the page, every filter change of the interface loads the frame again. That is fine for KPIs and charts, but a table would lose its page, its order and its scroll; so a component with a table loads all its data from callbacks. One component per widget on the grid (KPIs, a chart and a table as three components) keeps each one simple.
+
+### Loading data from callbacks
+
+The page of the component asks its data from methods of the component class marked with `@callback`, through `pyplan.callback(...)`, just like an HTML interface does. Inside a callback, `self.get_filtered_data()` returns the component's data with the interface's filters applied:
+
+```python
+import pyplan_core.interface.components.core as ppc
+from pyplan_core.html_interface import HtmlTable, callback
+from pyplan_core.interface.components.events import BaseEvent
+
+
+class MyComponent(ppc.HtmlVisualization):
+
+    def render(self, df: pd.DataFrame, event: BaseEvent = None, **kwargs) -> str:
+        return """<!doctype html>
+<html>
+<head></head>
+<body>
+  <div class="pp-page">
+    <div id="kpis" data-pyplan-widget="kpis" data-pyplan-skeleton="kpis"></div>
+    <div class="card pp-table-card">
+      <div id="detail" data-pyplan-widget="detail" data-pyplan-skeleton="table"></div>
+    </div>
+  </div>
+  <script>
+    pyplan.widget('kpis', async () => {
+      const kpis = await pyplan.callback('get_kpis');
+      pyplan.ui.kpis('#kpis', kpis.map((kpi) => ({
+        title: kpi.title,
+        value: pyplan.fmt.num(kpi.value)
+      })));
+    });
+    pyplan.ui.table('#detail', { callback: 'get_detail' });
+    pyplan.loadAll();
+  </script>
+</body>
+</html>"""
+
+    @callback
+    def get_kpis(self) -> list:
+        df = self.get_filtered_data()
+        numbers = df.select_dtypes('number')
+        return [
+            {'title': str(column), 'value': float(numbers[column].sum())}
+            for column in numbers.columns[:4]
+        ]
+
+    @callback
+    def get_detail(self, request: dict = None) -> dict:
+        df = self.get_filtered_data()
+        return HtmlTable(df, rows=['region', 'product']).respond(request)
+
+
+component: MyComponent = MyComponent.model_validate(component_definition)
+result = component
+```
+
+When a filter of the interface changes and `render()` returns the same HTML, the page is not loaded again: every widget registered with `pyplan.widget` loads its data again, so a table keeps its page, its order and its scroll. A table drawn from data written into the HTML (`pyplan.ui.table('#t', { payload })`) shows its first page and does not sort, filter or page.
+
+### Tables and editing
+
+`pyplan.ui.table` works as in HTML interfaces: `HtmlTable(df, ...).respond(request)` sorts, filters and pages on the server, over all the rows, and over a form node `edit=HtmlEdit(...)` lets the user type into it. Its Excel button downloads the table and brings an edited sheet back; the workbook linked to the Excel add-in is only available in HTML interfaces. See [filters and tables](../html-interface-filters-and-tables.md#tables) and [editing data](../html-interface-editing-data.md).
+
+When a callback changes the model, the other components of the interface that show the affected nodes render again on their own. Inside a callback, or `render()`, read another node by its id as in a node definition (`float(total_demand.sum())`), which reads the node's result when the method runs; a parameter or variable of the method with the same name is that variable, not the node. `self.model.getNode('node_id').result` works too. Use `self.html_helpers` for the helpers of HTML interfaces, such as `set_input` or `set_form_values`.
+
+### Sandboxing
+
+The page of the component runs in the same kind of [sandboxed frame](../html-interfaces.md#security-and-sandboxing) as an HTML interface: it cannot reach the surrounding application, its cookies or the browser's local storage, and it talks to the model only through its callbacks. Load libraries and fonts with `pyplan.use(...)`, which downloads them once for every frame of the interface.
+
 ## Adding the component
 
 1. In an interface in **edit mode**, open the components menu and drag the **HTML Visualization** component onto the grid.
@@ -100,7 +183,7 @@ Pyplan offers several ways to work with HTML. It helps to know how they differ:
 |---|---|---|
 | **[Rich Text component](./rich-text-component.md)** | Static formatted content (text, images, links) written in a visual or code editor. | Headers, descriptions, instructions, branding — content that does not depend on a Pyplan node data. |
 | **[HTML Menu component](./html-menu-component.md)** | A block of hand-written HTML wired to actions through an actions table (clicks open interfaces, run nodes, send attributes…). | A custom card, banner, or interactive block whose markup you write yourself. |
-| **HTML Visualization component** | A node's data transformed into custom HTML by a Python `render()` method, shown in an `iframe`. | A data-driven visualization (chart, KPI dashboard, styled table) that reacts to Pyplan node changes and to filters. |
+| **HTML Visualization component** | A node's data transformed into custom HTML by a Python `render()` method, shown in an `iframe`, with the standard components of HTML interfaces. | A data-driven visualization (chart, KPI dashboard, styled table) that reacts to Pyplan node changes and to filters. |
 | **[HTML interface](../html-interfaces.md)** | The *whole interface* is a self-contained web page calling Python callbacks. | A fully custom screen or tool, not a single component on a grid. |
 
 The key distinction: the **Rich Text component** is static, the **HTML Menu component** wires static markup to actions, and the **HTML Visualization component** generates its markup *from data* every time the data or filters change.
