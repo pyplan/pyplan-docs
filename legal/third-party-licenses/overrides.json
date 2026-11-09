@@ -1,0 +1,7 @@
+{
+  "_description": "Licencias corregidas a mano y notas de la revisión. Para corregir una licencia, la clave lleva la versión exacta. Para categorías y notas alcanza un patrón por major. Campos: license, category, note.",
+  "require-like@0.1.2": {
+    "license": "MIT",
+    "note": "package.json no declara licencia; el archivo License y el README son MIT."
+  }
+}

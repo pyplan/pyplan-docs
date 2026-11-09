@@ -1,0 +1,7 @@
+{
+  "project": "pyplan-docs",
+  "lock": "package-lock.json",
+  "policy": {
+    "fail_on": ["copyleft-fuerte", "copyleft-red", "comercial", "revisar"]
+  }
+}
