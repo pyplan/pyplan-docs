@@ -57,6 +57,75 @@ Changes take effect immediately after saving.
 
 ![Edit User](./img/security-options/edit_user.png)
 
+## Deactivate, Remove or Delete Users
+
+A user account can belong to several companies, so before taking a user out we choose the action that matches the scope we need. The User Manager offers three of them, from the **Actions** column of the list:
+
+| Action | Scope | Reversible |
+| --- | --- | :---: |
+| **Deactivate** | The whole account: the user cannot sign in to any of their companies. | Yes |
+| **Remove from this company** | Only the company we are logged into. The user keeps working in their other companies. | Yes, by assigning the company again |
+| **Delete** | The whole account and its access to every company. | No |
+
+:::tip
+When a user should only stop working in our company, **Remove from this company** is the right action. Deactivating or deleting affects every company the user belongs to.
+:::
+
+### Deactivate a user
+
+To deactivate a user, we turn off the status switch in their row. Pyplan always asks for confirmation before deactivating:
+
+- If the user belongs to a single company, we confirm with **Deactivate**.
+- If the user belongs to more than one company, the dialog warns that the whole account is deactivated and lists their companies (the ones we have no access to are counted, not named). When we are allowed to, it offers **Remove from this company** as the main option, and **Deactivate in all companies** as the alternative.
+
+![Deactivate a user who belongs to several companies](./img/security-options/deactivate-user-dialog.png)
+
+Turning the switch back on activates the user again, without a confirmation dialog.
+
+Only superusers can change the status of a superuser or of a user who does not belong to the company we are logged into. Nobody can change their own status. In those rows the status switch is disabled, and hovering over it tells us why.
+
+### Remove a user from the current company
+
+**Remove from this company** takes the user out of the company we are logged into, together with the roles they had in that company. Their account and their other companies are not affected.
+
+It is offered from the deactivate and delete dialogs when:
+
+- The user belongs to more than one company, one of them being the current company.
+- We have the permission to remove companies from a user (`delete_usercompany`), the same one required to remove a company from the user's company assignment.
+
+We cannot remove ourselves, nor remove the last company of a user.
+
+### Delete a user
+
+To delete a user, we select the **Delete user** icon (the bin) in their row. Deleting is permanent: the dialog warns that it cannot be undone and lists the companies the user loses access to. When the user also belongs to other companies, or does not belong to the company we are logged into, the dialog warns as well that they are deleted from all their companies. To enable **Delete**, we type the user's username.
+
+![Delete a user](./img/security-options/delete-user-dialog.png)
+
+Who can delete a user depends on the companies the user belongs to:
+
+- A user with the permission **Can delete users that belong to other companies** (`delete_user_of_other_companies`) can delete any user. Superusers always have it. Everyone else, staff users included, gets it from their role in the company they are logged into. No role has it by default, and it is not part of any role template.
+- Any other user with the delete permission (`delete_user`) can only delete users whose **only** company is the one they are logged into.
+
+We grant the permission per role, from [Permissions by Role](#permissions-by-role): we find it in the **User manager** group and check it for a role. Every user with that role in that company gets it.
+
+![Can delete users that belong to other companies permission](./img/security-options/permission-delete-users-other-companies.png)
+
+To grant it to a single user only, a staff user for instance, we give that user a dedicated role:
+
+1. We create a role in the user's company, from the same template as their current role, with a name that tells them apart (for example, *Super Administrator + delete users of other companies*). See [Roles](#roles).
+2. In **Permissions by role**, we check **Can delete users that belong to other companies** for the new role, along with any other change the current role has over its template.
+3. In the User Manager, we select **Manage companies** in the user's row and assign the new role to the user in that company.
+
+To revoke it, we uncheck the permission for the role, or give the user their previous role back. Permission changes apply the next time the user logs in.
+
+When the user belongs to other companies too, the dialog explains why they cannot be deleted and offers **Remove from this company** instead. When the user does not belong to the current company, we have to log into their company to delete them, and that only works if it is their only company; otherwise, only a user with `delete_user_of_other_companies` can delete them.
+
+![A user who belongs to several companies cannot be deleted](./img/security-options/delete-user-blocked-dialog.png)
+
+:::info
+These rules are enforced by the server as well, so a request that bypasses the User Manager is rejected in the same cases.
+:::
+
 ## Roles
 
 A role is a collection of permissions assigned to a user within the platform. Roles can be assigned and customized according to the needs of each organization.
