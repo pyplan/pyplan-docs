@@ -391,6 +391,8 @@ In the File Manager, you can restrict one folder at a time:
 
 ![Deny Accounting File Manager](./img/security-options/deny_accounting_filemanager.png)
 
+Folder restrictions do not apply to users whose role has the **Can restrict folders, modules and app versions** permission (`can_restrict_folders_modules_and_app_versions`), whatever departments they belong to. They see every folder and can download, compress, unzip and otherwise work with its whole content, so a folder they download or compress always includes the files of the restricted subfolders. For every other user, restricted folders are left out of downloads and compressed files.
+
 ### Exempt paths on folder rules
 
 A rule on a File Manager folder matches **by folder name**, so it reaches every folder called the same way in the company, including folders that belong to different applications. That is convenient when the same structure repeats across applications, but sometimes one particular folder has to behave differently.
