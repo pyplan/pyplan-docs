@@ -107,6 +107,9 @@ The **Permissions by role** option lets you modify which actions each role can p
 | **Companies** | Create companies | | | | | | | | ✓ |
 | | Modify companies | ✓ | | | | | | | ✓ |
 | **General Settings** | Modify General Settings | ✓ | | | | | | | ✓ |
+| **Support** | Access the support site (**Support** menu) | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
+
+The **Support** menu appears only when Pyplan Support is enabled for the company and the user's role has the *Can access the support site* permission. Custom roles can be given that permission from **Permissions by role**, under the **Support** group.
 
 ## Departments
 
