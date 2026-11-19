@@ -20,6 +20,16 @@ This enables translations for the following elements:
 - Interface components
 - Menu components
 
+### Which text is shown
+
+When Pyplan shows a translatable text, it picks the first one that is not empty:
+
+1. The translation in the user's interface language.
+2. The translation in the application language.
+3. The original text (for example, the node title or the node description), without translation.
+
+For example, in an application whose language is Portuguese, a user with the interface in Spanish sees the Portuguese translation of a node's documentation when its Spanish translation is empty.
+
 ### Nodes
 
 To translate the node title, go to the node properties and navigate to the **Translations** tab. There, you can specify the corresponding translations for the node title:
