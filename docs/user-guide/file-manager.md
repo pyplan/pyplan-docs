@@ -167,6 +167,10 @@ Pyplan packages the selection in a `.zip` file and starts the download automatic
 
 ![download.png](./img/download.png)
 
+:::info Modification dates
+Files we upload from the File Manager keep the **last modified date** they had on our computer, instead of the date of the upload. When Pyplan still holds data it calculated from the previous version of the file, the file gets the date of the upload instead, so that this data is calculated again. Likewise, the `.zip` files we download keep the original modification dates of the files and folders inside them, so they show up again when we extract them on our computer. When we download a single file, the date it gets on our computer depends on the browser, which usually assigns the date of the download.
+:::
+
 ---
 
 ## Compress and Decompress
@@ -188,3 +192,7 @@ To **decompress** a `.zip` file:
 Pyplan extracts the contents into the current directory, preserving the internal folder structure.
 
 ![unzip_file.png](./img/unzip_file.png)
+
+:::info Modification dates
+Compressing and decompressing keep the **last modified date** of every file and folder: the `.zip` file stores the original dates, and the extracted items get them back instead of the date of the extraction (as with uploads, a file whose previous version Pyplan still holds calculated data for gets the date of the extraction). This lets us know when each file was actually changed, for example when we restore a backup.
+:::
