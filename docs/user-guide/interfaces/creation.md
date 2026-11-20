@@ -65,3 +65,15 @@ The check on the right of each row marks the view that opens when you open the a
 
 Use the pencil icon of a view to rename it or change whether it opens by default, and the trash icon to delete it. Deleting the view being shown takes you back to the original view.
 
+
+### When the original interface changes
+
+When the author of the interface adds components to the original interface or removes components from it, and saves the application, our custom views of that interface no longer match the original. The next time we open one of those views, Pyplan **resets** it: the view is replaced by the updated original interface, and it keeps its name and whether it opens by default. A message tells us that our custom view was reset because the original interface was updated.
+
+Other changes to the original interface — its filters, the order of tables or the arrangement of its components — do not reset our custom views. Components that we add to or remove from our own custom view do not reset it either.
+
+Each version of the application is checked on its own: switching to another version does not reset a view by itself. When a version is created by copying another one, Pyplan compares it with the version it was copied from, so components added in the new version also reset the views opened there.
+
+:::info Custom views saved earlier
+A custom view saved before this behavior was available is compared with its own components the first time we open it. If we had added components to that view or removed them, it is reset once to the original interface.
+:::
