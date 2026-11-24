@@ -74,6 +74,16 @@ Other changes to the original interface — its filters, the order of tables or 
 
 Each version of the application is checked on its own: switching to another version does not reset a view by itself. When a version is created by copying another one, Pyplan compares it with the version it was copied from, so components added in the new version also reset the views opened there.
 
+Our custom views are shared by all the versions of the application. If a view was last changed in another version, where the original interface had different components than in the version we have open, Pyplan does not change it by itself: the custom views icon shows a message with the option to **Reset** the view.
+
+![Custom view differs from the original interface](../img/interfaces/custom_views_differs_callout.png)
+
+While the view does not match, the custom views menu also offers **Reset to the original interface**, even after we close the message.
+
+![Reset to the original interface](../img/interfaces/custom_views_reset_menu.png)
+
+Resetting replaces the view with the original interface of the open version and keeps its name and whether it opens by default. Saving the view in the open version also makes the message go away.
+
 :::info Custom views saved earlier
 A custom view saved before this behavior was available is compared with its own components the first time we open it. If we had added components to that view or removed them, it is reset once to the original interface.
 :::
