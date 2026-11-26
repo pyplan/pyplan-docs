@@ -81,33 +81,35 @@ The **Permissions by role** option lets you modify which actions each role can p
 
 ### Default Role Permissions Table
 
-| Module | Permission | Administrator | App Administrator | Creator with Public Access | Creator | Explorer | Viewer | Login Only | Super Admin |
-|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Applications** | Create apps | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
-| | Create versions and scenarios | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
-| | View diagram | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
-| | Save changes in private space | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
-| | Save changes in Public app | ✓ | ✓ | ✓ | | | | | ✓ |
-| | Set permissions in diagram modules | ✓ | ✓ | | | | | | ✓ |
-| **Interfaces** | View interfaces | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | | ✓ |
-| | Add, modify, or delete interfaces | ✓ | ✓ | ✓ | ✓ | ✓ | | | ✓ |
-| | Set interface permissions | ✓ | ✓ | | | | | | ✓ |
-| **File Manager** | View File Manager | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
-| | Add/modify/delete files (private) | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
-| | Add/modify/delete files (Public) | ✓ | ✓ | ✓ | | | | | ✓ |
-| | Set permissions on files/folders | ✓ | ✓ | | | | | | ✓ |
-| **External Links** | Create/modify/delete API endpoints or interface links | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
-| **Workflow** | Manage processes | ✓ | ✓ | | | | | | ✓ |
-| **Scheduled Tasks** | Create/modify/delete scheduled tasks | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
-| **Teams** | Add/modify/delete Teams | ✓ | ✓ | | | | | | ✓ |
-| **Departments** | Add/modify/delete departments | ✓ | ✓ | | | | | | ✓ |
-| **Instances** | View company instances | ✓ | ✓ | | | | | | ✓ |
-| | Deactivate company instances | ✓ | ✓ | | | | | | ✓ |
-| **Roles** | Create/modify/delete roles | | | | | | | | ✓ |
-| **Companies** | Create companies | | | | | | | | ✓ |
-| | Modify companies | ✓ | | | | | | | ✓ |
-| **General Settings** | Modify General Settings | ✓ | | | | | | | ✓ |
-| **Support** | Access the support site (**Support** menu) | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
+| Module | Permission | Administrator | App Administrator | Creator with Public Access | Creator with Public Read-only Apps | Creator | Explorer | Viewer | Login Only | Super Admin |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Applications** | Create apps | ✓ | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
+| | Create versions and scenarios | ✓ | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
+| | View diagram | ✓ | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
+| | Save changes in private space | ✓ | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
+| | Save changes in Public app | ✓ | ✓ | ✓ | | | | | | ✓ |
+| | Set permissions in diagram modules | ✓ | ✓ | | | | | | | ✓ |
+| **Interfaces** | View interfaces | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | | ✓ |
+| | Add, modify, or delete interfaces | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | | | ✓ |
+| | Set interface permissions | ✓ | ✓ | | | | | | | ✓ |
+| **File Manager** | View File Manager | ✓ | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
+| | Add/modify/delete files (private) | ✓ | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
+| | Add/modify/delete files (Public) | ✓ | ✓ | ✓ | ✓ | | | | | ✓ |
+| | Set permissions on files/folders | ✓ | ✓ | | | | | | | ✓ |
+| **External Links** | Create/modify/delete API endpoints or interface links | ✓ | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
+| **Workflow** | Manage processes | ✓ | ✓ | | | | | | | ✓ |
+| **Scheduled Tasks** | Create/modify/delete scheduled tasks | ✓ | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
+| **Teams** | Add/modify/delete Teams | ✓ | ✓ | | | | | | | ✓ |
+| **Departments** | Add/modify/delete departments | ✓ | ✓ | | | | | | | ✓ |
+| **Instances** | View company instances | ✓ | ✓ | | | | | | | ✓ |
+| | Deactivate company instances | ✓ | ✓ | | | | | | | ✓ |
+| **Roles** | Create/modify/delete roles | | | | | | | | | ✓ |
+| **Companies** | Create companies | | | | | | | | | ✓ |
+| | Modify companies | ✓ | | | | | | | | ✓ |
+| **General Settings** | Modify General Settings | ✓ | | | | | | | | ✓ |
+| **Support** | Access the support site (**Support** menu) | ✓ | ✓ | ✓ | ✓ | ✓ | | | | ✓ |
+
+The **Creator with Public Read-only Apps** role has the same permissions as **Creator with Public Access**, except for editing applications in the **Public** folder: its users can add, upload, rename and delete files in **Public**, but the applications stored there open in read-only mode for them. We assign it to users who build applications in their own space and manage shared files, but must not change the applications published in **Public**. The same set of permissions is available as a template when we create a role.
 
 The **Support** menu appears only when Pyplan Support is enabled for the company and the user's role has the *Can access the support site* permission. Custom roles can be given that permission from **Permissions by role**, under the **Support** group.
 
