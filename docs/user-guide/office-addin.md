@@ -58,6 +58,18 @@ If you use Single Sign On (SSO), you must add `/saml/[company code]` to the URL.
 
 3. Once registered, the connection will be available for future logins. Click on the connection you wish to use and log in using your credentials.
 
+:::info
+The add-in keeps its session on the computer where we log in, not inside the workbook. A workbook we share with another person, or open on another computer, asks for a new login there. The **Disconnect** button signs the add-in out without signing us out of Pyplan in the browser. If the workbook was opened from Pyplan (see below), the add-in works on the same application we have open in the browser, and **Disconnect** closes that application there too.
+:::
+
+## Workbooks Opened from Pyplan
+
+Some options of Pyplan open Excel with the add-in already connected: the **Edit in Excel** button of a form in an interface, and the option to open a table of an HTML interface with the add-in. The workbook they create carries a link to our session instead of our credentials.
+
+- The link works **once** and during **15 minutes**. If we open the workbook later, or open a copy of it, on a computer where the add-in is not logged in, the add-in asks us to log in with the **Sign in** button and does not link the node at that moment: we go back to Pyplan and use the same option again. If we open that same workbook again once the add-in is logged in, the add-in can still link the node, as long as the session in which we created the workbook remains open in Pyplan.
+- The first time a workbook asks to connect to a Pyplan instance that the add-in does not know on that computer, it shows the address of the instance and asks for confirmation. We confirm only when we recognize the address.
+- These options are not available in an interface opened through an [interface link](./app-management/interface-links.md).
+
 ## Open an Application
 
 After logging in, you can open any of the applications you have available — from your private space, from the public space, or from a work team to which you belong.
